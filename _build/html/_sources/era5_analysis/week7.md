@@ -25,7 +25,7 @@ The mean height anomalies shows a completely different pattern, with little phys
 
 :::{figure-md} sam_pearson
 
-<img src="../figures/correlations/sam_pearson_correlations.png">
+<img src="../figures/outdated_correlations/sam_pearson_correlations.png">
 
 Pearson Correlations for SAM Index, PC1.
 
@@ -33,7 +33,7 @@ Pearson Correlations for SAM Index, PC1.
 
 :::{figure-md} sam_rank
 
-<img src="../figures/correlations/sam_rank_correlations.png">
+<img src="../figures/outdated_correlations/sam_rank_correlations.png">
 
 Spearman Rank Correlations for SAM Index, PC1.
 
@@ -48,7 +48,7 @@ The mean height anomalies correlations are again much weaker than for variance a
 
 :::{figure-md} soi_pearson
 
-<img src="../figures/correlations/SOI_pearson_correlations.png">
+<img src="../figures/outdated_correlations/SOI_pearson_correlations.png">
 
 Pearson Correlations for SOI.
 
@@ -56,7 +56,7 @@ Pearson Correlations for SOI.
 
 :::{figure-md} soi_rank
 
-<img src="../figures/correlations/SOI_rank_correlations.png">
+<img src="../figures/outdated_correlations/SOI_rank_correlations.png">
 
 Spearman Rank Correlations for SOI.
 
@@ -73,7 +73,7 @@ The mean height anomalies correlations are again much weaker than for variance a
 
 :::{figure-md} dmi_pearson
 
-<img src="../figures/correlations/DMI_pearson_correlations.png">
+<img src="../figures/outdated_correlations/DMI_pearson_correlations.png">
 
 Pearson Correlations for DMI.
 
@@ -81,7 +81,7 @@ Pearson Correlations for DMI.
 
 :::{figure-md} dmi_rank
 
-<img src="../figures/correlations/DMI_rank_correlations.png">
+<img src="../figures/outdated_correlations/DMI_rank_correlations.png">
 
 Spearman Rank Correlations for DMI.
 
@@ -101,7 +101,7 @@ The ZW3-mean height correlations as with each of the indices before shows little
 
 :::{figure-md} zw3_pearson
 
-<img src="../figures/correlations/zw3_pearson_correlations.png">
+<img src="../figures/outdated_correlations/zw3_pearson_correlations.png">
 
 Pearson Correlations for ZW3.
 
@@ -109,7 +109,7 @@ Pearson Correlations for ZW3.
 
 :::{figure-md} zw3_rank
 
-<img src="../figures/correlations/ZW3_rank_correlations.png">
+<img src="../figures/outdated_correlations/ZW3_rank_correlations.png">
 
 Spearman Rank Correlations for ZW3.
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Correlation Spatial Patterns
+# # Correlation & Covariance Maps
 # 
-# This notebook calculates the correlation between indices time series and anomaly time series, variance and mean height, at each longitude/latitude grid point. Methods used are both Pearson and Spearman rank correlations.
+# This notebook calculates the correlation & covariance between indices time series and anomalies time series, for bandpassed variance and mean height fields, at each longitude/latitude grid point. Methods used are both Pearson product-moment and Spearman rank.
 
 # In[1]:
 

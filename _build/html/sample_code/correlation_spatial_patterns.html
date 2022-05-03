@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Correlation Spatial Patterns &#8212; Lab Notebooks</title>
+    <title>Correlation &amp; Covariance Maps &#8212; Lab Notebooks</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -132,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Early Analysis
+  Correlation/Covariance Analysis
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -170,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Correlation Spatial Patterns
+   Correlation &amp; Covariance Maps
   </a>
  </li>
  <li class="toctree-l1">
@@ -321,7 +321,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Correlation Spatial Patterns</h1>
+                <h1>Correlation & Covariance Maps</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -332,9 +332,9 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="correlation-spatial-patterns">
-<h1>Correlation Spatial Patterns<a class="headerlink" href="#correlation-spatial-patterns" title="Permalink to this headline">¶</a></h1>
-<p>This notebook calculates the correlation between indices time series and anomaly time series, variance and mean height, at each longitude/latitude grid point. Methods used are both Pearson and Spearman rank correlations.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="correlation-covariance-maps">
+<h1>Correlation &amp; Covariance Maps<a class="headerlink" href="#correlation-covariance-maps" title="Permalink to this headline">¶</a></h1>
+<p>This notebook calculates the correlation &amp; covariance between indices time series and anomalies time series, for bandpassed variance and mean height fields, at each longitude/latitude grid point. Methods used are both Pearson product-moment and Spearman rank.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
