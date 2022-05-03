@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Correlation Spatial Patterns &#8212; Lab Notebooks</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Early Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../era5_analysis/week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../era5_analysis/week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../era5_analysis/week8.html">
+   Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/src/src/corr_cov_maps/correlation_spatial_patterns.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsrc/src/corr_cov_maps/correlation_spatial_patterns.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/src/src/corr_cov_maps/correlation_spatial_patterns.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Correlation Spatial Patterns</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="correlation-spatial-patterns">
+<h1>Correlation Spatial Patterns<a class="headerlink" href="#correlation-spatial-patterns" title="Permalink to this headline">¶</a></h1>
+<p>This notebook calculates the correlation between indices time series and anomaly time series, variance and mean height, at each longitude/latitude grid point. Methods used are both Pearson and Spearman rank correlations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">load_indices</span> <span class="kn">import</span> <span class="n">Indices</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CorrCovMaps</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anoms</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">stat</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self._anoms: xarray.Dataset</span>
+<span class="sd">            Dataset containing time series for all lat/lon grid points.</span>
+<span class="sd">        self._index_dict: dict</span>
+<span class="sd">            Dictionary containing arrays of all normalised indices&#39; time series.</span>
+<span class="sd">        self._coords_array: numpy.ndarray</span>
+<span class="sd">            2D array containing all lat/lon coordinate pairs.</span>
+<span class="sd">        self._correlation_arrays: numpy.ndarray</span>
+<span class="sd">            Array to store correlation values between all indices and all lat/lon </span>
+<span class="sd">            grid points.</span>
+<span class="sd">        self._covariance_arrays: numpy.ndarray</span>
+<span class="sd">            Array to store covariance values between all indices and all lat/lon </span>
+<span class="sd">            grid points.   </span>
+<span class="sd">        self._stat: str</span>
+<span class="sd">            Specifies whether the anomalies are either mean height or bandpassed</span>
+<span class="sd">            variance.</span>
+<span class="sd">        self._method: str</span>
+<span class="sd">            Specifies whether to use Pearson product-moment correlation or</span>
+<span class="sd">            Spearman rank correlation.</span>
+<span class="sd">        self._period: boolean</span>
+<span class="sd">            Indicates whether the input data should be processed seasonally, </span>
+<span class="sd">            rolling three month seasons or yearly.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span> <span class="o">=</span> <span class="n">anoms</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span> <span class="o">=</span> <span class="n">indices</span><span class="o">.</span><span class="n">_index_dict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stat</span> <span class="o">=</span> <span class="n">stat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">=</span> <span class="n">period</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_corr_cov_dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_corr_cov_dict</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">populate_corr_cov_matrices</span><span class="p">()</span>
+      
+
+    <span class="k">def</span> <span class="nf">populate_corr_cov_matrices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function calls the correct function to calculate correlation/covariance</span>
+<span class="sd">        depending on whether seasonal data is being used. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;rolling_seasonal&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">season</span><span class="p">,</span><span class="n">variables</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">variable_name</span><span class="p">,</span><span class="n">variable_values</span> <span class="ow">in</span> <span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="c1"># Separate tuple of index values and time indices.</span>
+                    <span class="n">times</span> <span class="o">=</span> <span class="n">variable_values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">index_values</span> <span class="o">=</span> <span class="n">variable_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="c1"># Remove values for incomplete seasons, i.e. first month of first </span>
+                    <span class="c1"># summer and first two months of final summer in anomalies dataset.</span>
+                    <span class="k">if</span> <span class="n">season</span> <span class="o">==</span> <span class="s1">&#39;DJF&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span><span class="p">:</span>
+                        <span class="n">times</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="n">index_values</span> <span class="o">=</span> <span class="n">index_values</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">anoms_filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">times</span><span class="p">)</span>
+                    <span class="n">index_ds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_indices_dataset</span><span class="p">(</span>
+                        <span class="n">anoms_filtered</span><span class="p">,</span>
+                        <span class="n">index_values</span><span class="p">,</span> 
+                        <span class="n">variable_name</span>
+                    <span class="p">)</span>
+                    <span class="n">correlation_array</span><span class="p">,</span> <span class="n">covariance_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_corr_cov_matrices</span><span class="p">(</span>
+                        <span class="n">anoms_filtered</span><span class="p">,</span> <span class="n">index_ds</span><span class="p">,</span> <span class="n">variable_name</span>
+                    <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span><span class="p">[</span><span class="n">season</span><span class="p">][</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">correlation_array</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span><span class="p">[</span><span class="n">season</span><span class="p">][</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">covariance_array</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">variable_values</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s2">&quot;zw3&quot;</span> <span class="ow">in</span> <span class="n">variable_name</span><span class="p">:</span>
+                    <span class="n">times</span> <span class="o">=</span> <span class="n">variable_values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">index_values</span> <span class="o">=</span> <span class="n">variable_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">anoms_filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">times</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">index_values</span> <span class="o">=</span> <span class="n">variable_values</span>
+                    <span class="n">anoms_filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span>
+                <span class="n">index_ds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_indices_dataset</span><span class="p">(</span>
+                        <span class="n">anoms_filtered</span><span class="p">,</span>
+                        <span class="n">index_values</span><span class="p">,</span> 
+                        <span class="n">variable_name</span>
+                    <span class="p">)</span>
+                <span class="n">corr_arr</span><span class="p">,</span> <span class="n">cov_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_corr_cov_matrices</span><span class="p">(</span>
+                    <span class="n">anoms_filtered</span><span class="p">,</span> <span class="n">index_ds</span><span class="p">,</span> <span class="n">variable_name</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span><span class="p">[</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">corr_arr</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span><span class="p">[</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">cov_arr</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_to_netcdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span><span class="p">,</span> <span class="s1">&#39;corr&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">write_to_netcdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span><span class="p">,</span> <span class="s1">&#39;cov&#39;</span><span class="p">)</span>
+
+    
+    <span class="k">def</span> <span class="nf">create_corr_cov_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a dictionary of zero arrays with keys corresponding to index name and, </span>
+<span class="sd">        if seasonal is True, seasons. The dictionary will have the same structure as </span>
+<span class="sd">        index_dict. correlation_arrays will be used to store data for correlation</span>
+<span class="sd">        values at each lon/lat point.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        arrays: dict</span>
+<span class="sd">            Dictionary with the same structure as index_dict. Each key has a </span>
+<span class="sd">            numpy.ndarray of zeroes with identical longitude/latitude dimensions</span>
+<span class="sd">            to the input file grid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">arrays</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;rolling_seasonal&#39;</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">subkey</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">:</span>
+                        <span class="n">arrays</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="n">arrays</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">subkey</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">arrays</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">arrays</span>
+
+    
+    <span class="k">def</span> <span class="nf">create_indices_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anoms</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">):</span>
+        <span class="n">lon</span> <span class="o">=</span> <span class="n">anoms</span><span class="o">.</span><span class="n">lon</span>
+        <span class="n">lat</span> <span class="o">=</span> <span class="n">anoms</span><span class="o">.</span><span class="n">lat</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">lon</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="n">lat</span><span class="o">.</span><span class="n">size</span>
+
+        <span class="n">index_flattened</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:],</span> <span class="n">n</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">index_data</span> <span class="o">=</span> <span class="n">index_flattened</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">lon</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">lat</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">time</span><span class="p">))</span>
+
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+                <span class="n">data_vars</span><span class="o">=</span><span class="p">{</span>
+                    <span class="n">variable_name</span><span class="p">:((</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">),</span> <span class="n">index_data</span><span class="p">)</span>
+                    <span class="p">},</span>
+                <span class="n">coords</span><span class="o">=</span><span class="p">{</span>
+                    <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="n">lat</span><span class="p">,</span> 
+                    <span class="s1">&#39;lon&#39;</span><span class="p">:</span><span class="n">lon</span><span class="p">,</span>
+                    <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="n">anoms</span><span class="o">.</span><span class="n">time</span><span class="p">[:</span><span class="n">time</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">ds</span>
+
+    
+    <span class="k">def</span> <span class="nf">calculate_corr_cov_matrices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">anoms</span><span class="p">,</span> <span class="n">index_ds</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">):</span>
+        <span class="n">anoms_arr</span> <span class="o">=</span> <span class="n">anoms</span><span class="o">.</span><span class="n">z</span>
+        <span class="n">index_arr</span> <span class="o">=</span> <span class="n">index_ds</span><span class="p">[</span><span class="n">variable_name</span><span class="p">]</span>
+        <span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">align</span><span class="p">(</span><span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">==</span> <span class="s1">&#39;pearson&#39;</span><span class="p">:</span>
+            <span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">==</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span>
+            <span class="n">ranked_anoms</span> <span class="o">=</span> <span class="n">anoms_arr</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+            <span class="n">ranked_index</span> <span class="o">=</span> <span class="n">index_arr</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+            <span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">ranked_anoms</span><span class="p">,</span> <span class="n">ranked_index</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        
+        <span class="n">cov_matrix</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">corr_matrix</span><span class="p">,</span> <span class="n">cov_matrix</span>
+
+
+    <span class="k">def</span> <span class="nf">write_to_netcdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arrays</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="s1">&#39;corr&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes NetCDF file with dimensions at specified path location, creates parent </span>
+<span class="sd">        directories if required. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">corr_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">/</span> <span class="n">var</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span>
+        <span class="n">corr_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="c1"># Handle seasonal data.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;rolling_seasonal&#39;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">season_name</span><span class="p">,</span><span class="n">variables_dict</span> <span class="ow">in</span> <span class="n">arrays</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">variable_name</span><span class="p">,</span><span class="n">variable_values</span> <span class="ow">in</span> <span class="n">variables_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">ds</span> <span class="o">=</span> <span class="n">variable_values</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+                    <span class="n">filename</span> <span class="o">=</span> <span class="n">season_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> \
+                        <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> \
+                        <span class="o">+</span> <span class="n">var</span> <span class="o">+</span>  <span class="s1">&#39;.nc&#39;</span>
+                    <span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">corr_path</span> <span class="o">/</span> <span class="n">filename</span><span class="p">)</span>
+                    <span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">variable_name</span><span class="p">,</span><span class="n">variable_values</span> <span class="ow">in</span> <span class="n">arrays</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">ds</span> <span class="o">=</span> <span class="n">variable_values</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">season_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> \
+                    <span class="o">+</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> \
+                    <span class="o">+</span> <span class="n">var</span> <span class="o">+</span>  <span class="s1">&#39;.nc&#39;</span>
+                <span class="n">ds</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">corr_path</span> <span class="o">/</span> <span class="n">filename</span><span class="p">)</span>
+                <span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">index_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">indices</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">var_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg_deseasonalised_bandpass_20S_mon_var_anoms.nc&quot;</span>
+<span class="n">mean_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg_deseasonalised_20S_mon_anoms.nc&quot;</span>
+<span class="n">index_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">index_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.nc&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">period</span> <span class="o">=</span> <span class="s1">&#39;seasonal&#39;</span>
+
+<span class="n">variance_anoms</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">/</span> <span class="n">var_file</span><span class="p">)</span>
+<span class="n">mean_anoms</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">/</span> <span class="n">mean_file</span><span class="p">)</span>
+
+<span class="n">variable_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sam&#39;</span><span class="p">,</span> <span class="s1">&#39;DMI&#39;</span><span class="p">,</span> <span class="s1">&#39;SOI&#39;</span><span class="p">,</span> <span class="s1">&#39;zw3index_magnitude&#39;</span><span class="p">]</span>
+<span class="n">indices</span> <span class="o">=</span> <span class="n">Indices</span><span class="p">(</span><span class="n">index_files</span><span class="p">,</span> <span class="n">variable_names</span><span class="p">,</span> <span class="n">period</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zw3_-30_0 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-30_0 in MAM has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-90_-60 in SON has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_60_90 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_0_30 in DJF has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_0_30 in MAM has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_0_30 in SON has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_90_120 in MAM has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-120_-90 in DJF has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-120_-90 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-120_-90 in SON has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_30_60 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-150_-120 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-150_-120 in MAM has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_150_180 in DJF has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_150_180 in MAM has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_150_180 in SON has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-180_-150 in DJF has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-180_-150 in JJA has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+zw3_-60_-30 in DJF has fewer than 10 data. Sample size too small: it won&#39;t be correlated.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">anoms</span> <span class="o">=</span> <span class="p">[(</span><span class="n">variance_anoms</span><span class="p">,</span> <span class="s1">&#39;variance&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">mean_anoms</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">)]</span>
+<span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pearson&#39;</span><span class="p">,</span> <span class="s1">&#39;rank&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">anom</span> <span class="ow">in</span> <span class="n">anoms</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">methods</span><span class="p">:</span>
+        <span class="n">CorrCovMaps</span><span class="p">(</span>
+            <span class="n">anom</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">indices</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">anom</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="n">period</span><span class="p">,</span>
+            <span class="n">path</span><span class="o">=</span><span class="n">path</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">anom</span> <span class="ow">in</span> <span class="n">anoms</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">methods</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="n">CorrCovMaps</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>             <span class="n">anom</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">indices</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="n">anom</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="n">period</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>             <span class="n">path</span><span class="o">=</span><span class="n">path</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="p">)</span>
+
+<span class="nn">Input In [2],</span> in <span class="ni">CorrCovMaps.__init__</span><span class="nt">(self, anoms, indices, stat, method, period, path)</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_corr_cov_dict</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_corr_cov_dict</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">39</span> <span class="bp">self</span><span class="o">.</span><span class="n">populate_corr_cov_matrices</span><span class="p">()</span>
+
+<span class="nn">Input In [2],</span> in <span class="ni">CorrCovMaps.populate_corr_cov_matrices</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="n">anoms_filtered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_anoms</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">times</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">index_ds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_indices_dataset</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">anoms_filtered</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>     <span class="n">index_values</span><span class="p">,</span> 
+<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="n">variable_name</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">65</span> <span class="n">correlation_array</span><span class="p">,</span> <span class="n">covariance_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_corr_cov_matrices</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">anoms_filtered</span><span class="p">,</span> <span class="n">index_ds</span><span class="p">,</span> <span class="n">variable_name</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="bp">self</span><span class="o">.</span><span class="n">_correlation_arrays</span><span class="p">[</span><span class="n">season</span><span class="p">][</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">correlation_array</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span> <span class="bp">self</span><span class="o">.</span><span class="n">_covariance_arrays</span><span class="p">[</span><span class="n">season</span><span class="p">][</span><span class="n">variable_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">covariance_array</span>
+
+<span class="nn">Input In [2],</span> in <span class="ni">CorrCovMaps.calculate_corr_cov_matrices</span><span class="nt">(self, anoms, index_ds, variable_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span> <span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">align</span><span class="p">(</span><span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">==</span> <span class="s1">&#39;pearson&#39;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">153</span>     <span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">anoms_arr</span><span class="p">,</span> <span class="n">index_arr</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">==</span> <span class="s1">&#39;rank&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="n">ranked_anoms</span> <span class="o">=</span> <span class="n">anoms_arr</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\computation.py:1330,</span> in <span class="ni">corr</span><span class="nt">(da_a, da_b, dim)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1324</span> <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">)</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="p">[</span><span class="n">da_a</span><span class="p">,</span> <span class="n">da_b</span><span class="p">]):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1325</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1326</span>         <span class="s2">&quot;Only xr.DataArray is supported.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1327</span>         <span class="s2">&quot;Given </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="nb">type</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="p">[</span><span class="n">da_a</span><span class="p">,</span> <span class="n">da_b</span><span class="p">]])</span>
+<span class="g g-Whitespace">   </span><span class="mi">1328</span>     <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1330</span> <span class="k">return</span> <span class="n">_cov_corr</span><span class="p">(</span><span class="n">da_a</span><span class="p">,</span> <span class="n">da_b</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;corr&quot;</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\computation.py:1342,</span> in <span class="ni">_cov_corr</span><span class="nt">(da_a, da_b, dim, ddof, method)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1339</span> <span class="n">da_a</span><span class="p">,</span> <span class="n">da_b</span> <span class="o">=</span> <span class="n">align</span><span class="p">(</span><span class="n">da_a</span><span class="p">,</span> <span class="n">da_b</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1341</span> <span class="c1"># 2. Ignore the nans</span>
+<span class="ne">-&gt; </span><span class="mi">1342</span> <span class="n">valid_values</span> <span class="o">=</span> <span class="n">da_a</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">da_b</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1343</span> <span class="n">da_a</span> <span class="o">=</span> <span class="n">da_a</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">valid_values</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1344</span> <span class="n">da_b</span> <span class="o">=</span> <span class="n">da_b</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">valid_values</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\common.py:1373,</span> in <span class="ni">DataWithCoords.notnull</span><span class="nt">(self, keep_attrs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1370</span> <span class="k">if</span> <span class="n">keep_attrs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1371</span>     <span class="n">keep_attrs</span> <span class="o">=</span> <span class="n">_get_keep_attrs</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1373</span> <span class="k">return</span> <span class="n">apply_ufunc</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1374</span>     <span class="n">duck_array_ops</span><span class="o">.</span><span class="n">notnull</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span>     <span class="n">dask</span><span class="o">=</span><span class="s2">&quot;allowed&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1377</span>     <span class="n">keep_attrs</span><span class="o">=</span><span class="n">keep_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1378</span> <span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\computation.py:1159,</span> in <span class="ni">apply_ufunc</span><span class="nt">(func, input_core_dims, output_core_dims, exclude_dims, vectorize, join, dataset_join, dataset_fill_value, keep_attrs, kwargs, dask, output_dtypes, output_sizes, meta, dask_gufunc_kwargs, *args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1157</span> <span class="c1"># feed DataArray apply_variable_ufunc through apply_dataarray_vfunc</span>
+<span class="g g-Whitespace">   </span><span class="mi">1158</span> <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1159</span>     <span class="k">return</span> <span class="n">apply_dataarray_vfunc</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1160</span>         <span class="n">variables_vfunc</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1161</span>         <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1162</span>         <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1163</span>         <span class="n">join</span><span class="o">=</span><span class="n">join</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1164</span>         <span class="n">exclude_dims</span><span class="o">=</span><span class="n">exclude_dims</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1165</span>         <span class="n">keep_attrs</span><span class="o">=</span><span class="n">keep_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1166</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="c1"># feed Variables directly through apply_variable_ufunc</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span> <span class="k">elif</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">Variable</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">):</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\computation.py:286,</span> in <span class="ni">apply_dataarray_vfunc</span><span class="nt">(func, signature, join, exclude_dims, keep_attrs, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span> <span class="n">result_coords</span> <span class="o">=</span> <span class="n">build_output_coords</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="n">args</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">exclude_dims</span><span class="p">,</span> <span class="n">combine_attrs</span><span class="o">=</span><span class="n">keep_attrs</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="n">data_vars</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">286</span> <span class="n">result_var</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">data_vars</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span> <span class="k">if</span> <span class="n">signature</span><span class="o">.</span><span class="n">num_outputs</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span>     <span class="n">out</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">290</span>         <span class="n">DataArray</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">coords</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">fastpath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nn">    291         for variable, coords</span> in <span class="ni">zip</span><span class="nt">(result_var, result_coords)</span>
+<span class="g g-Whitespace">    </span><span class="mi">292</span>     <span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\computation.py:727,</span> in <span class="ni">apply_variable_ufunc</span><span class="nt">(func, signature, exclude_dims, dask, output_dtypes, vectorize, keep_attrs, dask_gufunc_kwargs, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="k">if</span> <span class="n">vectorize</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>         <span class="n">func</span> <span class="o">=</span> <span class="n">_vectorize</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">724</span>             <span class="n">func</span><span class="p">,</span> <span class="n">signature</span><span class="p">,</span> <span class="n">output_dtypes</span><span class="o">=</span><span class="n">output_dtypes</span><span class="p">,</span> <span class="n">exclude_dims</span><span class="o">=</span><span class="n">exclude_dims</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span>         <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">727</span> <span class="n">result_data</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">input_data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">729</span> <span class="k">if</span> <span class="n">signature</span><span class="o">.</span><span class="n">num_outputs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">730</span>     <span class="n">result_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">result_data</span><span class="p">,)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\duck_array_ops.py:125,</span> in <span class="ni">notnull</span><span class="nt">(data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span> <span class="k">def</span> <span class="nf">notnull</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">125</span>     <span class="k">return</span> <span class="o">~</span><span class="n">isnull</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\duck_array_ops.py:108,</span> in <span class="ni">isnull</span><span class="nt">(data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="k">return</span> <span class="n">isnat</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span> <span class="k">elif</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">scalar_type</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inexact</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span>     <span class="c1"># float types use NaN for null</span>
+<span class="ne">--&gt; </span><span class="mi">108</span>     <span class="k">return</span> <span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">elif</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">scalar_type</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">character</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">void</span><span class="p">)):</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>     <span class="c1"># these types cannot represent missing values</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>     <span class="k">return</span> <span class="n">zeros_like</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src\src\corr_cov_maps"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
