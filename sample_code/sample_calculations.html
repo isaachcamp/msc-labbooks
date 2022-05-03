@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Calculations &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References Table" href="../reference-table.html" />
+    <link rel="prev" title="Correlation Spatial Patterns" href="correlation_spatial_patterns.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Early Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week8.html">
+   Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="correlation_spatial_patterns.html">
+   Correlation Spatial Patterns
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/sample_code/sample_calculations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fsample_code/sample_calculations.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/sample_code/sample_calculations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sample Calculations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="sample-calculations">
+<h1>Sample Calculations<a class="headerlink" href="#sample-calculations" title="Permalink to this headline">¶</a></h1>
+<p>Five random points at two different pre-selected timestamps are used to test whether the CDO software accurately calculated pre-processing steps as well as anomalies, means and variances.</p>
+<p>The bandpass calculation was not recreated as the process is computationally expensive – CDO took over two days of CPU time, even with various optimisation procedures.</p>
+<p>Deseasonlisation and long-term averages show no discrepancies between the sample calculations and CDO. Neither do the variance and mean height anomalies – use of CDO module is considered valid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">choose_random_data</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+    <span class="n">arr_size</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">arr_size</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">points_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">size</span><span class="p">)))</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+    <span class="n">points_coords</span> <span class="o">=</span> <span class="n">points_indices</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">180</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
+
+    <span class="c1"># Ensure all surrounding points exist for smoothing operation.</span>
+    <span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="n">points_coords</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">180</span><span class="p">:</span>
+            <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">180</span><span class="p">:</span>
+            <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">90</span><span class="p">:</span>
+            <span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">90</span><span class="p">:</span>
+            <span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">points_coords</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_term_average</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="s1">&#39;%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="n">resampled_ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">resample</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">index_array</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">resampled_ds</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">group_by_time_format</span><span class="p">),</span> <span class="n">coords</span><span class="o">=</span><span class="n">resampled_ds</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">long_term_ave</span> <span class="o">=</span> <span class="n">resampled_ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">index_array</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">long_term_ave</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">long_term_variance</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="s1">&#39;%m&#39;</span><span class="p">):</span>
+    <span class="n">index_array</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">group_by_time_format</span><span class="p">),</span> <span class="n">coords</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">long_term_var</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">index_array</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">long_term_var</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_variance_anomalies</span><span class="p">(</span><span class="n">time_series</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="s1">&#39;%m&#39;</span><span class="p">):</span>
+    <span class="n">period_variance</span> <span class="o">=</span> <span class="n">time_series</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">resample</span><span class="p">)</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+    <span class="n">long_term_var</span> <span class="o">=</span> <span class="n">long_term_variance</span><span class="p">(</span><span class="n">time_series</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="n">group_by_time_format</span><span class="p">)</span>
+    <span class="n">index_array</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">period_variance</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">group_by_time_format</span><span class="p">),</span> <span class="n">coords</span><span class="o">=</span><span class="n">period_variance</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">var_anoms</span> <span class="o">=</span> <span class="n">period_variance</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">index_array</span><span class="p">)</span> <span class="o">-</span> <span class="n">long_term_var</span>
+
+    <span class="k">return</span> <span class="n">var_anoms</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">smooth9</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">grid_res</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="s1">&#39;1979-01-01-00&#39;</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="s1">&#39;%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="c1"># Get correct format for selecting by time index for long-term average dataset.</span>
+    <span class="n">groupby_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">-%H&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">group_by_time_format</span><span class="p">)</span>
+
+    <span class="c1"># Create variables for data and surrounding points using longitude and latitude.</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">lons</span> <span class="o">=</span> <span class="p">[</span><span class="n">lon</span> <span class="o">-</span> <span class="n">grid_res</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lon</span> <span class="o">+</span> <span class="n">grid_res</span><span class="p">]</span>
+    <span class="n">lats</span> <span class="o">=</span> <span class="p">[</span><span class="n">lat</span> <span class="o">-</span> <span class="n">grid_res</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lat</span> <span class="o">+</span> <span class="n">grid_res</span><span class="p">]</span>
+    
+    <span class="n">surrounding_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">surrounding_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+        <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span>
+    <span class="p">])</span>
+    
+    <span class="c1"># Get long-term average values for all points.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">surrounding_points</span><span class="p">)):</span>
+        <span class="n">time_series</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">surrounding_points</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">lat</span><span class="o">=</span><span class="n">surrounding_points</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">long_term_ave</span> <span class="o">=</span> <span class="n">long_term_average</span><span class="p">(</span><span class="n">time_series</span><span class="p">,</span> <span class="n">resample</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="p">)</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+        <span class="n">surrounding_values</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">long_term_ave</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">groupby_time</span><span class="p">)</span><span class="o">.</span><span class="n">to_array</span><span class="p">())</span>
+    
+    <span class="c1"># Calculate the smoothed value, sum of all weighted values divided by total weight.</span>
+    <span class="n">weighted_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">surrounding_values</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+    <span class="n">smoothed_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weighted_values</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">smoothed_value</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">deseasonalise</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="s1">&#39;1979-01-01-00&#39;</span><span class="p">,</span> <span class="n">grid_res</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="s1">&#39;%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">):</span>
+    <span class="n">smoothed_long_term_ave</span> <span class="o">=</span> <span class="n">smooth9</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">grid_res</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">resample</span><span class="o">=</span><span class="n">resample</span><span class="p">,</span> <span class="n">group_by_time_format</span><span class="o">=</span><span class="n">group_by_time_format</span><span class="p">)</span>
+    <span class="n">datum_val</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lat</span><span class="o">=</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">time</span><span class="o">=</span><span class="n">timestamp</span><span class="p">)</span><span class="o">.</span><span class="n">to_array</span><span class="p">()</span>
+    <span class="n">deseasonalised</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">datum_val</span><span class="p">)</span> <span class="o">-</span> <span class="n">smoothed_long_term_ave</span>
+    
+    <span class="k">return</span> <span class="n">deseasonalised</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compare_vals</span><span class="p">(</span><span class="n">cdo_ds</span><span class="p">,</span> <span class="n">calc_vals</span><span class="p">):</span>
+    <span class="n">errors</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">calc_val</span> <span class="ow">in</span> <span class="n">calc_vals</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">cdo_val</span> <span class="o">=</span> <span class="n">cdo_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lon</span><span class="o">=</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">lat</span><span class="o">=</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+        <span class="n">cdo_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">cdo_val</span><span class="p">)</span>
+        <span class="n">cdo_val_approx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cdo_val</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">calc_val_approx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">calc_val</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">cdo_val_approx</span><span class="p">)</span> <span class="o">!=</span> <span class="n">pytest</span><span class="o">.</span><span class="n">approx</span><span class="p">(</span><span class="n">calc_val_approx</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Difference between CDO and calculated values for: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> 
+                  <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> the two values are &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cdo_val</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">calc_val</span><span class="p">))</span>
+            <span class="n">errors</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No discrepancies found.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check pre-processing steps, up to deseasonalisation, but excluding bandpass filter.</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span>
+<span class="n">raw_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg.nc&quot;</span>
+<span class="n">cdo_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg_deseasonalised.nc&quot;</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">raw_file</span><span class="p">)</span>
+<span class="n">cdo_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">cdo_file</span><span class="p">)</span>
+
+<span class="n">points_coords</span> <span class="o">=</span> <span class="n">choose_random_data</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">points_coords</span><span class="p">)</span>
+
+<span class="n">deseasonalised_data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">timestamps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1979-01-01-00&#39;</span><span class="p">,</span> <span class="s1">&#39;2000-06-06-12&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">timestamp</span> <span class="ow">in</span> <span class="n">timestamps</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">datum</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points_coords</span><span class="p">):</span>
+        <span class="n">deseasonalised_datum</span> <span class="o">=</span> <span class="n">deseasonalise</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">grid_res</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">deseasonalised_data</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">datum</span><span class="p">),</span> <span class="n">timestamp</span><span class="p">]</span> <span class="o">=</span> <span class="n">deseasonalised_datum</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;: Done&#39;</span><span class="p">)</span>
+
+<span class="n">errors</span> <span class="o">=</span> <span class="n">compare_vals</span><span class="p">(</span><span class="n">cdo_ds</span><span class="p">,</span> <span class="n">deseasonalised_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check calculations of monthly variance anomalies.</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span>
+<span class="n">raw_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg_deseasonalised_bandpass.nc&quot;</span>
+<span class="n">cdo_file</span> <span class="o">=</span> <span class="s2">&quot;era5_h500_daily_1979_2021_1deg_deseasonalised_bandpass_mon_var_anoms.nc&quot;</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">raw_file</span><span class="p">)</span>
+<span class="n">cdo_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">cdo_file</span><span class="p">)</span>
+
+<span class="n">points_coords</span> <span class="o">=</span> <span class="n">choose_random_data</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">points_coords</span><span class="p">)</span>
+
+<span class="n">monthly_variance_anomalies</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">timestamps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1979-01-31&#39;</span><span class="p">,</span> <span class="s1">&#39;2000-06-30&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">timestamp</span> <span class="ow">in</span> <span class="n">timestamps</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">datum</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">points_coords</span><span class="p">):</span>
+        <span class="n">time_series</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">datum</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lat</span><span class="o">=</span><span class="n">datum</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">var_anoms</span> <span class="o">=</span> <span class="n">calculate_variance_anomalies</span><span class="p">(</span><span class="n">time_series</span><span class="p">)</span>
+        <span class="n">var_anom</span> <span class="o">=</span> <span class="n">var_anoms</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">timestamp</span><span class="p">)</span><span class="o">.</span><span class="n">to_array</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">datum</span><span class="p">),</span> <span class="n">timestamp</span><span class="p">)</span>
+        <span class="n">monthly_variance_anomalies</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">datum</span><span class="p">),</span> <span class="n">timestamp</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">var_anom</span><span class="p">)</span>
+
+<span class="n">errors</span> <span class="o">=</span> <span class="n">compare_vals</span><span class="p">(</span><span class="n">cdo_ds</span><span class="p">,</span> <span class="n">monthly_variance_anomalies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[178  36]
+ [ 21  -5]
+ [177  15]
+ [-77  77]
+ [-74  69]]
+(178, 36) 1979-01-31
+(21, -5) 1979-01-31
+(177, 15) 1979-01-31
+(-77, 77) 1979-01-31
+(-74, 69) 1979-01-31
+(178, 36) 2000-06-30
+(21, -5) 2000-06-30
+(177, 15) 2000-06-30
+(-77, 77) 2000-06-30
+(-74, 69) 2000-06-30
+((178, 36), &#39;1979-01-31&#39;)
+((21, -5), &#39;1979-01-31&#39;)
+((177, 15), &#39;1979-01-31&#39;)
+((-77, 77), &#39;1979-01-31&#39;)
+((-74, 69), &#39;1979-01-31&#39;)
+((178, 36), &#39;2000-06-30&#39;)
+((21, -5), &#39;2000-06-30&#39;)
+((177, 15), &#39;2000-06-30&#39;)
+((-77, 77), &#39;2000-06-30&#39;)
+((-74, 69), &#39;2000-06-30&#39;)
+No discrepancies found.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./sample_code"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="correlation_spatial_patterns.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Correlation Spatial Patterns</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../reference-table.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References Table</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

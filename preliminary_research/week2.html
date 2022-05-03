@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 3" href="week3.html" />
+    <link rel="prev" title="Week 1" href="week1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Early Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week8.html">
+   Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/preliminary_research/week2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpreliminary_research/week2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-7">
+   2022 Mar 7
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storm-tracks-in-the-southern-hemisphere-trenberth-storm-1991">
+     Storm Tracks in the Southern Hemisphere
+     <span class="xref cite">
+      trenberth_storm_1991
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#questions-to-be-answered">
+       Questions to be answered
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#points-of-interest">
+       Points of Interest
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#methodology">
+       Methodology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#questions-that-follow">
+       Questions that follow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-8">
+   2022 Mar 8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storm-track-processes-and-the-opposing-influences-of-climate-change-shaw-storm-2016">
+     Storm track processes and the opposing influences of climate change
+     <span class="xref cite">
+      shaw_storm_2016
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Questions to be answered
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Points of Interest
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#follow-up-questions">
+       Follow-up Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-9">
+   2022 Mar 9
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formation-of-extratropical-cyclones">
+     Formation of Extratropical Cyclones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-10">
+   2022 Mar 10
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-preprocessing">
+     Data Preprocessing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seasonal-variance">
+     Seasonal Variance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-11">
+   2022 Mar 11
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wallace-hobbs-ch-10-climate-dynamics-wallace-10-2006">
+     Wallace &amp; Hobbs, Ch.10: Climate Dynamics
+     <span class="xref cite">
+      wallace_10_2006
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#enso">
+       ENSO
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-comparison-of-southern-hemisphere-cyclone-track-climatology-and-interannual-variability-in-coarse-gridded-reanalysis-datasets-eichler-comparison-2013">
+     A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets
+     <span class="xref cite">
+      eichler_comparison_2013
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-used">
+       Data Used
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Methodology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#climatology">
+       Climatology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interannual-variability">
+       Interannual Variability
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Questions that follow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Week 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-7">
+   2022 Mar 7
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storm-tracks-in-the-southern-hemisphere-trenberth-storm-1991">
+     Storm Tracks in the Southern Hemisphere
+     <span class="xref cite">
+      trenberth_storm_1991
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#questions-to-be-answered">
+       Questions to be answered
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#points-of-interest">
+       Points of Interest
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#methodology">
+       Methodology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#questions-that-follow">
+       Questions that follow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-8">
+   2022 Mar 8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storm-track-processes-and-the-opposing-influences-of-climate-change-shaw-storm-2016">
+     Storm track processes and the opposing influences of climate change
+     <span class="xref cite">
+      shaw_storm_2016
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Questions to be answered
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Points of Interest
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#follow-up-questions">
+       Follow-up Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-9">
+   2022 Mar 9
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formation-of-extratropical-cyclones">
+     Formation of Extratropical Cyclones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-10">
+   2022 Mar 10
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-preprocessing">
+     Data Preprocessing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seasonal-variance">
+     Seasonal Variance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-11">
+   2022 Mar 11
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wallace-hobbs-ch-10-climate-dynamics-wallace-10-2006">
+     Wallace &amp; Hobbs, Ch.10: Climate Dynamics
+     <span class="xref cite">
+      wallace_10_2006
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#enso">
+       ENSO
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-comparison-of-southern-hemisphere-cyclone-track-climatology-and-interannual-variability-in-coarse-gridded-reanalysis-datasets-eichler-comparison-2013">
+     A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets
+     <span class="xref cite">
+      eichler_comparison_2013
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-used">
+       Data Used
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Methodology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#climatology">
+       Climatology
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interannual-variability">
+       Interannual Variability
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Questions that follow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-2">
+<h1>Week 2<a class="headerlink" href="#week-2" title="Permalink to this headline">¶</a></h1>
+<p>This lab notebook belongs to a set of <span class="xref myst">preliminary research</span>.</p>
+<div class="section" id="mar-7">
+<h2>2022 Mar 7<a class="headerlink" href="#mar-7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="storm-tracks-in-the-southern-hemisphere-trenberth-storm-1991">
+<span id="trenberth1991"></span><h3>Storm Tracks in the Southern Hemisphere <span id="id1">[<a class="reference internal" href="../bibliography.html#id16" title="Kevin E. Trenberth. Storm Tracks in the Southern Hemisphere. Journal of the Atmospheric Sciences, 48(19):2159–2178, October 1991. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/48/19/1520-0469_1991_048_2159_stitsh_2_0_co_2.xml (visited on 2022-03-03), doi:10.1175/1520-0469(1991)048&lt;2159:STITSH&gt;2.0.CO;2.">Trenberth, 1991</a>]</span><a class="headerlink" href="#storm-tracks-in-the-southern-hemisphere-trenberth-storm-1991" title="Permalink to this headline">¶</a></h3>
+<p>Trenberth summarises behaviour of key atmospheric characteristics associated with storm tracks taken from observations and forecasting from ECMWF 1979-89 dataset. He performs this analysis by calculating variance and covariance of several core variables available from the ECMWF dataset that can characterise storm track behaviour. He firstly identifies the principal location of the storm track in the NH and SH using maximum variance in geopotential height and notes some of the key differences in their respective seasonal behaviour &amp; variability. He goes on to discuss other key characteristics associated with the storm track such as zonal and meridional flow, u and v respectively, divergence, delta, and vorticity, zeta. He suggests that some covariance measures between specific properties can be used as proxies for transport of momentum, heat etc. He finds that storm tracks are strongly linked to the tropospheric polar jet stream. Trenberth also suggests the schematic he provides of key variables and their meridional location of maximum variance can largely be explained by traditional “geostrophic theory and perturbation analysis applied to baroclinic systems”.</p>
+<ul class="simple">
+<li><p>u = zonal velocity component</p></li>
+<li><p>v = meridional velocity component</p></li>
+<li><p>omega = vertical velocity component</p></li>
+<li><p>q = speific humidity</p></li>
+</ul>
+<div class="section" id="questions-to-be-answered">
+<h4>Questions to be answered<a class="headerlink" href="#questions-to-be-answered" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>What is the storm track?</p>
+<ul>
+<li><p>Storm tracks are areas, generally across a discrete latitude band, with a high incidence-rate of storms. It is associated with the tropospheric polar jet stream, as this is an area with particularly high baroclinic instability. Storms tend to form from baroclinic instabilities in the mean flow, which is at it’s highest close to the polar jet. This is due to the combination of the meridional temperature gradient driving winds upwards toward the tropopause and equatorwards, and the Coriolis effect forcing thermal winds in an easterly direction. This effect causes high-tropospheric winds to reach a maximum around 60 degrees from the equator, where the polar jets are found. Instabilities in the polar jets propagate downwards to the surface level (<em>find citation</em>).</p></li>
+</ul>
+</li>
+<li><p>What will be the difference between my analysis and Trenberth’s? Is it the dataset?</p>
+<ul>
+<li><p>He uses ECMWF 1979-89 data in his study. Our study will use a more up to date dataset (ERA5 reanalyses) over a longer time period, therefore a more comprehensive and reliable study. The data that he used was limited by the data observations and a large portion of some fields (e.g. moisture and divergence in particular are named) have a “significant model element”, in that they are computed through forecasting models.</p></li>
+</ul>
+</li>
+<li><p>What are the methods he uses to describe storm tracks?</p>
+<ul>
+<li><p>Trenberth uses variance and covariance of several characteristics common to climate datasets, such as height of a given geopotential surface, zonal and meriodional wind speeds, temperature, divergence, vorticity, specific humidity and vertical motions.</p></li>
+</ul>
+</li>
+<li><p>What factors influence the position and topology of the storm track?</p>
+<ul>
+<li><p>Meridional temperature gradient is the key driver of latitudinal position, due to its effect on the position of the tropospheric polar jet stream and its associated low-level baroclinicity.</p></li>
+</ul>
+</li>
+<li><p>How is the storm track linked to SAM?</p>
+<ul>
+<li><p>The storm track is driven by the meridional temperature gradient, which forms a pressure gradient driving thermal winds equatorwards. The changes in average pressures over the Antarctic region therefore affects the position of the storm track, as the weaker the temperature (pressure) gradient, the closer the jet (hence the storm track) is to the pole.</p></li>
+</ul>
+</li>
+<li><p>How is the storm track linked to ENSO?</p>
+<ul>
+<li><p>Sea surface temperatures (SSTs) are a major driver in the formation and propagation of storms (see <span id="id2">[<a class="reference internal" href="../bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span>, extended notes found <a class="reference internal" href="week3.html#hoskins2005"><span class="std std-ref">here</span></a>, and <span id="id3">[<a class="reference internal" href="../bibliography.html#id28" title="Kevin E. Trenberth, Grant W. Branstator, David Karoly, Arun Kumar, Ngar-Cheung Lau, and Chester Ropelewski. Progress during TOGA in understanding and modeling global teleconnections associated with tropical sea surface temperatures. Journal of Geophysical Research: Oceans, 103(C7):14291–14324, 1998. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/97JC01444. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/97JC01444 (visited on 2022-03-14), doi:10.1029/97JC01444.">Trenberth <em>et al.</em>, 1998</a>]</span> papers, extended notes found <a class="reference internal" href="week3.html#trenberth1998"><span class="std std-ref">here</span></a>), hence ENSO in its manifestation of high/low SSTs, depending on which phase of the cycle it is in, is a prominent forcing on the storm track.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Need to better understand how SSTs and pressure gradient affect the storm track.</p>
+</div>
+</div>
+<div class="section" id="points-of-interest">
+<h4>Points of Interest<a class="headerlink" href="#points-of-interest" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Trenberth suggests that the meridional temperature gradient in the SH is just as strong in the summer as it is in winter. Why would this be?</p>
+<ul>
+<li><p>He states that Antarctica is a big enough heat sink to modulate the temperature between seasons. There is a slight decrease in gradient in summer, however nowehere near as significant as in the NH. There are also local variations where temperature gradients on the local level are in fact greater in summer than winter (see <span id="id4">[<a class="reference internal" href="../bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span> paper, extended notes found <a class="reference internal" href="week3.html#hoskins2005"><span class="std std-ref">here</span></a>)</p></li>
+</ul>
+</li>
+<li><p>Trenberth uses covariance of some characteristics as a proxy for measuring the transport of heat, moisture and momentum:</p>
+<ul>
+<li><p>covariance of u and v considered to be horizontal momentum transport</p></li>
+<li><p>covariance of v and T considered to be meridional heat transport</p></li>
+<li><p>covariance of u and omega and v and omega considered to be vertical momentum transport</p></li>
+<li><p>covariance of v and q and omega and q considered to be moisture transport</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h4>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Uses a 2-8 day band in order to retain maximal variance, whilst removing some of the variability associated with the diurnal cycle.</p>
+<ul>
+<li><p>A 2-8 day band reportedly retains 20-30% more variance that Blackmon 1976 2.5-6 day band.</p></li>
+</ul>
+</li>
+<li><p>Uses positional and spatial distributions of variance and covariance of several characteristics common to climate datasets, such as height of a given geopotential surface, zonal and meriodional wind speeds, temperature, divergence, vorticity, specific humidity and vertical motions.</p></li>
+</ul>
+</div>
+<div class="section" id="questions-that-follow">
+<h4>Questions that follow<a class="headerlink" href="#questions-that-follow" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>What is the Eliasson-Palm flux and what does it represent?</p>
+<ul>
+<li><p>Trenberth seems to use E-P flux as a proxy for representing eddy fluxes of several characteristics of storms</p></li>
+<li><p>“the divergence of the E-P flux can be interpreted as the forcing on the westerly mean flow”</p></li>
+</ul>
+</li>
+<li><p>What are the strengths and weaknesses of Trenberth’s analysis?</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="mar-8">
+<h2>2022 Mar 8<a class="headerlink" href="#mar-8" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>On the Trend, Detrending and variability of nonlinear and nonstationary time series, PNAS online</strong>
+<a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.0701020104">https://www.pnas.org/doi/10.1073/pnas.0701020104</a></p>
+<p>Describes the Empirical Mode Decomposition method (EMD) for how to intrinsically identify trends in a given set of (potentially) nonlinear and nonstationary time series data.</p>
+<p>This could be used in analysis of trends over time to be found in the time series of SAM indices or ENSO3.4 indices.</p>
+</div>
+<div class="section" id="storm-track-processes-and-the-opposing-influences-of-climate-change-shaw-storm-2016">
+<span id="shaw2016"></span><h3>Storm track processes and the opposing influences of climate change <span id="id5">[<a class="reference internal" href="../bibliography.html#id14" title="T. A. Shaw, M. Baldwin, E. A. Barnes, R. Caballero, C. I. Garfinkel, Y.-T. Hwang, C. Li, P. A. O'Gorman, G. Rivière, I. R. Simpson, and A. Voigt. Storm track processes and the opposing influences of climate change. Nature Geoscience, 9(9):656–664, September 2016. Number: 9 Publisher: Nature Publishing Group. URL: http://www.nature.com/articles/ngeo2783 (visited on 2022-03-03), doi:10.1038/ngeo2783.">Shaw <em>et al.</em>, 2016</a>]</span><a class="headerlink" href="#storm-track-processes-and-the-opposing-influences-of-climate-change-shaw-storm-2016" title="Permalink to this headline">¶</a></h3>
+<p>This review article introduces a few new phenomena that I have yet to understand, such as stationary eddies, eddy-driven jets and the affect of Sea Surface Temperatures (SSTs). Although the article doesn’t really provide answers, it references other publications that may hold clues. It also has a very useful description of factors influencing the behaviour of storm tracks (although there is more of a focus on NH), as well as a description of competing influences over how the storm tracks might be affected by climate change. These are based on the ERA-interim dataset, and analysis made prior to the release of ERA5-reanalyses.</p>
+<p>Suggests that I have got the direction of shifting storm track due to changes in baroclinicity is the wrong way round… why?</p>
+<div class="section" id="id6">
+<h4>Questions to be answered<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>What are the factors that determine storm track location, intensity and variability?</p>
+<ul>
+<li><p>“Seasonality of insolation” - the varying levels of solar heat absorbed with seasonal changes i.e. lower insolation during the winter which is particularly extreme at high latitudes. Poleward energy transfer (of which storms play a significant role) is greatest during winter when the strongest temperature gradient exists. Interestingly, the shifting of the jet stream is much more pronounced in the NH. <a class="reference internal" href="#trenberth1991"><span class="std std-ref">Trenberth 1991</span></a> suggests that this is because the Antarctic provides a constant heat sink that doesn’t much change between seasons due to it being mostly land, whereas there is significant melting of sea ice in the Arctic.</p></li>
+<li><p>Strong Hadley circulation weakens the meridional temperature gradient, resulting in an equatorwards shift.</p></li>
+<li><p>Baroclinicity affected by vertical temperature gradients, therefore important in  understanding storm track behaviour… why?</p></li>
+<li><p>Reduced baroclinicity also results in an equatorwards shift.</p></li>
+<li><p>Warm ocean currents (SSTs??) increase baroclinicity, resulting in passing eddies being amplified, increasing their intensity, hence is intimately connected with interannual and decadal ENSO cycle.</p></li>
+<li><p>Stationary eddies tend to destroy baroclinicity downstream… why?</p></li>
+<li><p>Annular modes i.e. SAM, result in north-south displacment of the eddy-driven jet and changes in jet intensity.</p></li>
+<li><p>SH Storm track has migrated polewards with ozone depletion, as formerly predicted. This is due to lower stratospheric cooling in the Antarctic, thus increasing upper tropospheric baroclinicity hence the polar jet which in turn propogates instabilites downwards to the surface. <em>Don’t understand why reduced ozone leads to less stratospheric cooling… does this mean heat transferred from upper troposphere to the stratosphere?</em></p></li>
+</ul>
+</li>
+<li><p>How do storms transport heat polewards?</p>
+<ul>
+<li><p>Claims that storms transport high amounts of high polewards through moist convection processes. Latent heat released during large convection events associated with cyclones/storms (low pressure centres) accounts for fully 50% of heat transfer polewards.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h4>Points of Interest<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Pacific storm track intensity drops in mid-winter despite strong baroclinicity… why?</p></li>
+</ul>
+</div>
+<div class="section" id="follow-up-questions">
+<h4>Follow-up Questions<a class="headerlink" href="#follow-up-questions" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>What are stationary eddies?</p></li>
+<li><p>What is the eddy-driven jet?</p></li>
+<li><p>Storm tracks converge momentum over mid-latitudes, maintaining westerlies against surface friction, in agreement with Trenberth… why?</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="mar-9">
+<h2>2022 Mar 9<a class="headerlink" href="#mar-9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="formation-of-extratropical-cyclones">
+<h3>Formation of Extratropical Cyclones<a class="headerlink" href="#formation-of-extratropical-cyclones" title="Permalink to this headline">¶</a></h3>
+<p>Extratropical cyclones are cyclones that form outside of the tropics, often referred to as lows or depressions. According to the Norwegian cyclone model, they form along a frontal boundary (between cold and warm fronts) where a temperature discontinuity is found. They are generally preceded and tailed by high pressure systems or highs. They form from broad areas of low pressure and, once an upper tropospheric disturbance intercepts the frontal boundary (<em>what impact does this have?</em>), the low sharpens resulting in a clockwise local circulatory pattern as cold and warm fronts rotate around the low and become more defined with the deepening low pressure. Eventually the cold front catches up with the warm front and becomes occluded, resulting in vertical motion of the warm air. After some time, the low moves deeper into the cold front, and into barotropic conditions, becoming disconnected from the original temperature discontuity which fuelled its formation, where it begins to decay.</p>
+</div>
+</div>
+<div class="section" id="mar-10">
+<h2>2022 Mar 10<a class="headerlink" href="#mar-10" title="Permalink to this headline">¶</a></h2>
+<p>Data preprocessing and calculation of seasonal variance.
+Climate Data Operators (CDO) bash commands were used. They were developed specifically for frequent operations performed in climate data analyses.</p>
+<div class="section" id="data-preprocessing">
+<h3>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h3>
+<p>Downloaded sub-daily (12-hourly) files and monthly files. Regridded the files to one degree resolution, deseasonalised them by subtracting the monthly mean-through-time on the monthly files, and daily mean-through-time of the daily files. An extra step was added for the daily files, a smoothing operator was applied to remove the noise-like behaviour of daily mean-through-time. A bandpass filter was applied to the monthly file to check whether the command works. The daily files will have to wait for this step for more CPU and RAM to become available.</p>
+<p>Example Script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remaps data conservatively, retains information from surrounded higher resolution cells by including them in calculation of lower resolution value, by weighted mean.</span>
+<span class="c1"># gridspec.txt holds the grid specification to map the input file to.</span>
+<span class="n">cdo</span> <span class="n">remapcon</span><span class="p">,</span><span class="n">gridspec</span><span class="o">.</span><span class="n">txt</span> <span class="n">era5_h500_daily_2011_2021</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_2011_2021_1deg</span><span class="o">.</span><span class="n">nc</span>
+
+<span class="c1"># Merges several files of the same variable with different timesteps, the files must have the same structure.</span>
+<span class="n">cdo</span> <span class="o">-</span><span class="n">b</span> <span class="n">f32</span> <span class="n">mergetime</span> <span class="n">era5_h500_daily_1979_1990_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1991_2000_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_2001_2010_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_2011_2021_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg</span><span class="o">.</span><span class="n">nc</span>
+
+<span class="c1"># Takes the mean of the time series of each day</span>
+<span class="n">cdo</span> <span class="n">ydaymean</span> <span class="n">era5_h500_daily_1979_2021_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_seas_mean</span><span class="o">.</span><span class="n">nc</span>
+
+<span class="c1"># Uses a 9-point weighted mean to smooth the daily mean-through-time, the datum has a weight of 1.0, the four sides have a weight of 0.5, and the four corners 0.3.</span>
+<span class="n">cdo</span> <span class="n">smooth9</span> <span class="n">era5_h500_daily_1979_2021_1deg_seas_mean</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_seas_mean_smoothed</span><span class="o">.</span><span class="n">nc</span>
+
+<span class="c1"># Subtracts the smoothed daily mean-through-time from the original datset.</span>
+<span class="n">cdo</span> <span class="n">ydaysub</span> <span class="n">era5_h500_daily_1979_2021_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_seas_mean_smoothed</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_deseasonalized</span><span class="o">.</span><span class="n">nc</span>
+
+<span class="c1"># Bandpass filter of 2-8 days, the two numbers following the &#39;bandpass&#39; operator are 2- and 8-day frequencies (per year).</span>
+<span class="c1"># The bandpass filter operates on a 365-day cycle therefore February 29th is removed from all leap years before applying the filter.</span>
+<span class="n">cdo</span> <span class="n">bandpass</span><span class="p">,</span><span class="mf">45.6</span><span class="p">,</span><span class="mf">182.5</span> <span class="o">-</span><span class="n">del29feb</span> <span class="n">era5_h500_daily_1979_2021_1deg_deseasonalized</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_deseasonalized_bandpass</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seasonal-variance">
+<h3>Seasonal Variance<a class="headerlink" href="#seasonal-variance" title="Permalink to this headline">¶</a></h3>
+<p>Variance in geopotential height over monthly time series, saved as era5_h500_daily_1979_2021_1deg_month_var.nc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculates variance of every month, first takes monthly mean from daily data </span>
+<span class="n">cdo</span> <span class="n">ymonvar</span> <span class="n">era5_h500_daily_1979_2021_1deg</span><span class="o">.</span><span class="n">nc</span> <span class="n">era5_h500_daily_1979_2021_1deg_month_var</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mar-11">
+<h2>2022 Mar 11<a class="headerlink" href="#mar-11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wallace-hobbs-ch-10-climate-dynamics-wallace-10-2006">
+<h3>Wallace &amp; Hobbs, Ch.10: Climate Dynamics <span id="id8">[<a class="reference internal" href="../bibliography.html#id9" title="John M. Wallace and Peter V. Hobbs. 10 - Climate Dynamics. In John M. Wallace and Peter V. Hobbs, editors, Atmospheric Science (Second Edition), pages 419–465. Academic Press, San Diego, January 2006. URL: https://www.sciencedirect.com/science/article/pii/B9780127329512500156 (visited on 2022-03-02), doi:10.1016/B978-0-12-732951-2.50015-6.">Wallace and Hobbs, 2006</a>]</span><a class="headerlink" href="#wallace-hobbs-ch-10-climate-dynamics-wallace-10-2006" title="Permalink to this headline">¶</a></h3>
+<p>“When the annular modes are in their high index polarity, the storm tracks and associated westerly wind belts are shifted poleward of their climatological-mean positions, and vice versa.” SAM in a positive phase has lower than average pressures over Antarctica and higher than average over mid-latitudes, leading to a reduced pressure gradient. In line with the thermal wind relation, this results in  weaker winds and a shift polewards.</p>
+<div class="section" id="enso">
+<h4>ENSO<a class="headerlink" href="#enso" title="Permalink to this headline">¶</a></h4>
+<p>ENSO is an internal mode of variability on a decadal timescale. It is characterised by higher than average SSTs in the eastern Pacific and lower than average SSTs in the western Pacific. This leads to a weakening of the easterly trade winds, as the east-west pressure gradient is weaker in ENSO years, followed by a relaxation (deepening) of the thermocline, reducing the amount of cold nutrient-rich upwellings in the east Pacific hence a reduction in productivity of the Pacific biosphere. The relative warming in the east Pacific also increases the sea level there.</p>
+</div>
+</div>
+<div class="section" id="a-comparison-of-southern-hemisphere-cyclone-track-climatology-and-interannual-variability-in-coarse-gridded-reanalysis-datasets-eichler-comparison-2013">
+<h3>A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets <span id="id9">[<a class="reference internal" href="../bibliography.html#id25" title="Timothy Paul Eichler and Jon Gottschalck. A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets. Advances in Meteorology, 2013:e891260, December 2013. Publisher: Hindawi. URL: https://www.hindawi.com/journals/amete/2013/891260/ (visited on 2022-03-13), doi:10.1155/2013/891260.">Eichler and Gottschalck, 2013</a>]</span><a class="headerlink" href="#a-comparison-of-southern-hemisphere-cyclone-track-climatology-and-interannual-variability-in-coarse-gridded-reanalysis-datasets-eichler-comparison-2013" title="Permalink to this headline">¶</a></h3>
+<p>This paper compares three reanalysis datasets on storm track behaviour and it’s relations with ENSO, SAM and the Indian Ocean Dipole (IOD) in terms of intensity and frequency of storms. Less intersetingly to us, it finds that temporal limitations in some of the reanalysis datasets (1979-2010),  changes in data assimilation techniques and the inferiority of pre-satellite data make the comparison less significant, and some of the observed storm track behaviour is attributed to these deficiencies. However, there are some convincing trends across the datasets that allow for more secure inferences into storm track behviour and its associated drivers.</p>
+<p>They use a specific latitude band to investigate individual storm intensities and frequencies, differing from our proposed variance-field method. <em>It would be interesting to know if we can derive storm frequencies from our chosen analysis method.</em></p>
+<p>Eichler and Gottschalk find that patterns consistent with the Pacific South American, equatorial Africa and East Indian Ocean patterns (see <span id="id10">[<a class="reference internal" href="../bibliography.html#id28" title="Kevin E. Trenberth, Grant W. Branstator, David Karoly, Arun Kumar, Ngar-Cheung Lau, and Chester Ropelewski. Progress during TOGA in understanding and modeling global teleconnections associated with tropical sea surface temperatures. Journal of Geophysical Research: Oceans, 103(C7):14291–14324, 1998. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/97JC01444. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/97JC01444 (visited on 2022-03-14), doi:10.1029/97JC01444.">Trenberth <em>et al.</em>, 1998</a>]</span> papers, extended notes found <a class="reference internal" href="week3.html#trenberth1998"><span class="std std-ref">here</span></a>) are strongly linked to variability in storm track bevhaviour in El Nino and positive IOD (and their respective opposing phases). These patterns are driven by anomalous convection in the tropics driven by the anomalous SSTs found in El Nino and positive IOD years.</p>
+<p>Most convincingly of all however, is the strong correlations between SAM phases and the variability in the storm track, suggesting that SAM phases are likely responsible for a significant amount of storm track variability.</p>
+<div class="section" id="data-used">
+<h4>Data Used<a class="headerlink" href="#data-used" title="Permalink to this headline">¶</a></h4>
+<p>Eichler and Gottschalk provide a brief description of the data that they use, including ERA40, NCEP1 and NCEP2 datasets. They identify key deficiencies in their data, namely:
+- coarse spatial gridding
+- differences in assimilation techniques between reanalyses
+- short temporal period for chosen datasets
+- use of pre-satellite data (pre-1979)</p>
+<p><em>Identify why ERA5 reanalysis will be better</em></p>
+</div>
+<div class="section" id="id11">
+<h4>Methodology<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Counted individual storms in a particular region, identified intensity and frequency of those storms.</p></li>
+<li><p>Uses SAM index, ENSO3.4 and IOD data from previous paper (<em>ref. 35</em>)</p>
+<ul>
+<li><p>We will use Southern Oscillation index (SOI) and (possibly) first coefficient of PCA.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="climatology">
+<h4>Climatology<a class="headerlink" href="#climatology" title="Permalink to this headline">¶</a></h4>
+<p>Highest frequency of storms were found in the southern Indian Ocean, stretching eastward to south of Australia, with the peak found just of the coast of Antarctica. This is attributed to the high baroclinic instability found in that region (Hodges et al. 2003, Murray &amp; Simmonds, 1991). However, peak frequency band is located 10 degrees poleward of highest intensity band, where the most intense cyclones are located, as found in <a class="reference internal" href="week3.html#hoskins2005"><span class="std std-ref">Hoskins &amp; Hodges 2005</span></a>. It was suggested by Hoskins and Hodges that this is because areas towards the equator are associated with cyclogenesis, whereas polewards are areas of cyclolysis or decay.</p>
+<p>The positive trend in SAM is linked to a reduction in cyclone frequencies in mid-latitudes and an increase in high latitudes (<a class="reference internal" href="week3.html#pezza2008"><span class="std std-ref">Pezza et al., 2008</span></a>, Mendes et al., 2010).</p>
+</div>
+<div class="section" id="interannual-variability">
+<h4>Interannual Variability<a class="headerlink" href="#interannual-variability" title="Permalink to this headline">¶</a></h4>
+<p>To assess effects of ENSO, discrete years were identified with particularly strong El Nino or La Nina events, and composited together. Then the difference in frequency and intensity was calculated by El Nino minus La Nina years. Patterns were identified that are consistent with the patterns identified in other papers (Cai et al., 2011, Garreaud &amp; Battisti, 1999) that outline the PSA. This is linked to Rossby wave trains that are initialised by the anomalous convection in the tropics.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See paper for visualisations and descriptions of these patterns.</p>
+</div>
+<p><em>Find out about Rossby wave trains.</em></p>
+<p>A similar process was followed to identify the effects of IOD, with the difference between positive and negative phases identified. This lead to patterns similar to those seen in the ENSO composites, indicating that the ENSO and IOD are closely correlated.</p>
+<p>SAM composites show interesting results, with a particularly strong correlation to storm track behaviour. The following was observed:</p>
+<ul class="simple">
+<li><p>Positive phase: fewer but more intense storms</p></li>
+<li><p>Negative phase: more but less intense storms</p></li>
+</ul>
+<p>This follows from Simmonds, 2003, who found no strong correlation between sea level pressure (SLP) and cyclone intensity.</p>
+<p><em>This is something that could be investigated, why would this be the case?</em></p>
+<p>Eichler and Gottschalk also use partial correaltions of ENSO, IOD and SAM to eliminate external forcings from each respectively, more robustly quantifying the correlations specifically between each and storm track behaviour.</p>
+</div>
+<div class="section" id="id12">
+<h4>Questions that follow<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>What are Rossby waves?</p></li>
+<li><p>What are Rossby wave trains?</p></li>
+<li><p>How does anomalous convection in the tropics affect global circulation patterns?</p></li>
+<li><p>What are the pros and cons of using ERA5 reanalysis?</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./preliminary_research"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="week1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="week3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
