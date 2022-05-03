@@ -12,3 +12,5 @@ Records of all notebooks for the MSc research project are found here. This is sp
     - [Week 6](era5_analysis/week6.md)
     - [Week 7](era5_analysis/week7.md)
     - [Week 8](era5_analysis/week8.md)
+    - [Week 9](era5_analysis/week9.md)
+    - [Week 10](era5_analysis/week10.md)

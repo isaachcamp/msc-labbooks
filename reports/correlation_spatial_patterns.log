@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 730, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\util.py", line 96, in ensure_async
-    result = await obj
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\jupyter_client\channels.py", line 230, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 1204, in execute
@@ -22,22 +11,260 @@ Traceback (most recent call last):
     return future.result()
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 949, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 754, in _async_poll_for_reply
-    await self._async_handle_timeout(timeout, cell)
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 801, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-for anom in anoms:
-    for method in methods:
-        CorrCovMaps(
-            anom[0], indices, stat=anom[1],
-            method=method, period=period,
-            path=path
+  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+
+import xarray as xr
+import numpy as np
+
+from pathlib import Path
+
+from load_indices import Indices
+from create_cartopy_maps import CreateMaps
+
+
+class CorrCovMaps():
+    def __init__(self, anoms, indices, stat, method, period, path=Path(".")):
+        """ 
+        Attributes
+        ----------
+        self._anoms: xarray.Dataset
+            Dataset containing time series for all lat/lon grid points.
+        self._index_dict: dict
+            Dictionary containing arrays of all normalised indices' time series.
+        self._coords_array: numpy.ndarray
+            2D array containing all lat/lon coordinate pairs.
+        self._correlation_arrays: numpy.ndarray
+            Array to store correlation values between all indices and all lat/lon 
+            grid points.
+        self._covariance_arrays: numpy.ndarray
+            Array to store covariance values between all indices and all lat/lon 
+            grid points.   
+        self._stat: str
+            Specifies whether the anomalies are either mean height or bandpassed
+            variance.
+        self._method: str
+            Specifies whether to use Pearson product-moment correlation or
+            Spearman rank correlation.
+        self._period: boolean
+            Indicates whether the input data should be processed seasonally, 
+            rolling three month seasons or yearly.
+        """
+        
+        self._path = path
+        self._anoms = anoms
+        self._index_dict = indices._index_dict
+        self._stat = stat
+        self._method = method
+        self._period = period
+
+        self._correlation_arrays = self.create_corr_cov_dict()
+        self._covariance_arrays = self.create_corr_cov_dict()
+
+        self.populate_corr_cov_matrices()
+      
+
+    def populate_corr_cov_matrices(self):
+        """
+        This function calls the correct function to calculate correlation/covariance
+        depending on whether seasonal data is being used. 
+        """
+
+        if self._period == 'seasonal' or self._period == 'rolling_seasonal':
+            for season,variables in self._index_dict.items():
+                for variable_name,variable_values in variables.items():
+                    # Separate tuple of index values and time indices.
+                    times = variable_values[1]
+                    index_values = variable_values[0]
+                    # Remove values for incomplete seasons, i.e. first month of first 
+                    # summer and first two months of final summer in anomalies dataset.
+                    if season == 'DJF' and self._period == 'seasonal':
+                        times = times[2:-1]
+                        index_values = index_values[2:-1]
+                    anoms_filtered = self._anoms.isel(time=times)                        
+                    index_ds = self.create_indices_dataset(
+                        anoms_filtered,
+                        index_values, 
+                        variable_name
+                    )
+                    correlation_array, covariance_array = self.calculate_corr_cov_matrices(
+                        anoms_filtered, index_ds, variable_name
+                    )
+                    self._correlation_arrays[season][variable_name] = correlation_array
+                    self._covariance_arrays[season][variable_name] = covariance_array
+        else:
+            for variable_name, variable_values in self._index_dict.items():
+                if "zw3" in variable_name:
+                    times = variable_values[1]
+                    index_values = variable_values[0]
+                    anoms_filtered = self._anoms.isel(time=times)
+                else:
+                    index_values = variable_values
+                    anoms_filtered = self._anoms
+                index_ds = self.create_indices_dataset(
+                        anoms_filtered,
+                        index_values, 
+                        variable_name
+                    )
+                corr_arr, cov_arr = self.calculate_corr_cov_matrices(
+                    anoms_filtered, index_ds, variable_name
+                )
+                self._correlation_arrays[variable_name] = corr_arr
+                self._covariance_arrays[variable_name] = cov_arr
+
+        self._anoms.close()
+        if self._path != None:
+            self.write_to_netcdf(self._correlation_arrays, 'corr')
+            self.write_to_netcdf(self._covariance_arrays, 'cov')
+
+    
+    def create_corr_cov_dict(self):
+        """
+        Creates a dictionary of zero arrays with keys corresponding to index name and, 
+        if seasonal is True, seasons. The dictionary will have the same structure as 
+        index_dict. correlation_arrays will be used to store data for correlation
+        values at each lon/lat point.
+        
+        Returns
+        -------
+        arrays: dict
+            Dictionary with the same structure as index_dict. Each key has a 
+            numpy.ndarray of zeroes with identical longitude/latitude dimensions
+            to the input file grid.
+        """
+
+        arrays = {}
+
+        for key in self._index_dict.keys():
+            if self._period == 'seasonal' or self._period == 'rolling_seasonal':
+                for subkey in self._index_dict[key].keys():
+                    if key not in arrays:
+                        arrays[key] = {}
+                    arrays[key][subkey] = None
+            else:
+                arrays[key] = None
+
+        return arrays
+
+    
+    def create_indices_dataset(self, anoms, index, variable_name):
+        lon = anoms.lon
+        lat = anoms.lat
+        time = len(index)
+        n = lon.size * lat.size
+
+        index_flattened = np.repeat(index[None, :], n, axis=0)
+        index_data = index_flattened.reshape((lon.size, lat.size, time))
+
+        ds = xr.Dataset(
+                data_vars={
+                    variable_name:(('lon', 'lat', 'time'), index_data)
+                    },
+                coords={
+                    'lon':lon,
+                    'lat':lat, 
+                    'time':anoms.time[:time]
+                }
             )
--------------------
+        return ds
+
+    
+    def calculate_corr_cov_matrices(self, anoms, index_ds, variable_name):
+        anoms_arr = anoms.z
+        index_arr = index_ds[variable_name]
+        anoms_arr, index_arr = xr.align(anoms_arr, index_arr)
+
+        if self._method == 'pearson':
+            corr_matrix = xr.corr(anoms_arr, index_arr, dim='time')
+            cov_matrix = xr.cov(anoms_arr, index_arr, dim='time')
+        elif self._method == 'rank':
+            ranked_anoms = anoms_arr.rank(dim='time')
+            ranked_index = index_arr.rank(dim='time')
+            corr_matrix = xr.corr(ranked_anoms, ranked_index, dim='time')
+            cov_matrix = xr.cov(ranked_anoms, ranked_index, dim='time')
+        
+        
+        return corr_matrix, cov_matrix
+
+
+    def write_to_netcdf(self, arrays: dict, var='corr'):
+        """
+        Writes NetCDF file with dimensions at specified path location, creates parent 
+        directories if required. 
+        """
+        self._opath = self._path / var / self._period
+        self._opath.mkdir(parents=True, exist_ok=True)
+
+        # Handle seasonal data.
+        if self._period == 'seasonal' or self._period == 'rolling_seasonal':
+            for season_name,variables_dict in arrays.items():
+                for variable_name,variable_values in variables_dict.items():
+                    ds = variable_values.to_dataset(name=var)
+                    ds = ds.transpose("lat", "lon")
+                    filename = season_name + '_' + self._stat + '_' \
+                        + variable_name + '_' + self._method + '_' \
+                        + var +  '.nc'
+                    ds.to_netcdf(self._opath / filename)
+                    ds.close()
+        else:
+            for variable_name,variable_values in arrays.items():
+                ds = variable_values.to_dataset(name=var)
+                ds = ds.transpose("lat", "lon")
+                filename = self._stat + '_' \
+                    + variable_name + '_' + self._method + '_' \
+                    + var +  '.nc'
+                ds.to_netcdf(self._opath / filename)
+                ds.close()
+
+
+if __name__ == "__main__":
+    path = Path("G:\\Isaac\\Documents\\msc-research\\data\\ERA5\\daily_data\\")
+    index_path = Path("G:\\Isaac\\Documents\\msc-research\\data\\indices\\")
+
+    var_file = "era5_h500_daily_1979_2021_1deg_deseasonalised_bandpass_20S_mon_var_anoms.nc"
+    mean_file = "era5_h500_daily_1979_2021_1deg_deseasonalised_20S_mon_anoms.nc"
+
+    variance_anoms = xr.open_dataset(path / var_file)
+    mean_anoms = xr.open_dataset(path / mean_file)
+
+    period = 'yearly'
+    index_files = list(index_path.glob("*.nc"))
+    variable_names = ['zw3index_magnitude','sam', 'SOI', 'DMI', ]
+    indices = Indices(index_files, variable_names, period)
+
+    anoms = [(variance_anoms, 'variance'), (mean_anoms, 'mean')]
+    methods = ['rank', 'pearson',]
+
+    for anom in anoms:
+        for method in methods:
+            inst = CorrCovMaps(
+                    anom[0], 
+                    indices, 
+                    stat=anom[1],
+                    method=method, 
+                    period=period,
+                    path=path
+                    )
+    
+    corr_maps = CreateMaps(inst._path, 'corr', inst._period)
+    cov_maps = CreateMaps(inst._path, 'cov', inst._period)
+
+
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Input [1;32mIn [1][0m, in [0;36m<cell line: 6>[1;34m()[0m
+[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpathlib[39;00m [38;5;28;01mimport[39;00m Path
+[1;32m----> 6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mload_indices[39;00m [38;5;28;01mimport[39;00m Indices
+[0;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mcreate_cartopy_maps[39;00m [38;5;28;01mimport[39;00m CreateMaps
+[0;32m     10[0m [38;5;28;01mclass[39;00m [38;5;21;01mCorrCovMaps[39;00m():
+
+[1;31mModuleNotFoundError[0m: No module named 'load_indices'
+ModuleNotFoundError: No module named 'load_indices'
 
