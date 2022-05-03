@@ -1,0 +1,1493 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Week 6" href="../era5_analysis/week6.html" />
+    <link rel="prev" title="Week 4" href="week4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Early Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week8.html">
+   Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/correlation_spatial_patterns.html">
+   Correlation Spatial Patterns
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/sample_calculations.html">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/preliminary_research/week5.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpreliminary_research/week5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-28">
+   2022 Mar 28
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-dynamic-meteorology-holton-intro">
+     Introduction to Dynamic Meteorology
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#assumptions">
+       Assumptions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#pressure">
+         Pressure
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#viscosity">
+         Viscosity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#gravitation">
+         Gravitation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#coriolis-force">
+         Coriolis Force
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#static-atmosphere">
+         Static Atmosphere
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kinematics">
+         Kinematics
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#basic-conservatation-laws">
+       Basic Conservatation Laws
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#complete-equations-of-motion">
+         Complete Equations of Motion
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#frames-of-reference">
+         Frames of Reference
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#rates-of-change">
+         Rates of Change
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#scale-analysis">
+         Scale Analysis
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#conservation-of-mass">
+         Conservation of Mass
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#conservation-of-energy">
+         Conservation of Energy
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermodynamics-of-a-dry-atmosphere">
+         Thermodynamics of a Dry Atmosphere
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermodynamics-of-a-moist-atmosphere">
+         Thermodynamics of a Moist Atmosphere
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-29">
+   2022 Mar 29
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Introduction to Dynamic Meteorology
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elementary-applications-of-basic-equations">
+       Elementary Applications of Basic Equations
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#equations-in-isobaric-coordinates">
+         Equations in Isobaric Coordinates
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#natural-coordinates">
+         Natural Coordinates
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#flow-types-in-the-natural-coordinates">
+           Flow Types in the Natural Coordinates
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermal-wind">
+         Thermal Wind
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#formation-of-a-cyclone-in-brief">
+         Formation of a Cyclone - in brief
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#circulation-vorticity-potential-vorticity">
+       Circulation, Vorticity &amp; Potential Vorticity
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#circulation">
+         Circulation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#vorticity">
+         Vorticity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#potential-vorticity">
+         Potential Vorticity
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-30">
+   2022 Mar 30
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro-to-dynamic-meteorology-holton-intro">
+     Intro to Dynamic Meteorology,
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#atmospheric-oscillations-linear-perturbation-theory">
+       Atmospheric Oscillations: Linear Perturbation Theory
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#perturbation-method">
+         Perturbation Method
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#waves-in-2d-and-3d">
+         Waves in 2D and 3D
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#shallow-water-waves">
+         Shallow Water Waves
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#internal-gravity-waves">
+         Internal Gravity Waves
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#rossby-waves">
+         Rossby Waves
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-31">
+   2022 Mar 31
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Intro to Dynamic Meteorology,
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quasi-geostrophic-qg-analysis">
+       Quasi-Geostrophic (QG) Analysis
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#derivation-of-qg-equations">
+         Derivation of QG Equations
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#thermodynamic-energy-equation">
+           Thermodynamic Energy Equation
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#qusai-geostrophic-potential-vorticity">
+         Qusai-Geostrophic Potential Vorticity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#pv-thinking">
+         “PV Thinking”
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Week 5</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-28">
+   2022 Mar 28
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-dynamic-meteorology-holton-intro">
+     Introduction to Dynamic Meteorology
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#assumptions">
+       Assumptions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#pressure">
+         Pressure
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#viscosity">
+         Viscosity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#gravitation">
+         Gravitation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#coriolis-force">
+         Coriolis Force
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#static-atmosphere">
+         Static Atmosphere
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#kinematics">
+         Kinematics
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#basic-conservatation-laws">
+       Basic Conservatation Laws
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#complete-equations-of-motion">
+         Complete Equations of Motion
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#frames-of-reference">
+         Frames of Reference
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#rates-of-change">
+         Rates of Change
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#scale-analysis">
+         Scale Analysis
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#conservation-of-mass">
+         Conservation of Mass
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#conservation-of-energy">
+         Conservation of Energy
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermodynamics-of-a-dry-atmosphere">
+         Thermodynamics of a Dry Atmosphere
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermodynamics-of-a-moist-atmosphere">
+         Thermodynamics of a Moist Atmosphere
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-29">
+   2022 Mar 29
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Introduction to Dynamic Meteorology
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elementary-applications-of-basic-equations">
+       Elementary Applications of Basic Equations
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#equations-in-isobaric-coordinates">
+         Equations in Isobaric Coordinates
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#natural-coordinates">
+         Natural Coordinates
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#flow-types-in-the-natural-coordinates">
+           Flow Types in the Natural Coordinates
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#thermal-wind">
+         Thermal Wind
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#formation-of-a-cyclone-in-brief">
+         Formation of a Cyclone - in brief
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#circulation-vorticity-potential-vorticity">
+       Circulation, Vorticity &amp; Potential Vorticity
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#circulation">
+         Circulation
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#vorticity">
+         Vorticity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#potential-vorticity">
+         Potential Vorticity
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-30">
+   2022 Mar 30
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro-to-dynamic-meteorology-holton-intro">
+     Intro to Dynamic Meteorology,
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#atmospheric-oscillations-linear-perturbation-theory">
+       Atmospheric Oscillations: Linear Perturbation Theory
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#perturbation-method">
+         Perturbation Method
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#waves-in-2d-and-3d">
+         Waves in 2D and 3D
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#shallow-water-waves">
+         Shallow Water Waves
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#internal-gravity-waves">
+         Internal Gravity Waves
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#rossby-waves">
+         Rossby Waves
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mar-31">
+   2022 Mar 31
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Intro to Dynamic Meteorology,
+     <span class="xref cite">
+      holton_intro_
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#quasi-geostrophic-qg-analysis">
+       Quasi-Geostrophic (QG) Analysis
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#derivation-of-qg-equations">
+         Derivation of QG Equations
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#thermodynamic-energy-equation">
+           Thermodynamic Energy Equation
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#qusai-geostrophic-potential-vorticity">
+         Qusai-Geostrophic Potential Vorticity
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#pv-thinking">
+         “PV Thinking”
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-5">
+<h1>Week 5<a class="headerlink" href="#week-5" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mar-28">
+<h2>2022 Mar 28<a class="headerlink" href="#mar-28" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction-to-dynamic-meteorology-holton-intro">
+<h3>Introduction to Dynamic Meteorology <span id="id1">[]</span><a class="headerlink" href="#introduction-to-dynamic-meteorology-holton-intro" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>How do baroclinic instabilities form?</p>
+<ul>
+<li><p>Do they propagate down from the polar jets? If so, how?</p></li>
+</ul>
+</li>
+<li><p>How do vertical temperature gradients affect baroclinic instabilities?</p>
+<ul>
+<li><p>Is it something to do with the static stability/stratification?</p></li>
+</ul>
+</li>
+<li><p>What are stationary eddies?</p></li>
+<li><p>What are the most important equations/physical processes relating to storm tracks?</p></li>
+</ul>
+<div class="section" id="assumptions">
+<h4>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Continuum approximation - a mass of air (or air parcel) is assumed to take on the average property of all the particles that make up that air parcel, contained within, such that the air parcel may take on a continuum of values.</p></li>
+<li><p>Conservation laws</p>
+<ul>
+<li><p>Conservation of momentum (Newton’s third law).</p></li>
+<li><p>Conservation of mass.</p></li>
+<li><p>Conservation of energy (first law of thermodynamics).</p></li>
+</ul>
+</li>
+<li><p>Atmosphere follows ideal gas law.</p></li>
+<li><p>Atmosphere remains in hydrostatic balance (except for weather systems such as tropical cyclones &amp; squall lines).</p></li>
+<li><p>Geostrophic balance between coriolis force and pressure gradient, only a valid approximation for large-scale motions in the midlatitudes.</p></li>
+<li><p>It is assumed that dry processes are approximately adiabatic, and moist processes, such as precipitation, are diabatic processes.</p></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h4>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h4>
+<p>All forces are per unit volume, per unit mass, in order to standardise the units for manipulation. There are two types of forces involved in meteorology:</p>
+<ul class="simple">
+<li><p>surface forces - act on a boundary (of an air parcel), independent of mass e.g. pressure gradient force.</p></li>
+<li><p>body forces - act on centre of mass, dependent on magnitude of mass e.g. gravitational force.</p></li>
+</ul>
+<p>Forces of interest in meteorology are: gravitational; pressure gradient; and frictional forces. Apparent forces, centrifugal and coriolis forces, are also important to consider.</p>
+<div class="section" id="pressure">
+<h5>Pressure<a class="headerlink" href="#pressure" title="Permalink to this headline">¶</a></h5>
+<p>Proportional to gradient of the pressure, not to the absolute value:</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    F_p = \frac{1}{\rho} \nabla p
+  \end{equation}\]</div>
+</div>
+<div class="section" id="viscosity">
+<h5>Viscosity<a class="headerlink" href="#viscosity" title="Permalink to this headline">¶</a></h5>
+<p>Viscosity forces arise when there is a spatial asymmetry, when random motion of molecules results in a transport of momentum to areas of lower pressure. This force acts along the face of the air parcel, creating shear <span class="math notranslate nohighlight">\(\tau = F/A\)</span>, where A is the surface area of the face experiencing viscosity effects. Shear is linearly proportional to the fluid speed, to a good approximation for air, giving <span class="math notranslate nohighlight">\(\tau = \upsilon \frac{\partial u}{\partial z}\)</span>, where <span class="math notranslate nohighlight">\(upsilon\)</span> is the kinematic viscosity coefficient, per unit density. In three-dimensions,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    F_{\upsilon} = \upsilon \nabla^2 u
+  \end{equation}\]</div>
+<p>Each component of represents diffusion of momentum in each direction. This equation states that there is a loss of momentum from the maximum to the surrounding regions, known as “downgradient diffusion”.</p>
+<p>Viscosity effects are negligible below 100km because <span class="math notranslate nohighlight">\(\upsilon\)</span> is so small, with the exception of the first few centimetres above the surface, called the molecular surface boundary layer. Elsewhere, turbulent eddies are the biggest transporters of momentum.</p>
+</div>
+<div class="section" id="gravitation">
+<h5>Gravitation<a class="headerlink" href="#gravitation" title="Permalink to this headline">¶</a></h5>
+<p>Gravity works on the centre of mass of an air particle, stemming from Newton’s law of Gravitation, with a reference frame that begins at sea level, the “true” value of <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(g^*\)</span>, is given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    g^* = \frac{g_0^*}{(1 + z/a)^2}
+  \end{equation}\]</div>
+<p>However, this is offset by the centrifugal force, which in a rotating reference frame appears to add a horizontal component to the force, changing the direction of motion according to the observer in that rotating reference frame. This is accounted for in the calculation and use of the gravitational constant <span class="math notranslate nohighlight">\(g\)</span>, such that the “apparent gravity” g is,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    g = g^* + \Omega^2 R
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Omega\)</span> is the angular velocity of the Earth, and R is the radius of the Earth.</p>
+</div>
+<div class="section" id="coriolis-force">
+<h5>Coriolis Force<a class="headerlink" href="#coriolis-force" title="Permalink to this headline">¶</a></h5>
+<p>Arises due to the conservation of angular momentum in a rotating reference frame. Horizontal components are,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{Du}{Dt} &amp;= 2\Omega v\sin{\phi} = fv \\
+    \frac{Dv}{Dt} &amp;= 2\Omega u\sin{\phi} = fu 
+  \end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(f = 2\Omega\sin{\phi}\)</span>, the coriolis parameter, and <span class="math notranslate nohighlight">\(\phi\)</span> is the latitude.</p>
+</div>
+<div class="section" id="static-atmosphere">
+<h5>Static Atmosphere<a class="headerlink" href="#static-atmosphere" title="Permalink to this headline">¶</a></h5>
+<p>Assumption of air as an ideal gas, <span class="math notranslate nohighlight">\(p = \alpha RT\)</span>, where <span class="math notranslate nohighlight">\(\alpha = \rho^{-1}\)</span>, and atmosphere is in hydrostatic balance,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    p(z) \int_{z}^{\infty} \rho gdz
+  \end{equation}\]</div>
+<p>This gives two important equations, geopotential height,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \Phi (z) = \int_{0}^{z} gdz
+  \end{equation}\]</div>
+<p>and the Hypsometric equation,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \Delta \Phi (z) = R \int_{p_2}^{p_1} Tdlnp
+  \end{equation}\]</div>
+<p>This is important for a number of reasons. It tells us that in an isothermal atmosphere, pressure decreases exponentially, <span class="math notranslate nohighlight">\(p(z) = p_0 \exp^{\frac{-z}{H}}\)</span>, where H is the isothermal scale height. It can also tell us the thickness of a given atmospheric layer, between two heights. It also tells us that pressure varies with height monotonically, so can be used as a vertical coordinate.</p>
+<p>In this isobaric coordinate system, horizontal pressure gradient is measured by the gradient of geopotential height at constant pressure,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    -\frac{1}{\rho}\bigg( \frac{\partial p}{\partial y}\bigg)_z = -\bigg( \frac{\partial \Phi}{\partial y}\bigg)_p
+  \end{equation}\]</div>
+</div>
+<div class="section" id="kinematics">
+<h5>Kinematics<a class="headerlink" href="#kinematics" title="Permalink to this headline">¶</a></h5>
+<p>Kinematics is a description of a fluid flow at an instant in time. Four quantities are useful for this:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{du}{dx} + \frac{dv}{dy} &amp;= \delta, \ divergence \\
+    \frac{dv}{dx} - \frac{du}{dy} &amp;= \zeta, \ vorticity \\
+    \frac{du}{dx} - \frac{dv}{dy} &amp;= d_1, \\
+    \frac{dv}{dx} + \frac{du}{dy} &amp;= d_2
+  \end{align}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(d_1\)</span> and <span class="math notranslate nohighlight">\(d_2\)</span> represent deformation of the flow, along the axis of contraction and axis of dilatation respectively. They are positioned at 45\textdegree  to each other, hence are not independent patterns.</p>
+<p>Linear variations in a flow can be described by these for quantities as such,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    u(x_0 + \delta x, y_0 + \delta y) \approx u(x_0,y_0) + \frac{1}{2}(\delta + d_1)\delta x + frac{1}{2}(d_2 - \zeta)\delta y \\
+    v(x_0 + \delta x, y_0 + \delta y) \approx v(x_0,y_0) + \frac{1}{2}(\zeta + d_2)\delta x + frac{1}{2}(\delta - d_1)\delta y
+  \end{align}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Character of atmospheric motions depends heavily on the horizontal scale, hence derivations of mechanics are justified using sclaing explanations.</p>
+</div>
+</div>
+</div>
+<div class="section" id="basic-conservatation-laws">
+<h4>Basic Conservatation Laws<a class="headerlink" href="#basic-conservatation-laws" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="complete-equations-of-motion">
+<h5>Complete Equations of Motion<a class="headerlink" href="#complete-equations-of-motion" title="Permalink to this headline">¶</a></h5>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{Du}{Dt} - \frac{uv\tan{\phi}}{a} + \frac{uw}{a} &amp;= -\frac{1}{\rho} \frac{\partial p}{\partial x} + 2\Omega v\sin{\phi} - 2\Omega w\cos{\phi} + F_{rx} \\
+    \frac{Dv}{Dt} - \frac{u^2\tan{\phi}}{a} + \frac{vw}{a} &amp;= -\frac{1}{\rho} \frac{\partial p}{\partial y} - 2\Omega u\sin{\phi} + F_{ry} \\
+    \frac{Dw}{Dt} - \frac{u^2 + v^2}{a} &amp;= -\frac{1}{\rho} \frac{\partial p}{\partial z} - g + 2\Omega u\cos{\phi} + F_{rz}
+  \end{align}\end{split}\]</div>
+<p>These equations completely describe the motions of all atmospheric dynamics, including sound waves (sound waves are always filtered out however, based on scale analysis the solution is negligible).</p>
+</div>
+<div class="section" id="frames-of-reference">
+<h5>Frames of Reference<a class="headerlink" href="#frames-of-reference" title="Permalink to this headline">¶</a></h5>
+<p>There are two frames of reference, each possessing particular advantages.</p>
+<ul class="simple">
+<li><p>Eulerian reference frame</p>
+<ul>
+<li><p>A fixed parallelipiped, <span class="math notranslate nohighlight">\(\delta x\delta y\delta z\)</span>,through which fluid flows, fluxes of energy, mass and momentum flow in and out through the faces.</p></li>
+<li><p>Easier for solving problems as the coordinate system requires no transformation with time.</p></li>
+</ul>
+</li>
+<li><p>Lagrangian reference frame</p>
+<ul>
+<li><p>A parallelipiped that travels with the fluid motion.</p></li>
+<li><p>Easier for deriving the conservation laws.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="rates-of-change">
+<h5>Rates of Change<a class="headerlink" href="#rates-of-change" title="Permalink to this headline">¶</a></h5>
+<p>There are two types of rates of change, the rate of change of a field variable with the fluid flow, and the rate of change at a fixed point. These are given by the total derivative, and the partial derivative with respect to time, respectively,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{D}{Dt} &amp;= \frac{\partial}{\partial t} + u\frac{\partial}{\partial x} + v\frac{\partial}{\partial y} + w\frac{\partial}{\partial z} = \frac{\partial}{\partial t} + \vec{U} \cdot \nabla \\
+    \frac{\partial}{\partial t} &amp;= \frac{D}{Dt} - \vec{U}\cdot \nabla
+  \end{align}\end{split}\]</div>
+<p>The second equation is the relation between the two rates of change. If the total derivative is zero, then the field variable is conserved, and the local change at a point is entirely due to advection.</p>
+</div>
+<div class="section" id="scale-analysis">
+<h5>Scale Analysis<a class="headerlink" href="#scale-analysis" title="Permalink to this headline">¶</a></h5>
+<p>Elimination of terms can be done on the basis of scale of the process being considered. This can greatly simplify the equations of motion. One example would be the assumption of Geostrophic wind at the mid-latitudes. At this location, the pressure gradient and coriolis forces are a couple of orders of magnitude greater than any other term (in the complete equations of motion given above), therefore these are the only two that need be considered. This is a very good approximation for the mid-latitudes, however at higher and lower latitudes other forces become important. The Rossby number is a measure of the validity of the approximation, given by the characteristic scales of the pressure gradient and coriolis forces.</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    R_o = \frac{U^2/L}{f_0U} = \frac{U}{f_0L}
+  \end{equation}\]</div>
+</div>
+<div class="section" id="conservation-of-mass">
+<h5>Conservation of Mass<a class="headerlink" href="#conservation-of-mass" title="Permalink to this headline">¶</a></h5>
+<p>Mass must be conserved across the globe. Any divergence observed in 2-D is a sign of vertical motions, maintaining the conservation of mass.</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{1}{\rho}\frac{D\rho}{Dt} + \nabla\cdot \vec{U} = 0
+  \end{equation}\]</div>
+</div>
+<div class="section" id="conservation-of-energy">
+<h5>Conservation of Energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">¶</a></h5>
+<p>Stemming from the first law of Thermodynamics, the mechanical energy equation can be derived, which relates the rate of change of mechanical energy to the rate of work done by the pressure gradient. In this case, mechanical energy is the sum of geopotential energy and kinetic energy of an air mass.</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \rho\frac{D}{Dt}\bigg( \frac{1}{2}\vec{U}\cdot\vec{U} + \Phi \bigg) = -\vec{U}\cdot\nabla p
+  \end{equation}\]</div>
+<p>This can be restructured into the familiar Thermodynamic energy equation,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    c_v\frac{DT}{Dt} + p\frac{D\alpha}{Dt} = J
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is the heating by conduction, latent heat etc. per unit mass.</p>
+</div>
+<div class="section" id="thermodynamics-of-a-dry-atmosphere">
+<h5>Thermodynamics of a Dry Atmosphere<a class="headerlink" href="#thermodynamics-of-a-dry-atmosphere" title="Permalink to this headline">¶</a></h5>
+<p>Assuming adiabatic processes is often a reasonable approximation for most circumstances, where the atmosphere can be assumed to be dry. Because of the decreasing temperature with height, it is often convenient to compare the “potential temperature” of a given air mass using the surface pressure as a reference point. For adiabatic processes, <span class="math notranslate nohighlight">\(dq = 0\)</span>, hence from the first law, <span class="math notranslate nohighlight">\(D(c_p\ln{T} - R\ln{p}) = 0\)</span>, which can be integrated to give,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \theta = T\Big( \frac{p}{p_s} \Big)^{R/c_p}
+  \end{equation}\]</div>
+<p>where potential temperature, <span class="math notranslate nohighlight">\(\theta\)</span>, is the temperature that an air mass at temperature, <span class="math notranslate nohighlight">\(T\)</span>, and pressure, <span class="math notranslate nohighlight">\(p\)</span>, would have it was expanded/compressed to the surface pressure, <span class="math notranslate nohighlight">\(p_s\)</span>. This is only valid for dry adiabatic motions, of which synoptic-scale motions outside of precipitation regions is often a good approximation. Potential temperature is invariant for a parcel being lifted and compressed or descending and expanding. Isentropic lines, lines of constant potential temperature, are natural lines for parcels motion to follow since no work need be done on the parccel, nor any change in heat (due to the adiabatic assumption).</p>
+<p>The equation for potential temperature can be manipulated to give the gradient of potential temperature with height, by taking logarithms, and differentiating with respect to height, <span class="math notranslate nohighlight">\(z\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{T}{\theta}\frac{\partial\theta}{\partial z} = \frac{\partial T}{\partial z} + \frac{g}{c_p}
+  \end{equation}\]</div>
+<p>which, for an atmosphere with constant potential temperature, informs us that the dry adiabatic lapse rate for the lower atmosphere is constant(where this is a fair approximation),</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \Gamma_d = \frac{g}{c_p}
+  \end{equation}\]</div>
+<p>If the atmosphere doesn’t have a constant potential temperature however, the change in potential temperature can be given as the difference between the dry adiabtaic lapse rate, <span class="math notranslate nohighlight">\(\Gamma_d\)</span>, and the atmospheric lapse rate, <span class="math notranslate nohighlight">\(\Gamma\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{T}{\theta}\frac{\partial\theta}{\partial z} = \Gamma_d - \Gamma
+  \end{equation}\]</div>
+<p>If <span class="math notranslate nohighlight">\(\Gamma_d &gt; \Gamma\)</span>, the atmosphere is “stably stratified”, dampening the ability of buoyant air to ascend for long distances. Buoyant air parcels will instead undergo “buoyancy oscillations”, and no large-scale convection events will occur. The conditions for atmospheric stabilty are given by,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{d\theta_0}{dz} &amp;&gt; 0, \ statically\ stable \\
+    \frac{d\theta_0}{dz} &amp;= 0, \ statically\ neutral \\
+    \frac{d\theta_0}{dz} &amp;&lt; 0, \ statically\ unstable
+  \end{align}\end{split}\]</div>
+</div>
+<div class="section" id="thermodynamics-of-a-moist-atmosphere">
+<h5>Thermodynamics of a Moist Atmosphere<a class="headerlink" href="#thermodynamics-of-a-moist-atmosphere" title="Permalink to this headline">¶</a></h5>
+<p>When water vapour is present in the atmosphere, this has a significant effect on the dynamics of the atmosphere. Water vapour influences the stability condition through partial pressure, and is the main reason why large-scale convective motions up to the tropopause can occur. A convection event is possible if the saturated lapse rate, <span class="math notranslate nohighlight">\(\Gamma_s &lt; \Gamma\)</span>. This is known as conditional stability, and the conditions for stability are given in terms of equivalent potential temperature of an equivalent atmosphere, <span class="math notranslate nohighlight">\(d\ln{\theta_e*} = d\ln{\theta} + d(L_cq_s/c_pT)\)</span>, where <span class="math notranslate nohighlight">\(q_s\)</span> is the saturated mixing ratio of moist and dry air. The conditions for stability are,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{d\theta_e^*}{dz} &amp;&gt; 0, \ conditionally\ stable \\
+    \frac{d\theta_e^*}{dz} &amp;= 0, \ conditionally\ neutral \\
+    \frac{d\theta_e^*}{dz} &amp;&lt; 0, \ conditionally\ unstable
+  \end{align}\end{split}\]</div>
+<p>The equations given above for a dry atmosphere must be amended to account for the presence of vapour. The pressure of the air parcel is now, by Dalton’s law, <span class="math notranslate nohighlight">\(p = p_d + e\)</span>, where <span class="math notranslate nohighlight">\(e\)</span> is the vapour pressure. More conveniently, this is expressed in terms of <span class="math notranslate nohighlight">\(T_v\)</span>, virtual temperature.</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    p = \rho R_d T_v
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(R_d\)</span> is the dry gas constant, and,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    T_v = \frac{T}{1-\frac{e}{p}\Big( 1-\frac{R_d}{R_v}\Big)}
+  \end{equation}\]</div>
+<p>The virtual temperature is the temperature that a dry air parcel needs to be in order to have the same density as a moist air parcel. It is in effect a correction factor for the increased buoyancy of moist air, and it is always higher than the real temperature, usually a few degrees more. The more humid the air, i.e. the greater amount of water vapour in the air parcel, the greater the correction factor, virtual temperature will be.</p>
+<p>Saturated Vapour Pressure is given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    SVP = \frac{1}{e_s}\frac{de_s}{dT} = \frac{L}{RT^2}
+  \end{equation}\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mar-29">
+<h2>2022 Mar 29<a class="headerlink" href="#mar-29" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Introduction to Dynamic Meteorology <span id="id2">[]</span><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="elementary-applications-of-basic-equations">
+<h4>Elementary Applications of Basic Equations<a class="headerlink" href="#elementary-applications-of-basic-equations" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="equations-in-isobaric-coordinates">
+<h5>Equations in Isobaric Coordinates<a class="headerlink" href="#equations-in-isobaric-coordinates" title="Permalink to this headline">¶</a></h5>
+<p>Using the isobaric coordinate system has a number of advantages, but significiantly the dependency of equations of motion on density is removed. The horizontal momentum equation becomes,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D\vec{V}}{Dt} + f\hat{k} \times \vec{V} = -\nabla_p \phi
+  \end{equation}\]</div>
+<p>where the gradient of horizontal coordinates are taken at constant pressure.</p>
+<p>The geostrophic relation becomes,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    f\vec{V}_g = \vec{V} \times \nabla_p \phi
+  \end{equation}\]</div>
+<p>If constant coriolis parameter, i.e. no meridional flow, there is no divergence in the geostrophic flow.</p>
+<p>A similar method can be adopted for the continuity equation, in isobaric coordinates,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \bigg( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} \bigg)_p + \frac{\partial \omega}{\partial p} = 0
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega\)</span> is the pressure change following the motion of the air parcel, the “omega” vertical motion. Once again, the horizontal coordinates are held at constant pressure.</p>
+<p>The thermodynamic energy equation becomes,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \bigg( \frac{\partial T}{\partial t} u\frac{\partial T}{\partial x} + v\frac{\partial T}{\partial y} \bigg) - S_p\omega = \frac{J}{c_p}
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_p\)</span> is the static stability parameter, given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    S_p = - \frac{T}{\theta}\frac{\partial \theta}{\partial p} = (\Gamma_d - \Gamma)/\rho g 
+  \end{equation}\]</div>
+</div>
+<div class="section" id="natural-coordinates">
+<h5>Natural Coordinates<a class="headerlink" href="#natural-coordinates" title="Permalink to this headline">¶</a></h5>
+<p>A natural set of coordinates are used to describe flows, <span class="math notranslate nohighlight">\(\hat{t}, \hat{n}, \hat{k}\)</span>, where <span class="math notranslate nohighlight">\(\hat{t}\)</span> is orientated parallel to the horizontal velocity at each point, <span class="math notranslate nohighlight">\(\hat{n}\)</span> is normal to the same horizontal velocity, and <span class="math notranslate nohighlight">\(\hat{k}\)</span> is the usual vertical coordinate. This greatly simplifies the equations of motion. The horizontal momentum equation in the natural coordinate system, in <span class="math notranslate nohighlight">\(\hat{t}\)</span> and <span class="math notranslate nohighlight">\(\hat{n}\)</span> components,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}  \begin{align}
+    \frac{DV}{Dt} &amp;= -\frac{\partial \Phi}{\partial s} \\
+    \frac{V^2}{R} + fV = -\frac{\partial \Phi}{\partial n}
+  \end{align}\end{split}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(R\)</span> is the radius of curvature of the air parcel path, <span class="math notranslate nohighlight">\(s(x, y, t)\)</span> is the distance along that path, and <span class="math notranslate nohighlight">\(\Phi\)</span> is the geopotential height field as usual. These equations detail the fluid motions in the natural coordinate system.</p>
+<div class="section" id="flow-types-in-the-natural-coordinates">
+<h6>Flow Types in the Natural Coordinates<a class="headerlink" href="#flow-types-in-the-natural-coordinates" title="Permalink to this headline">¶</a></h6>
+<p>In this system, the <em>geostrophic flow</em> equation simplifies to <span class="math notranslate nohighlight">\(fV_g = -\partial \Phi / \partial n\)</span>. Any component of wind that is not in geostrophic balance is referred to as ageostrophic wind.</p>
+<p><em>Inertial flow</em> is a type of flow that occurs when there is no horizontal pressure gradient, such that the equations reduce to a balance between the coriolis and centrifugal forces – two inertial forces. This results in,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{V^2}{R} + fV = 0
+  \end{equation}\]</div>
+<p>which can be solved for the radius of curvature,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    R = \frac{-V}{f}
+  \end{equation}\]</div>
+<p>Neglecting the latitudinal dependence of <span class="math notranslate nohighlight">\(f\)</span>, this is a constant <span class="math notranslate nohighlight">\(R\)</span>, hence the flow follows a circular path in the anticyclonic direction (since \hat{n} is defined as positive to the left of the flow direction).</p>
+<p><em>Cyclostrophic flow</em> occurs when the coriolis force may be neglected, which, solving the equation of motion for <span class="math notranslate nohighlight">\(V\)</span>, gives,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    V = \bigg( -R\frac{\partial \Phi}{\partial n} \bigg)^{1/2}
+  \end{equation}\]</div>
+<p>This flow may be both cyclonic or anticyclonic. The pressure gradient is always directed toward the centre of curvature, the centrifugal force away. This motion is important for tornado-scale motions. They tend to rotate in a cyclonic direction, however this is due to the fact ehy are embedded in environments that favour this motion, and no preference is inherent in the mechanics of the flow itself.</p>
+</div>
+</div>
+<div class="section" id="thermal-wind">
+<h5>Thermal Wind<a class="headerlink" href="#thermal-wind" title="Permalink to this headline">¶</a></h5>
+<p>By considering the premise of hydrostatic balance, it can be inferred that there must be vertical wind shear when there is a horizontal temperature gradient. This is because air columns with higher average temperatures will be taller, hence there will be a geopotential gradient (due to the difference in density). Since geostrophic wind speed is proportional to geopotential gradient along an isobaric surface, higher altitudes in the troposphere will have a higher the geopotential gradient, hence a higher wind speed.</p>
+<p>The Thermal Wind relation is expressed fully by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{\partial\vec{V}_g}{\partial\ln{z}} = -\frac{R}{f}\hat{k} \times \nabla_p T
+  \end{equation}\]</div>
+<p>This equation is valid for predicting <em>geostrophic wind</em> at a given height, provided geostrophic wind at a reference height, and the horizontal temperature gradent are known.</p>
+</div>
+<div class="section" id="formation-of-a-cyclone-in-brief">
+<h5>Formation of a Cyclone - in brief<a class="headerlink" href="#formation-of-a-cyclone-in-brief" title="Permalink to this headline">¶</a></h5>
+<p>Suppose a heat source is located in the midtroposphere, resulting in a local warm anomaly. This will raise the depth of the column above the warm anomaly, in accordance with the hypsometric equation. This results in a horizontal pressure gradient, creating upper-level divergence. This will initially cause the surface pressure to decrease, causing a surface low. The surface low will draw in air creating lower-level convergence and driving vertical circulation. The degree to which this vertical circulation compensates for the upper-level divergence will determine whether the surface low deepens, remains steady, or returns to normal. This is an example of high distrubances at any level in the atmosphere can propagate up- or downward.</p>
+</div>
+</div>
+<div class="section" id="circulation-vorticity-potential-vorticity">
+<h4>Circulation, Vorticity &amp; Potential Vorticity<a class="headerlink" href="#circulation-vorticity-potential-vorticity" title="Permalink to this headline">¶</a></h4>
+<p>Circulation and vorticity are two primary measures of rotation in a fluid. Circulation, a scalar integral quantity, is a macroscopic measure; vorticity is a vector field measuring microscopic rotation.</p>
+<div class="section" id="circulation">
+<h5>Circulation<a class="headerlink" href="#circulation" title="Permalink to this headline">¶</a></h5>
+<p>Kelvin’s Circulation Theorem is given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{DC_a}{Dt} = -\oint \rho^{-1} dp
+  \end{equation}\]</div>
+<p>which says that the absolute change in Circulation of a fluid is equal to the total change in pressure, including density, which is a function of pressure. This is further complicated under baroclinic conditions, when density is dependent on temperature as well as pressure. This equation can be applied to calculate the change in wind speed over a density discontinuity, such as a land-sea boundary.</p>
+</div>
+<div class="section" id="vorticity">
+<h5>Vorticity<a class="headerlink" href="#vorticity" title="Permalink to this headline">¶</a></h5>
+<p>Vorticity is related to the macroscopic Circulation by Stokes’ theorem, which states,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    -\oint \vec{U} \cdot d\vec{l} = \iint_A (\nabla \times \vec{U})\cdot \hat{n} dA
+  \end{equation}\]</div>
+<p>meaning that the line integral of the tangential velocity of a closed loop is equal to the vorticity over the surface enclosed by that loop.</p>
+<p>Vorticity is mostly considered in the vertical component, as other contributions are small. This component is vertical because of the vector nature of vorticity, however the vertical component is made up of contributions from the horizontal flow,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \zeta = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}
+  \end{equation}\]</div>
+<p>Using the horizontal momentum equations, the vorticity equation becomes,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D}{Dt}(\zeta + f) = -(\zeta + f)\bigg( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\bigg) - \bigg( \frac{\partial w}{\partial x}\frac{\partial v}{\partial z} - \frac{\partial w}{\partial y}\frac{\partial u}{\partial z}\bigg) + \frac{1}{\rho^2} \bigg(\frac{\partial \rho}{\partial x}\frac{\partial p}{\partial y} - \frac{\partial \rho}{\partial y}\frac{\partial p}{\partial x}\bigg)
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\frac{Df}{Dt} = v\frac{df}{dy}\)</span> since the coriolis parameter depends only on y. This equation states that the rate of change of vorticity with the flow depends on the three terms on the right, the divergence (or vorticity stertching), the tilting or twisting term (deformation of the flow), and the solenoidal term.</p>
+<p>The concentration or dilution of the vorticity field (convergent or divergent flow) is very important for synoptic-scale distrubances. If the flow is divergent, the area enclosed by a loop, or air parcel, ncreases, meaning that for circulation to be conserved, the average vorticity in the loop must decrease. Conversely for convergent flow, if the area of the air parcel decreases, the absolute average vorticity will increase.</p>
+<p>The tilting term is a measure of vertical vorticity generated by the tilting of horizontal components of the flow, e.g. if the y-component increases with height, there is a horizontal gradient in the y-direction creating a shear effect in the x-direction. If there is also a decrease in vertical velocity with increasing x, this will tilt the vorticity vector such that there is a component in the vertical direction. Hence, if <span class="math notranslate nohighlight">\(\partial v/\partial z &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\partial w/\partial x &lt; 0\)</span>, there is a positive vertical vorticity. The same will be true for the inverse of the negative part of the term.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Read up on classical mechanics again to interpret the third term, specifically Hamiltonian mechanics and Poisson brackets.</p>
+</div>
+<p>In the isobaric coordinate system, the solenoidal term is missing since the horizontal components are evaluated at constant pressure. This difference is genreally unimportant as the solenoidal term is usually so small as to be considered negligible.</p>
+<p>Using scale analysis for mid-latitude synoptic systems, the <span class="math notranslate nohighlight">\(\zeta\)</span> relative vorticity may be neglected, as the coriolis parameter dominates the flow. Thus the vorticity equation simplifies to,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D_h(\zeta + f)}{Dt} = -(\zeta + f)\bigg( \frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\bigg)
+  \end{equation}\]</div>
+<p>where, <span class="math notranslate nohighlight">\(D_h/Dt\)</span> includes the horizontal components only. This equation states that the absolute vorticity of horizontal synoptic scale motions are approximately the divergence/convergence of planetary vorticity. This equation also indicates why cyclonic systems are stronger on average than anti-cyclonic systems. In a convergent flow, the relative vorticity will increase, strengthening the <span class="math notranslate nohighlight">\((\zeta + f)\)</span> term. However for a divergent flow, the opposite is true, such that relative the term shrinks.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This approximation does not remain valid nearly frontal systems.</p>
+</div>
+</div>
+<div class="section" id="potential-vorticity">
+<h5>Potential Vorticity<a class="headerlink" href="#potential-vorticity" title="Permalink to this headline">¶</a></h5>
+<p>On an isentropic surface (a surface of constant potential temperature), it can be proven that Kelvin’s circulation still holds, even for baroclinic systems. This is possible because isentropic surfaces mean that the density is dependent on pressure alone. Uzing Stokes’ theorem, we can apply the same logic to vorticity component normal to the surface. This gives the very important <strong>Ertel potential vorticity theorem</strong>,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D}{Dt}\bigg[ \frac{\omega_a \cdot \nabla\theta}{\rho}\bigg] = \frac{D}{Dt} \Pi = 0
+  \end{equation}\]</div>
+<p>This states that the quantity known as potential vorticity, PV, is conserved following the motion of an air parcel. This is very important, since it relates all the conservation laws into one simple equation, placing a constraint on the types of motions developing.</p>
+<p>On synoptic and larger scales, the Rossby number is small, such that the dominant contribution to PV is from the vertical direction.</p>
+<p>Further simplifications can be made to the Ertel PV theorem by assuming shallow water equations – an approximation of a shallow incompressible fluid whose vertical scale is negligible to its horizontal scale, a useful approximation for large-scale dynamic motions. Another simplification is to assuming isentropic coordinates, or potential temperature. This assumes that the atmosphere is stably stratified, such that <span class="math notranslate nohighlight">\(\theta\)</span> increases monotonically with height.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Weather disturbances that have sharp gradients in dynamical fields, such as jets and fronts, are associated with anomalies in the Ertel PV. Such anomalis tend to be rapidly advected under nearly adiabatic conditions in the upper troposphere, hence PV anomalies are useful for identifying meteorological disturbances.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mar-30">
+<h2>2022 Mar 30<a class="headerlink" href="#mar-30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intro-to-dynamic-meteorology-holton-intro">
+<h3>Intro to Dynamic Meteorology, <span id="id4">[]</span><a class="headerlink" href="#intro-to-dynamic-meteorology-holton-intro" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="atmospheric-oscillations-linear-perturbation-theory">
+<h4>Atmospheric Oscillations: Linear Perturbation Theory<a class="headerlink" href="#atmospheric-oscillations-linear-perturbation-theory" title="Permalink to this headline">¶</a></h4>
+<p>This chapter focuses on an analytical method of idealised representations of the atmosphere. These idealised atmospheres are useful in isolating featues of the general flow and building up a comprehensive picture piece-by-piece.</p>
+<div class="section" id="perturbation-method">
+<h5>Perturbation Method<a class="headerlink" href="#perturbation-method" title="Permalink to this headline">¶</a></h5>
+<p>All field variables are split into two parts, the field average (or basic state) and the deviation from that average. For example, <span class="math notranslate nohighlight">\(u(x,t) = \bar{u} + u'(x,t)\)</span>. The basic assumptions are that the field averages must satisfy the solutions to the governing equations, and that the deviations are small enough such that only the linear terms need be considered. This means that any perturbations may be considered to be wave-like, hence take on wave properties and are solutions to the linear harmonic oscillator equation, composed of any linear combination of sine and cosine waves.</p>
+<div class="admonition-dispersion-and-group-velocity admonition">
+<p class="admonition-title">Dispersion and Group Velocity</p>
+<p>For some waves whose phase speed varies with wavenumber <span class="math notranslate nohighlight">\(k\)</span>, the sinusoidal components making up the waves will later be found in different locations – the wave envelope has dispersed. For this type of wave, the actual rate of energy transfer is better described by the group velocity, given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    c_{gx} = \partial \mu /\partial k
+  \end{equation}\]</div>
+</div>
+</div>
+<div class="section" id="waves-in-2d-and-3d">
+<h5>Waves in 2D and 3D<a class="headerlink" href="#waves-in-2d-and-3d" title="Permalink to this headline">¶</a></h5>
+<p>Waves of higher dimensions are more easily evaluated in space and time separately, characterised by a phase angle <span class="math notranslate nohighlight">\(\phi\)</span>. Lines of constant phase capture the propagation in higher dimensions. For spatial dimensions, the wave vector is defined by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \vec{K} = \nabla \phi
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi = kx + ly + C\)</span>, <span class="math notranslate nohighlight">\(l\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are the wane numbers in the y- and x-directions, and <span class="math notranslate nohighlight">\(C\)</span> is some arbitrary constant. For the time dimension,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \mu = -\partial \phi /\partial t
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi = C - \mu t\)</span>. The phase speed is then,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    c = \frac{\mu}{\mathcal{K}} = -\frac{1}{|\nabla\phi |} \frac{\partial \phi}{\partial t}
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{K} = |\vec{K} |\)</span>. Group velocity is then <span class="math notranslate nohighlight">\(\vec{C}_g = \nabla_k \mu = \Big(\frac{\partial \mu}{\partial k},\ \frac{\partial \mu}{\partial l}\Big)\)</span>.</p>
+<p>Importantly, in a frame of reference moving with the group velocity, the wave vector is conserved, as given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{\partial \vec{K}}{\partial t} + (\vec{C}_g \cdot \nabla )\vec{K} = 0
+  \end{equation}\]</div>
+</div>
+<div class="section" id="shallow-water-waves">
+<h5>Shallow Water Waves<a class="headerlink" href="#shallow-water-waves" title="Permalink to this headline">¶</a></h5>
+<p>Shallow water waves are used as a good approximation of atmospheric waves of minimal vertical extent, shallow depth. Using linearised momentum &amp; continuity equations, information about the characteristics of the waves can be uncovered. Solving for <span class="math notranslate nohighlight">\(\mu\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \mu^3 - \mu\Big[ f^2 +g\bar{h} \big( k^2 + l^2\big) \Big] = 0
+  \end{equation}\]</div>
+<p>Clearly, <span class="math notranslate nohighlight">\(\mu = 0\)</span> is a solution. Provided <span class="math notranslate nohighlight">\(f\)</span> is constant, this gives the stationary Rossby waves solution, dependent on rotation alone i.e. zero wave speed.</p>
+<p>Where <span class="math notranslate nohighlight">\(\mu \ne 0\)</span>, this gives inertia-gravity wave solutions, explored in detail later. Another important result stems from this, which is htat linearised PV for shallow water waves are shown to be conserved at all local points,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{\partial Q'}{\partial t} = \zeta ' - \frac{f}{\bar{h}}h' = 0
+  \end{equation}\]</div>
+<p>Key characteristics and differences between Rossby Waves and Inertia-Gravity waves:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Rossby</p></th>
+<th class="text-align:left head"><p>Inertia-Gravity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Stationary waves</p></td>
+<td class="text-align:left"><p>Move very fast</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Geostrophic winds with zero divergence &amp; large relative vorticity</p></td>
+<td class="text-align:left"><p>High divergence and low relative vorticity</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Non-zero PV</p></td>
+<td class="text-align:left"><p>Zero PV</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="internal-gravity-waves">
+<h5>Internal Gravity Waves<a class="headerlink" href="#internal-gravity-waves" title="Permalink to this headline">¶</a></h5>
+<p>Exist in a stably stratified atmosphere where buoyancy is the restoring force for any displacements. In a fluid with no upper boundary, such as the atmosphere, gravity waves can propagate in the vertical direction – referred to as internal gravity waves.</p>
+<p>One form of internal gravity waves are known as “pure” internal gravity waves. These are a wave form derived whilst assuming constant density with height and only small perturbations (as per linear perturbation theory). This means that the vertical scale of the morions must be less than <span class="math notranslate nohighlight">\(H\)</span>, the isothermal scale height, approximately 8km. They are generated by tropospheric cumulus convection, flow over topography and other processes. They propagate into the middle atmosphere, many times the iosthermal scale height – <em>why?</em> They have the remarkable property of the group velocity being perpendicular to the direction of phase propagation, such that energy propagates parallel to the wave crests and troughs – the opposite to sound waves and other shallow water gravity waves.</p>
+</div>
+<div class="section" id="rossby-waves">
+<h5>Rossby Waves<a class="headerlink" href="#rossby-waves" title="Permalink to this headline">¶</a></h5>
+<p>Waves of great importance to large-scale circulation process, Rossby waves, also known as <em>planetary waves</em>, are generated by the meridional variation in the Coriolis parameter. In a baroclinic atmosphere, it is a potential vorticity-conserving wave that propagates through the atmosphere in an westward direction realtive to the mean flow (although still travels eastward due to the mean flow being faster). If an air parcel is displaced by small meridional distance, <span class="math notranslate nohighlight">\(\delta y\)</span>, the coriolis force will act to restore the air parcel to equilibrium, setting up an oscillatory motion in the vorticity field (as <span class="math notranslate nohighlight">\(f\)</span> is a component of the absolute vorticity field, <span class="math notranslate nohighlight">\(\eta\)</span>, hence a hcnage in the coriolis parameter causes a change in the absolute vorticity), propagating in a westwards direction. In other words, the meridional absolute vorticity gradient resists meridonal displacement, providing a restoring force.</p>
+<p>The variation of the coriolis parameter is often approximated using the <em>midlatitude <span class="math notranslate nohighlight">\(\beta\)</span>-plane</em> approximation, given by,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{eqaution}
+    f = f_0 + \beta y
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\beta = (df/dy)_{\phi_0} = 2\Omega \cos{\phi_0 /a}\)</span> and <span class="math notranslate nohighlight">\(y=0\)</span> at <span class="math notranslate nohighlight">\(\phi_0\)</span>. By assuming <span class="math notranslate nohighlight">\(\delta y\)</span> has a wavelike signal, such that $\delta y = a\sin{[k(x-ct)]}, the phase speed is found to be,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    c=-\beta /k^2
+  \end{equation}\]</div>
+<p>Hence the wave speed is inversely proportional to the zonal wave number (<em>important for predicted changes to ZW3</em>). This shows that Rossby waves are dispersive. In 2D, including the zonal mean wind speed, the relative phase speed becomes,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    c - \bar{u} = -\beta /K^2
+  \end{equation}\]</div>
+<p>If the square of the wave number, <span class="math notranslate nohighlight">\(K^2=\beta /\bar{u}\)</span>, then the wave solution becomes stationary, i.e. zero phase speed.</p>
+<p>Westward propoagating Rossby waves, along with eastward- and westward-propagating gravity waves, are normal modes of a hydrostatic, gravitationally stable atmosphere. As such, these free oscillations are frequently excited by perturbations in the atmosphere. Although, free-moving Rossby waves ahve relatively small amplitudes hence do not have a significant impact of the transfer of energy, momentum, mass etc.</p>
+<p>Stationary Rossby waves are of great importance for understanding global circulation patterns. Flow over topographic featueres generate significant quasi-stationary variations in the geopotential height field.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mar-31">
+<h2>2022 Mar 31<a class="headerlink" href="#mar-31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Intro to Dynamic Meteorology, <span id="id5">[]</span><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="quasi-geostrophic-qg-analysis">
+<h4>Quasi-Geostrophic (QG) Analysis<a class="headerlink" href="#quasi-geostrophic-qg-analysis" title="Permalink to this headline">¶</a></h4>
+<p>This analysis method simplifies some of the complexities of atmospheric dynamics by assuming near hydrostatic and geostrophic behaviour. It is assumed that the Rossby number is small i.e. for systems in the mid-latitudes where the coriolis force is significant. A full set of simplified equations stemming from this analysis are derived.</p>
+<div class="section" id="derivation-of-qg-equations">
+<h5>Derivation of QG Equations<a class="headerlink" href="#derivation-of-qg-equations" title="Permalink to this headline">¶</a></h5>
+<p>For motions that are nearly hydrostatic and geostrophic, the 3-dimensional flow field is approximately determined by the pressure field. This operates under the assumption of constant density (Boussinesq approximation), and the <span class="math notranslate nohighlight">\(f\)</span>-field approximation – the coriolis parameter is constant. The following equations are defined for a small Rossby number and an atmosphere with strong stratification.</p>
+<div class="section" id="thermodynamic-energy-equation">
+<h6>Thermodynamic Energy Equation<a class="headerlink" href="#thermodynamic-energy-equation" title="Permalink to this headline">¶</a></h6>
+<p>In the absense of diabatic heating and for a small Rossby number, the QG thermodynamic energy equation can be written as,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D\theta}{Dt_g} = -w\frac{d\hat{\theta}}{dz}
+  \end{equation}\]</div>
+<p>This says that the perturbation in potential temperature following a geostrophic flow changes due to vertical advection of a “basic state” potential temperature.</p>
+<p>Interactions between the jet stream and extratropical weather systems are captured in the advection terms of the PV equation.</p>
+<p>Following Geostrophic motion, geostrophic vorticity changes to stretching of ambient planetary rotation.</p>
+</div>
+</div>
+<div class="section" id="qusai-geostrophic-potential-vorticity">
+<h5>Qusai-Geostrophic Potential Vorticity<a class="headerlink" href="#qusai-geostrophic-potential-vorticity" title="Permalink to this headline">¶</a></h5>
+<p>The QGPV equation is essentially a linearisation of the Ertel PV. This means separating it into the base state and perturbations, substituting inot the governing equations i.e. equation of motion, continuity equation, conservation of energy etc., and removing non-linear terms. This gives the equation,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{D}{Dt_g}\frac{1}{\rho_0}\frac{d\hat{\theta}}{dz} q = 0
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(t_g\)</span> is the geostrophic component, <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> is the base state potential temperature, and <span class="math notranslate nohighlight">\(q\)</span>, the QG potential vorticity, is,</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    q =\zeta_g + f + f\frac{\partial}{\partial z}\bigg( \frac{d\hat{\theta}}{dz}^{-1} \theta \bigg)
+  \end{equation}\]</div>
+<p>hence, QGPV is a conserved quantity. This is a very important concept for midlatitude weather systems, e.g. storm tracks! One way to view this, is that QGPV is made up of the contributions from the vertical component of vorticity and the disturbance static stability. <em>QGPV represents all of the fundamental conservation laws in a single equation.</em> It also states that QGPV is completely determined by the three-dimensional pressure field.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All governing equations have a QG equivalents, see the Holton &amp; Hakim chapter for full set.</p>
+</div>
+</div>
+<div class="section" id="pv-thinking">
+<h5>“PV Thinking”<a class="headerlink" href="#pv-thinking" title="Permalink to this headline">¶</a></h5>
+<p>Using PV to describe atmospheric dynamics is very powerful as it encases the three conservation laws in a very simple form. “PV Thinking” has two aspects, inversion and conservation. Inversion is a kinematic diagnostic technique that allows any field variable to be recovered from the PV equation. Variables include the geostrophic wind and potential temperature field. This process is done by inverting the QGPV and solving with boundary conditions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./preliminary_research"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="week4.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 4</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../era5_analysis/week6.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 6</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
