@@ -13,7 +13,7 @@ parts:
     - file: preliminary_research/week3
     - file: preliminary_research/week4
     - file: preliminary_research/week5
-- caption: Early Analysis
+- caption: Correlation/Covariance Analysis
   chapters:
     - file: era5_analysis/week6
     - file: era5_analysis/week7
