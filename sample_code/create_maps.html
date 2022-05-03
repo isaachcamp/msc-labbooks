@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Load Indices" href="load_indices.html" />
-    <link rel="prev" title="Correlation Spatial Patterns" href="correlation_spatial_patterns.html" />
+    <link rel="prev" title="Correlation &amp; Covariance Maps" href="correlation_spatial_patterns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Early Analysis
+  Correlation/Covariance Analysis
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -170,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="correlation_spatial_patterns.html">
-   Correlation Spatial Patterns
+   Correlation &amp; Covariance Maps
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -471,71 +471,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 128&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">130</span>     <span class="n">corr_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;corr&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>     <span class="n">cov_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;cov&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
-
-<span class="nn">Input In [1],</span> in <span class="ni">CreateMaps.__init__</span><span class="nt">(self, path, var, period)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">output_fname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_output_filename</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">mean_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">mean_file</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">25</span> <span class="n">var_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_var_files</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="bp">self</span><span class="o">.</span><span class="n">plot_corr_cov_maps</span><span class="p">(</span><span class="n">mean_ds</span><span class="p">,</span> <span class="n">var_ds</span><span class="p">,</span> <span class="n">output_fname</span><span class="p">)</span>
-
-<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\backends\api.py:479,</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, backend_kwargs, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">backend_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">478</span> <span class="k">if</span> <span class="n">engine</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">479</span>     <span class="n">engine</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">guess_engine</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">481</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> <span class="n">decoders</span> <span class="o">=</span> <span class="n">_resolve_decoders_kwargs</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="n">decode_cf</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span>     <span class="n">open_backend_dataset_parameters</span><span class="o">=</span><span class="n">backend</span><span class="o">.</span><span class="n">open_dataset_parameters</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>     <span class="n">decode_coords</span><span class="o">=</span><span class="n">decode_coords</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span> <span class="p">)</span>
-
-<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\backends\plugins.py:107,</span> in <span class="ni">guess_engine</span><span class="nt">(store_spec)</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span> <span class="k">for</span> <span class="n">engine</span><span class="p">,</span> <span class="n">backend</span> <span class="ow">in</span> <span class="n">engines</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">107</span>         <span class="k">if</span> <span class="n">backend</span><span class="o">.</span><span class="n">guess_can_open</span><span class="p">(</span><span class="n">store_spec</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>             <span class="k">return</span> <span class="n">engine</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span>     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-
-<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\backends\netCDF4_.py:522,</span> in <span class="ni">NetCDF4BackendEntrypoint.guess_can_open</span><span class="nt">(self, filename_or_obj)</span>
-<span class="g g-Whitespace">    </span><span class="mi">520</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_remote_uri</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">521</span>     <span class="k">return</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">522</span> <span class="n">magic_number</span> <span class="o">=</span> <span class="n">try_read_magic_number_from_path</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">523</span> <span class="k">if</span> <span class="n">magic_number</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">524</span>     <span class="c1"># netcdf 3 or HDF5</span>
-<span class="g g-Whitespace">    </span><span class="mi">525</span>     <span class="k">return</span> <span class="n">magic_number</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="sa">b</span><span class="s2">&quot;CDF&quot;</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;</span><span class="se">\211</span><span class="s2">HDF</span><span class="se">\r\n\032\n</span><span class="s2">&quot;</span><span class="p">))</span>
-
-<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\utils.py:665,</span> in <span class="ni">try_read_magic_number_from_path</span><span class="nt">(pathlike, count)</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">665</span>         <span class="k">return</span> <span class="n">read_magic_number_from_file</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">666</span> <span class="k">except</span> <span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">667</span>     <span class="k">pass</span>
-
-<span class="nn">File c:\Users\User\anaconda3\envs\msc-research\lib\site-packages\xarray\core\utils.py:642,</span> in <span class="ni">read_magic_number_from_file</span><span class="nt">(filename_or_obj, count)</span>
-<span class="g g-Whitespace">    </span><span class="mi">634</span>     <span class="sd">&quot;&quot;&quot;Finds URLs of the form protocol:// or protocol::</span>
-<span class="g g-Whitespace">    </span><span class="mi">635</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">636</span><span class="sd">     This also matches for http[s]://, which were the only remote URLs</span>
-<span class="g g-Whitespace">    </span><span class="mi">637</span><span class="sd">     supported in &lt;=v0.16.2.</span>
-<span class="g g-Whitespace">    </span><span class="mi">638</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">639</span>     <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;^[a-z][a-z0-9]*(\://|\:\:)&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
-<span class="ne">--&gt; </span><span class="mi">642</span> <span class="k">def</span> <span class="nf">read_magic_number_from_file</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span>     <span class="c1"># check byte header to determine file type</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">magic_number</span> <span class="o">=</span> <span class="n">filename_or_obj</span><span class="p">[:</span><span class="n">count</span><span class="p">]</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 
@@ -568,7 +503,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Correlation Spatial Patterns</p>
+            <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="load_indices.html" title="next page">
