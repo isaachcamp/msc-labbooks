@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 730, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\util.py", line 96, in ensure_async
-    result = await obj
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\jupyter_client\channels.py", line 230, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 1204, in execute
@@ -22,18 +11,245 @@ Traceback (most recent call last):
     return future.result()
   File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 949, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 754, in _async_poll_for_reply
-    await self._async_handle_timeout(timeout, cell)
-  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 801, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-['import xarray as xr', 'import numpy as np', '', 'import matplotlib.pyplot as plt', 'import matplotlib.cm as cm']
-...
-['', 'if __name__ == "__main__":', '    path = Path("G:\\\\Isaac\\\\Documents\\\\msc-research\\\\data\\\\ERA5\\\\daily_data\\\\")', '    corr_maps = CreateMaps(path, "corr", "seasonal")', '    cov_maps = CreateMaps(path, "cov", "seasonal")']
--------------------
+  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\User\anaconda3\envs\msc-research\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import xarray as xr
+import numpy as np
+
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import cartopy.crs as ccrs
+
+from pathlib import Path
+
+class CreateMaps():
+    """
+    Creates figures of variance & mean height anomalies and saves as PNG files.
+
+    Takes inputs detailing file path. All files with suffix ".nc" located 
+    under the file path are globbed into a list. Input files must be variance 
+    and mean height field anomalies, and must be in NetCDF4 format. Pairs of
+    variance and mean height anomaly data are collated and creates a figures 
+    of each pair. 
+    
+    Every outputted figure is saved to a separate file under a filename 
+    derived from the filenames inputted. For example, two files, with names 
+    "DJF_mean_sam_rank_corr.nc" and "DJF_variance_sam_rank_corr.nc", will be 
+    saved under the name "DJF_sam_rank_corr.png".
+
+    Attributes
+    ----------
+    self._path: str
+        Path to directory containing variance and mean height anomalies 
+        files.
+    self._mean_files: list
+        List of paths to mean height anomalies file locations.
+    self._var_files: list
+        List of paths to variance anomalies file locations.
+    self.labels: dict
+        Dictionary of plot labels derived from the file names. Specific
+        to each file so repreatedly changed. The final label attribute 
+        will correspond to the final files processed.
+    """
+
+    def __init__(self, path=Path("."), var='corr', period='yearly'):
+        """
+        Sets attributes and loops through paired files.
+        
+        Arguments
+        ---------
+        path: str
+            Path to base directory. 
+        var: str
+            Name of sub-directory containing the variable.
+        period: str
+            Name of sub-directory containing files to be plotted.
+        """
+        if path == None or path == "":
+            raise Exception("No path provided, no figures were created, "\
+                "skipping process.")
+        
+        self._path = path / var / period
+        
+        self.get_files()
+        
+        for i, mean_file in enumerate(self._mean_files):
+            filename = mean_file.parts[-1]
+            self.get_plot_labels(filename)
+            output_fname = self.get_output_filename(filename) + ".png"
+
+            mean_ds = xr.open_dataset(mean_file)
+            var_ds = xr.open_dataset(self._var_files[i])
+            
+            self.plot_corr_cov_maps(mean_ds, var_ds, output_fname)
+
+
+    def get_files(self):
+        """Creates lists of variance and mean anomalies files as attributes."""
+        self._var_files = list(self._path.glob('*variance_*.nc'))
+        self._mean_files = list(self._path.glob('*mean_*.nc'))
+
+
+    def get_plot_labels(self, filename):
+        """"
+        Returns plot labels as an attribute, derived from file name.
+        
+        File naming convention is assumed to be the following:
+        If seasonal:
+            {season}_{variance or mean}_{index name}_{correlation method}_{statistic}.nc
+        If not seasonal:
+            {variance or mean}_{index name}_{correlation method}_{statistic}.nc
+
+        If index is ZW3, the index naming convention is assumed to be:
+            zw3_{phase bin}, e.g. zw3_-120_-90
+        """
+        self.labels = {}
+        parts = filename.split('_')
+        
+        if parts[0] != 'variance' and parts[0] != 'mean':
+            self.labels['season'] = parts[0]
+            parts.remove(parts[0])
+        
+        self.labels['method'] = parts[-2].capitalize()
+        if not parts[-3].isalpha():
+            self.labels['index'] = parts[1].upper() \
+                + " (with Phase between " + parts[2] \
+                + " and " + parts[3] + ")"
+        else:
+            self.labels['index'] = parts[-3].upper()
+
+        corr_cov = parts[-1].split('.')[0]
+        self.labels['variable_name'] = corr_cov
+        if corr_cov == 'corr':
+            self.labels['stat'] = 'Correlation'
+        elif corr_cov == 'cov':
+            self.labels['stat'] = 'Covariance'
+
+
+    def get_output_filename(self, filename):
+        """Returns output file name derived from the input file name."""
+        parts = filename.split('_')
+        parts[-1] = parts[-1].split('.')[0]
+        parts.remove('mean')
+        return '_'.join(parts)
+
+
+    @staticmethod
+    def calibrate_colour_scale(ds, variable_name):
+        """Return max and min values for figure colour scale."""
+        abs_max_value = np.abs(ds[variable_name]).max()
+        return abs_max_value, -abs_max_value
+
+
+    def plot_corr_cov_maps(self, mean_ds, var_ds, output_fname):
+        """
+        Create figures and save as PNG files.
+        
+        Takes input Datasets and plots mean and variance datasets 
+        side-by-side. The two share the same projection, but possess 
+        independent colour bars. xarray's PlateCarree native projection
+        is transformed into Orthographic projection for more digestable 
+        figures.
+
+        Arguments
+        ---------
+        mean_ds: xarray.Dataset
+            Dataset containing data of mean height field anomalies.
+        var_ds: xarray.Dataset
+            Dataset containing data of bandpassed variance anomalies.
+        output_fname: str
+            Name of PNG output file.
+        """
+        # Check path exists
+        output_path = self._path / 'figures'
+        output_path.mkdir(parents=True, exist_ok=True)
+
+        # Fetch plot labels from self.labels attribute
+        index = self.labels['index']
+        variable_name = self.labels['variable_name']
+        stat = self.labels['stat']
+        method = self.labels['method']
+        
+        # Set figure super title.
+        figure_title = method + " " + stat + " between " \
+            + index \
+            + " and 500hPa Geopotential Height Field"
+            
+        if 'season' in self.labels:
+            figure_title = self.labels['season'] + " " + figure_title
+
+        # Set max and min values for colour bar.
+        mean_max, mean_min = self.calibrate_colour_scale(mean_ds, variable_name)
+        var_max, var_min = self.calibrate_colour_scale(var_ds, variable_name)
+
+        # Set map projection for consistency with data.
+        map_projection = ccrs.Orthographic(central_longitude=0.0, central_latitude=-90.0)
+        extent = [-180, 180, -90, -20]
+
+        # Create figure with two subplot axes.
+        fig = plt.figure(figsize=(15,6))
+        
+        ax1 = plt.subplot(1, 2, 1, projection=map_projection)
+        ax1.set_extent(extent, ccrs.PlateCarree())
+        mean_ds[variable_name].plot(
+            ax=ax1, 
+            transform=ccrs.PlateCarree(),
+            vmin=mean_min, vmax=mean_max, 
+            cbar_kwargs={'shrink': 0.7},
+            cmap=cm.seismic)
+        ax1.coastlines()
+        ax1.set_title("Mean Height Anomalies")
+
+        ax2 = plt.subplot(1, 2, 2, projection=map_projection)
+        ax2.set_extent(extent, ccrs.PlateCarree())
+        var_ds[variable_name].plot(
+            ax=ax2, 
+            transform=ccrs.PlateCarree(),
+            vmin=var_min, vmax=var_max, 
+            cbar_kwargs={'shrink': 0.7},
+            cmap=cm.seismic)
+        ax2.coastlines()
+        ax2.set_title("2-8 Day Bandpassed Variance Anomalies")
+
+        fig.suptitle(figure_title, fontsize=16)
+
+        out_dest = output_path / output_fname
+        plt.savefig(out_dest, format='png')
+
+        plt.close()
+
+
+if __name__ == "__main__":
+    path = Path("G:\\Isaac\\Documents\\msc-research\\data\\ERA5\\daily_data\\")
+    corr_maps = CreateMaps(None, "corr", "seasonal")
+    cov_maps = CreateMaps(None, "cov", "seasonal")
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mException[0m                                 Traceback (most recent call last)
+Input [1;32mIn [1][0m, in [0;36m<cell line: 207>[1;34m()[0m
+[0;32m    207[0m [38;5;28;01mif[39;00m [38;5;18m__name__[39m [38;5;241m==[39m [38;5;124m"[39m[38;5;124m__main__[39m[38;5;124m"[39m:
+[0;32m    208[0m     path [38;5;241m=[39m Path([38;5;124m"[39m[38;5;124mG:[39m[38;5;130;01m\\[39;00m[38;5;124mIsaac[39m[38;5;130;01m\\[39;00m[38;5;124mDocuments[39m[38;5;130;01m\\[39;00m[38;5;124mmsc-research[39m[38;5;130;01m\\[39;00m[38;5;124mdata[39m[38;5;130;01m\\[39;00m[38;5;124mERA5[39m[38;5;130;01m\\[39;00m[38;5;124mdaily_data[39m[38;5;130;01m\\[39;00m[38;5;124m"[39m)
+[1;32m--> 209[0m     corr_maps [38;5;241m=[39m [43mCreateMaps[49m[43m([49m[38;5;28;43;01mNone[39;49;00m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mcorr[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mseasonal[39;49m[38;5;124;43m"[39;49m[43m)[49m
+[0;32m    210[0m     cov_maps [38;5;241m=[39m CreateMaps([38;5;28;01mNone[39;00m, [38;5;124m"[39m[38;5;124mcov[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mseasonal[39m[38;5;124m"[39m)
+
+Input [1;32mIn [1][0m, in [0;36mCreateMaps.__init__[1;34m(self, path, var, period)[0m
+[0;32m     41[0m [38;5;124;03m"""[39;00m
+[0;32m     42[0m [38;5;124;03mSets attributes and loops through paired files.[39;00m
+[0;32m     43[0m [38;5;124;03m[39;00m
+[1;32m   (...)[0m
+[0;32m     51[0m [38;5;124;03m    Name of sub-directory containing files to be plotted.[39;00m
+[0;32m     52[0m [38;5;124;03m"""[39;00m
+[0;32m     53[0m [38;5;28;01mif[39;00m path [38;5;241m==[39m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m path [38;5;241m==[39m [38;5;124m"[39m[38;5;124m"[39m:
+[1;32m---> 54[0m     [38;5;28;01mraise[39;00m [38;5;167;01mException[39;00m([38;5;124m"[39m[38;5;124mNo path provided, no figures were created, [39m[38;5;124m"[39m\
+[0;32m     55[0m         [38;5;124m"[39m[38;5;124mskipping process.[39m[38;5;124m"[39m)
+[0;32m     57[0m [38;5;28mself[39m[38;5;241m.[39m_path [38;5;241m=[39m path [38;5;241m/[39m var [38;5;241m/[39m period
+[0;32m     59[0m [38;5;28mself[39m[38;5;241m.[39mget_files()
+
+[1;31mException[0m: No path provided, no figures were created, skipping process.
+Exception: No path provided, no figures were created, skipping process.
 

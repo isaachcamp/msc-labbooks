@@ -2,8 +2,9 @@
 
 ## This Week
 
-- Document yearly and seasonal maps.
-- Document code.
+- Document yearly covariance.
+- Document ZW3 60 degree seasonal maps.
+- Document seasonal covariance maps.
 - Update week 9 notebook.
 - Read up on Partial Correlations.
 - Q-Q plots.

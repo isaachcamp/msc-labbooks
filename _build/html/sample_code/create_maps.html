@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Load Indices" href="load_indices.html" />
-    <link rel="prev" title="Correlation &amp; Covariance Maps" href="correlation_spatial_patterns.html" />
+    <link rel="prev" title="Week 10" href="../era5_analysis/week10.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -168,11 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="correlation_spatial_patterns.html">
-   Correlation &amp; Covariance Maps
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Create Maps
@@ -334,7 +329,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="create-maps">
 <h1>Create Maps<a class="headerlink" href="#create-maps" title="Permalink to this headline">¶</a></h1>
-<p>This notebook contains code for creating maps overlaid with correlation and covariance data.</p>
+<p>Creates figures of variance &amp; mean height anomalies and saves them as PNG files.</p>
+<p>See docstrings below for more details.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
@@ -347,11 +343,53 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="k">class</span> <span class="nc">CreateMaps</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates figures of variance &amp; mean height anomalies and saves as PNG files.</span>
+
+<span class="sd">    Takes inputs detailing file path. All files with suffix &quot;.nc&quot; located </span>
+<span class="sd">    under the file path are globbed into a list. Input files must be variance </span>
+<span class="sd">    and mean height field anomalies, and must be in NetCDF4 format. Pairs of</span>
+<span class="sd">    variance and mean height anomaly data are collated and creates a figures </span>
+<span class="sd">    of each pair. </span>
+<span class="sd">    </span>
+<span class="sd">    Every outputted figure is saved to a separate file under a filename </span>
+<span class="sd">    derived from the filenames inputted. For example, two files, with names </span>
+<span class="sd">    &quot;DJF_mean_sam_rank_corr.nc&quot; and &quot;DJF_variance_sam_rank_corr.nc&quot;, will be </span>
+<span class="sd">    saved under the name &quot;DJF_sam_rank_corr.png&quot;.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self._path: str</span>
+<span class="sd">        Path to directory containing variance and mean height anomalies </span>
+<span class="sd">        files.</span>
+<span class="sd">    self._mean_files: list</span>
+<span class="sd">        List of paths to mean height anomalies file locations.</span>
+<span class="sd">    self._var_files: list</span>
+<span class="sd">        List of paths to variance anomalies file locations.</span>
+<span class="sd">    self.labels: dict</span>
+<span class="sd">        Dictionary of plot labels derived from the file names. Specific</span>
+<span class="sd">        to each file so repreatedly changed. The final label attribute </span>
+<span class="sd">        will correspond to the final files processed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">),</span> <span class="n">var</span><span class="o">=</span><span class="s1">&#39;corr&#39;</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s1">&#39;yearly&#39;</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_var</span> <span class="o">=</span> <span class="n">var</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">=</span> <span class="n">period</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_var</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_output_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">/</span> <span class="s1">&#39;figures&#39;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets attributes and loops through paired files.</span>
+<span class="sd">        </span>
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
+<span class="sd">        path: str</span>
+<span class="sd">            Path to base directory. </span>
+<span class="sd">        var: str</span>
+<span class="sd">            Name of sub-directory containing the variable.</span>
+<span class="sd">        period: str</span>
+<span class="sd">            Name of sub-directory containing files to be plotted.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No path provided, no figures were created, &quot;</span>\
+                <span class="s2">&quot;skipping process.&quot;</span><span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">var</span> <span class="o">/</span> <span class="n">period</span>
         
         <span class="bp">self</span><span class="o">.</span><span class="n">get_files</span><span class="p">()</span>
         
@@ -367,11 +405,24 @@ const thebe_selector_output = ".output, .cell_output"
 
 
     <span class="k">def</span> <span class="nf">get_files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creates lists of variance and mean anomalies files as attributes.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_var_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*variance_*.nc&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mean_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*mean_*.nc&#39;</span><span class="p">))</span>
 
 
     <span class="k">def</span> <span class="nf">get_plot_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">        Returns plot labels as an attribute, derived from file name.</span>
+<span class="sd">        </span>
+<span class="sd">        File naming convention is assumed to be the following:</span>
+<span class="sd">        If seasonal:</span>
+<span class="sd">            {season}_{variance or mean}_{index name}_{correlation method}_{statistic}.nc</span>
+<span class="sd">        If not seasonal:</span>
+<span class="sd">            {variance or mean}_{index name}_{correlation method}_{statistic}.nc</span>
+
+<span class="sd">        If index is ZW3, the index naming convention is assumed to be:</span>
+<span class="sd">            zw3_{phase bin}, e.g. zw3_-120_-90</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="n">parts</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
         
@@ -381,7 +432,9 @@ const thebe_selector_output = ".output, .cell_output"
         
         <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;method&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">isalpha</span><span class="p">():</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; (with Phase between &quot;</span> <span class="o">+</span> <span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> \
+                <span class="o">+</span> <span class="s2">&quot; (with Phase between &quot;</span> <span class="o">+</span> <span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> \
+                <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 
@@ -394,28 +447,50 @@ const thebe_selector_output = ".output, .cell_output"
 
 
     <span class="k">def</span> <span class="nf">get_output_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns output file name derived from the input file name.&quot;&quot;&quot;</span>
         <span class="n">parts</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
         <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">parts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
-
         <span class="k">return</span> <span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span>
 
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">calibrate_colour_scale</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return max and min values for figure colour scale.&quot;&quot;&quot;</span>
         <span class="n">abs_max_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="n">variable_name</span><span class="p">])</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">abs_max_value</span><span class="p">,</span> <span class="o">-</span><span class="n">abs_max_value</span>
 
+
     <span class="k">def</span> <span class="nf">plot_corr_cov_maps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean_ds</span><span class="p">,</span> <span class="n">var_ds</span><span class="p">,</span> <span class="n">output_fname</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create figures and save as PNG files.</span>
+<span class="sd">        </span>
+<span class="sd">        Takes input Datasets and plots mean and variance datasets </span>
+<span class="sd">        side-by-side. The two share the same projection, but possess </span>
+<span class="sd">        independent colour bars. xarray&#39;s PlateCarree native projection</span>
+<span class="sd">        is transformed into Orthographic projection for more digestable </span>
+<span class="sd">        figures.</span>
 
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
+<span class="sd">        mean_ds: xarray.Dataset</span>
+<span class="sd">            Dataset containing data of mean height field anomalies.</span>
+<span class="sd">        var_ds: xarray.Dataset</span>
+<span class="sd">            Dataset containing data of bandpassed variance anomalies.</span>
+<span class="sd">        output_fname: str</span>
+<span class="sd">            Name of PNG output file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Check path exists</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_output_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">output_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">/</span> <span class="s1">&#39;figures&#39;</span>
+        <span class="n">output_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
+        <span class="c1"># Fetch plot labels from self.labels attribute</span>
         <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span>
         <span class="n">variable_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;variable_name&#39;</span><span class="p">]</span>
         <span class="n">stat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;stat&#39;</span><span class="p">]</span>
         <span class="n">method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="s1">&#39;method&#39;</span><span class="p">]</span>
         
+        <span class="c1"># Set figure super title.</span>
         <span class="n">figure_title</span> <span class="o">=</span> <span class="n">method</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">stat</span> <span class="o">+</span> <span class="s2">&quot; between &quot;</span> \
             <span class="o">+</span> <span class="n">index</span> \
             <span class="o">+</span> <span class="s2">&quot; and 500hPa Geopotential Height Field&quot;</span>
@@ -431,7 +506,7 @@ const thebe_selector_output = ".output, .cell_output"
         <span class="n">map_projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Orthographic</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=-</span><span class="mf">90.0</span><span class="p">)</span>
         <span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">]</span>
 
-        <span class="c1"># Creat figure.</span>
+        <span class="c1"># Create figure with two subplot axes.</span>
         <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
         
         <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">map_projection</span><span class="p">)</span>
@@ -458,7 +533,7 @@ const thebe_selector_output = ".output, .cell_output"
 
         <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">figure_title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 
-        <span class="n">out_dest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_output_path</span> <span class="o">/</span> <span class="n">output_fname</span>
+        <span class="n">out_dest</span> <span class="o">=</span> <span class="n">output_path</span> <span class="o">/</span> <span class="n">output_fname</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">out_dest</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
 
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -466,8 +541,34 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">corr_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;corr&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
-    <span class="n">cov_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s2">&quot;cov&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+    <span class="n">corr_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;corr&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+    <span class="n">cov_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;cov&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 207&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;G:</span><span class="se">\\</span><span class="s2">Isaac</span><span class="se">\\</span><span class="s2">Documents</span><span class="se">\\</span><span class="s2">msc-research</span><span class="se">\\</span><span class="s2">data</span><span class="se">\\</span><span class="s2">ERA5</span><span class="se">\\</span><span class="s2">daily_data</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">209</span>     <span class="n">corr_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;corr&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>     <span class="n">cov_maps</span> <span class="o">=</span> <span class="n">CreateMaps</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;cov&quot;</span><span class="p">,</span> <span class="s2">&quot;seasonal&quot;</span><span class="p">)</span>
+
+<span class="nn">Input In [1],</span> in <span class="ni">CreateMaps.__init__</span><span class="nt">(self, path, var, period)</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span> <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span><span class="sd"> Sets attributes and loops through paired files.</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span><span class="sd">     Name of sub-directory containing files to be plotted.</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">54</span>     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No path provided, no figures were created, &quot;</span>\
+<span class="g g-Whitespace">     </span><span class="mi">55</span>         <span class="s2">&quot;skipping process.&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span> <span class="o">/</span> <span class="n">var</span> <span class="o">/</span> <span class="n">period</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_files</span><span class="p">()</span>
+
+<span class="ne">Exception</span>: No path provided, no figures were created, skipping process.
 </pre></div>
 </div>
 </div>
@@ -499,11 +600,11 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="correlation_spatial_patterns.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../era5_analysis/week10.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
+            <p class="prev-next-title">Week 10</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="load_indices.html" title="next page">

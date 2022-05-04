@@ -169,11 +169,6 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="correlation_spatial_patterns.html">
-   Correlation &amp; Covariance Maps
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="create_maps.html">
    Create Maps
   </a>
@@ -334,40 +329,75 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="load-indices">
 <h1>Load Indices<a class="headerlink" href="#load-indices" title="Permalink to this headline">¶</a></h1>
-<p>This notebook contains code that opens indices datasets and sorts them into a nested dictionary, a structure that is consistent with how the data is handled by the CorrCovMaps class.</p>
+<p>Creates nested dictionary containing time series of each index passed to it.</p>
+<p>See docstrings below for more details.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 
 <span class="k">class</span> <span class="nc">Indices</span><span class="p">():</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">variable_names</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s1">&#39;seasonal&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates dictionary containing time series of each index passed to it.</span>
+
+<span class="sd">    Loads index NetCDF files contained within filenames list. Reads the data as</span>
+<span class="sd">    xarray.Datasets before reformatting them into numpy.ndarrays. </span>
+<span class="sd">    Creates a data structure, a nested dictionary, that is consistent for easy </span>
+<span class="sd">    access to indices time series. This dictionary is assigned as an attribute </span>
+<span class="sd">    under self._index_dict.</span>
+
+<span class="sd">    If period is &quot;seasonal&quot;, the data is grouped according to season. Also, if</span>
+<span class="sd">    the index for ZW3 is passed, the tindex is grouped according to phase bins,</span>
+<span class="sd">    controlled by the argument &quot;zw3_bins&quot;. This grouping effeectively reduces the</span>
+<span class="sd">    length of the time series, and the exact times under each group must be paired</span>
+<span class="sd">    with the same timestamps in the anomalies Dataset when calculating correlation</span>
+<span class="sd">    and covariance matrices (see corr_cov_maps.py). To this end, the index of each </span>
+<span class="sd">    time contained within the grouped data is returned in a tuple with the index </span>
+<span class="sd">    value at this timestamp.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self._index_dict: dict</span>
+<span class="sd">        Nested dictionary containing time series for each grouped index. If period</span>
+<span class="sd">        is &quot;seasonal&quot;, the data structure will be the following:</span>
+<span class="sd">            self._index_dict = {</span>
+<span class="sd">                season:{</span>
+<span class="sd">                    index_name: (index_values, timestamp_indices)</span>
+<span class="sd">                }</span>
+<span class="sd">            }</span>
+<span class="sd">        Otherwise, the structure will be:</span>
+<span class="sd">            self._index_dict = {</span>
+<span class="sd">                index_name:(index_values, timestamp_indices)</span>
+<span class="sd">            }</span>
+<span class="sd">        If the whole time series is to be used, {timestamp_indices} is assigned</span>
+<span class="sd">        None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filenames</span><span class="p">,</span> <span class="n">index_names</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s1">&#39;seasonal&#39;</span><span class="p">,</span> <span class="n">zw3_bins</span><span class="o">=</span><span class="s1">&#39;30_deg&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and organises index dictionary attribute.</span>
+
 <span class="sd">        This function opens the NetCDF files containing indices, reformats the </span>
 <span class="sd">        contents into a usable format and stores them in a consistent data structure.</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
 <span class="sd">        filenames: list</span>
 <span class="sd">            List of file path locations for all indices to be correlated.</span>
-<span class="sd">        variable_names: str</span>
+<span class="sd">        index_names: list</span>
 <span class="sd">            List of names that identify the variable in the index NetCDF file.</span>
-<span class="sd">        seasonal: boolean</span>
-<span class="sd">            Indicates whether the input data should be processed seasonally.</span>
-
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">        index_dict: dict</span>
-<span class="sd">            Dictionary used to store indices&#39; time series.</span>
-<span class="sd">        std_dict: dict</span>
-<span class="sd">            Dictionary used to store standard deviations of indices&#39; time series.</span>
+<span class="sd">        period: str</span>
+<span class="sd">            Indicates whether the input data should be processed seasonally or</span>
+<span class="sd">            yearly.</span>
+<span class="sd">        zw3_bins: str</span>
+<span class="sd">            Indicates whether 30 degree or 60 degree longitude bins should be used.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         
         <span class="bp">self</span><span class="o">.</span><span class="n">_filenames</span> <span class="o">=</span> <span class="n">filenames</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_variable_names</span> <span class="o">=</span> <span class="n">variable_names</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_index_names</span> <span class="o">=</span> <span class="n">index_names</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">=</span> <span class="n">period</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_bins</span> <span class="o">=</span> <span class="n">zw3_bins</span>
         
         <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -376,57 +406,59 @@ const thebe_selector_output = ".output, .cell_output"
 
     <span class="k">def</span> <span class="nf">load_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">        normalised_index_dict: dict</span>
-<span class="sd">            Dictionary containing arrays of all normalised indices&#39; time series.</span>
-<span class="sd">        std_dict: dict</span>
-<span class="sd">            Dictionary containing standard deviation of all normalised indices&#39; time </span>
-<span class="sd">            series.</span>
+<span class="sd">        Loads index files and calls method depending on &quot;period&quot; value.</span>
+
+<span class="sd">        Loops through each file and opens that file. Ensures that the</span>
+<span class="sd">        index within that file is required, i.e. is contained within the</span>
+<span class="sd">        self._index_names list. Handles ZW3 index different as it first</span>
+<span class="sd">        groups the data according to phase bins/longitude groups. The</span>
+<span class="sd">        bounds of the phase bins are used to name the dictionary key.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filenames</span><span class="p">:</span>
             <span class="n">raw_index</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">variable_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">raw_index</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
-                <span class="k">if</span> <span class="n">variable_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variable_names</span><span class="p">:</span>
-                    <span class="k">assert</span> <span class="n">variable_name</span> <span class="o">+</span> <span class="s2">&quot;not in variable_names, skipping.&quot;</span>
+            <span class="k">for</span> <span class="n">index_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">raw_index</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                <span class="k">if</span> <span class="n">index_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_names</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="n">index_name</span> <span class="o">+</span> <span class="s2">&quot;not in variable_names, skipping.&quot;</span>
                     <span class="k">continue</span>
-                <span class="k">if</span> <span class="n">variable_name</span> <span class="o">==</span> <span class="s1">&#39;zw3index_magnitude&#39;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">index_name</span> <span class="o">==</span> <span class="s1">&#39;zw3index_magnitude&#39;</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_lon_filtered_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lon_groups</span><span class="p">(</span><span class="n">raw_index</span><span class="p">)</span>
                     <span class="k">for</span> <span class="n">lon_range</span><span class="p">,</span> <span class="n">times</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_lon_filtered_groups</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
                         <span class="n">raw_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_lon_filtered_groups</span><span class="p">[</span><span class="n">lon_range</span><span class="p">]</span>
                         <span class="n">key_name</span> <span class="o">=</span> <span class="s2">&quot;zw3_&quot;</span> <span class="o">+</span> <span class="n">lon_range</span>
-                        <span class="bp">self</span><span class="o">.</span><span class="n">organise_indices_dict</span><span class="p">(</span><span class="n">raw_index</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">organise_indices_dict</span><span class="p">(</span><span class="n">raw_index</span><span class="p">,</span> <span class="n">index_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">organise_indices_dict</span><span class="p">(</span><span class="n">raw_index</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">organise_indices_dict</span><span class="p">(</span><span class="n">raw_index</span><span class="p">,</span> <span class="n">index_name</span><span class="p">,</span> <span class="n">index_name</span><span class="p">)</span>
             <span class="n">raw_index</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 
-    <span class="k">def</span> <span class="nf">organise_indices_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">variable_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">lon_times</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">organise_indices_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">index_name</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">lon_times</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Checks whether the data is to be handled seasonally or not, and calls the </span>
-<span class="sd">        appropriate method to create the correct data structure.</span>
+<span class="sd">        Calls appropriate method for handling seasonally grouped data.</span>
+
+<span class="sd">        Checks whether the data is to be handled seasonally or not. If so,</span>
+<span class="sd">        that data is grouped and a call is made to the appropriate method </span>
+<span class="sd">        to create the correct data structure.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span><span class="p">:</span>
-            <span class="n">index_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_seasonal_data</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">variable_name</span><span class="p">])</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">organise_seasonal_dict</span><span class="p">(</span><span class="n">index_groups</span><span class="p">,</span> <span class="n">key_name</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;rolling_seasonal&#39;</span><span class="p">:</span>
-            <span class="n">index_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_rolling_seasonal_data</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">variable_name</span><span class="p">])</span>
+            <span class="n">index_groups</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">group_seasonal_data</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">index_name</span><span class="p">])</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">organise_seasonal_dict</span><span class="p">(</span><span class="n">index_groups</span><span class="p">,</span> <span class="n">key_name</span><span class="p">)</span>
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_period</span> <span class="o">==</span> <span class="s1">&#39;yearly&#39;</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">organise_yearly_dict</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">variable_name</span><span class="p">],</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">lon_times</span><span class="p">)</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">organise_yearly_dict</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="n">index_name</span><span class="p">],</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">lon_times</span><span class="p">)</span> 
     
     
     <span class="k">def</span> <span class="nf">organise_yearly_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">lon_times</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This function creates the necessary dictionary structure when using the full </span>
-<span class="sd">        time series i.e. yearly aggregate where seasonal differences are smeared over.</span>
-<span class="sd">        Ensures self._index_dict and self._std_dict are stored and accessed correctly when</span>
-<span class="sd">        calculating correlations and writing NetCDF files.</span>
+<span class="sd">        Creates dictionary for indices full time series.</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
+<span class="sd">        This function creates the necessary dictionary structure when using the</span>
+<span class="sd">        full time series i.e. yearly aggregate where seasonal differences are </span>
+<span class="sd">        smeared over. Ensures self._index_dict is stored and accessed correctly </span>
+<span class="sd">        when calculating correlations and writing NetCDF files.</span>
+
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
 <span class="sd">        index: xarray.Dataset</span>
 <span class="sd">            Dataset containing index data with time dimension.</span>
 <span class="sd">        key_name: str</span>
@@ -444,21 +476,23 @@ const thebe_selector_output = ".output, .cell_output"
             <span class="k">if</span> <span class="s1">&#39;zw3&#39;</span> <span class="ow">in</span> <span class="n">key_name</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">key_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_time_series</span><span class="p">,</span> <span class="n">lon_times</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">key_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">index_time_series</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">key_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_time_series</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 
     <span class="k">def</span> <span class="nf">organise_seasonal_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index_groups</span><span class="p">,</span> <span class="n">key_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        For data to be handled seasonally, this function creates the necessary dictionary</span>
-<span class="sd">        structure for the self._index_dict and self._std_dict to be stored and accessed </span>
+<span class="sd">        Creates dictionary for indices to be analysed according to season.</span>
+
+<span class="sd">        For data to be handled seasonally, this function creates the necessary </span>
+<span class="sd">        dictionary structure for the self._index_dict to be stored and accessed </span>
 <span class="sd">        correctly when calculating correlations and writing NetCDF files.</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
 <span class="sd">        index: xarray.Dataset</span>
 <span class="sd">            Dataset containing index data with time dimension.</span>
 <span class="sd">        key_name: str</span>
-<span class="sd">            Name of key to store data under, in this case usually the index name.</span>
+<span class="sd">            Name of key to store data under, usually the index name.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">season</span><span class="p">,</span> <span class="n">times</span> <span class="ow">in</span> <span class="n">index_groups</span><span class="o">.</span><span class="n">groups</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">index_time_series</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_index</span><span class="p">(</span><span class="n">index_groups</span><span class="p">[</span><span class="n">season</span><span class="p">])</span>
@@ -467,58 +501,30 @@ const thebe_selector_output = ".output, .cell_output"
                     <span class="s2">&quot;Sample size too small: it won&#39;t be correlated.&quot;</span><span class="p">)</span>
                 <span class="k">continue</span>
             <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># if self._period == &#39;rolling_seasonal&#39;:</span>
-            <span class="c1">#     season_names = [</span>
-            <span class="c1">#         &#39;NDJ&#39;, &#39;DJF&#39;, &#39;JFM&#39;, &#39;FMA&#39;, &#39;MAM&#39;, &#39;AMJ&#39;, </span>
-            <span class="c1">#         &#39;MJJ&#39;, &#39;JJA&#39;, &#39;JAS&#39;, &#39;ASO&#39;, &#39;SON&#39;, &#39;OND&#39;,   </span>
-            <span class="c1">#     ]</span>
-            <span class="c1">#     season = season_names[season - 1]</span>
                 <span class="k">if</span> <span class="n">season</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">season</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_index_dict</span><span class="p">[</span><span class="n">season</span><span class="p">][</span><span class="n">key_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">index_time_series</span><span class="p">,</span> <span class="n">times</span><span class="p">)</span>
 
 
     <span class="k">def</span> <span class="nf">format_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Reformats given index into a flattened numpy.ndarray and normalises that array.</span>
-<span class="sd">        Returns the normalised index and its standard deviation for use in covariance</span>
-<span class="sd">        calculation.</span>
-
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        index: xarray.DataArray</span>
-<span class="sd">            DataArray containing index data with time dimension.</span>
-<span class="sd">        </span>
-<span class="sd">        Returns</span>
-<span class="sd">        -------</span>
-<span class="sd">        normalised_index: numpy.ndarray</span>
-<span class="sd">            Normalised index with no NaNs.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Returns flattened index array with no NaN values.&quot;&quot;&quot;</span>
         <span class="n">index_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-        <span class="c1"># Drop nans</span>
         <span class="n">index_array</span> <span class="o">=</span> <span class="n">index_array</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">index_array</span><span class="p">)]</span>
-
         <span class="k">return</span> <span class="n">index_array</span>
         
     
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">group_seasonal_data</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Groups xarray.Dataset seasonally.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.season&#39;</span><span class="p">)</span>
 
 
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">group_rolling_seasonal_data</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
-        <span class="n">rolling_season_average</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">rolling_season_average</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.month&#39;</span><span class="p">)</span>
-
-
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">get_lon_groups</span><span class="p">(</span><span class="n">zw3</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_lon_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">zw3</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Groups Goyal&#39;s ZW3 index into longitude bins.</span>
 
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
+<span class="sd">        Arguments</span>
+<span class="sd">        ---------</span>
 <span class="sd">        zw3: xarray.Dataset</span>
 <span class="sd">            Dataset containing a time series for Goyal&#39;s ZW3 index, must contain both </span>
 <span class="sd">            magnitude and phase.</span>
@@ -528,11 +534,22 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="sd">        groups_zw3: xarray.Dataset.groupby</span>
 <span class="sd">            Dataset grouped by longitude bins.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_bins</span> <span class="o">==</span> <span class="s2">&quot;30_deg&quot;</span><span class="p">:</span>
+            <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s1">&#39;-180_-150&#39;</span><span class="p">,</span> <span class="s1">&#39;-150_-120&#39;</span><span class="p">,</span> <span class="s1">&#39;-120_-90&#39;</span><span class="p">,</span> <span class="s1">&#39;-90_-60&#39;</span><span class="p">,</span> <span class="s1">&#39;-60_-30&#39;</span><span class="p">,</span> 
+                <span class="s1">&#39;-30_0&#39;</span><span class="p">,</span> <span class="s1">&#39;0_30&#39;</span><span class="p">,</span> <span class="s1">&#39;30_60&#39;</span><span class="p">,</span> <span class="s1">&#39;60_90&#39;</span><span class="p">,</span> <span class="s1">&#39;90_120&#39;</span><span class="p">,</span> <span class="s1">&#39;120_150&#39;</span><span class="p">,</span> <span class="s1">&#39;150_180&#39;</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zw3_bins</span> <span class="o">==</span> <span class="s2">&quot;60_deg&quot;</span><span class="p">:</span>
+            <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;-180_-120&#39;</span><span class="p">,</span> <span class="s1">&#39;-120_-60&#39;</span><span class="p">,</span> <span class="s1">&#39;-60_0&#39;</span><span class="p">,</span> <span class="s1">&#39;0_60&#39;</span><span class="p">,</span> <span class="s1">&#39;60_120&#39;</span><span class="p">,</span> <span class="s1">&#39;120_180&#39;</span>
+            <span class="p">]</span>
 
-        <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">,</span> <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">60</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
-        <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-180_-150&#39;</span><span class="p">,</span> <span class="s1">&#39;-150_-120&#39;</span><span class="p">,</span> <span class="s1">&#39;-120_-90&#39;</span><span class="p">,</span> <span class="s1">&#39;-90_-60&#39;</span><span class="p">,</span> <span class="s1">&#39;-60_-30&#39;</span><span class="p">,</span> <span class="s1">&#39;-30_0&#39;</span><span class="p">,</span> <span class="s1">&#39;0_30&#39;</span><span class="p">,</span> <span class="s1">&#39;30_60&#39;</span><span class="p">,</span> <span class="s1">&#39;60_90&#39;</span><span class="p">,</span> <span class="s1">&#39;90_120&#39;</span><span class="p">,</span> <span class="s1">&#39;120_150&#39;</span><span class="p">,</span> <span class="s1">&#39;150_180&#39;</span><span class="p">]</span>
-
-        <span class="n">groups_zw3</span> <span class="o">=</span> <span class="n">zw3</span><span class="o">.</span><span class="n">groupby_bins</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">zw3</span><span class="o">.</span><span class="n">zw3index_phase</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">groups_zw3</span> <span class="o">=</span> <span class="n">zw3</span><span class="o">.</span><span class="n">groupby_bins</span><span class="p">(</span>
+            <span class="n">group</span><span class="o">=</span><span class="n">zw3</span><span class="o">.</span><span class="n">zw3index_phase</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> 
+            <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
 
         <span class="k">return</span> <span class="n">groups_zw3</span>
 </pre></div>

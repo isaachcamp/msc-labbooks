@@ -26,10 +26,10 @@ Spearman Rank Correlations for SAM Index, PC1.
 Mean height anomalies show textbook SAM pattern, with positive correlations between 30S and 60S -- with a maximum value reaching roughly 0.5 -- and negative correlations over the pole -- reaching a low of around -0.8 -- extending to 60S, where the zero correlation is roughly found. The picture is highly symmetrical, however there are three apparent maximums for positive correlation in a band at approximately 50S, centred over the eastern Indian Ocean, the western Atlantic over South America, and western Pacific, south east of New Zealand. 
 
 ```{note}
-Could this be a tracer for ZW3?
+Could this be a tracer for ZW3? This is the picture seen in the literature -- _remind yourself why the three maxima exist._
 ```
 
-There is also a diminishing of correlation around the central Pacific, with another cessation, though not to the same extent, found south of Australia.
+There is also a diminishing correlation around the central Pacific, though not to the same extent, found south of Australia.
 
 ##### Short-Scale Variance Anomalies
 
@@ -44,7 +44,7 @@ Both mean height and variance anomalies colour bars are skewed positive. This is
 
 :::{figure-md} soi_rank
 
-<img src="../figures/correlations/yearly/soi_rank_corr.png">
+<img src="../figures/correlations/yearly/SOI_rank_corr.png">
 
 Spearman Rank Correlations for SOI.
 
@@ -69,7 +69,7 @@ A similar band across the Pacific ocean can be seen, though further poleward, wi
 
 :::{figure-md} dmi_rank
 
-<img src="../figures/correlations/yearly/dmi_rank_corr.png">
+<img src="../figures/correlations/yearly/DMI_rank_corr.png">
 
 Spearman Rank Correlations for DMI.
 
@@ -84,239 +84,241 @@ Negative correlation values are generally weak, indicating there may be little c
 The correlation values are generally weaker for the DMI than than seen for other indices, indicating that there may be little connection between the IOD and the storm track. A negative region stretching across the Indian ocean to north of New Zealand, reaching a maximum of -0.25 over Alice Springs, Australia, is well aligned with the positive region seen in the mean height field. This is a relatively coherent pattern and could indicate there is some physical reason for this.
 
 
-#### ZW3 Longitude -180 to -150
+#### ZW3
+
+##### Phase -180 to -150
 
 :::{figure-md} zw3_-180_-150_rank
 
-<img src="../figures/correlations/yearly/zw3_-180_-150_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-180_-150_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -180 to -150.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 Weaker ZW3 pattern here, with much less distinct extrema, both positive and negative, than can be seen in other phase bins. There are still strong positive regions off the coast of Antartica, in the Amundsen sea. and south of Australia, though the one that should be south of South Africa is weak. There are also strong negative regions east of New Zealand and east of South America.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 There is little distinctive pattern here, as is common to most of the following figures for variance anomalies. There is a cluster of local positive maxima over Antarctica, with the strongest maximum located over the Amundesen and Ross seas. The positive regions do however, vaguely resemble the structure seen in the mean height field anomalies.
 
 A small, indistinctive positive region can be seen off the south western coast of South America, north of the Antarctic peninsula. It might not have been of note except for the presence of such a region in many, if not all of the graphs, which is also aligned very well with a negative region in the mean height field.Both these regions seem to have migrated poleward as compared to phases between 0 and 180, see note for [ZW3 Phase 150-180](first-common-feature).
 
 
-#### ZW3 Longitude -150 to -120
+##### Phase -150 to -120
 
 :::{figure-md} zw3_-150_-120_rank
 
-<img src="../figures/correlations/yearly/zw3_-150_-120_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-150_-120_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -150 to -120.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 As with the -180 to -150 phase bin, a weaker ZW3 pattern is observed, with missing positive and negative extrema, however still ostensibly resmembling ZW3 and the correlation values appear to be consistent with other phase groups. Again, there is a strong positive region off the coast of Antartica, in the Amundsen sea, although shifted equatorward, as well as south of Australia. Weaker regions of negative correlation exist between the positive ones, the strongest located east of New Zealand as per the previous phase group.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Generally weaker correlations here than for other ZW3 phases. A cluster of positive correlations can be seen around the Antarctic, the strongest at 0.3 is found between the Amundsen and Ross seas. A negative region south of New Zealand aligns well with the equivalent negative region in mean height field anomalies. Once again, the pattern vaguely resembles that seen in the mean height anomalies.
 
 A strong negative region centred on the coast of Brazil at around 30S is well-aligned with a region of positive correlation seen in the mean height anomalies. Whilst a region of positive located directly below the aforementioned negative region is possibly a common feature between phase bin maps, however it has migrated poleward along with the (potentially) associated negative region of the mean height field, see note for [ZW3 Phase 150-180](first-common-feature).
 
 
-#### ZW3 Longitude -120 to -90
+##### Phase -120 to -90
 
 :::{figure-md} zw3_-120_-90_rank
 
-<img src="../figures/correlations/yearly/zw3_-120_-90_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-120_-90_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -120 to -90.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A strong ZW3-like spatial correlation pattern, with positive and negative extrema possessing correlations of 0.5 and -0.5 respectively. This is the expected result as the ZW3 is defined according to the mean height field. The three expected negative regions are however, much weaker and less distinctive -- the third region in the Indian ocean is very weak. 
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 A region of strong positive, 0.4, is located above the Ross sea, whilst almost directly opposite, on the other side of Antarctica, there exists a strong negative region, -0.4, above the Lazarev sea. This negative region lines up well with the negative region of the mean height anomaly field, however the aforementioned positive region lies on the lower tail end of Pacific positive region of the mean height field, therefore no strong link can be inferred here. There is a particularly strong negative region in the central Pacific, around 35S, which aligns well with the mean height positive region. There is also a strong positive region north west of New Zealand, that could be linked to the mean height negative region present to the south east.
 
 
-#### ZW3 Longitude -90 to -60
+##### Phase -90 to -60
 
 :::{figure-md} zw3_-90_-60_rank
 
-<img src="../figures/correlations/yearly/zw3_-90_-60_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-90_-60_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -90 to -60.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A very strong ZW3-like spatial correlation pattern, with positive and negative extrema possessing correlations of 0.6 and -0.5 respectively. The three expected negative regions are again weaker and less distinctive -- the third region south of Tasmania is very weak. _This is a consistent feature found across each of the phase groups -- weaker negative regions with a particularly weak third region._
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 There appears to be three very strong positive regions in a ZW3-like pattern, however much less extensive and shift meridionally toward Australia. A positive region, 0.4, extends zonally to the south of South Africa whilst negative regions of considerable extent spread across the entire Pacific ocean, and from Australia poleward and toward the Indian ocean. These regions may be associated with the two mean height positive regions.
 
 
-#### ZW3 Longitude -60 to -30
+##### Phase -60 to -30
 
 :::{figure-md} zw3_-60_-30_rank
 
-<img src="../figures/correlations/yearly/zw3_-60_-30_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-60_-30_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -60 to -30.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A strong ZW3-like pattern, although weaker than the previous phase group. The three negative regions are once again weaker and less distinctive. The positive region over the Atlantic is unusual in that it is weaker, and appears to extend westward and equatorward over South America, reaching a maximum somewhere over Brazil.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Very little in the way of spatial pattern can be seen. The are a few strong positive regions around Antarctica, consistent with other phase groups. These regions vaguely resemble a ZW3 pattern, in that there are three distinct regions interupted by fainter negative ones, however there is a fourth strong positive extremum over the pole and the pattern is quite diffuse -- significance is hard to establish, _this could be where significance testing is useful_. There are other dispersed negative regions of considerable magnitude, however it is difficult to establish any context for them. Arguably, there exists three negative regions that align reasonably well with the mean height positive regions, however this could be fanciful.
 
 
-#### ZW3 Longitude -30 to 0
+##### Phase -30 to 0
 
 :::{figure-md} zw3_-30_0_rank
 
-<img src="../figures/correlations/yearly/zw3_-30_0_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_-30_0_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group -30 to -0.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A strong ZW3-like pattern, but three negative regions are significantly weaker. Only one negaitve region can be discerned, the others two appear to be subsumed by the positive regions that extend much further than for other phase groups. The positive region over the Atlantic again extends westward and equatorward over the South American peninsula -- this appears to occur often in other phase groups.
 
 _Another possibly consistent feature seems to be the alignment of the mean height positive regions with negative regions in the variance anomaly field. This, alongside the variance positive regions closer to pole, and somewhat in alignment with the mean height negative regions, could be significant. This is particularly apparent for this phase group -- something to investigate._
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Another cluster of positive regions around the South Pole. Align reasonably well with the mean height negative region (that appear to be enveloped by the positive regions -- assuming that these are negative regions, as they are very weak in this phase group). Three negative regions align well with the mean height positive regions. There is also another negative region between South Africa and Antarctica that doesn't clearly align well with any thing.
 
 
-#### ZW3 Longitude 0 to 30
+##### Phase 0 to 30
 
 :::{figure-md} zw3_0_30_rank
 
-<img src="../figures/correlations/yearly/zw3_0_30_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_0_30_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 0 to 30.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A very prominent ZW3 pattern can be observed, with strong correlations reaching an absolute maximum of 0.6. There is a reduction in correlation centred over the Antarctic, though only slight. This is the strongest ZW3 pattern between phase groups, with prominent positive and negative regions, however there remains the common feature of one negative region being weaker than the other two -- this one over the eastern Pacific ocean.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Another indistinctive pattern here, although the absolute correlations are still strong at about 0.6 again. There are strong maxima of positive correlation centred over South Africa and west of South America. Three tails of strong negative correlations emanate from Antarctica roughly over the same location as the positive mean heights anomalies -- another common occurrence, though these regions are broader whereas other maps present tight, small negative regions aligning with the mean height positives.
 
 
-#### ZW3 Longitude 30 to 60
+##### Phase 30 to 60
 
 :::{figure-md} zw3_30_60_rank
 
-<img src="../figures/correlations/yearly/zw3_30_60_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_30_60_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 30 to 60.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 Another prominent ZW3 pattern can be observed, with strong correlations reaching an absolute maximum of 0.6. Two negative regions are once again less distinctive however, and a merge into a single weakly negative region stretching across the pole between the Atlantic and Indian oceans. This weak, diffuse region is however, very well-aligned with a band of strongly positive correlation found in the variance anomaly field.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Again a confused pattern, difficult to draw any conclusions about. However the correlation values are extremely strong at 0.5 again. There is a spread of strongly positive regions clustered around the pole, hwich seem to align fairly well with the mean height negative regions. There is also a region of strong negative correlation, centred over the south island of New Zealand, that aligns well with a region of strong positive correlation in the mean height anomaly field.
 
 In this phase group, a potentially common feature appears, with a strongly positive region at 20S-30S off the South American eastern coast aligns well with a mean height anomalies negative region.
 
 
-#### ZW3 Longitude 60 to 90
+##### Phase 60 to 90
 
 :::{figure-md} zw3_60_90_rank
 
-<img src="../figures/correlations/yearly/zw3_60_90_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_60_90_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 60 to 90.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 A less obvious ZW3 pattern but once again with strong correlations reaching an absolute maximum of 0.6. This occurs for a single one of the positive and negative extremes, the other extrema are much less distinctive, more diffuse. Two of negative extrema are weaker and less distinctive. There are also a further two local minima found equatorward of the prominent pattern, which may be indicative of Rossby wave trains -- _this seems a stretch_. 
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Strong positive correlations clustering around the pole, with a further positive region at lower latitudes off the east coast of South America. A strongly negative region follows the zero line of the mean height anomalies field to the south of New Zealand.
 
 
-#### ZW3 Longitude 90 to 120
+##### Phase 90 to 120
 
 :::{figure-md} zw3_90_120_rank
 
-<img src="../figures/correlations/yearly/zw3_90_120_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_90_120_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 90 to 120.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 Another strong ZW3 pattern, as expected. A negative skew in the maximum correlation values, seemingly localised to the negative extremum located in the central Pacific, whilst the other negative extrema are less pronounced. Strong positive extrema that extend and meet over the Antarctic, where the correlation is much weaker. 
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 Indistinctive pattern here. One particularly pronounced positive region, a high of over 0.5, located close to Antarctica, south of the African continent, which lines up well with the positive region of the mean height field -- though this region is much more extensive. A couple of other, less pronounced, positive regions are located above South Africa and the off the south coast of Western Australia. A strong negative region on the south west coast of South America lines up well with another of the positive mean height anomaly field regions -- an inconsistent pairing, as noted above with the complete opposite case, therefore difficult to say whether this is significant. There is some alignment between negative regions and the mean height positive regions, as seen in many other phase groups, except for the aforementioned strongly positive region which in some way contradicts this.
 
 
-#### ZW3 Longitude 120 to 150
+##### Phase 120 to 150
 
 :::{figure-md} zw3_120_150_rank
 
-<img src="../figures/correlations/yearly/zw3_120_150_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_120_150_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 120 to 150.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 Another strong ZW3 pattern, highs and lows of 0.6. The location of the three highs and lows are circling the globe as would be expected with the changing phase. The third negative region is once again less prominent, and intruded upon by the two positive regions either side of it.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 A diffuse region of strong positive correlation is aligned well with the positive region of mean height field anomalies, stretched across the western side of the South American and Antarctic peninsulas. Whilst a second cluster of local positive maxima align well with the strong negative region of mean height field anomalies in the Atlantic. Again little obvious pattern can be discerned, however the correlation values remain high. _There is arguably three negative regions aligning with the three mean height positives, though again this could be a stretch._
 
 
 (first-common-feature)=
-#### ZW3 Longitude 150 to 180
+##### Phase 150 to 180
 
 :::{figure-md} zw3_150_180_rank
 
-<img src="../figures/correlations/yearly/zw3_150_180_rank_corr.png">
+<img src="../figures/correlations/yearly/zw3_30_deg/zw3_150_180_rank_corr.png">
 
 Spearman Rank Correlations for ZW3, Phase Group 150 to 180.
 
 :::
 
-##### Mean Height Anomalies
+###### Mean Height Anomalies
 
 Very prominent ZW3 pattern, slight negative skew in the extrema with maximums of 0.5 and -0.6 for positive and negative respectively. The negative regions are much more distinct than other longitude bins.
 
-##### Short-Scale Variance Anomalies
+###### Short-Scale Variance Anomalies
 
 A strong positive region extends from South America's southern tip south and through Antarctica to the coastline south of Australia. This roughly follows the positive region in the mean height field correlations, however the extent is much reduced and almost a single line drawn directly between South America and Australia. There are a couple of negative regions in southern Indian ocean that also align well well a negative region of the mean height field. Another negative region off the southern coast of South Africa aligns well with a positive region in the mean height field. The same is true of negative regions to hte west of South America and south of Australia -- consistent with other phase groups.
 
@@ -326,7 +328,7 @@ Once more there is a region of positive correlation off the southern coast of Br
 This is a common occurrence for ZW3 phase between 0 and 180 degrees longitude! A negative region in the mean height field located off the the eastern cost of South America, around 30S, which aligns very well with a positive region in the variance field.
 ```
 
-#### ZW3 Summary
+##### ZW3 Summary
 
 - The regions in the variance field are generally much less extensive than any that they may be associated with in the mean height field.
 - There is most often three weaker negative regions, with one in particular being weaker than the others.
@@ -452,6 +454,43 @@ The strong positive band that is seen in all seasons is once again present for b
 
 #### DMI
 
+```{figure} ../figures/correlations/seasonal/dmi/DJF_dmi_rank_corr.png
+---
+name: dmi-djf-rank-corr
+scale: 40%
+align: left
+---
+Spearman Rank Correlations in Austral Summer for DMI.
+```
+
+
+```{figure} ../figures/correlations/seasonal/dmi/JJA_dmi_rank_corr.png
+---
+name: dmi-jja-rank-corr
+scale: 40%
+align: right
+---
+Spearman Rank Correlations in Austral Winter for DMI.
+```
+
+
+```{figure} ../figures/correlations/seasonal/dmi/SON_dmi_rank_corr.png
+---
+name: dmi-son-rank-corr
+figclass: margin
+---
+Spearman Rank Correlations in Austral Spring for DMI.
+```
+
+
+```{figure} ../figures/correlations/seasonal/dmi/MAM_dmi_rank_corr.png
+---
+name: dmi-mam-rank-corr
+figclass: margin
+---
+Spearman Rank Correlations in Austral Autumn for DMI.
+```
+
 ##### Mean Height Anomalies
 
 A strong positive ring is consistently located between 20S and 45S, broken in places with weaker correlations during the transition seasons. The ring is most prominent during austral summer. The strongest regions are found around Australia, extending from the western Pacific to south of the Indian subcontinent in austral summer, however it can vary significantly. The region appears over the Indian ocean during the autumn months, whilst it is quite prominent over Australia and poleward during the winter and spring months. The region for these months is much reduced as compared to summer.
@@ -466,9 +505,61 @@ A positive region located south of this negative region is observed in all seaso
 
 There is a second consistent positive region in the central Atlantic, between 20S and 40S appearing in all seasons except austral summer. This is a particularly strong patch, which may suggest a teleconnection between the IOD and this region.
 
-#### ZW3
+#### ZW3 30 Degree Phase Bins
 
-##### Mean Height Anomalies
+Many of these figures were not produced as the sample size was too small -- some phase groups have a figure for a single season. There are approximately 516 data in a full time series, in this case these are grouped into 12 phase bins and four seasons, a total of 48 groups, leaving an average sample size of less than 11. There is also little obvious coherence in spatial patterns and the figures are quite coarse-grained. For these reasons, for seasonal maps at least, new phase bins of 60 degrees will be used for correlation & covariance maps.
+
+```{note}
+Is one reason why there is little pattern because it is blurred out due to ZW3's mobility? Such that the regions of maximum correlation are so strong and yet so small because they are highly consistent for the whole phase bin, whereas the surrounding regions are smeared out?
+```
+
+## 2022 May 05
+
+### Seasonal Correlation & Covariance Maps
+
+#### ZW3 60 Degree Phase Bins
+
+##### Phase -180 to -120
+
+###### Mean Height Anomalies
+
+```{note}
+There appears to be a season or two where the ZW3 pattern is strongest, whereas other seasons have little obvious features at all. The season in which the ZW3 pattern is apparent depends on the phase bin. _Certain phases are more common in those seasons?_
+```
+
+In austral summer, the ZW3 pattern common to the full year time series figures is not obvious here. There are regions of alternating positive and negative, but with no consistency and those regions are not localised, rather smeared out over a large area. There is a single localised negative region southwest of South America, however this is the only one. Otherwise there is almost a complete ring of positive correlation which wanders between 60S and 40S. This band disappears in winter, though retains a large positive region stretching from south of New Zealand to south of Madagascar. Strongly negative regions lie on either side of this positive region, though none align particularly well with anything seen in the variance anomalies. One of these negative regions, over Antarctica, aligns with a broken positive region, but difficult to definitively associate them. There is a further positive region over South America.
+
+Spring and autumn have much more distinctive ZW3-like patterns, particularly autumn. Three strongly negative regions surround a positive region that extends across Antarctica --  there is a lack of the three alternating positive regions. Little aligns with this region in the variance anomalies, however where a small recess in the central positive zone occurs, there is a particularly strong negative region in the variance map, though very limited in extent. Conversely, the spring months have much more prominent postivie regions, though missing is a third positive zone, along with the three negative regions. There are two negative regions -- one over the Weddell sea, another west of South America -- that sit either side of one of the positive zones; a feature that is seen during austral winter, though on the other side of the globe. _Might be nothing, but Rossby wave train-like._
+
+###### Short-Scale Variance Anomalies
+
+No obvious patterns for any season. In DJF months, a large extended positive region in the south Indian ocean aligns well with the positive region of the mean height anomalies. However, this is not a consistent feature, as there are other positive regions between Antarctica and Australia that do not align well with any feature in the mean height map, and a large mean height positive region that aligns with nothing in the variance map. Over the winter months, there is the aforementioned cluster of positive correlations that align well with the mean height negative region over Antarctica. Else there are a few small positive regions over the Atlantic ocean that don't align much with anything. 
+
+Autumn has a very vague ZW3-like pattern -- three negative regions equally spaced around Antarctica, though all are fairly weak, other than the aforementioned narrow maximum located over the Weddell sea. A small positive region off the Argentine coast sits just off-centre to a large mean height negative region, otherwise very little can be said in the way of matching the two maps. In spring, a positive region centred over Antarctica aligns with a mean height negative region, though not well. A small but strongly positive region south of Madagascar aligns with a zero correlation region between strongly positive and negative regions of the mean height field.
+
+
+##### Phase -120 to -60
+
+###### Mean Height Anomalies
+
+ZW3-like pattern is much more apparent throughout the seasons for this phase bin, but again weakest for summer and winter months. In summer, a very strong region exists over New Zealand and south of Australia, adjacent to a poleward, strongly negative region over the Ross and Amundsen seas. Semblences of the other expected lows and highs are visible, but are indistinct. In austral winter, three weak positive regions are clustered around Antarctica at about 60S, but the corresponding negative regions are notably absent. There is a strongly positive band around 30S, stretching from north of New Zealand toward India. Another prominent positive region is observed over the Atlantic coast of South America. Two negative regions, weak and diffuse, are present off South America's west coast and southwest of South Africa, though it is difficult to establish whether these are the components of ZW3.
+
+The most distinctive ZW3 pattern is found in spring, with three clear positive regions and two negative, the thrid negative zone is somewhat indistinct and appears almost displaced equatorward. Autumn is similar with three positive regions and two negative, but with weaker correlations. There is a further strong positive region in the eastern Pacific, at 30S, with another coherent negative region on the opposite coast of South America in the Atlantic. 
+
+###### Short-Scale Variance Anomalies
+
+The correlations remain strong for all seasons despite difficulty in establishing a pattern or common threads -- _why is this?_. 
+
+Austral summer sees a large, strongly positive region south of New Zealand, stretching into the Pacific, which aligns well with a region of mean height negative correlation and zero correlation. There is a high proportion of positive correlation, which in some way mirrors the high proportion of negative of the mean height anomalies. In winter, the central region, between 90S and 60S, is mostly strongly positive, in stark contrast to the mean height field which possesses fairly weak, if any correlation in the same location. There is a strongly negative region south of South Africa which aligns well with a mean height positive region, confined almost precisely same area, of the same size. This however, appears to be an anomaly, as there is little else that can be said to align. 
+
+For autumn, there is little in the way of ZW3 pattern, in keeping with the variance correlation maps other phase bins. However, between -180 and 0 degrees longitude, there are alternatine positive and negative regions that align very well with regions of the opposite sign in the mean height anomalies. The same cannot be said for the other hemisphere however. A cluster of positive regions over Antarctica aligns with the mean height weakly negative central region. In spring, only one region, south of South Africa, is aligned between the two fields -- positive for variance anomalies, negative for mean height anomalies.
+
+
+##### Phase 0 to 60
+
+###### Mean Height Anomalies
+
+
 
 
 ### El Nino-Southern Oscillation Complexity {cite}`timmermann_ninosouthern_2018`

@@ -21,3 +21,4 @@ Some show very apparent patterns like the SAM, however most do not have very obv
 
 ```{note}
 These figures are now outdated. See [Week 7](week7.md) for notes.
+```
