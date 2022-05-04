@@ -169,11 +169,6 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../sample_code/correlation_spatial_patterns.html">
-   Correlation &amp; Covariance Maps
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../sample_code/create_maps.html">
    Create Maps
   </a>
@@ -308,8 +303,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#correlation-covariance-maps">
-     Correlation &amp; Covariance Maps
+    <a class="reference internal nav-link" href="#updated-correlation-covariance-maps">
+     Updated Correlation &amp; Covariance Maps
     </a>
    </li>
   </ul>
@@ -340,8 +335,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#correlation-covariance-maps">
-     Correlation &amp; Covariance Maps
+    <a class="reference internal nav-link" href="#updated-correlation-covariance-maps">
+     Updated Correlation &amp; Covariance Maps
     </a>
    </li>
   </ul>
@@ -359,8 +354,19 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Week 9<a class="headerlink" href="#week-9" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="apr-25-29">
 <h2>2022 Apr 25-29<a class="headerlink" href="#apr-25-29" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="correlation-covariance-maps">
-<span id="correlation-maps"></span><h3>Correlation &amp; Covariance Maps<a class="headerlink" href="#correlation-covariance-maps" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="updated-correlation-covariance-maps">
+<span id="correlation-maps"></span><h3>Updated Correlation &amp; Covariance Maps<a class="headerlink" href="#updated-correlation-covariance-maps" title="Permalink to this headline">¶</a></h3>
+<p>ERA5 data for the mean anomalies and the 2-8 day bandpassed variance anomalies of the 500hPa geopotential height field were correlated with the monthly time series of standard indices for the four phenomena being considered.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference internal" href="../preliminary_research/week3.html#indices-source"><span class="std std-ref">week 3</span></a> for where the indices were sourced from, and <a class="reference internal" href="../preliminary_research/week4.html#index-processing"><span class="std std-ref">week 4</span></a> for how these indices were formatted.</p>
+</div>
+<p>The analysis was performed by first aggregating the ERA5 data into a monthly time series in line with the index time series, and trimmed to the region south of 20S – this was done using CDO software. At each longitude-latitude grid point, the mean and variance time series were correlated with the index time series, and the covariance of the two time series was calculated in the same manner. This was done with both Pearson product-moment and Spearman rank methods – in future, the rank method is preferred as it is more robust and resistant to outliers skewing the result.</p>
+<p>The same method was applied to ERA5 data grouped seasonally. This left a reduced time series which was correlated with the corresponding time stamps from each index. This enables seasonal effects and connections to be inspected.</p>
+<p>The code used to calculating correlations and covariance can be found <a class="reference internal" href="../sample_code/corr_cov_maps.html"><span class="doc std std-doc">here</span></a>.</p>
+<p>The resulting matrices were plotted using the cartopy library in Python: two subplots of mean height anomalies and variance, side-by-side, using an Orthographic projection for a clearer picture of the 20S to 90S region.</p>
+<p>The code used to create these figures can be found <a class="reference internal" href="../sample_code/create_maps.html"><span class="doc std std-doc">here</span></a>.</p>
+<p>The correlation and covariance figures are discussed in detail in <a class="reference internal" href="week10.html"><span class="doc std std-doc">week 10</span></a> notes.</p>
 </div>
 </div>
 </div>

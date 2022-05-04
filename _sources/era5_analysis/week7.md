@@ -6,7 +6,7 @@
 These maps are out of date as the wrong dataset was used for mean height anomalies. They have been redone and a description can be found in the [Week 10](week10.md) notebook.
 ```
 
-(correlation-maps)=
+(correlation-maps-outdated)=
 ### Correlation Maps
 
 The following sections detail the correlation maps of each index, except [ZW3](ZW3-correlations), with mean height field and variance anomalies. Both Pearson and Spearman rank correlations were used, rank being more robust, however very little difference can be seen between the two methods.
@@ -23,7 +23,7 @@ For the variance anomalies, a clear annular structure can be seen with negative 
 
 The mean height anomalies shows a completely different pattern, with little physically explainable structure. There is no annular structure, and in some places resembles a wave-like structure in its alternating positive and negative correlations. There is an almost cross-like structure of positive correlation emanating from Antarctica. The maximum correlation value is only around 0.1, much weaker than those observed for variance anomalies. This reinforces the significance of the patterns seen with the SAM-variance correlations. 
 
-:::{figure-md} sam_pearson
+:::{figure-md} sam_pearson_old
 
 <img src="../figures/outdated_correlations/sam_pearson_correlations.png">
 
@@ -31,7 +31,7 @@ Pearson Correlations for SAM Index, PC1.
 
 :::
 
-:::{figure-md} sam_rank
+:::{figure-md} sam_rank_old
 
 <img src="../figures/outdated_correlations/sam_rank_correlations.png">
 
@@ -46,7 +46,7 @@ The SOI-variance correlations show little correlation except over the Pacific, w
 
 The mean height anomalies correlations are again much weaker than for variance anomalies, with little apparent structure. The maximum correlation value is less than 0.1. This reinforces the significance of the patterns seen with the SOI-variance correlations. 
 
-:::{figure-md} soi_pearson
+:::{figure-md} soi_pearson_old
 
 <img src="../figures/outdated_correlations/SOI_pearson_correlations.png">
 
@@ -54,7 +54,7 @@ Pearson Correlations for SOI.
 
 :::
 
-:::{figure-md} soi_rank
+:::{figure-md} soi_rank_old
 
 <img src="../figures/outdated_correlations/SOI_rank_correlations.png">
 
@@ -71,7 +71,7 @@ There are two more areas of positive correlation, equal in strength to that over
 
 The mean height anomalies correlations are again much weaker than for variance anomalies, with little apparent structure. The maximum correlation value is less than 0.1. 
 
-:::{figure-md} dmi_pearson
+:::{figure-md} dmi_pearson_old
 
 <img src="../figures/outdated_correlations/DMI_pearson_correlations.png">
 
@@ -79,7 +79,7 @@ Pearson Correlations for DMI.
 
 :::
 
-:::{figure-md} dmi_rank
+:::{figure-md} dmi_rank_old
 
 <img src="../figures/outdated_correlations/DMI_rank_correlations.png">
 
@@ -99,7 +99,7 @@ The weaker magnitude could be because of the mobility of ZW3, historically a dif
 
 The ZW3-mean height correlations as with each of the indices before shows little defined structure that can be explained physically. The absolute magnitudes are small again, less than 0.1.
 
-:::{figure-md} zw3_pearson
+:::{figure-md} zw3_pearson_old
 
 <img src="../figures/outdated_correlations/zw3_pearson_correlations.png">
 
@@ -107,7 +107,7 @@ Pearson Correlations for ZW3.
 
 :::
 
-:::{figure-md} zw3_rank
+:::{figure-md} zw3_rank_old
 
 <img src="../figures/outdated_correlations/ZW3_rank_correlations.png">
 

@@ -128,6 +128,7 @@ Westerly winds are projected to increase with warming. Stationary wave theory st
 
 ## 2022 Mar 22
 
+(index-processing)=
 ### Calculating SAM Index
 
 A time series for the SAM Index is calculated using PCA analysis of the monthly mean variance field of the deseasonalised 500hPa geopotential height.
