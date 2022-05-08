@@ -91,7 +91,11 @@ Spearman Rank Correlations for DMI.
 (ZW3-correlations)=
 #### ZW3 Correlations
 
-Initially correlations were done between variance anomalies and both ZW3 magnitude and phase, however this was deemed insufficient since ZW3 is quite mobile. This means that ZW3 events with high magnitudes could occur and affect the storm track strongly locally, but not on the other side of the globe. Therefore, due to the inconsistency of event locations, correlations would be weaker and local influences would go undetected. For this reason, ZW3 events of sufficient magnitude were separated into longitude bins and correlated those ZW3 magnitude time series with variance anomalies found in corresponding longitude bins. The code developed to achieve this can be [here](../sample_code/zw3_correlations.ipynb).
+```{warning}
+These notes are now outdated. Please see updated [notes](week10.md), and updated [code](../sample_code/corr_cov_maps.ipynb).
+```
+
+Initially correlations were done between variance anomalies and both ZW3 magnitude and phase, however this was deemed insufficient since ZW3 is quite mobile. This means that ZW3 events with high magnitudes could occur and affect the storm track strongly locally, but not on the other side of the globe. Therefore, due to the inconsistency of event locations, correlations would be weaker and local influences would go undetected. For this reason, ZW3 events of sufficient magnitude were separated into longitude bins and correlated those ZW3 magnitude time series with variance anomalies found in corresponding longitude bins.
 
 The ZW3-variance correlations also shows a annular structure, similar to the SAM-variance correlations, except weaker in magnitude and with no defined outer positive ring. This suggests there is stormier weather between 30S and 60S when the ZW3 is in a high magnitude state, and less storm weather south of 60S.
 

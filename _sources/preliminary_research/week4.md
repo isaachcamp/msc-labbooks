@@ -1,6 +1,6 @@
 # Week 4
 
-This lab notebook belongs to a set of [preliminary research](../preliminary_research.md).
+This lab notebook belongs to a set of [preliminary research](preliminary_research.md).
 
 ## 2022 Mar 21
 
