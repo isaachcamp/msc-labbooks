@@ -2,15 +2,13 @@
 
 ## This Week
 
-- I made a mistake in creating seasonal ZW3 maps, but the correlations were still very large... this is why significance testing is important. _But why are they so high?!_
+- Maximum covariance analysis between paired fields (mean height and variance anomalies).
+    - Read up on MCA for plotting.
+- Document new classes.
 - Read up on covariance.
 - Document yearly covariance.
 - Document seasonal covariance maps.
 - Read up on Partial Correlations.
-- Q-Q plots.
-- Maximum covariance analysis between paired fields (mean height and variance anomalies).
-    - Diagonalise the covariance matrix of the two fields.
-- Composite Analysis of the five strongest and weakest events for each index.
 - Read thorugh week 10 nots and check out common features found in maps -- [week 10](era5_analysis/week10.md).
     - Positive over negative? Positive over positive? Vice versa?
     - Consistency between seasons of different phase bins?

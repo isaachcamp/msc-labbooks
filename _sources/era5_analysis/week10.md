@@ -535,7 +535,7 @@ The interpretation of these maps are risky at best. There are some consistent fe
 
 ##### Phase -180 to -120
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/DJF_zw3_-180_-120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-180_-120/DJF_zw3_-180_-120_rank_corr.png
 ---
 name: zw3--180--120-djf-rank-corr
 scale: 40%
@@ -545,7 +545,7 @@ Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -180 to -120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/JJA_zw3_-180_-120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-180_-120/JJA_zw3_-180_-120_rank_corr.png
 ---
 name: zw3--180--120-jja-rank-corr
 scale: 40%
@@ -555,7 +555,7 @@ Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -180 to -120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/SON_zw3_-180_-120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-180_-120/SON_zw3_-180_-120_rank_corr.png
 ---
 name: zw3--180--120-son-rank-corr
 scale: 40%
@@ -565,7 +565,7 @@ Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -180 to -120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/MAM_zw3_-180_-120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-180_-120/MAM_zw3_-180_-120_rank_corr.png
 ---
 name: zw3--180--120-mam-rank-corr
 scale: 40%
@@ -591,7 +591,7 @@ Autumn is again inconsistent, some features align as in other seasons but not al
 
 ##### Phase -120 to -60
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/DJF_zw3_-120_-60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-120_-60/DJF_zw3_-120_-60_rank_corr.png
 ---
 name: zw3--120--60-djf-rank-corr
 scale: 40%
@@ -601,7 +601,7 @@ Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -120 to -60.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/JJA_zw3_-120_-60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-120_-60/JJA_zw3_-120_-60_rank_corr.png
 ---
 name: zw3--120--60-jja-rank-corr
 scale: 40%
@@ -610,7 +610,7 @@ align: left
 Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -120 to -60.
 ```
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/SON_zw3_-120_-60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-120_-60/SON_zw3_-120_-60_rank_corr.png
 ---
 name: zw3--120--60-son-rank-corr
 scale: 40%
@@ -619,7 +619,7 @@ align: left
 Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -120 to -60.
 ```
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/MAM_zw3_-120_-60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-120_-60/MAM_zw3_-120_-60_rank_corr.png
 ---
 name: zw3--120--60-mam-rank-corr
 scale: 40%
@@ -643,7 +643,7 @@ No obvious patterns for any season. At this point, it seems wise to get a second
 
 ##### Phase -60 to 0
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/DJF_zw3_-60_0_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-60_0/DJF_zw3_-60_0_rank_corr.png
 ---
 name: zw3--60-0-djf-rank-corr
 scale: 40%
@@ -653,7 +653,7 @@ Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -60 to 0.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/JJA_zw3_-60_0_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-60_0/JJA_zw3_-60_0_rank_corr.png
 ---
 name: zw3--60-0-jja-rank-corr
 scale: 40%
@@ -663,7 +663,7 @@ Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -60 to 0.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/SON_zw3_-60_0_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-60_0/SON_zw3_-60_0_rank_corr.png
 ---
 name: zw3--60-0-son-rank-corr
 scale: 40%
@@ -673,7 +673,7 @@ Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -60 to 0.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/MAM_zw3_-60_0_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/-60_0/MAM_zw3_-60_0_rank_corr.png
 ---
 name: zw3--60-0-mam-rank-corr
 scale: 40%
@@ -705,7 +705,7 @@ In autumn, there is little that can be said to be features consistent with other
 
 ##### Phase Bin 0 to 60
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/DJF_zw3_0_60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/0_60/DJF_zw3_0_60_rank_corr.png
 ---
 name: zw3-0-60-djf-rank-corr
 scale: 40%
@@ -715,7 +715,7 @@ Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin 0 to 60.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/JJA_zw3_0_60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/0_60/JJA_zw3_0_60_rank_corr.png
 ---
 name: zw3-0-60-jja-rank-corr
 scale: 40%
@@ -725,7 +725,7 @@ Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin 0 to 60.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/SON_zw3_0_60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/0_60/SON_zw3_0_60_rank_corr.png
 ---
 name: zw3-0-60-son-rank-corr
 scale: 40%
@@ -735,7 +735,7 @@ Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin 0 to 60.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/MAM_zw3_0_60_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/0_60/MAM_zw3_0_60_rank_corr.png
 ---
 name: zw3-0-60-mam-rank-corr
 scale: 40%
@@ -760,7 +760,7 @@ Autumn brings little in the way of coherence, with a cluster of positive correla
 
 ##### Phase Bin 60 to 120
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/DJF_zw3_60_120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/60_120/DJF_zw3_60_120_rank_corr.png
 ---
 name: zw3-60-120-djf-rank-corr
 scale: 40%
@@ -770,7 +770,7 @@ Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin 60 to 120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/JJA_zw3_60_120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/60_120/JJA_zw3_60_120_rank_corr.png
 ---
 name: zw3-60-120-jja-rank-corr
 scale: 40%
@@ -780,7 +780,7 @@ Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin 60 to 120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/SON_zw3_60_120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/60_120/SON_zw3_60_120_rank_corr.png
 ---
 name: zw3-60-120-son-rank-corr
 scale: 40%
@@ -790,7 +790,7 @@ Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin 60 to 120.
 ```
 
 
-```{figure} ../figures/correlations/seasonal/zw3/zw3_60_deg/MAM_zw3_60_120_rank_corr.png
+```{figure} ../figures/correlations/seasonal/zw3_60_deg/60_120/MAM_zw3_60_120_rank_corr.png
 ---
 name: zw3-60-120-mam-rank-corr
 scale: 40%
