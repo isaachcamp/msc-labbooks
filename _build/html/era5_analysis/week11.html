@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 11 &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Correlation &amp; Covariance Maps" href="../sample_code/corr_cov_maps.html" />
+    <link rel="prev" title="Week 10" href="week10.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Correlation/Covariance Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week8.html">
+   Week 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week9.html">
+   Week 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week10.html">
+   Week 10
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Week 11
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/create_maps.html">
+   Create Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/load_indices.html">
+   Load Indices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/sample_calculations.html">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/era5_analysis/week11.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fera5_analysis/week11.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-13">
+   2022 May 13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-figures">
+     Composite Figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sam">
+       SAM
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#mean-composites">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#variance-composites">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#soi">
+       SOI
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zw3">
+       ZW3
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id3">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id4">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dmi">
+       DMI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Week 11</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-13">
+   2022 May 13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-figures">
+     Composite Figures
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sam">
+       SAM
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#mean-composites">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#variance-composites">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#soi">
+       SOI
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id1">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id2">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zw3">
+       ZW3
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id3">
+         Mean Composites
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id4">
+         Variance Composites
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dmi">
+       DMI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-11">
+<h1>Week 11<a class="headerlink" href="#week-11" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="may-13">
+<h2>2022 May 13<a class="headerlink" href="#may-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="composite-figures">
+<h3>Composite Figures<a class="headerlink" href="#composite-figures" title="Permalink to this headline">¶</a></h3>
+<p>Composite figures for the extreme (upper and lower 5% percent with a minimum of five data) events were generated. The composite mean of H500 mean height anomalies at the time of extreme events for a given index were plotted alongside the corresponding bandpass filtered variance anomalies. For SAM, SOI and DMI, the upper and lower quantiles are populated by positive and negative extremes, whereas ZW3 is always positive, so the lower qunatile is populated by the weakest events (<em>unsure of the value of this</em>). With ZW3, the sample size was below 100 for a given phase bin, hence it the quantile considered is greater than 5% to fulfil the minimum requirement of 5 data. This is true also of seasonal data for all indices, particularly ZW3 where the sample size shrinks to ~20. The upper and lower quantile values are presented in the figure subtitles.</p>
+<div class="section" id="sam">
+<h4>SAM<a class="headerlink" href="#sam" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="mean-composites">
+<h5>Mean Composites<a class="headerlink" href="#mean-composites" title="Permalink to this headline">¶</a></h5>
+<p>Textbook SAM pattern seen for upper and lower quantile events; the two are essentially a mirror image reflecting the oscillation between positive and negative modes. In the upper quantile – the highly positive events – there is a lower than average pressure over Antarctica extending out to 60S, and a ring of higher than average pressure between 40S and 60S. The central region is highly symmetrical, with the usual small protrusion out over the Pacific, whereas the positive ring around is ostensibly separated into three maxima over the three major oceans. What is quite notable is the asymmetry in the magnitude of mean height anomalies, the negative (lower than average) anomalies being much stronger than the positive anomalies. The lower quantile composite is almost an exact mirror image, except that the negative low over the Atlantic is much weaker than the positive high seen for the upper quantile compsite. This time the positive anomalies over the pole are much stronger than the weaker negative ring.</p>
+<div class="figure align-left" id="sam-mean-composites">
+<a class="reference internal image-reference" href="../_images/mean_sam_composite.png"><img alt="../_images/mean_sam_composite.png" src="../_images/mean_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 56 </span><span class="caption-text">Mean Upper and Lower Quantile Composites for SAM Index, PC1 (Full Time Series).</span><a class="headerlink" href="#sam-mean-composites" title="Permalink to this image">¶</a></p>
+</div>
+<p>Seasonally, there are much more distinct features that are smeared over in the full time series (yearly). Over the summer months presents a picture of SAM at its most symmetrical. There is a more distinctive, fuller ring of positive anomalies for the upper composite, with a near-perfect circle of negative anomalies over the pole and the Pacific protrusion is much reduced. In the lower composite there is a less symmetrical picture, with a the negative anomalies over the Pacific being almost non-existent. However, there still appear three maxima, though distributed over a limited range, between the Atlantic and Indian oceans. Winter sees a reduction in the magnitude of the maxima at 45S in the upper composite, and the asymmetry of the central region disintegrates slightly, with the Pacific protrusion more prominent. The lower composite presents another very nice mirror image of the upper – even the Pacific protrusion is now a positive mean height anomaly. Autumn sees the upper composite’s positive anomalies at their greatest magnitude, with three highly positive regions over the three major oceans around 45S. The Pacific protrusion is stronger still – it seems at its most prominent during the transition seasons – and is joined now by similar features over the Indian and Atlantic oceans, leading to a much broken positive ring. The same is true for the lower composite, however the Pacific protrusion is now the most anomalous feature on the map. A much broken negative ring and relatively asymmetrical central region. Spring is particularly interesting for two reasons: the Pacific protrusion is at its greatest extent, with strong negative anomalies reaching 45S; and the upper and lower composites are not alike. The lower composite has a much more symmetrical picture, with a more distinct negative ring at 45S, whereas the upper is highly asymmetrical, with a much more broken ring.</p>
+<p>In winter and spring, there is a prominent positive anomalous region during strong El Nino events that aligns with the Pacific protrusion. There is a second positive region that aligns well with the protrusion over the Indian ocean during spring. During autumn there is good alignment between the positive region and the Pacific protrusion however, there is a highly negative anomalous feature in the SOI lower composite (strong El Nino events) adjacent to the positive zone that is unusual. There is no apparent equivalent region during summer. <em>Are the two connected?</em></p>
+<div class="figure align-left" id="sam-djf-mean-composites">
+<a class="reference internal image-reference" href="../_images/DJF_mean_sam_composite.png"><img alt="../_images/DJF_mean_sam_composite.png" src="../_images/DJF_mean_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 57 </span><span class="caption-text">Mean Upper and Lower Quantile Composites in Austral Summer for SAM Index, PC1.</span><a class="headerlink" href="#sam-djf-mean-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-jja-mean-composites">
+<a class="reference internal image-reference" href="../_images/JJA_mean_sam_composite.png"><img alt="../_images/JJA_mean_sam_composite.png" src="../_images/JJA_mean_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 58 </span><span class="caption-text">Mean Upper and Lower Quantile Composites in Austral Winter for SAM Index, PC1.</span><a class="headerlink" href="#sam-jja-mean-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-son-mean-composites">
+<a class="reference internal image-reference" href="../_images/SON_mean_sam_composite.png"><img alt="../_images/SON_mean_sam_composite.png" src="../_images/SON_mean_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 59 </span><span class="caption-text">Mean Upper and Lower Quantile Composites in Austral Spring for SAM Index, PC1.</span><a class="headerlink" href="#sam-son-mean-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-mam-mean-composites">
+<a class="reference internal image-reference" href="../_images/MAM_mean_sam_composite.png"><img alt="../_images/MAM_mean_sam_composite.png" src="../_images/MAM_mean_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 60 </span><span class="caption-text">Mean Upper and Lower Quantile Composites in Austral Autumn for SAM Index, PC1.</span><a class="headerlink" href="#sam-mam-mean-composites" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="variance-composites">
+<h5>Variance Composites<a class="headerlink" href="#variance-composites" title="Permalink to this headline">¶</a></h5>
+<p>In the full time series composite, the two quantile composites are nice reflections of each other. The textbook SAM zonal ring-like structure around 60S is quite apparent, though somewhat broken. Interestingly, during extreme positive SAM events (upper composite) there is a broader, stronger negative region over the Atlantic side of the pole, whereas the equivalent feature (positive in sign) is on the opposite side of the pole, over the Indian and Pacific oceans.</p>
+<div class="figure align-left" id="sam-var-composites">
+<a class="reference internal image-reference" href="../_images/variance_sam_composite.png"><img alt="../_images/variance_sam_composite.png" src="../_images/variance_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 61 </span><span class="caption-text">Variance Upper and Lower Quantile Composites for SAM Index, PC1 (Full Time Series).</span><a class="headerlink" href="#sam-var-composites" title="Permalink to this image">¶</a></p>
+</div>
+<p>During summer, there is a distinct positive ring centred on 55S, encircled by a second ring of negative anomalies at 45S. Summer positive SAM events the only composite to display this kind of inner-outer annuli feature so distinctly. Others have positive and negative regions, but not seen in such an obvious pattern. For example, the same cannot be said of the negative SAM during summer, in which only a negative ring of anomalies is apparent. Interestingly, there appears to be a reduction in variance anomalies, positive or negative, at roughly the same location as the Pacific protrusion, over all months. This is even apparent during summer, where the Pacific protrusion is not clearly present in the mean height anomalies. Winter is the complete reverse of summer, with the upper composite (positive SAM) now showing a single prominent ring of positive anomalies, whilst the lower composite (negative SAM) takes on the double ring pattern, though the outer ring much more broken than that seen during summer positive SAMs. Autumn is the most interesting season, in that the patterns are less distinctive and far from the textbook pattern. There is an extensive positive region over the Pacific, South America and Atlantic ocean that wanders meridionally. There is also a strong negative region in the Indian ocean that also wanders meridionally, but at roughly the same latitude as the positive region. This seems to be a unique feature of the autumnal months. During spring, there is, what appears at first sight, a much less distinctive ring, however the strength of a few maxima distributed zonally over the same latitude is much higher than those seen in summer or autumn. There is arguably still a prominent ring however, due to the colour-bar scaling to these highly localised maxima, it is less obvious. A similar picture is apparent in the negative mode extreme events, with strong lows distributed around the pole in a ring-like structure, however there is a highly positive region in the Indian ocean that is not apprent in during positive SAM events.</p>
+<div class="figure align-left" id="sam-djf-var-composites">
+<a class="reference internal image-reference" href="../_images/DJF_variance_sam_composite.png"><img alt="../_images/DJF_variance_sam_composite.png" src="../_images/DJF_variance_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 62 </span><span class="caption-text">Variance Upper and Lower Quantile Composites in Austral Summer for SAM Index, PC1.</span><a class="headerlink" href="#sam-djf-var-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-jja-var-composites">
+<a class="reference internal image-reference" href="../_images/JJA_variance_sam_composite.png"><img alt="../_images/JJA_variance_sam_composite.png" src="../_images/JJA_variance_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 63 </span><span class="caption-text">Variance Upper and Lower Quantile Composites in Austral Winter for SAM Index, PC1.</span><a class="headerlink" href="#sam-jja-var-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-son-var-composites">
+<a class="reference internal image-reference" href="../_images/SON_variance_sam_composite.png"><img alt="../_images/SON_variance_sam_composite.png" src="../_images/SON_variance_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 64 </span><span class="caption-text">Variance Upper and Lower Quantile Composites in Austral Spring for SAM Index, PC1.</span><a class="headerlink" href="#sam-son-var-composites" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="sam-mam-var-composites">
+<a class="reference internal image-reference" href="../_images/MAM_variance_sam_composite.png"><img alt="../_images/MAM_variance_sam_composite.png" src="../_images/MAM_variance_sam_composite.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 65 </span><span class="caption-text">Variance Upper and Lower Quantile Composites in Austral Autumn for SAM Index, PC1.</span><a class="headerlink" href="#sam-mam-var-composites" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="soi">
+<h4>SOI<a class="headerlink" href="#soi" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h5>Mean Composites<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<p>Over the full time series, taken from any month, the extreme cool La Nina events (upper quantile composite) have a reasonably clear ring-like structure around 45S, that spirals poleward from the major positive region, around 30S, in the Pacific – a clear SAM-like signal. There is a strong localised negative region in the Pacific, right where the SAM Pacific protrusion in the mean height field is found – <em>the two might be connected</em>. The SAM-like signal is not replicated in the lower composite (warm El Nino events) however the same localised region of the opposite sign is still present in the Pacific, and an extended negative region in the Pacific lower latitudes is apparent, closest to where the physical manifestation of ENSO occurs. Note that the average magnitudes of the anomalies are much lower than those of anomalies associated with extreme SAM events (see above).</p>
+<p>Throughout all seasons, the strongly negative Pacific region at 50S is present during strong La Nina events, likewise the equivalent positive region is present during strong El Nino events. Though the magnitude of the region drops off in spring for La Nina and in autumn for El Nino. During summer there is a prominent positive ring at 40S during La Nina, and a negative broken ring which is less prominent in El Nino events, with strong localised maxima in the Atlantic and Indian oceans. Winter sees this ring dissipate, to be replaced by a large central negative region over the south pole in La Nina events, whilst two positive regions over the Antarctic peninsula and in the Indian ocean at 50S stand out, along with the major positive region over the Pacific. The Pacific region is negative during El Nino events, as expected, however a positive region over Southern Ocean south of Australia is apparent, a feature that extends westward over the Indian ocean – a feature that becomes more prominent and localised in spring, but does not appear elsewhere. In autumn there is a much more extended negative Pacific region in La Nina events that stretches over South America. The usual major positive region in the Pacific is weaker, and two stronger positive regions exist over the Amundsen sea and over the Atlantic at 40S. During El Nino events in autumn, there is an unusally large and strong region of negative varaince anomalies south of New Zealand. In both El Nino and La Nina events there is little impression of the ring structure seen in other seasons. In spring, there is another large central region of positive anomalies over the south pole during La Nina events – the opposite to winter, and a strong positive region in the Pacific ocean but little in the way of negative anomalies are apparent. During El Nino events, there is a strong region of positive anomalies, the aforementioned persistent feature, encircled by a ring of negative anomalies. There is a further region of positive anomalies over the south of Australia that is als seen during winter, as mentioned previously.</p>
+</div>
+<div class="section" id="id2">
+<h5>Variance Composites<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>The expected mirror image is apparent between El Nino and La Nina events for the full time series. More storminess is found during La Nina events in the Pacific, spiralling poleward over the Indian ocean. There is less storminess just south of Australia during La Nina events, a feature common to both La Nina and El Nino. During extreme El Nino events there is greatly reduced storm activity in the southern Pacific, but seemingly does little to increase storminess anywhere across the SH.</p>
+<p>During austral summer, ther eis a higher amount of storm activity around 60S during La Nina events, and less storminess equatorward, around 40S, mostly over the Atlantic and Indian oceans. There are also a few localised negative and positive maxima. During summer El Nino events, there is less storminess over the Pacific in general, as well as over the Indian ocean. There is however, a couple of conspicuous regions of strong positive anomalies south of South Africa and in the central Atlantic. There is not the obvious meridional separation of positive and negative regions that is seen in the La Nina composite. La Nina events during winter display a general increase in storminess poleward of 40S, with a couple of particularly stormy regions south of South Africa and in central south Indian ocean. The reverse is true with El Nino events, with a general decrease in storminess with a particularly prominent minimum over hthe Pacific, in contrast to La Nina. Autumn sees a semi-ring of positive storminess over the Pacific and Atlantic, adjacent to a poleward region of negative storminess. The other half of the hemisphere is less structured, with interspersed positive and negative of varying strength. Autumn is interesting in that the effects of El Nino events are not clearly the inverse of those of La Nina. Similar to La Nina, there are adjacent bands of positive and negative, with negative further poleward, however the positive region has shifted zonally toward New Zealand. Once more, the other half of the hemisphere has no distinct structure. Back on more solid ground, springtime sees the usual mirror image of the effects of La Nina and El Nino events. The hemisphere is apparently split in two halves, with two semi-rings of positive and negative storminess, meeting south of Australia and over the Antarctic peninsula. The positive region, in the central Pacific, wanders slightly meridionally, but the central region lies approximately at the same latitude as that of the negative region, at 50S. Antarctica experiences more storminess overall, which is a common feature between La Nina and El Nino events. The opposite is seen in El Nino events, with the negative region located over the Pacific, the positive over the Indian and Atlantic oceans. There is a notable positive high storminess south of Tasmania and New Zealand, the reason for which is unclear.</p>
+</div>
+</div>
+<div class="section" id="zw3">
+<h4>ZW3<a class="headerlink" href="#zw3" title="Permalink to this headline">¶</a></h4>
+<p>30 degree bins were checked for the full time series, whereas too few data were available to repeat this for seasonal data, hence 60 degree bins were used. This could change if consistency is more important. The whole library of ZW3 figures has not been fully explored at this time, but will be done at a later date.</p>
+<div class="section" id="id3">
+<h5>Mean Composites<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<p>Strong ZW3 signal in all of the phase group upper composites. It is not unusual for one high and one low to dominate in magnitude, but the overall signal is remarkably consistent across all upper composites and for all seasons as well as yearly – excluding DJF, more on that later. As expected, the lower composites, with weaker ZW3 indices, is much less distinctive and possesses little consistent pattern. There is frequently a ZW4-like signal observed, and just often no zonal wave at all. This is true for both the full time series and for seasonal data.</p>
+</div>
+<div class="section" id="id4">
+<h5>Variance Composites<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<p>There are no clear patterns, often the signal looks similar to SOI or SAM variance patterns. A closer inspection of a few ZW3 figures would be a good approach to begin with, comparing the timestamps of ZW3 indices with SAM and SOI, which are known to cause a high degree of variance. Perhaps strong SAM or SOI events are drowning out the ZW3 signal, thus they may be subtracted to get an isolated picture of ZW3.</p>
+</div>
+</div>
+<div class="section" id="dmi">
+<h4>DMI<a class="headerlink" href="#dmi" title="Permalink to this headline">¶</a></h4>
+<p>Magnitudes of mean and variance anomalies for DMI is much lower than other phenomena. There are some consistent features in the mean height anomalies field, however the signal seen in the variance is similar to SAM and SOI. This could indicate that they have similar effects, but given the generally smaller anomalies, it is more likely that the variance observed is due to other phenomena. Research into DMI will not be pursued further at this time.</p>
+<ul class="simple">
+<li><p>Get the behaviour of the SOI at the same timestamp as SAM extreme events, and vice versa. What does this say?</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./era5_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="week10.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 10</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../sample_code/corr_cov_maps.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

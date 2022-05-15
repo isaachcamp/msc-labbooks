@@ -1,6 +1,6 @@
 # Lab Notebooks
 
-Records of all notebooks for the MSc research project are found here. This is split up into sections that give an indication of the contents found within, which are then split into each week. There is a single "page" per week.
+Records of all notebooks for the MSc research project are found here. This is split up into sections that give an indication of the contents found within, which are then split into each week. There is a single webpage per week.
 
 - [Preliminary Research](preliminary_research/preliminary_research.md)
     - [Week 1](preliminary_research/week1.md)
@@ -14,3 +14,4 @@ Records of all notebooks for the MSc research project are found here. This is sp
     - [Week 8](era5_analysis/week8.md)
     - [Week 9](era5_analysis/week9.md)
     - [Week 10](era5_analysis/week10.md)
+    - [Week 11](era5_analysis/week11.md)

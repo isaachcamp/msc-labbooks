@@ -169,6 +169,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../sample_code/create_maps.html">
    Create Maps
   </a>
@@ -461,7 +466,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="zw3-correlations">
 <span id="id1"></span><h4>ZW3 Correlations<a class="headerlink" href="#zw3-correlations" title="Permalink to this headline">¶</a></h4>
-<p>Initially correlations were done between variance anomalies and both ZW3 magnitude and phase, however this was deemed insufficient since ZW3 is quite mobile. This means that ZW3 events with high magnitudes could occur and affect the storm track strongly locally, but not on the other side of the globe. Therefore, due to the inconsistency of event locations, correlations would be weaker and local influences would go undetected. For this reason, ZW3 events of sufficient magnitude were separated into longitude bins and correlated those ZW3 magnitude time series with variance anomalies found in corresponding longitude bins. The code developed to achieve this can be <span class="xref myst">here</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These notes are now outdated. Please see updated <a class="reference internal" href="week10.html"><span class="doc std std-doc">notes</span></a>, and updated <a class="reference internal" href="../sample_code/corr_cov_maps.html"><span class="doc std std-doc">code</span></a>.</p>
+</div>
+<p>Initially correlations were done between variance anomalies and both ZW3 magnitude and phase, however this was deemed insufficient since ZW3 is quite mobile. This means that ZW3 events with high magnitudes could occur and affect the storm track strongly locally, but not on the other side of the globe. Therefore, due to the inconsistency of event locations, correlations would be weaker and local influences would go undetected. For this reason, ZW3 events of sufficient magnitude were separated into longitude bins and correlated those ZW3 magnitude time series with variance anomalies found in corresponding longitude bins.</p>
 <p>The ZW3-variance correlations also shows a annular structure, similar to the SAM-variance correlations, except weaker in magnitude and with no defined outer positive ring. This suggests there is stormier weather between 30S and 60S when the ZW3 is in a high magnitude state, and less storm weather south of 60S.</p>
 <p>The weaker magnitude could be because of the mobility of ZW3, historically a difficult aspect to capture, which is not adequately considered with the longitude bins. This could be altered if the size of the longitude bins was altered, however reducing the bin size will mean that smaller samples (time series) would be used to calculate the correlations, which could lead to errors. There is little difference between Pearson and rank correlation methods as before.</p>
 <p>The ZW3-mean height correlations as with each of the indices before shows little defined structure that can be explained physically. The absolute magnitudes are small again, less than 0.1.</p>

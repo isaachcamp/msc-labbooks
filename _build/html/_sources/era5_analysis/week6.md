@@ -15,8 +15,6 @@ Deseasonlisation and long-term averages show no discrepancies between the sample
 
 Correlation between the time series of each index, DMI, SOI, SAMI, ZW3 magnitude and phase, and the variance time series at each latitude/longitude point south of 20S was calculated using normalised anomalies. The result was saved as a NetCDF file so that it could be viewed with Panoply. The files show the spatial distribution of correlations between variance and each index. 
 
-The code used to calculate correlations can be viewed [here](../sample_code/correlation_spatial_patterns.ipynb).
-
 Some show very apparent patterns like the SAM, however most do not have very obvious patterns and the correlations are relatively weak, between 0.1 and 0.2, for SAM it is stronger with a maximum of around 0.3. Figures and descriptions can be found in [Week 7](correlation-maps-outdated).
 
 ```{note}

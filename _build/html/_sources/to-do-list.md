@@ -2,16 +2,17 @@
 
 ## This Week
 
-- Document yearly covariance.
-- Document ZW3 60 degree seasonal maps.
-- Document seasonal covariance maps.
-- Update week 9 notebook.
-- Read up on Partial Correlations.
-- Q-Q plots.
 - Maximum covariance analysis between paired fields (mean height and variance anomalies).
-    - Diagonalise the covariance matrix of the two fields.
-- Composite Analysis of the five strongest and weakest events for each index.
-- Check out common features found in maps - [week 10](era5_analysis/week10.md).
+    - Read up on MCA for plotting.
+- Document new classes.
+- Read up on covariance.
+- Document yearly covariance.
+- Document seasonal covariance maps.
+- Read up on Partial Correlations.
+- Read thorugh week 10 nots and check out common features found in maps -- [week 10](era5_analysis/week10.md).
+    - Positive over negative? Positive over positive? Vice versa?
+    - Consistency between seasons of different phase bins?
+    - Spiral-like structure as seen in JJA 0 - 60 degrees?
 
 
 ## Questions to Answer

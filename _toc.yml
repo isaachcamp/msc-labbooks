@@ -20,6 +20,7 @@ parts:
     - file: era5_analysis/week8
     - file: era5_analysis/week9
     - file: era5_analysis/week10
+    - file: era5_analysis/week11
 - caption: Sample Code
   chapters:
     - file: sample_code/corr_cov_maps.ipynb

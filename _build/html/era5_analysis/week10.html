@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Create Maps" href="../sample_code/create_maps.html" />
+    <link rel="next" title="Week 11" href="week11.html" />
     <link rel="prev" title="Week 9" href="week9.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -161,6 +161,11 @@ const thebe_selector_output = ".output, .cell_output"
    Week 10
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week11.html">
+   Week 11
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -168,6 +173,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../sample_code/create_maps.html">
    Create Maps
@@ -717,13 +727,52 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#phase-0-to-60">
-         Phase 0 to 60
+        <a class="reference internal nav-link" href="#phase-60-to-0">
+         Phase -60 to 0
         </a>
         <ul class="nav section-nav flex-column">
          <li class="toc-h6 nav-item toc-entry">
           <a class="reference internal nav-link" href="#id44">
            Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id45">
+           Short-Scale Variance Anomalies
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#phase-bin-0-to-60">
+         Phase Bin 0 to 60
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id46">
+           Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id47">
+           Short-Scale Variance Anomalies
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#phase-bin-60-to-120">
+         Phase Bin 60 to 120
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id48">
+           Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id49">
+           Short-Scale Variance Anomalies
           </a>
          </li>
         </ul>
@@ -1182,13 +1231,52 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
        </li>
        <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#phase-0-to-60">
-         Phase 0 to 60
+        <a class="reference internal nav-link" href="#phase-60-to-0">
+         Phase -60 to 0
         </a>
         <ul class="nav section-nav flex-column">
          <li class="toc-h6 nav-item toc-entry">
           <a class="reference internal nav-link" href="#id44">
            Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id45">
+           Short-Scale Variance Anomalies
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#phase-bin-0-to-60">
+         Phase Bin 0 to 60
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id46">
+           Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id47">
+           Short-Scale Variance Anomalies
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#phase-bin-60-to-120">
+         Phase Bin 60 to 120
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id48">
+           Mean Height Anomalies
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#id49">
+           Short-Scale Variance Anomalies
           </a>
          </li>
         </ul>
@@ -1240,7 +1328,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Note</p>
 <p>Could this be a tracer for ZW3? This is the picture seen in the literature – <em>remind yourself why the three maxima exist.</em></p>
 </div>
-<p>There is also a diminishing correlation around the central Pacific, though not to the same extent, found south of Australia.</p>
+<p>There is also a significant diminishing correlation around the central Pacific, and another, though not to the same extent, found south of Australia.</p>
 </div>
 <div class="section" id="short-scale-variance-anomalies">
 <h5>Short-Scale Variance Anomalies<a class="headerlink" href="#short-scale-variance-anomalies" title="Permalink to this headline">¶</a></h5>
@@ -1300,8 +1388,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="id7">
 <h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h6>
-<p>There is little distinctive pattern here, as is common to most of the following figures for variance anomalies. There is a cluster of local positive maxima over Antarctica, with the strongest maximum located over the Amundesen and Ross seas. The positive regions do however, vaguely resemble the structure seen in the mean height field anomalies.</p>
-<p>A small, indistinctive positive region can be seen off the south western coast of South America, north of the Antarctic peninsula. It might not have been of note except for the presence of such a region in many, if not all of the graphs, which is also aligned very well with a negative region in the mean height field.Both these regions seem to have migrated poleward as compared to phases between 0 and 180, see note for <a class="reference internal" href="#first-common-feature"><span class="std std-ref">ZW3 Phase 150-180</span></a>.</p>
+<p>There is little distinctive pattern here, as is common to most of the following figures for variance anomalies. There is a cluster of local positive maxima over Antarctica, with the strongest maximum located over the Amundsen and Ross seas. The positive regions do however, vaguely resemble the structure seen in the mean height field anomalies.</p>
+<p>A small, indistinctive positive region can be seen off the south western coast of South America, north of the Antarctic peninsula. It might not have been of note except for the presence of such a region in many, if not all of the graphs, which is also aligned very well with a negative region in the mean height field. Both these regions seem to have migrated poleward as compared to phases between 0 and 180, see note for <a class="reference internal" href="#first-common-feature"><span class="std std-ref">ZW3 Phase 150-180</span></a>.</p>
 </div>
 </div>
 <div class="section" id="phase-150-to-120">
@@ -1473,7 +1561,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Once more there is a region of positive correlation off the southern coast of Brazil, in the Atlantic ocean, which aligns well with a strong negative region in the mean height field. <em>Check this out, is it really significant?</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a common occurrence for ZW3 phase between 0 and 180 degrees longitude! A negative region in the mean height field located off the the eastern cost of South America, around 30S, which aligns very well with a positive region in the variance field.</p>
+<p><strong>Ignore</strong>. This is a common occurrence for ZW3 phase between 0 and 180 degrees longitude! A negative region in the mean height field located off the the eastern cost of South America, around 30S, which aligns very well with a positive region in the variance field.</p>
 </div>
 </div>
 </div>
@@ -1481,7 +1569,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h5>ZW3 Summary<a class="headerlink" href="#zw3-summary" title="Permalink to this headline">¶</a></h5>
 <ul class="simple">
 <li><p>The regions in the variance field are generally much less extensive than any that they may be associated with in the mean height field.</p></li>
-<li><p>There is most often three weaker negative regions, with one in particular being weaker than the others.</p></li>
+<li><p>There is most often three weaker negative regions in the mean height field, with one in particular being weaker than the others.</p></li>
 </ul>
 </div>
 </div>
@@ -1493,20 +1581,20 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Seasonal Correlation Maps<a class="headerlink" href="#seasonal-correlation-maps" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id30">
 <h4>SAM<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
-<div class="margin figure align-default" id="sam-djf-rank-corr">
-<img alt="../_images/DJF_sam_rank_corr.png" src="../_images/DJF_sam_rank_corr.png" />
+<div class="figure align-left" id="sam-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_sam_rank_corr.png"><img alt="../_images/DJF_sam_rank_corr.png" src="../_images/DJF_sam_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 24 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for SAM Index, PC1.</span><a class="headerlink" href="#sam-djf-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="sam-jja-rank-corr">
-<img alt="../_images/JJA_sam_rank_corr.png" src="../_images/JJA_sam_rank_corr.png" />
+<div class="figure align-left" id="sam-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_sam_rank_corr.png"><img alt="../_images/JJA_sam_rank_corr.png" src="../_images/JJA_sam_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 25 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for SAM Index, PC1.</span><a class="headerlink" href="#sam-jja-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="sam-son-rank-corr">
-<img alt="../_images/SON_sam_rank_corr.png" src="../_images/SON_sam_rank_corr.png" />
+<div class="figure align-left" id="sam-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_sam_rank_corr.png"><img alt="../_images/SON_sam_rank_corr.png" src="../_images/SON_sam_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for SAM Index, PC1.</span><a class="headerlink" href="#sam-son-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="sam-mam-rank-corr">
-<img alt="../_images/MAM_sam_rank_corr.png" src="../_images/MAM_sam_rank_corr.png" />
+<div class="figure align-left" id="sam-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_sam_rank_corr.png"><img alt="../_images/MAM_sam_rank_corr.png" src="../_images/MAM_sam_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 27 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for SAM Index, PC1.</span><a class="headerlink" href="#sam-mam-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id31">
@@ -1525,20 +1613,20 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="id33">
 <h4>SOI<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
-<div class="margin figure align-default" id="soi-djf-rank-corr">
-<img alt="../_images/DJF_soi_rank_corr.png" src="../_images/DJF_soi_rank_corr.png" />
+<div class="figure align-left" id="soi-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_SOI_rank_corr.png"><img alt="../_images/DJF_SOI_rank_corr.png" src="../_images/DJF_SOI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 28 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for SOI.</span><a class="headerlink" href="#soi-djf-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="soi-jja-rank-corr">
-<img alt="../_images/JJA_soi_rank_corr.png" src="../_images/JJA_soi_rank_corr.png" />
+<div class="figure align-left" id="soi-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_SOI_rank_corr.png"><img alt="../_images/JJA_SOI_rank_corr.png" src="../_images/JJA_SOI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for SOI.</span><a class="headerlink" href="#soi-jja-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="soi-son-rank-corr">
-<img alt="../_images/SON_soi_rank_corr.png" src="../_images/SON_soi_rank_corr.png" />
+<div class="figure align-left" id="soi-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_SOI_rank_corr.png"><img alt="../_images/SON_SOI_rank_corr.png" src="../_images/SON_SOI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 30 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for SOI.</span><a class="headerlink" href="#soi-son-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="soi-mam-rank-corr">
-<img alt="../_images/MAM_soi_rank_corr.png" src="../_images/MAM_soi_rank_corr.png" />
+<div class="figure align-left" id="soi-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_SOI_rank_corr.png"><img alt="../_images/MAM_SOI_rank_corr.png" src="../_images/MAM_SOI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 31 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for SOI.</span><a class="headerlink" href="#soi-mam-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id34">
@@ -1563,19 +1651,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="id37">
 <h4>DMI<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-left" id="dmi-djf-rank-corr">
-<a class="reference internal image-reference" href="../_images/DJF_dmi_rank_corr.png"><img alt="../_images/DJF_dmi_rank_corr.png" src="../_images/DJF_dmi_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/DJF_DMI_rank_corr.png"><img alt="../_images/DJF_DMI_rank_corr.png" src="../_images/DJF_DMI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 32 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for DMI.</span><a class="headerlink" href="#dmi-djf-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-right" id="dmi-jja-rank-corr">
-<a class="reference internal image-reference" href="../_images/JJA_dmi_rank_corr.png"><img alt="../_images/JJA_dmi_rank_corr.png" src="../_images/JJA_dmi_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<div class="figure align-left" id="dmi-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_DMI_rank_corr.png"><img alt="../_images/JJA_DMI_rank_corr.png" src="../_images/JJA_DMI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 33 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for DMI.</span><a class="headerlink" href="#dmi-jja-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="dmi-son-rank-corr">
-<img alt="../_images/SON_dmi_rank_corr.png" src="../_images/SON_dmi_rank_corr.png" />
+<div class="figure align-left" id="dmi-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_DMI_rank_corr.png"><img alt="../_images/SON_DMI_rank_corr.png" src="../_images/SON_DMI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 34 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for DMI.</span><a class="headerlink" href="#dmi-son-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
-<div class="margin figure align-default" id="dmi-mam-rank-corr">
-<img alt="../_images/MAM_dmi_rank_corr.png" src="../_images/MAM_dmi_rank_corr.png" />
+<div class="figure align-left" id="dmi-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_DMI_rank_corr.png"><img alt="../_images/MAM_DMI_rank_corr.png" src="../_images/MAM_DMI_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 35 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for DMI.</span><a class="headerlink" href="#dmi-mam-rank-corr" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id38">
@@ -1606,47 +1694,173 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Seasonal Correlation &amp; Covariance Maps<a class="headerlink" href="#seasonal-correlation-covariance-maps" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="zw3-60-degree-phase-bins">
 <h4>ZW3 60 Degree Phase Bins<a class="headerlink" href="#zw3-60-degree-phase-bins" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="phase-180-to-120">
-<h5>Phase -180 to -120<a class="headerlink" href="#phase-180-to-120" title="Permalink to this headline">¶</a></h5>
-<div class="section" id="id40">
-<h6>Mean Height Anomalies<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h6>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There appears to be a season or two where the ZW3 pattern is strongest, whereas other seasons have little obvious features at all. The season in which the ZW3 pattern is apparent depends on the phase bin. <em>Certain phases are more common in those seasons?</em></p>
+<p>ZW3 is defined by the mean height field, therefore, in referring to the mean height anomalies correlation maps, regions that are components of a ZW3-like signal are referred to as such, e.g. the ZW3 low in the Pacific, or ZW3 high in the Indian ocean etc.</p>
 </div>
-<p>In austral summer, the ZW3 pattern common to the full year time series figures is not obvious here. There are regions of alternating positive and negative, but with no consistency and those regions are not localised, rather smeared out over a large area. There is a single localised negative region southwest of South America, however this is the only one. Otherwise there is almost a complete ring of positive correlation which wanders between 60S and 40S. This band disappears in winter, though retains a large positive region stretching from south of New Zealand to south of Madagascar. Strongly negative regions lie on either side of this positive region, though none align particularly well with anything seen in the variance anomalies. One of these negative regions, over Antarctica, aligns with a broken positive region, but difficult to definitively associate them. There is a further positive region over South America.</p>
-<p>Spring and autumn have much more distinctive ZW3-like patterns, particularly autumn. Three strongly negative regions surround a positive region that extends across Antarctica –  there is a lack of the three alternating positive regions. Little aligns with this region in the variance anomalies, however where a small recess in the central positive zone occurs, there is a particularly strong negative region in the variance map, though very limited in extent. Conversely, the spring months have much more prominent postivie regions, though missing is a third positive zone, along with the three negative regions. There are two negative regions – one over the Weddell sea, another west of South America – that sit either side of one of the positive zones; a feature that is seen during austral winter, though on the other side of the globe. <em>Might be nothing, but Rossby wave train-like.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The interpretation of these maps are risky at best. There are some consistent features, but may well be physically meaningless. There are no obviously persistent trends depsite the correlation values being quite strong.</p>
+</div>
+<div class="section" id="phase-180-to-120">
+<h5>Phase -180 to -120<a class="headerlink" href="#phase-180-to-120" title="Permalink to this headline">¶</a></h5>
+<div class="figure align-left" id="zw3-180-120-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_zw3_-180_-120_rank_corr.png"><img alt="../_images/DJF_zw3_-180_-120_rank_corr.png" src="../_images/DJF_zw3_-180_-120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 36 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -180 to -120.</span><a class="headerlink" href="#zw3-180-120-djf-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-180-120-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_zw3_-180_-120_rank_corr.png"><img alt="../_images/JJA_zw3_-180_-120_rank_corr.png" src="../_images/JJA_zw3_-180_-120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 37 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -180 to -120.</span><a class="headerlink" href="#zw3-180-120-jja-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-180-120-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_zw3_-180_-120_rank_corr.png"><img alt="../_images/SON_zw3_-180_-120_rank_corr.png" src="../_images/SON_zw3_-180_-120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 38 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -180 to -120.</span><a class="headerlink" href="#zw3-180-120-son-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-180-120-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_zw3_-180_-120_rank_corr.png"><img alt="../_images/MAM_zw3_-180_-120_rank_corr.png" src="../_images/MAM_zw3_-180_-120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 39 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin -180 to -120.</span><a class="headerlink" href="#zw3-180-120-mam-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id40">
+<h6>Mean Height Anomalies<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h6>
+<p>In austral summer there is a clear ZW3 signal. There are regions of alternating positive and negative, though two of the negatives are either indistinct or completely missing. There is a single localised negative region southwest of South America. The ZW3 associated features are the only ones of note. Winter similar to summer; other than the ZW3 signal, there is a large positive region stretching from the central Pacific to north of New Zealand.</p>
+<p>There appears to be a transition between the seasons, in that the positive regions which are apparent in a sea of negative correlations for winter and summer, and to some extent in spring, whereas the reverse is true for autumn. This occurs for other phase bins too.</p>
+<p>Spring and autumn both have distinctive ZW3-like patterns. In autumn, three strongly negative regions surround a positive region that extends across Antarctica – the three expected positive regions have merged into a single central on with three protuberances. Little aligns with this region in the variance anomalies, however where a small recess in the central positive zone occurs, there is a particularly strong negative region in the variance map, though very limited in extent. Conversely, the spring months have more localised positive regions, howeever they are relatively weak. There are two strong negative regions and a third much weaker one in the Indian ocean.</p>
 </div>
 <div class="section" id="id41">
 <h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h6>
-<p>No obvious patterns for any season. In DJF months, a large extended positive region in the south Indian ocean aligns well with the positive region of the mean height anomalies. However, this is not a consistent feature, as there are other positive regions between Antarctica and Australia that do not align well with any feature in the mean height map, and a large mean height positive region that aligns with nothing in the variance map. Over the winter months, there is the aforementioned cluster of positive correlations that align well with the mean height negative region over Antarctica. Else there are a few small positive regions over the Atlantic ocean that don’t align much with anything.</p>
-<p>Autumn has a very vague ZW3-like pattern – three negative regions equally spaced around Antarctica, though all are fairly weak, other than the aforementioned narrow maximum located over the Weddell sea. A small positive region off the Argentine coast sits just off-centre to a large mean height negative region, otherwise very little can be said in the way of matching the two maps. In spring, a positive region centred over Antarctica aligns with a mean height negative region, though not well. A small but strongly positive region south of Madagascar aligns with a zero correlation region between strongly positive and negative regions of the mean height field.</p>
+<p>In DJF months, a large extended negative region in south of Australia aligns well with the positive region of the mean height anomalies, however it appears to extend further into the Indian ocean and poleward; a feature not reproduced in the mean height anomalies. There is a medium-sized negative region that corresponds with one of the ZW3 highs (positive) in the Pacific. There is also a strongly positive region west of South Africa that aligns with a negative region in the mean height map. The same is true of a region in the central Indian ocean. Over the winter months, there is a cluster of positive correlations over Antarctica that do not align with anything. There is a positive region east of Madagascar that aligns with the ZW3 negative region in that zone. Similarly, there is a negative region south of Australia that corresponds to the ZW3 negative. This is a reasonably persistent pattern in this season, but not always true.</p>
+<p>Autumn is again inconsistent, some features align as in other seasons but not always in the same manner. The aforementioned localised negative maximum located over the Weddell sea aligns well with the zero-correlation region in the same location of the mean height map. A negative region off the Argentine coast sits just off-centre to a large mean height positive region, however this is not part of the ZW3 signal.Negative regions centred over Tasmania and off the South American west coast align with two ZW3 highs, and a positive region corresponds to one of the ZW3 lows in the Indian ocean. In spring, the only feature of note is the alignment of an extended negative band across the Pacific at 50S with the ZW3 positive region, however the size and shape is not coherent.</p>
 </div>
 </div>
 <div class="section" id="phase-120-to-60">
 <h5>Phase -120 to -60<a class="headerlink" href="#phase-120-to-60" title="Permalink to this headline">¶</a></h5>
+<div class="figure align-left" id="zw3-120-60-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_zw3_-120_-60_rank_corr.png"><img alt="../_images/DJF_zw3_-120_-60_rank_corr.png" src="../_images/DJF_zw3_-120_-60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 40 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -120 to -60.</span><a class="headerlink" href="#zw3-120-60-djf-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-120-60-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_zw3_-120_-60_rank_corr.png"><img alt="../_images/JJA_zw3_-120_-60_rank_corr.png" src="../_images/JJA_zw3_-120_-60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 41 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -120 to -60.</span><a class="headerlink" href="#zw3-120-60-jja-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-120-60-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_zw3_-120_-60_rank_corr.png"><img alt="../_images/SON_zw3_-120_-60_rank_corr.png" src="../_images/SON_zw3_-120_-60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 42 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -120 to -60.</span><a class="headerlink" href="#zw3-120-60-son-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-120-60-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_zw3_-120_-60_rank_corr.png"><img alt="../_images/MAM_zw3_-120_-60_rank_corr.png" src="../_images/MAM_zw3_-120_-60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 43 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin -120 to -60.</span><a class="headerlink" href="#zw3-120-60-mam-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="id42">
 <h6>Mean Height Anomalies<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h6>
-<p>ZW3-like pattern is much more apparent throughout the seasons for this phase bin, but again weakest for summer and winter months. In summer, a very strong region exists over New Zealand and south of Australia, adjacent to a poleward, strongly negative region over the Ross and Amundsen seas. Semblences of the other expected lows and highs are visible, but are indistinct. In austral winter, three weak positive regions are clustered around Antarctica at about 60S, but the corresponding negative regions are notably absent. There is a strongly positive band around 30S, stretching from north of New Zealand toward India. Another prominent positive region is observed over the Atlantic coast of South America. Two negative regions, weak and diffuse, are present off South America’s west coast and southwest of South Africa, though it is difficult to establish whether these are the components of ZW3.</p>
-<p>The most distinctive ZW3 pattern is found in spring, with three clear positive regions and two negative, the thrid negative zone is somewhat indistinct and appears almost displaced equatorward. Autumn is similar with three positive regions and two negative, but with weaker correlations. There is a further strong positive region in the eastern Pacific, at 30S, with another coherent negative region on the opposite coast of South America in the Atlantic.</p>
+<p>ZW3-like pattern is much more apparent throughout the seasons for this phase bin, except for autral summer where the signal is difficult to discern. In summer, a strong negative region exists over New Zealand, adjacent to a poleward, strongly positive region over the Ross and Amundsen seas. Semblences of the other expected lows and highs are visible, but are indistinct. There is a strongly positive region over South America, unconnected to the ZW3 signal. In austral winter, the ZW3 signal is much more apparent; three positive regions are very prominent, whilst the third negative zone is indistinct. It is hard to say definitively whether these two seasons are anti-phase given the summer months’ lack of ZW3 signal, the story is different for the two transition seasons however. The anti-phase seen in the previous phase bin is not replicated here, though there is a wandering aspect to the highs and lows.</p>
+<p>Another distinctive ZW3 pattern is found in spring, with three clear negative regions. There is a strong positive signal centred over Antarctica that protrudes equatorward over the Pacific and Atlantic oceans, and to a lesser extent over the Indian ocean. The expected localised positive regions appear to have been swallowed by this large positive zone. Autumn possesses with three positive regions and two negative, with a weaker third negaitve region.</p>
 </div>
 <div class="section" id="id43">
 <h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h6>
 <p>The correlations remain strong for all seasons despite difficulty in establishing a pattern or common threads – <em>why is this?</em>.</p>
-<p>Austral summer sees a large, strongly positive region south of New Zealand, stretching into the Pacific, which aligns well with a region of mean height negative correlation and zero correlation. There is a high proportion of positive correlation, which in some way mirrors the high proportion of negative of the mean height anomalies. In winter, the central region, between 90S and 60S, is mostly strongly positive, in stark contrast to the mean height field which possesses fairly weak, if any correlation in the same location. There is a strongly negative region south of South Africa which aligns well with a mean height positive region, confined almost precisely same area, of the same size. This however, appears to be an anomaly, as there is little else that can be said to align.</p>
-<p>For autumn, there is little in the way of ZW3 pattern, in keeping with the variance correlation maps other phase bins. However, between -180 and 0 degrees longitude, there are alternatine positive and negative regions that align very well with regions of the opposite sign in the mean height anomalies. The same cannot be said for the other hemisphere however. A cluster of positive regions over Antarctica aligns with the mean height weakly negative central region. In spring, only one region, south of South Africa, is aligned between the two fields – positive for variance anomalies, negative for mean height anomalies.</p>
+<p>No obvious patterns for any season. At this point, it seems wise to get a second opinion on whether documenting each isolated common feature is a good idea or not.</p>
 </div>
 </div>
-<div class="section" id="phase-0-to-60">
-<h5>Phase 0 to 60<a class="headerlink" href="#phase-0-to-60" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="phase-60-to-0">
+<h5>Phase -60 to 0<a class="headerlink" href="#phase-60-to-0" title="Permalink to this headline">¶</a></h5>
+<div class="figure align-left" id="zw3-60-0-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_zw3_-60_0_rank_corr.png"><img alt="../_images/DJF_zw3_-60_0_rank_corr.png" src="../_images/DJF_zw3_-60_0_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 44 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin -60 to 0.</span><a class="headerlink" href="#zw3-60-0-djf-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-0-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_zw3_-60_0_rank_corr.png"><img alt="../_images/JJA_zw3_-60_0_rank_corr.png" src="../_images/JJA_zw3_-60_0_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 45 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin -60 to 0.</span><a class="headerlink" href="#zw3-60-0-jja-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-0-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_zw3_-60_0_rank_corr.png"><img alt="../_images/SON_zw3_-60_0_rank_corr.png" src="../_images/SON_zw3_-60_0_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 46 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin -60 to 0.</span><a class="headerlink" href="#zw3-60-0-son-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-0-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_zw3_-60_0_rank_corr.png"><img alt="../_images/MAM_zw3_-60_0_rank_corr.png" src="../_images/MAM_zw3_-60_0_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 47 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin -60 to 0.</span><a class="headerlink" href="#zw3-60-0-mam-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="id44">
 <h6>Mean Height Anomalies<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>What are the correlation maximum values?</p></li>
+<li><p>Are there any regions that align with features in the variance maps?</p>
+<ul>
+<li><p>Negatives over positives, positives over positives?</p></li>
+</ul>
+</li>
+<li><p>Is there a clear pattern?</p></li>
+<li><p>Do they make sense physically?</p></li>
+</ul>
+<p>Weak, but fairly clear ZW3 pattern seen in all months except austral winter, once again strongest during the transition seasons. Austral summer is missing the third negative region and the others are also weak. There is a very strong area of positive correlation over South America centred on 30S, around 0.7. A large negative region over the high latitudes can be seen in winter, stretching from 90S to 40S in some locations. There is an indistinct ZW3 pattern present.</p>
+<p>A much more prominent ZW3 pattern is observed in autumn, though the negative regions are once again weak, and displaced from the expected location for a ZW3 signal. The regions are of about the same magnitude as in the other seasons, however they are tighter and more localised. In spring there is another strong ZW3 signal, however the positives are fairly weak and diffuse and there is a a single negative region over the Antarctic, extending out to 40S only over South America. The other expected negative regions are subsumed by the broader positive zones. There is a highly positive region that extends across South America, but it is not well-aligned with any feature in the variance anomalies correlation map – although there exists an extended, strongly negative band across the Atlantic at the same latitude, though displaced eastward.</p>
+</div>
+<div class="section" id="id45">
+<h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h6>
+<p>Very high positive and negative correlations despite there once more being no clear pattern. In most cases, the variance correlations are in fact larger than for the mean height anomalies – <em>seems counter-intuitive also, when ZW3 is defined according to the mean height field</em>.</p>
+<p>In austral summer, there is little coherence. Some regions align relatively well, though this not seen consistently across the whole map. These regions include the negative region over the Antarctic peninsula in mean height field aligning well with a diffuse positive region just west of the peninsula, and a mean height field positive located off the Antarctic coast, south of Australia, aligning with a diffuse negative region. There is another strongly negative region of around -0.8, however it is not clear how this lines up with anything seen in the mean height field. There are also a dispersed group of strongly positive regions in the Pacific, in the same location as a weakly negative region in the mean height. In winter, there exists a region of strongly positive correlation over the central Pacific that aligns well with a negative region in the mean hieght anomalies field. There is a high proportion of positive correlation that is matched by a highly negative mean height anomalies map, though the distributions do not align exactly, the vast majority is located in the higher latitudes. A strongly negative region over Australia aligns very well with a highly positive region in the mean height map.</p>
+<p>In autumn, there is little that can be said to be features consistent with other phase bin correlation maps, with few regions reflecting what’s seen in the mean height anomalies. Around New Zealand, there is a negative region that aligns with a positive mean height region, whislt equatorward there are similarly aligned zones of opposite sign, over eastern Australia. In austral spring, there is a positive band across the Pacific ocean, from the southern tip of New Zealand to the southern tip of South America, this aligns well with the zero correlation region. Otherwise, there is a positive region over the Lazarov sea that aligns well with a strongly positive mean height field.</p>
+</div>
+</div>
+<div class="section" id="phase-bin-0-to-60">
+<h5>Phase Bin 0 to 60<a class="headerlink" href="#phase-bin-0-to-60" title="Permalink to this headline">¶</a></h5>
+<div class="figure align-left" id="zw3-0-60-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_zw3_0_60_rank_corr.png"><img alt="../_images/DJF_zw3_0_60_rank_corr.png" src="../_images/DJF_zw3_0_60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 48 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin 0 to 60.</span><a class="headerlink" href="#zw3-0-60-djf-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-0-60-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_zw3_0_60_rank_corr.png"><img alt="../_images/JJA_zw3_0_60_rank_corr.png" src="../_images/JJA_zw3_0_60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 49 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin 0 to 60.</span><a class="headerlink" href="#zw3-0-60-jja-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-0-60-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_zw3_0_60_rank_corr.png"><img alt="../_images/SON_zw3_0_60_rank_corr.png" src="../_images/SON_zw3_0_60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 50 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin 0 to 60.</span><a class="headerlink" href="#zw3-0-60-son-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-0-60-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_zw3_0_60_rank_corr.png"><img alt="../_images/MAM_zw3_0_60_rank_corr.png" src="../_images/MAM_zw3_0_60_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 51 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin 0 to 60.</span><a class="headerlink" href="#zw3-0-60-mam-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id46">
+<h6>Mean Height Anomalies<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h6>
+<p>All seasons are possess less distinctive ZW3 patterns than other phase bins, particularly in summer and winter the signal is very weak. In summer, there are only two positive and negative regions in the expected positions, however one negative region is very central, displaced toward higher latitudes. There is also a third positive region at almost 90S, confined to a small area. In the summer, there is almost no signal at all, with particularly weak correlations between 40S and 90S. There are still strongly positive regions in the subtropics, around 20S to 4S,
+notably off the west coast of South Africa, and in the Indian ocean.</p>
+<p>In autumn, there is once more a weak ZW3-like signal, if you squint. Again weak correlations in high and mid latitudes. There is a single region of strong correlation in the central Pacific at 40S, and a strongly negative region northeast of there. These overlap reasonably well with oppositely-signed regions in the variance correlations. Spring in this phase bin is almost a perfect reflection of the same season but for phases -60 to 0 – <em>what can this mean?</em>. A very strong, extensice positive region exists over the south pole, surrounded by three diffuse negative regions that are much more equatorward, between 50S and 30S.</p>
+</div>
+<div class="section" id="id47">
+<h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h6>
+<p>Austral summer sees a mirroring of positive variance correlations and negative mean height correlations, though inexact to be sure. The region centred over the south pole is particularly positive, well-matched with the extensive negative region of the mean height map in the same location. Winter brings some relief, there is a pattern! Sort of, there appears to be a spiral-like structure in the mean height field, that is somewhat mirrored by the positive regions visible in the variance map. Specifically, two arms emanating from the south pole curve outward from the Antarctic peninsula to the west coast of Australia, and from west of the Ross sea equatorward toward South America. <em>This is seemingly unique to this map, are there any other maps that follow the same pattern?</em></p>
+<p>Autumn brings little in the way of coherence, with a cluster of positive correlations in the high latitudes that correspond to the negative polar region in the mean height map. There is the aforementioned positive and negative regions aligning between the two maps (see above), however there is little else of note. In spring there is little obvious pattern, as always. A high proportion of positive correlations mirrors the high proportion of negative observed in the mean height map, however the location of the highly positive mean height region is also positive in the variance map. In the hemisphere cented over New Zealand there is a reasonable alignment between positive variance correlation and negative mean height correlations.</p>
+</div>
+</div>
+<div class="section" id="phase-bin-60-to-120">
+<h5>Phase Bin 60 to 120<a class="headerlink" href="#phase-bin-60-to-120" title="Permalink to this headline">¶</a></h5>
+<div class="figure align-left" id="zw3-60-120-djf-rank-corr">
+<a class="reference internal image-reference" href="../_images/DJF_zw3_60_120_rank_corr.png"><img alt="../_images/DJF_zw3_60_120_rank_corr.png" src="../_images/DJF_zw3_60_120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 52 </span><span class="caption-text">Spearman Rank Correlations in Austral Summer for ZW3, Phase Bin 60 to 120.</span><a class="headerlink" href="#zw3-60-120-djf-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-120-jja-rank-corr">
+<a class="reference internal image-reference" href="../_images/JJA_zw3_60_120_rank_corr.png"><img alt="../_images/JJA_zw3_60_120_rank_corr.png" src="../_images/JJA_zw3_60_120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 53 </span><span class="caption-text">Spearman Rank Correlations in Austral Winter for ZW3, Phase Bin 60 to 120.</span><a class="headerlink" href="#zw3-60-120-jja-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-120-son-rank-corr">
+<a class="reference internal image-reference" href="../_images/SON_zw3_60_120_rank_corr.png"><img alt="../_images/SON_zw3_60_120_rank_corr.png" src="../_images/SON_zw3_60_120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 54 </span><span class="caption-text">Spearman Rank Correlations in Austral Spring for ZW3, Phase Bin 60 to 120.</span><a class="headerlink" href="#zw3-60-120-son-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="zw3-60-120-mam-rank-corr">
+<a class="reference internal image-reference" href="../_images/MAM_zw3_60_120_rank_corr.png"><img alt="../_images/MAM_zw3_60_120_rank_corr.png" src="../_images/MAM_zw3_60_120_rank_corr.png" style="width: 600.0px; height: 240.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 55 </span><span class="caption-text">Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin 60 to 120.</span><a class="headerlink" href="#zw3-60-120-mam-rank-corr" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id48">
+<h6>Mean Height Anomalies<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h6>
+<p>A relatively consistent ZW3 signal observed here</p>
+</div>
+<div class="section" id="id49">
+<h6>Short-Scale Variance Anomalies<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h6>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="el-nino-southern-oscillation-complexity-timmermann-ninosouthern-2018">
-<h3>El Nino-Southern Oscillation Complexity <span id="id45">[<a class="reference internal" href="../bibliography.html#id32" title="Axel Timmermann, Soon-Il An, Jong-Seong Kug, Fei-Fei Jin, Wenju Cai, Antonietta Capotondi, Kim M. Cobb, Matthieu Lengaigne, Michael J. McPhaden, Malte F. Stuecker, Karl Stein, Andrew T. Wittenberg, Kyung-Sook Yun, Tobias Bayr, Han-Ching Chen, Yoshimitsu Chikamoto, Boris Dewitte, Dietmar Dommenget, Pamela Grothe, Eric Guilyardi, Yoo-Geun Ham, Michiya Hayashi, Sarah Ineson, Daehyun Kang, Sunyong Kim, WonMoo Kim, June-Yi Lee, Tim Li, Jing-Jia Luo, Shayne McGregor, Yann Planton, Scott Power, Harun Rashid, Hong-Li Ren, Agus Santoso, Ken Takahashi, Alexander Todd, Guomin Wang, Guojian Wang, Ruihuang Xie, Woo-Hyun Yang, Sang-Wook Yeh, Jinho Yoon, Elke Zeller, and Xuebin Zhang. El Niño–Southern Oscillation complexity. Nature, 559(7715):535–545, July 2018. Number: 7715 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41586-018-0252-6 (visited on 2022-03-21), doi:10.1038/s41586-018-0252-6.">Timmermann <em>et al.</em>, 2018</a>]</span><a class="headerlink" href="#el-nino-southern-oscillation-complexity-timmermann-ninosouthern-2018" title="Permalink to this headline">¶</a></h3>
+<h3>El Nino-Southern Oscillation Complexity <span id="id50">[<a class="reference internal" href="../bibliography.html#id32" title="Axel Timmermann, Soon-Il An, Jong-Seong Kug, Fei-Fei Jin, Wenju Cai, Antonietta Capotondi, Kim M. Cobb, Matthieu Lengaigne, Michael J. McPhaden, Malte F. Stuecker, Karl Stein, Andrew T. Wittenberg, Kyung-Sook Yun, Tobias Bayr, Han-Ching Chen, Yoshimitsu Chikamoto, Boris Dewitte, Dietmar Dommenget, Pamela Grothe, Eric Guilyardi, Yoo-Geun Ham, Michiya Hayashi, Sarah Ineson, Daehyun Kang, Sunyong Kim, WonMoo Kim, June-Yi Lee, Tim Li, Jing-Jia Luo, Shayne McGregor, Yann Planton, Scott Power, Harun Rashid, Hong-Li Ren, Agus Santoso, Ken Takahashi, Alexander Todd, Guomin Wang, Guojian Wang, Ruihuang Xie, Woo-Hyun Yang, Sang-Wook Yeh, Jinho Yoon, Elke Zeller, and Xuebin Zhang. El Niño–Southern Oscillation complexity. Nature, 559(7715):535–545, July 2018. Number: 7715 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41586-018-0252-6 (visited on 2022-03-21), doi:10.1038/s41586-018-0252-6.">Timmermann <em>et al.</em>, 2018</a>]</span><a class="headerlink" href="#el-nino-southern-oscillation-complexity-timmermann-ninosouthern-2018" title="Permalink to this headline">¶</a></h3>
 <p>Contains a useful glossary of terms relating to ENSO.</p>
 </div>
 </div>
@@ -1684,10 +1898,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Week 9</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../sample_code/create_maps.html" title="next page">
+    <a class='right-next' id="next-link" href="week11.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Create Maps</p>
+        <p class="prev-next-title">Week 11</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
