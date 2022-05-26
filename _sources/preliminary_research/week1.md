@@ -22,7 +22,7 @@ A phase shift can only be known a few days in advance, but the ensuing phase cou
 
 Recent trends show that the SAM is more frequently in the positive phase, which indicates this might be something to expect in the future. 
 
-There is strong evidence that the SAM phase is influenced by the ozone hole and the stratosphere (as detailed in [Thompson et al. 2011])(./week3.md) (Week 3 notebook). There are also strong ties between the SAM and storm tracks.
+There is strong evidence that the SAM phase is influenced by the ozone hole and the stratosphere (as detailed in [Thompson et al. 2011](week3.md)). There are also strong ties between the SAM and storm tracks.
 
 ### Questions
 - What are the current trends? (this was written in 2006)
@@ -30,7 +30,7 @@ There is strong evidence that the SAM phase is influenced by the ozone hole and 
 - What causes SAM?
 
 ```{note}
-See [Thompson et al. 2011])(./week3.md) (Week 3 notebook) for answers to both questions.
+See [Thompson et al. 2011](week3.md) (Week 3 notebook) for answers to both questions.
 ```
 
 (Fogt2020)=

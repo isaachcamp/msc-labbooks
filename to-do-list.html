@@ -307,8 +307,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-week">
-   This Week
+  <a class="reference internal nav-link" href="#things-to-do">
+   Things to Do
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -357,8 +357,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-week">
-   This Week
+  <a class="reference internal nav-link" href="#things-to-do">
+   Things to Do
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -397,33 +397,28 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="to-do-list">
 <h1>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="this-week">
-<h2>This Week<a class="headerlink" href="#this-week" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="things-to-do">
+<h2>Things to Do<a class="headerlink" href="#things-to-do" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Maximum covariance analysis between paired fields (mean height and variance anomalies).</p>
-<ul>
-<li><p>Read up on MCA for plotting.</p></li>
-</ul>
-</li>
-<li><p>Document new classes.</p></li>
-<li><p>Read up on covariance.</p></li>
-<li><p>Document yearly covariance.</p></li>
-<li><p>Document seasonal covariance maps.</p></li>
+<li><p>MCA with daily data.</p></li>
+<li><p>Seasonal MCA, rotated EOFs and Lagged analysis.</p></li>
+<li><p>Correlation between mean and variance MCA PCs.</p></li>
+<li><p>Document yearly and seasonal covariance maps.</p></li>
 <li><p>Read up on Partial Correlations.</p></li>
-<li><p>Read thorugh week 10 nots and check out common features found in maps – <a class="reference internal" href="era5_analysis/week10.html"><span class="doc std std-doc">week 10</span></a>.</p>
+<li><p>Read thorugh week 10 notes and check out common features found in maps – <a class="reference internal" href="era5_analysis/week10.html"><span class="doc std std-doc">week 10</span></a>.</p>
 <ul>
 <li><p>Positive over negative? Positive over positive? Vice versa?</p></li>
 <li><p>Consistency between seasons of different phase bins?</p></li>
 <li><p>Spiral-like structure as seen in JJA 0 - 60 degrees?</p></li>
 </ul>
 </li>
+<li><p>Remove variance due to first EOF (SAM) from mean height and bandpassed variance field to isolate contributions from other phenomena.</p></li>
 </ul>
 </div>
 <div class="section" id="questions-to-answer">
 <h2>Questions to Answer<a class="headerlink" href="#questions-to-answer" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Is geostrophic balance the reason why there is momentum convergence in the storm tracks?</p></li>
-<li><p>Why does Trenberth 1991 use the covariance of atmospheric variables to determine fluxes of momentum, heat, moisture etc.?</p></li>
 <li><p>What is the Eliasson-Palm flux and what does it represent? Trenberth 1991 seems to use E-P flux as a proxy for representing eddy fluxes of several characteristics of storms.</p></li>
 <li><p>The jet axis tends to be located above a narrow sloping zone of strong potential temperature gradients, called the <em>polar-frontal zone</em>, which separates the cold polar air from the warm tropical air. This is a result of the thermal wind balance. Why is this?</p></li>
 </ul>
@@ -443,7 +438,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Potential Vorticity</p></li>
 </ul>
 </li>
-<li><p>Statistical methods for establishing pattern significance</p></li>
 <li><p>Importance of documenting ERA5 dataset</p>
 <ul>
 <li><p>What is different about this dataset? More advanced? Better data? Why?</p></li>
@@ -457,6 +451,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Fogt and Marshall, 2020</p></li>
 <li><p>Fogt, Jones et al. 2012</p></li>
 <li><p>Priestley et al. 2020</p></li>
+<li><p>Hartman and Lorenz, 2002</p></li>
 </ul>
 </div>
 <div class="section" id="books-chapters-to-read">
@@ -476,7 +471,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Misc to Read<a class="headerlink" href="#misc-to-read" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>On the Trend, Detrending and variability of nonlinear and nonstationary time series, PNAS online https://www.pnas.org/doi/10.1073/pnas.0701020104</p></li>
-<li><p>Week 3 &amp; 4 Notes</p></li>
+<li><p>Old Notes</p></li>
 </ul>
 </div>
 </div>

@@ -110,7 +110,7 @@ Look at Wallace & Hobbs again to understand the physical basis for atmospheric d
 
 #### Major Findings
 
-Strong convection events cause an increased Hadley overturning circulation, low-level convergence and upper-level divergence, which, coupled with the upper-level divergence at the descending branch of Hadley cell, produces the conditions for Rossby wave propagation. This paper once again reinforces the importance of Rossby wave trains in produing the teleconnection patterns observed such as the PSA. It reiterates that Rossby wave trains push the storm track equatorwards (_find citation_).
+Strong convection events cause an increased Hadley overturning circulation, low-level convergence and upper-level divergence, which, coupled with the upper-level convergence at the descending branch of Hadley cell, produces the conditions for Rossby wave propagation. This paper once again reinforces the importance of Rossby wave trains in produing the teleconnection patterns observed such as the PSA. It reiterates that Rossby wave trains push the storm track equatorwards (_find citation_).
 
 It is suggested that the storm track plays a key role in amplifying the wave trains and even control the structure, partially explaining commonality of observed features, such as the lengthening of the jet stream, despite forcing from SST anomalies that geographically distributed. The amplification is due to transient transportation of flux that enhances jet streams.
 

@@ -804,8 +804,3 @@ Spearman Rank Correlations in Austral Autumn for ZW3, Phase Bin 60 to 120.
 A relatively consistent ZW3 signal observed here 
 
 ###### Short-Scale Variance Anomalies
-
-
-### El Nino-Southern Oscillation Complexity {cite}`timmermann_ninosouthern_2018`
-
-Contains a useful glossary of terms relating to ENSO.
