@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 12 &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Correlation &amp; Covariance Maps" href="../sample_code/corr_cov_maps.html" />
+    <link rel="prev" title="Week 12" href="week12.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Correlation/Covariance Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week8.html">
+   Week 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week9.html">
+   Week 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week10.html">
+   Week 10
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week11.html">
+   Week 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week12.html">
+   Week 12
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Week 12
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/create_maps.html">
+   Create Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/load_indices.html">
+   Load Indices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/sample_calculations.html">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/era5_analysis/week13.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fera5_analysis/week13.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-24">
+   2022 May 24
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#persistent-positive-anomalies-in-the-southern-hemisphere-circulation-renwick-persistent-2005">
+     Persistent Positive Anomalies in the Southern Hemisphere Circulation
+     <span class="xref cite">
+      renwick_persistent_2005
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summary">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#major-findings">
+       Major Findings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cluster-analysis">
+       Cluster Analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possible-forcings">
+       Possible Forcings
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-25">
+   2022 May 25
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-zonally-symmetric-and-asymmetric-components-of-the-southern-annular-mode-using-a-novel-approach-campitelli-assessment-2021">
+     Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach
+     <span class="xref cite">
+      campitelli_assessment_2021
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indices">
+       Indices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#results">
+       Results
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#temporal-evolution">
+         Temporal Evolution
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#spatial-patterns">
+         Spatial Patterns
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useful-citations">
+       Useful Citations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-stippling-shows-statistically-significant-grid-points-how-research-results-are-routinely-overstated-and-overinterpreted-and-what-to-do-about-it-wilks-stippling-2016">
+     “The Stippling Shows Statistically Significant Grid Points” How Research Results are Routinely Overstated and Overinterpreted, and What to Do about It
+     <span class="xref cite">
+      wilks_stippling_2016
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#history-of-significance-testing-for-multiple-hypotheses">
+       History of Significance Testing for Multiple Hypotheses
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#false-discovery-rate-technique">
+       False Discovery Rate Technique
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-26">
+   2022 May 26
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
+     Eddy–Zonal Flow Feedback in the Southern Hemisphere
+     <span class="xref cite">
+      lorenz_eddy_2002
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Week 12</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-24">
+   2022 May 24
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#persistent-positive-anomalies-in-the-southern-hemisphere-circulation-renwick-persistent-2005">
+     Persistent Positive Anomalies in the Southern Hemisphere Circulation
+     <span class="xref cite">
+      renwick_persistent_2005
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summary">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#major-findings">
+       Major Findings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cluster-analysis">
+       Cluster Analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#possible-forcings">
+       Possible Forcings
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-25">
+   2022 May 25
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assessment-of-zonally-symmetric-and-asymmetric-components-of-the-southern-annular-mode-using-a-novel-approach-campitelli-assessment-2021">
+     Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach
+     <span class="xref cite">
+      campitelli_assessment_2021
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indices">
+       Indices
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#results">
+       Results
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#temporal-evolution">
+         Temporal Evolution
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#spatial-patterns">
+         Spatial Patterns
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useful-citations">
+       Useful Citations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-stippling-shows-statistically-significant-grid-points-how-research-results-are-routinely-overstated-and-overinterpreted-and-what-to-do-about-it-wilks-stippling-2016">
+     “The Stippling Shows Statistically Significant Grid Points” How Research Results are Routinely Overstated and Overinterpreted, and What to Do about It
+     <span class="xref cite">
+      wilks_stippling_2016
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#history-of-significance-testing-for-multiple-hypotheses">
+       History of Significance Testing for Multiple Hypotheses
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#false-discovery-rate-technique">
+       False Discovery Rate Technique
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#may-26">
+   2022 May 26
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
+     Eddy–Zonal Flow Feedback in the Southern Hemisphere
+     <span class="xref cite">
+      lorenz_eddy_2002
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-12">
+<h1>Week 12<a class="headerlink" href="#week-12" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="may-24">
+<h2>2022 May 24<a class="headerlink" href="#may-24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="persistent-positive-anomalies-in-the-southern-hemisphere-circulation-renwick-persistent-2005">
+<h3>Persistent Positive Anomalies in the Southern Hemisphere Circulation <span id="id1">[]</span><a class="headerlink" href="#persistent-positive-anomalies-in-the-southern-hemisphere-circulation-renwick-persistent-2005" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>What is the importance of linear detrending?</p></li>
+</ul>
+<div class="section" id="summary">
+<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h4>
+<p>Clustering analysis of the 500hPa geopotential height field reveals two commonly occurring patterns: a ZW1 pattern; and a ZW3 pattern. There is a clear maximum anomaly in the south Pacific. A persistant positive anomaly (PPA) is defined as an anomaly in the 500hPa geopotential height field of at least 100m and lasting at lest 5 days. Blocking events are described as associated with a PPA in the higher latitudes, that is associated with a region of negative anomalies on the equatorward side, resulting in a ‘split’ or ‘blocked’ westerly flow.</p>
+<p>Previous studies have either identified ZW3 pattern with limited data for the south Pacific – using Australian observations, or, where data has been available, identified the south Pacific as the major blocking event in the SH, and downplayed the impact of ZW3. This paper argues that there are both ZW3 and ZW1 related PPAs, with the former having a weak connection to ENSO forcing, and the latter being strongly connected.</p>
+</div>
+<div class="section" id="major-findings">
+<h4>Major Findings<a class="headerlink" href="#major-findings" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Number of PPAs varies seasonally and zonally, reachin a maximum in the southb Pacific during austral winter.</p></li>
+<li><p>Notes an upward trend in the number of PPA events, consistent with the SAM trneding positive, however this could be an artefact of the uptake in satellite observations.</p></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="cluster-analysis">
+<h4>Cluster Analysis<a class="headerlink" href="#cluster-analysis" title="Permalink to this headline">¶</a></h4>
+<p>Three clusters are identified, with cluster 1 and 2 likely be linked to the changeover during the satellite era, with cluster 1 being the low resolution version of cluster 2. This is apparent from the drop-off in cluster 1 occurrence found around 1979, whilst there was a significant uptick in cluster 2 at around the same time. Clusters 1 and 2 have a ZW3-like signal, whilst cluster 3 is more ZW1-like, with a signal strong maximum located over the South Pacific. Cluster 3 has little seasonal cycle, though it does reach a maximum over austral winter.</p>
+</div>
+<div class="section" id="possible-forcings">
+<h4>Possible Forcings<a class="headerlink" href="#possible-forcings" title="Permalink to this headline">¶</a></h4>
+<p>Cluster 3 (ZW1) has a clear linkage with the SOI, as documented in Kiladis &amp; Mo 1998, Renwick 1998, Kidson 1999, Renwick &amp; Revell 2001, Renwick 2002. <em>Check out these papers</em>. This refers to the blocking over the South Pacific that is closely-tied to ENSO, which is apparent in a lot of the correlation and composite maps. More frequent blocking events during El Nino events.</p>
+<p>ZW3 patterns have less certain forcing by ENSO, but indications of PPAs favoured during winter La Nina and spring El Nino. Notes the forcing of Rossby waves by ENSO and it’s potential involvement in stimulating ZW3.</p>
+</div>
+</div>
+</div>
+<div class="section" id="may-25">
+<h2>2022 May 25<a class="headerlink" href="#may-25" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="assessment-of-zonally-symmetric-and-asymmetric-components-of-the-southern-annular-mode-using-a-novel-approach-campitelli-assessment-2021">
+<h3>Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach <span id="id2">[]</span><a class="headerlink" href="#assessment-of-zonally-symmetric-and-asymmetric-components-of-the-southern-annular-mode-using-a-novel-approach-campitelli-assessment-2021" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h4>Summary<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Campitelli et al. separate the SAM into three indices, one for the SAM as a whole, and two separate indices for the symmetric and asymmetric components. The indices are defined by regressing the geopotential height each of 37 atmospheric layers, 1000hPa to 1hPa, onto the asymmetric and symmetric components. Here they document temporal and spatial variability of both components, and look at linkages through the depth of the atmosphere, focussing on the manifestation of each component in the troposphere (700hPa) and stratosphere (50hPa).</p>
+<p>They found that each component has distinct regimes of variability, and that the asymmetric component is the sole connection between the SAM and ENSO. The well-documented positive trend appears only to be present in the symmetric SAM index.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The connection between A-SAM and ENSO is important for us as the ZW3 pattern of A-SAM has a strong maximum in the south Pacific, around the location of the Amundsen sea low. This is present in many of the figures produced so far, and is a key component in the variability of SAM. This means that the leading mode of variance are in fact the combination of ENSO and SAM.</p>
+</div>
+<p><em>If the asymmetrical component is the only part of SAM that is connected to ENSO, why do we see a ring-like structure in variance and height corr/cov and composites for DJF, when ENSO pattern looks most like SAM?</em></p>
+</div>
+<div class="section" id="indices">
+<h4>Indices<a class="headerlink" href="#indices" title="Permalink to this headline">¶</a></h4>
+<p>To define the symmetric SAM (S-SAM) and asymmetric SAM (A-SAM), they compute the zonal mean and anomalies of the geopotential height field, before calculating the leading EOF for these fields.</p>
+<p>The A-SAM assumes linearity of response i.e. the positive phase is a mirror image of the negative. They suggest this is valid as there is a strong negative spatial correlation between composites of events with +/- 1 standard deviation.</p>
+</div>
+<div class="section" id="results">
+<h4>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="temporal-evolution">
+<h5>Temporal Evolution<a class="headerlink" href="#temporal-evolution" title="Permalink to this headline">¶</a></h5>
+<p>The stratospheric imprint of SAM shows a significant oscillatory nature on the order of 20 months, and is therefore linked to the Quasi-Biennial Oscillation (QBO) (Baldwin et al. 2001, Vasconcellos et al. 2020). The most significant variability is found for ZW3 in the troposphere on the order of 3.6 months.</p>
+<p>Correlations between A-SAM and S-SAM were found to differ between the stratosphere and troposphere, with consistent values of ~0.4 with zero-lag in the troposphere, before dropping to below 0.25 in the stratosphere. Whereas, with -1 lag (A-SAM keads S-SAM by one month), the reverse relationship is found, with there being a much lower (although consistent) correlation in the troposphere, before reaching a peak of 0.58 in the stratosphere.</p>
+<p>Cross-correlations indicate that there is greater vertical coherence in SAM and S-SAM, whilst A-SAM is more incoherent.</p>
+</div>
+<div class="section" id="spatial-patterns">
+<h5>Spatial Patterns<a class="headerlink" href="#spatial-patterns" title="Permalink to this headline">¶</a></h5>
+<p>In the stratosphere, SAM has a symmetrical monopole structure, off-centre from the pole, reflected by the structure seen in the S-SAM. Interestingly, the A-SAM has a ZW1 pattern, with a high over South America, and low in the south Indian ocean.</p>
+<p>In the troposphere, S-SAM possesses the ring-like structure surrounding the oppositely-signed polar disc (with faint traces of ZW3 highs and lows), whereas A-SAM has the familiar ZW3 signal, and SAM is a combination of both. Notably, the ZW3 pattern of A-SAM is displaced by half a wavelength from the climatological mean phase as described by Raphael 2004 (<em>is this the case with Goyal’s too?</em>).</p>
+<p>Partial correlations between A-SAM &amp; S-SAM and the Oceanic Nino Index (ONI), which quantifies the correlation between ENSO and SAM, show there is a statistically significant (moderated by False Discovery Rate (FDR)) relationship between A-SAM and ONI, but no such relationship exists between S-SAM and ONI. These results were repeated for the SOI and Multivariate ENSO Index (Wolter and Timlin 2011).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Look at regression patterns with temperature anomalies (p11) and compare with generated figures, some of the A-SAM patterns look similar to ones that emerged from corr/cov and composite analysis.</p>
+</div>
+</div>
+</div>
+<div class="section" id="useful-citations">
+<h4>Useful Citations<a class="headerlink" href="#useful-citations" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>“the main mode of variability in the Southern Hemisphere extratropical circulation (Rogers and van Loon 1982)”</p></li>
+<li><p>On the trends observed in SAM, “find large positive trends in summer, smaller in autumn and no trends in the other seasons (e.g., Fogt and Marshall 2020, and references therein)”</p></li>
+<li><p>“Fogt et al. (2011) showed that there is a significant relationship between the SAM and the ENSO”, the Oceanic Nino Index quantifies the correlation between ENSO and SAM.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-stippling-shows-statistically-significant-grid-points-how-research-results-are-routinely-overstated-and-overinterpreted-and-what-to-do-about-it-wilks-stippling-2016">
+<h3>“The Stippling Shows Statistically Significant Grid Points” How Research Results are Routinely Overstated and Overinterpreted, and What to Do about It <span id="id4">[]</span><a class="headerlink" href="#the-stippling-shows-statistically-significant-grid-points-how-research-results-are-routinely-overstated-and-overinterpreted-and-what-to-do-about-it-wilks-stippling-2016" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Summary<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>This paper lays out a technique for interdependent multiple hypothesis tests and how significance can be established. This technique, known as the control of False Discovery Rate (FDR), is computationally simple and statistically principled.</p>
+</div>
+<div class="section" id="history-of-significance-testing-for-multiple-hypotheses">
+<h4>History of Significance Testing for Multiple Hypotheses<a class="headerlink" href="#history-of-significance-testing-for-multiple-hypotheses" title="Permalink to this headline">¶</a></h4>
+<p>The paper outlines a couple of methods that have been used historically to try to solve this problem: Walker’s Test; and Field Significance. Both assume that the hypothesis tests are independent, which is highly unlikely for a global field, what is much more likely is strong autocorrelation between grid points. The success of Walker’s test is in how it accounts for the increasing likelihood of a vanishingly small p-value with increasing number of hypothesis tests. He proposed a modification to the chosen significance level:</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \alpha_{walker} = 1 - (1 - \alpha)^{\frac{1}{N_0}}
+  \end{equation}\]</div>
+<p>This however, is a very strict criterion for establishing significance, and can often fail to reject false null hypotheses. The second method mentioned is the field significance approach. This is a ‘metatest’, which defines a global null hypothesis which must be rejected in order for any local tests to be considered significant. This is done by assuming that a certain proportion of local tests, equivalent to the significance level, e.g. <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>, must be rejected before the global null hypothesis can be rejected. Two prominent issues arise from this approach, aside from the assumption of statistical independence:</p>
+<ul class="simple">
+<li><p>No account is taken of the magnitude of the p-value, and so not all the information is used to establish significance.</p></li>
+<li><p>If a global null hypothesis is rejected, this merely establishes the field in its entirety as significant, which could lead to an overinterpretation of seemingly coherent features present that did not in fact contribute to the rejection of the global null hypothesis. These features may not have any physical significance, but as they are present in a ‘statistically-significant field’, they may be subjected to overinterpretation.</p></li>
+</ul>
+</div>
+<div class="section" id="false-discovery-rate-technique">
+<h4>False Discovery Rate Technique<a class="headerlink" href="#false-discovery-rate-technique" title="Permalink to this headline">¶</a></h4>
+<p>This technique works by limiting the number of falsely rejected null hypotheses by using the statistically expected fraction of such rejections. p-values are sorted into ascending order and compared to the expected fraction, which is progressively more lenient with p-values. This takes account of both the magnitude of the p-values, as well as their distribution. This method can capture regional/feature significance allowing for interpretation of these results. The FDR is defined as:</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    p^*_{FDR} = \big[p_{(i)}: p_{(i)} &lt;= (i/N)\alpha_{FDR} \big]
+  \end{equation}\]</div>
+<p>Choosing <span class="math notranslate nohighlight">\(\alpha_{FDR} = 0.1\)</span> is a reasonable estimate, as strong spatial autocorrelation tends to effectively double the usual significance level. Use this paper as a reference. <em>Find others</em>.</p>
+<p>Even though this test assumes statistical independence, it is shown that the results are not too affected by highly correlated tests, as such it is appropriate for testing fields with spatial autocorrelation.</p>
+</div>
+</div>
+</div>
+<div class="section" id="may-26">
+<h2>2022 May 26<a class="headerlink" href="#may-26" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
+<h3>Eddy–Zonal Flow Feedback in the Southern Hemisphere <span id="id6">[]</span><a class="headerlink" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h4>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./era5_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="week12.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 12</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../sample_code/corr_cov_maps.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

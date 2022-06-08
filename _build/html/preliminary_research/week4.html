@@ -163,6 +163,11 @@ const thebe_selector_output = ".output, .cell_output"
    Week 10
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../era5_analysis/week11.html">
+   Week 11
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -397,6 +402,11 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#trends">
        Trends
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useful-citations">
+       Useful Citations
       </a>
      </li>
     </ul>
@@ -681,6 +691,11 @@ const thebe_selector_output = ".output, .cell_output"
        Trends
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#useful-citations">
+       Useful Citations
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -866,6 +881,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>A new zonal wave 3 index for the Southern Hemisphere <span id="id1">[<a class="reference internal" href="../bibliography.html#id22">Goyal <em>et al.</em>, 2022</a>]</span><a class="headerlink" href="#a-new-zonal-wave-3-index-for-the-southern-hemisphere-goyal-new-2022" title="Permalink to this headline">¶</a></h3>
 <p>A pair of indices are introduced to characterise ZW3 more effectively. These new indices are based on the first two EOFs of meridional wind anomalies (and raw data) and successfully capture both magnitude and phase of the quasi-stationary zonal wave. This is a marked improvement on the Raphael 2004 index, increasing the amount of variance contained within the indices from 16% to 40%. The introduction of two indices over just a single index is justified due to the phase being of great importance in explaining some climatological patterns seen, in this case study the Antarctic sea-ice extent is used, in which a strong relationship between the two is established, with sea-ice extent exhibiting a clear ZW3-like pattern.</p>
 <p>The main flaw in the Raphael index was the station data used cannot capture the phase change of ZW3, leading to false positives and false negatives. It also couldn’t be applied to CMIP6 or CMIP5 model output given that the station doesn’t exist in those models, and a nearby datum would need to be used. The new indices suffer from neither problem.</p>
+<p>They used mean phase and amplitude in their diagnosis of model bias.</p>
 <div class="section" id="major-findings">
 <h4>Major Findings<a class="headerlink" href="#major-findings" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -880,9 +896,9 @@ const thebe_selector_output = ".output, .cell_output"
 <h4>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>ERA5 500hPa meridional wind &amp; geopotential height anomalies.</p></li>
-<li><p>Uses CESM2 historical model for the last 1200 preindustrial years in order to find more robust results for connections between ZW3 and sea-ice and heaat transport - <em>justified? What impacts does this have?</em></p></li>
+<li><p>Uses CESM2 historical model for the last 1200 preindustrial years in order to find more robust results for connections between ZW3 and sea-ice and heat transport - <em>justified? What impacts does this have?</em></p></li>
 </ul>
-<p>Meridional wind field was used as it can be directly associated with momentum and heat transport.</p>
+<p>Meridional wind field was used as ZW3 explains 45% of the variance through EOF analysis, whereas in the geopotential height field it is only 8%. It can also be directly associated with momentum and heat transport.</p>
 </div>
 <div class="section" id="new-index">
 <h4>New Index<a class="headerlink" href="#new-index" title="Permalink to this headline">¶</a></h4>
@@ -897,7 +913,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="seasonality">
 <h4>Seasonality<a class="headerlink" href="#seasonality" title="Permalink to this headline">¶</a></h4>
-<p>Austral winter possesses the strongest ZW3 events on average, summer the weakest. However there is strong variability in all months, corroborated by Renwick 2005. Also identified is where the strongest signal is located, the South Pacific - <em>why? Look in Renwick 2005</em>. There was no clear phase seasonal cycle using the deseasonalised data, however there was a clear cycle with the raw data of a  20-30 degree shift.</p>
+<p>Austral winter possesses the strongest ZW3 events on average, summer the weakest. However there is strong variability in all months, corroborated by Renwick 2005. Also identified is where the strongest signal is located, the South Pacific - <em>why? Look in Renwick 2005</em>. There was no clear phase seasonal cycle using the deseasonalised data, however there was a clear cycle with the raw data of a 20-30 degree shift.</p>
 </div>
 <div class="section" id="atmospheric-meridional-heat-transport-amht">
 <h4>Atmospheric Meridional Heat Transport (AMHT)<a class="headerlink" href="#atmospheric-meridional-heat-transport-amht" title="Permalink to this headline">¶</a></h4>
@@ -939,7 +955,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="zonal-wave-3-pattern-in-the-southern-hemisphere-generated-by-tropical-convection-goyal-zonal-2021">
 <h3>Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection <span id="id2">[<a class="reference internal" href="../bibliography.html#id20" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span><a class="headerlink" href="#zonal-wave-3-pattern-in-the-southern-hemisphere-generated-by-tropical-convection-goyal-zonal-2021" title="Permalink to this headline">¶</a></h3>
 <p>Goyal et al. uses a series of experiments with an AGCM to establish that tropical convection forced by the presence of land in the tropics generates ZW3. The essential idea is that deep tropical convection sets up a local Hadley cell, with tropical upper-level divergence and sub-tropical upper-level convergence. The convergence in the sub-tropics acts as a Rossby wave source, exciting a poleward and eastward Rossby wave train that is deflected equatorward by wave guides at high latitudes and decays in the tropics. This forms a quasi-stationary wave in the form of ZW3.</p>
-<p>ZW3 is prominent in the geopotential height and meridional wind fields, and dominates zonally asymmetric extratropical circulation at submonthly, seasonal and interannual timescales. It is at its strongest at 55S. ZW3 plays a key role in poleward heat and momentum transport.</p>
+<p>ZW3 is prominent in the geopotential height and meridional wind fields, and dominates zonally asymmetric extratropical circulation. ZW3 is present in the climatological mean flow, whilst also expresses varaibility on submonthly, seasonal and interannual timescales. Seasonally, there is a mean (~20<span class="math notranslate nohighlight">\(\degree\)</span> longitude) shift between autumn and winter months, as well as substantial variation in amplitude and phase on submonthly timescales.</p>
+<p>It is at its strongest at 55S. ZW3 plays a key role in poleward heat and momentum transport.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CMIP5 underestimates ZW3 amplitude - is this still true of CMIP6?</p>
@@ -949,6 +966,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>ZW3 generated by tropical convection events, driven by asymmetry in SSTs.</p></li>
 <li><p>Phase of ZW3 is related to the longitudinal location of the Rossby wave source in the sub-tropics.</p></li>
+<li><p>They note that the Indo-Pacific warm pool has a major role to play in the propagation of ZW3, as it is the location of the strongest deep convection events. <em>Producer of the mean climatological state?</em></p></li>
+<li><p>Strongest during austral autumn and winter, weaker in spring and summer.</p></li>
 </ul>
 </div>
 <div class="section" id="data-experimental-set-up">
@@ -962,17 +981,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="mechanism">
 <h4>Mechanism<a class="headerlink" href="#mechanism" title="Permalink to this headline">¶</a></h4>
-<p>Tropical land presence provides a pertrubation to the mean flow causing low-level/surface convergence. This results in convective heating and increased vertical motion, creating upper-level tropospheric divergence. This creates a local Hadley cell, causing upper-level convergence and sinking in the sub-tropics. This set up acts as a Rossby wave source, creating a Rossby wave train that propagates poleward and eastward. Wave guides in the high latitudes, where absolute vorticity is zero, reflect the wave train equatorward where it eventually decays in the tropics, where zonal wind tends to zero (Rossby wave trains require westerlies to propagate). This sets up a ZW3-like signal - a quasi-stationary wave with three highs and three lows.</p>
+<p>Tropical land presence provides a perturbation to the mean flow causing low-level/surface convergence. This results in convective heating and increased vertical motion, creating upper-level tropospheric divergence. This sets up a local Hadley cell, causing upper-level convergence and sinking in the sub-tropics. Upper-level subtropical convergence acts as a Rossby wave source, creating a Rossby wave train that propagates poleward and eastward. Wave guides in the high latitudes, where absolute vorticity is zero, reflect the wave train equatorward where it eventually decays in the tropics, where zonal wind tends to zero (Rossby wave trains require westerlies to propagate). This sets up a ZW3-like signal - a quasi-stationary wave with three highs and three lows.</p>
 <p>Rossby wave trains can be forced by a number of tropical convection events, relating to Madden-Julian Oscillation, monsoons, IOD and ENSO positive events.</p>
+<p>The wave trains possess a dispersive group velocity, hence the lower zonal wavenumbers travel further poleward, and at this point set up quaasi-stationary waves, which is also the reason why ZW3 dominates at 50-65<span class="math notranslate nohighlight">\(\degree\)</span>S.</p>
 </div>
 <div class="section" id="trends">
 <h4>Trends<a class="headerlink" href="#trends" title="Permalink to this headline">¶</a></h4>
-<p>Changes to ZW3 depend on tropical SST warming as well as changes to SH circulation patterns like ENSO and IOD. Warming is expected to weaken teleconnections through to mechanisms:</p>
+<p>Changes to ZW3 depend on tropical SST warming as well as changes to SH circulation patterns like ENSO and IOD. Warming is expected to weaken teleconnections through two mechanisms:</p>
 <ul class="simple">
-<li><p>weakening convective circulation.</p></li>
+<li><p>Weakening convective circulation.</p></li>
 <li><p>Amplified upper tropospheric warming causing static stability, decreasing the amount of vertical motion.</p></li>
 </ul>
 <p>Westerly winds are projected to increase with warming. Stationary wave theory states that wave number inversely proportional to zonal flow strength, suggesting that the wavenumber of the stationary wave created by tropical convection events may decrease in the future.</p>
+</div>
+<div class="section" id="useful-citations">
+<h4>Useful Citations<a class="headerlink" href="#useful-citations" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>“quasi-stationary zonal wave 3 (ZW3) pattern is a prominent feature in the Southern Hemisphere (SH) extratropical circulation, with impacts on Antarctic sea ice (Raphael 2007, Raphael &amp; Hobbs 2014), meridional heat and momentum transport (Raphael 2004)”.</p></li>
+<li><p>“ZW3 also plays an important role in wintertime SH blocking events (Trenberth &amp; Mo 1985) and has been suggested to be the most persistent mode of SH eddy circulation (Mo 1986)”</p></li>
+</ul>
 </div>
 </div>
 </div>
