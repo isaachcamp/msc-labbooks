@@ -1,4 +1,4 @@
-# Week 12
+# Week 13
 
 ## 2022 May 24
 
@@ -117,8 +117,47 @@ Even though this test assumes statistical independence, it is shown that the res
 
 ## 2022 May 26
 
-### Eddy–Zonal Flow Feedback in the Southern Hemisphere {cite}`lorenz_eddy_2002`
+### Eddy–Zonal Flow Feedback in the Southern Hemisphere {cite}`lorenz_eddy_2001`
 
 #### Summary
 
+This paper seeks to establish the importance of eddies in influencing SAM variability. In particular, it seeks to establish whether there is a zonal-mean wind-eddy feedback. They do this by first calculating EOF1, the first mode of variability, of the zonal-mean zonal wind with height i.e. the longitudinal component of the wind averaged across all longitudes -- this means the spatial variability over longitude is lost, but vertical variations are retained. 
+
+#### Major Findings
+
+- The leading mode of variability (EOF1) of zonal winds is the dipole displacement of the eddy-driven polar jet.
+- The zonal wind anomalies (anomalously strong zonal winds associated with the meridional displacement of the jet) are in part driven by eddy momentum flux anomalies. At low frequencies, the synoptic (baroclinic storms) eddy anomalies are driven by zonal mean winds, which in turn feed back and cause persistence of the leading mode.
+- Source of baroclinic waves (storms) follows the north-south movement of the jet, and possesses a bias toward equatorward wave propagation (due to the spherical nature of the earth), hence there is a net propagation of momentum poleward. This also leads to a poleward drift of zonal wind anomalies (feedback causing the southward displacement).
+- The subtropical jet is at it's strongest in austral winter, but almost completely absent in summer. Whereas the mid-latitude jet is fairly constant all year.
+- Subtropical jet is not apparent at 850hPa, but very clear at 200hPa. This suggests that the subtropical jet does not extend down to the surface as the mid-latitude jet does.
+
+#### Introduction
+
+"Dominant mode of interannual variability" is the meridional movement of the jet stream, between 40 and 60$\degree$S, with a mean position at 50$\deg$S. 
+
+"[SAM] represents the fluctuation of mass between polar regions and midlatitudes, which must accompany the shift in mid-latitude winds."
+
+A SAM pattern can be generated, i.e. an emergent property, for the simplest quasigeostrophic, primitive equation models, without topography or seasonal cycle required.
+
+Tha variability associated with the SAM is due to internally forced atmospheric dynamic processes.
+
+#### Zonal Mean Winds
+
+The subtropical jet is at it's strongest in austral winter, but almost completely absent in summer. Whereas the mid-latitude jet is fairly constant all year. The subtropical jet is not apparent at 850hPa, but very clear at 200hPa. This suggests that the subtropical jet does not extend down to the surface as the mid-latitude jet does. The differences are likely down to the different mechanisms that sustain the jets. Whilst the subtropical jet is driven by the temperature gradient between the tropics and subtropics (strongest gradient during winter), the mid-latitude jet, and surface easterlies, are driven by the Coriolis force. Eddies play an important role in transporting upper-level westerly momentum toward the surface at the mid-latitudes.
+
+The source of eddies is the instability created by the meridional temperature gradient. The SH is subject to less extreme fluctuations from the seasons since the ocean moderates the temperature gradient, and for this reason a significant proportion of variability in zonal-mean is associated with internal dynamical processes, instead of the seasonal cycle.
+
+#### Zonal Wind-Eddy Feedback
+
+Use the projection of the leading EOF vertically averaged zonal-mean zonal wind onto eddy forcing anomalies to define a time series for eddy forcing, $m$, and using the leading PC to define an index for the location of the mid-latitude jet stream, $z$. They perform a cross-spectrum analysis -- _don't know what this is_ -- and cross-correlation that suggests that the two are positively correlated over long lagged timescales, significant for 6-13 day periods, i.e. the eddy forcing and position of the jet stream are connected. This also suggests a feedback mechanism.
+
+The two are connected through the following equation:
+
+```{math}
+  \begin{equation}
+    \frac{dz}{dt} = m - \frac{z}{\tau}
+  \end{equation}
+```
+
+where $\tau$ parameterises the damping between $m$ and $z$, with a value of 8.9 days.
 
