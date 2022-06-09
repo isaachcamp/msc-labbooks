@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 12 &#8212; Lab Notebooks</title>
+    <title>Week 13 &#8212; Lab Notebooks</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Correlation &amp; Covariance Maps" href="../sample_code/corr_cov_maps.html" />
+    <link rel="next" title="Week 14" href="week14.html" />
     <link rel="prev" title="Week 12" href="week12.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -175,7 +175,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Week 12
+   Week 13
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week14.html">
+   Week 14
   </a>
  </li>
 </ul>
@@ -230,6 +235,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../to-do-list.html">
    To Do List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../paper1.html">
+   Working Title - Southern Hemisphere storm tracks and interactions with large-scale variability: what do the ERA5 Reanalyses say?
   </a>
  </li>
 </ul>
@@ -436,16 +446,36 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
+    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2001">
      Eddy–Zonal Flow Feedback in the Southern Hemisphere
      <span class="xref cite">
-      lorenz_eddy_2002
+      lorenz_eddy_2001
      </span>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id7">
        Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Major Findings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-mean-winds">
+       Zonal Mean Winds
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wind-eddy-feedback">
+       Zonal Wind-Eddy Feedback
       </a>
      </li>
     </ul>
@@ -462,7 +492,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Week 12</h1>
+                <h1>Week 13</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -589,16 +619,36 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
+    <a class="reference internal nav-link" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2001">
      Eddy–Zonal Flow Feedback in the Southern Hemisphere
      <span class="xref cite">
-      lorenz_eddy_2002
+      lorenz_eddy_2001
      </span>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id7">
        Summary
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Major Findings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#introduction">
+       Introduction
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-mean-winds">
+       Zonal Mean Winds
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wind-eddy-feedback">
+       Zonal Wind-Eddy Feedback
       </a>
      </li>
     </ul>
@@ -614,8 +664,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="week-12">
-<h1>Week 12<a class="headerlink" href="#week-12" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-13">
+<h1>Week 13<a class="headerlink" href="#week-13" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="may-24">
 <h2>2022 May 24<a class="headerlink" href="#may-24" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="persistent-positive-anomalies-in-the-southern-hemisphere-circulation-renwick-persistent-2005">
@@ -727,10 +777,43 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="may-26">
 <h2>2022 May 26<a class="headerlink" href="#may-26" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002">
-<h3>Eddy–Zonal Flow Feedback in the Southern Hemisphere <span id="id6">[]</span><a class="headerlink" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2002" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2001">
+<h3>Eddy–Zonal Flow Feedback in the Southern Hemisphere <span id="id6">[]</span><a class="headerlink" href="#eddyzonal-flow-feedback-in-the-southern-hemisphere-lorenz-eddy-2001" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id7">
 <h4>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>This paper seeks to establish the importance of eddies in influencing SAM variability. In particular, it seeks to establish whether there is a zonal-mean wind-eddy feedback. They do this by first calculating EOF1, the first mode of variability, of the zonal-mean zonal wind with height i.e. the longitudinal component of the wind averaged across all longitudes – this means the spatial variability over longitude is lost, but vertical variations are retained.</p>
+</div>
+<div class="section" id="id8">
+<h4>Major Findings<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The leading mode of variability (EOF1) of zonal winds is the dipole displacement of the eddy-driven polar jet.</p></li>
+<li><p>The zonal wind anomalies (anomalously strong zonal winds associated with the meridional displacement of the jet) are in part driven by eddy momentum flux anomalies. At low frequencies, the synoptic (baroclinic storms) eddy anomalies are driven by zonal mean winds, which in turn feed back and cause persistence of the leading mode.</p></li>
+<li><p>Source of baroclinic waves (storms) follows the north-south movement of the jet, and possesses a bias toward equatorward wave propagation (due to the spherical nature of the earth), hence there is a net propagation of momentum poleward. This also leads to a poleward drift of zonal wind anomalies (feedback causing the southward displacement).</p></li>
+<li><p>The subtropical jet is at it’s strongest in austral winter, but almost completely absent in summer. Whereas the mid-latitude jet is fairly constant all year.</p></li>
+<li><p>Subtropical jet is not apparent at 850hPa, but very clear at 200hPa. This suggests that the subtropical jet does not extend down to the surface as the mid-latitude jet does.</p></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h4>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h4>
+<p>“Dominant mode of interannual variability” is the meridional movement of the jet stream, between 40 and 60<span class="math notranslate nohighlight">\(\degree\)</span>S, with a mean position at 50<span class="math notranslate nohighlight">\(\deg\)</span>S.</p>
+<p>“[SAM] represents the fluctuation of mass between polar regions and midlatitudes, which must accompany the shift in mid-latitude winds.”</p>
+<p>A SAM pattern can be generated, i.e. an emergent property, for the simplest quasigeostrophic, primitive equation models, without topography or seasonal cycle required.</p>
+<p>Tha variability associated with the SAM is due to internally forced atmospheric dynamic processes.</p>
+</div>
+<div class="section" id="zonal-mean-winds">
+<h4>Zonal Mean Winds<a class="headerlink" href="#zonal-mean-winds" title="Permalink to this headline">¶</a></h4>
+<p>The subtropical jet is at it’s strongest in austral winter, but almost completely absent in summer. Whereas the mid-latitude jet is fairly constant all year. The subtropical jet is not apparent at 850hPa, but very clear at 200hPa. This suggests that the subtropical jet does not extend down to the surface as the mid-latitude jet does. The differences are likely down to the different mechanisms that sustain the jets. Whilst the subtropical jet is driven by the temperature gradient between the tropics and subtropics (strongest gradient during winter), the mid-latitude jet, and surface easterlies, are driven by the Coriolis force. Eddies play an important role in transporting upper-level westerly momentum toward the surface at the mid-latitudes.</p>
+<p>The source of eddies is the instability created by the meridional temperature gradient. The SH is subject to less extreme fluctuations from the seasons since the ocean moderates the temperature gradient, and for this reason a significant proportion of variability in zonal-mean is associated with internal dynamical processes, instead of the seasonal cycle.</p>
+</div>
+<div class="section" id="zonal-wind-eddy-feedback">
+<h4>Zonal Wind-Eddy Feedback<a class="headerlink" href="#zonal-wind-eddy-feedback" title="Permalink to this headline">¶</a></h4>
+<p>Use the projection of the leading EOF vertically averaged zonal-mean zonal wind onto eddy forcing anomalies to define a time series for eddy forcing, <span class="math notranslate nohighlight">\(m\)</span>, and using the leading PC to define an index for the location of the mid-latitude jet stream, <span class="math notranslate nohighlight">\(z\)</span>. They perform a cross-spectrum analysis – <em>don’t know what this is</em> – and cross-correlation that suggests that the two are positively correlated over long lagged timescales, significant for 6-13 day periods, i.e. the eddy forcing and position of the jet stream are connected. This also suggests a feedback mechanism.</p>
+<p>The two are connected through the following equation:</p>
+<div class="math notranslate nohighlight">
+\[  \begin{equation}
+    \frac{dz}{dt} = m - \frac{z}{\tau}
+  \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau\)</span> parameterises the damping between <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(z\)</span>, with a value of 8.9 days.</p>
 </div>
 </div>
 </div>
@@ -768,10 +851,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Week 12</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../sample_code/corr_cov_maps.html" title="next page">
+    <a class='right-next' id="next-link" href="week14.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
+        <p class="prev-next-title">Week 14</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

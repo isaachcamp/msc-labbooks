@@ -2,16 +2,17 @@
 
 ## Things to Do
 
-- MCA with daily data.
-- Seasonal MCA, rotated EOFs and Lagged analysis.
-- Correlation between mean and variance MCA PCs.
-- Document yearly and seasonal covariance maps.
-- Read up on Partial Correlations.
+- Write paper.
+- Finish lagged analysis.
+- Correlation between PC2 and SOI -- is the second mode due to variability in ENSO?
+- Add significant regions to covariance maps.
+- Write abstract for NZ Met Conference.
+- Read papers on ERA5 reanalyses.
+- Mention units for covariance, what do they mean?
 - Read thorugh week 10 notes and check out common features found in maps -- [week 10](era5_analysis/week10.md).
     - Positive over negative? Positive over positive? Vice versa?
     - Consistency between seasons of different phase bins?
     - Spiral-like structure as seen in JJA 0 - 60 degrees?
-- Remove variance due to first EOF (SAM) from mean height and bandpassed variance field to isolate contributions from other phenomena.
 
 
 ## Questions to Answer
