@@ -24,6 +24,7 @@ parts:
     - file: era5_analysis/week12
     - file: era5_analysis/week13
     - file: era5_analysis/week14
+    - file: era5_analysis/week15
 - caption: Sample Code
   chapters:
     - file: sample_code/corr_cov_maps.ipynb
