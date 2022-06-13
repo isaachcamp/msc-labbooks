@@ -76,18 +76,7 @@ To write:
 
 - Results & Discussion
 
-- Monthly MCA:
-    - ZW3 patterns apparent at monthly times series analysis.
-    - 8% of variance in MCA explained by ZW3, in agreement with Goyal et al. 2021 {cite}`goyal_zonal_2021`??
-    - Two leading MCA modes with monthly data, SAM and ZW3
-        - A-SAM component completely explains the connection between ENSO and SAM
-        - ZW3 pattern driven by anomalous deep convection events in the tropics, e.g. ENSO events. 
-        - Hence the two main modes of variation in ENSO can be interpreted as either SAM or ZW3 events. __But this doesn't agree with the daily analysis, where it looks very likely that ENSO is the second mode of variation and ZW3 is completely absent...__
-    - {cite}`goyal_new_2022` finds ZW3 explains a greater amount of variance in the meridional wind anomalies field, therefore there is a greater likelihood of significance using this field in place of the geopotential height. This is true also for the MCA analysis.
-- Daily MCA:
-    - No ZW3 patterns obvious in daily (with 15 day average), but instead ZW4 and ZW5 seem apparent, as well as atmospheric wave trains.
-    - SAM is always the leading pattern in 15-day rolling window, at least the first or second in 7-day window. 
-    - 15-day window chosen because more variance is explained -- _why_? -- and greater consistency in the leading modes -- _again, why?_.
+
 
 
 ## Correlation & Covariance Maps
