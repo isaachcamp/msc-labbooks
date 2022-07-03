@@ -13,7 +13,7 @@ Uses automatic tracking procedure using relative vorticity. Finds high incidence
 Greatest track density around 50S, true in both summer and winter, in agreement with [Trenberth 1991](Trenberth1991). The maxima found in the Indian ocean by Trenberth is also identified, and attributed to the incidence of high intensity storms that cause greater fluctuations in the geopotential height field. Also makes the connection between higher incidence rates of storm centres over warmer waters east of a continental landmass, and fewer over cooler waters to the west. In agreement with Trenberth over the consistency of SH storm track, in that it is much more consistent throughout the year than the NH, due to the lack of landmasses.
 
 
-### Objective Identification of Cyclones and Their Circulation Intensity, and Climatology {cite}`sinclair_objecive_1997`
+### Objective Identification of Cyclones and Their Circulation Intensity, and Climatology {cite}`sinclair_objective_1997`
 
 #### Summary
 
@@ -24,7 +24,7 @@ An updated method is applied for tracking storm centres, common associated probl
 Track density maximises between 50-60S in Atlantic and Indian oceans, however it maximises south of 60S in the Pacific -- _could be due to Amundsen sea low?_ Track density can be seen as analogous to maximal variance in geopotential height. A secondary maximum spans the Pacific around 40S, likely associated with the subtropical jet (STJ) which splits east of Australia in the winter. Highly symmetrical distribution compared to NH. Associates cyclogensis with SST gradients in each ocean, downstream of maximum gradients, around 40S, specifically it connects the rapid intensification of cyclones with SST gradients. 
 
 
-### Influence of El Niño-Southern Oscillation on baroclinic instability and storm tracks in the Southern Hemisphere {cite}`machado_influence_2020`
+### Influence of El Niño-Southern Oscillation on baroclinic instability and storm tracks in the Southern Hemisphere {cite}`machado_influence_2021`
 
 #### Summary
 
@@ -45,3 +45,7 @@ Increased Hadley cell activity during El Nino events causes increased BI around 
 - "It was observed that ENSO causes an impact in cyclone frequency and intensity in the reanalysis datasets, due to a Rossby wave-train stemming from anomalous heating in the Equatorial Pacific, similar the PSA pattern. Eichler and Market (2019)"
 - "The BI is the main mechanism responsible for the formation of storm systems (Holton, 2004)." 
 - "According to Trenberth (1991), the structure shown by the BI (Figure 1a–d) can be associated with the profile of the westerlies."
+
+#### Agreement with our Results
+
+- "Southern Hemisphere extratropical cyclones being more intense with trajectories towards lower (higher) latitudes during El Niño (La Niña) summers."

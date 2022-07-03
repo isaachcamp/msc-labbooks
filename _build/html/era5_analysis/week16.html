@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 16 &#8212; Lab Notebooks</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Correlation &amp; Covariance Maps" href="../sample_code/corr_cov_maps.html" />
+    <link rel="prev" title="Week 15" href="week15.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Correlation/Covariance Analysis
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week8.html">
+   Week 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week9.html">
+   Week 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week10.html">
+   Week 10
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week11.html">
+   Week 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week12.html">
+   Week 12
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week13.html">
+   Week 13
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week14.html">
+   Week 14
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week15.html">
+   Week 15
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Week 16
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/create_maps.html">
+   Create Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/load_indices.html">
+   Load Indices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sample_code/sample_calculations.html">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../to-do-list.html">
+   To Do List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../paper1.html">
+   Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/era5_analysis/week16.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fera5_analysis/week16.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-13">
+   2022 June 13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-maps">
+     Composite Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wave-3">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-covariance-analysis">
+     Maximum Covariance Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-monthly-data">
+       MCA with Monthly Data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-daily-data">
+       MCA with Daily Data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#zero-lag">
+         Zero-Lag
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lagged-data">
+         Lagged Data
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#presence-of-zw3-signal-in-leading-modes">
+         Presence of ZW3 Signal in Leading Modes
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-14">
+   2022 June 14
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoskins-hodges-2005-hoskins-new-2005">
+     Hoskins &amp; Hodges 2005
+     <span class="xref cite">
+      hoskins_new_2005
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-15">
+   2022 June 15
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fredricksen-fredricksen-1993-frederiksen-southern-1993">
+     Fredricksen &amp; Fredricksen 1993
+     <span class="xref cite">
+      frederiksen_southern_1993
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#berbery-vera-1996-berbery-characteristics-1996">
+     Berbery &amp; Vera 1996
+     <span class="xref cite">
+      berbery_characteristics_1996
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#karoly-1989-karoly-southern-1989">
+     Karoly 1989
+     <span class="xref cite">
+      karoly_southern_1989
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#july-16">
+   2022 July 16
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitivity-of-blocks-and-cyclones-in-era5-to-spatial-resolution-and-definition-rohrer-sensitivity-2020">
+     Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition
+     <span class="xref cite">
+      rohrer_sensitivity_2020
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summary">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-evaluation-of-surface-climatology-in-state-of-the-art-reanalyses-over-the-antarctic-ice-sheet-gossart-evaluation-2019">
+     An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet
+     <span class="xref cite">
+      gossart_evaluation_2019
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-makes-era5-unique">
+     What Makes ERA5 Unique?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-zonal-asymmetry-of-the-southern-hemisphere-winter-storm-track-inatsu-zonal-2004">
+     The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track
+     <span class="xref cite">
+      inatsu_zonal_2004
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opposite-phases-of-the-antarctic-oscillation-and-relationships-with-intraseasonal-to-interannual-activity-in-the-tropics-during-the-austral-summer-carvalho-opposite-2005">
+     Opposite Phases of the Antarctic Oscillation and Relationships with Intraseasonal to Interannual Activity in the Tropics during the Austral Summer
+     <span class="xref cite">
+      carvalho_opposite_2005
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trend-and-teleconnection-patterns-in-the-climatology-of-extratropical-cyclones-over-the-southern-hemisphere-reboita-trend-2015">
+     Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere
+     <span class="xref cite">
+      reboita_trend_2015
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id20">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Week 16</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-13">
+   2022 June 13
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-maps">
+     Composite Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wave-3">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-covariance-analysis">
+     Maximum Covariance Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-monthly-data">
+       MCA with Monthly Data
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-daily-data">
+       MCA with Daily Data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#zero-lag">
+         Zero-Lag
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lagged-data">
+         Lagged Data
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#presence-of-zw3-signal-in-leading-modes">
+         Presence of ZW3 Signal in Leading Modes
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-14">
+   2022 June 14
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hoskins-hodges-2005-hoskins-new-2005">
+     Hoskins &amp; Hodges 2005
+     <span class="xref cite">
+      hoskins_new_2005
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#june-15">
+   2022 June 15
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fredricksen-fredricksen-1993-frederiksen-southern-1993">
+     Fredricksen &amp; Fredricksen 1993
+     <span class="xref cite">
+      frederiksen_southern_1993
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#berbery-vera-1996-berbery-characteristics-1996">
+     Berbery &amp; Vera 1996
+     <span class="xref cite">
+      berbery_characteristics_1996
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#karoly-1989-karoly-southern-1989">
+     Karoly 1989
+     <span class="xref cite">
+      karoly_southern_1989
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#july-16">
+   2022 July 16
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitivity-of-blocks-and-cyclones-in-era5-to-spatial-resolution-and-definition-rohrer-sensitivity-2020">
+     Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition
+     <span class="xref cite">
+      rohrer_sensitivity_2020
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summary">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-evaluation-of-surface-climatology-in-state-of-the-art-reanalyses-over-the-antarctic-ice-sheet-gossart-evaluation-2019">
+     An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet
+     <span class="xref cite">
+      gossart_evaluation_2019
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-makes-era5-unique">
+     What Makes ERA5 Unique?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-zonal-asymmetry-of-the-southern-hemisphere-winter-storm-track-inatsu-zonal-2004">
+     The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track
+     <span class="xref cite">
+      inatsu_zonal_2004
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opposite-phases-of-the-antarctic-oscillation-and-relationships-with-intraseasonal-to-interannual-activity-in-the-tropics-during-the-austral-summer-carvalho-opposite-2005">
+     Opposite Phases of the Antarctic Oscillation and Relationships with Intraseasonal to Interannual Activity in the Tropics during the Austral Summer
+     <span class="xref cite">
+      carvalho_opposite_2005
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trend-and-teleconnection-patterns-in-the-climatology-of-extratropical-cyclones-over-the-southern-hemisphere-reboita-trend-2015">
+     Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere
+     <span class="xref cite">
+      reboita_trend_2015
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id20">
+       Summary
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-16">
+<h1>Week 16<a class="headerlink" href="#week-16" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="june-13">
+<h2>2022 June 13<a class="headerlink" href="#june-13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="composite-maps">
+<h3>Composite Maps<a class="headerlink" href="#composite-maps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Results &amp; Discussion</p></li>
+</ul>
+<div class="section" id="zonal-wave-3">
+<h4>Zonal Wave 3<a class="headerlink" href="#zonal-wave-3" title="Permalink to this headline">¶</a></h4>
+<p>Composites of the mean height field for the full time series present very strong zonal wavenumber 3 patterns, with the patterns steadily circulating the pole in accordance with the phase shift. All composites have strong highs and weaker lows, with a single strong negative region. This negative region appears strongest when over the Pacific, though there are some phase bins with strong negative region over South America (phase bins 120E-60E and 120W-180W). There are regions of high variance consistent with regions of steep geopotential height gradient, though there does not appear to be any consistent structure.</p>
+<p>Strong ZW3 signals can be identified in all seasons and all phase bins in the mean height field. There are regions of strong variance anomalies, however, once more there is no consistent discernible structure in the hgih-frequency variance field. This could be because of the level of noise present with such a small sample size (each composite was constructed from only five months), however it is may be ZW3 has minimal effect on storminess. It has been suggested that ZW3 has an effect on the direction of storms and position of the storm track, however this was not clear in these composites. Provided a systematic shift in behaviour of individual storms, it can be expected that this coherence would be present in the composites. This is an unusual result, since the composites were not taken from a dataset that suppressed signals from other sources, and ZW3 signals are prominent in all the mean height composites. It could be expected therefore that there would be some more obvious structure to the high-frequency variance field also. Following Goyal et al. 2022, using the meridional wind field anomalies may reveal more coherent structure as ZW3 clearly has a much stronger influence on this field.</p>
+<ul class="simple">
+<li><p>Goyal finds strong seasonal cycle in phase and amplitude when using meridional winds with the seasonal cycle retained.</p>
+<ul>
+<li><p>20-40 degrees between winter and other seasons and magnitude shift of 0.6-0.8, peaking in winter.</p></li>
+</ul>
+</li>
+<li><p>Goyal uses CESM2 model of last 1200 years when considering the impact of ZW3 phase to make results more robust, this is the difficulty we have with only 20 data points for 60 degree bins. He also uses 20 degree bins. What impact does this have on our analysis?</p></li>
+<li><p>What impact does the linkage between meridional heat transport and ZW3 have on storm tracks?</p></li>
+<li><p>Goyal finds clear link between ZW3 phase and sea ice extent, which is also connected to the storm track, because a reduction in sea ice will reduce the meridional temperature gradient, reducing the speed of the polar jet and baroclinic instability, the potential energy store of storm tracks. This is a lagged relationship, as sea-ice extent does not respond immediately, meaning that some of the influence of ZW3 is missed in a simultaneous analysis.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="maximum-covariance-analysis">
+<h3>Maximum Covariance Analysis<a class="headerlink" href="#maximum-covariance-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Maximum Covariance Analysis (MCA) was performed on the variance and mean height fields for both monthly and daily data, to identify the main modes of variability between the two fields. Daily variance was unavailable so it was calculated using a rolling window on 12-hourly data.</p>
+<p>It was found that no one mode explains a particularly high percentage of variance, with maximum being a SAM-like pattern that explains 11.1% of variance. This suggests that many factors hold influence over the variance field, but the leading patterns are highly suggestive of the atmospheric phenomena</p>
+<p><em>Why wouldn’t there be a lot of variance explained by the leading modes?</em></p>
+<div class="section" id="mca-with-monthly-data">
+<h4>MCA with Monthly Data<a class="headerlink" href="#mca-with-monthly-data" title="Permalink to this headline">¶</a></h4>
+<p>Using North et al. Rule of Thumb, only the first two modes for the full time series and summer are unique. However, there are physical patterns such as ZW3 and ZW4 that appear in the higher order modes, and in other seasons, therefore these are considered but are not to be relied upon.</p>
+<p>A textbook SAM patttern is the leading mode for the full time series and each season – except winter where the leading two modes explain the same variance to two significant figures – explaining between 7.8% of variance in MAM and 11.1% in DJF. SAM is well-known to be the leading mode of variability across the SH so is to be expected, and supports the proposal of SAM as a controlling influence of feedback between mean height field and variance field.</p>
+<p>An ENSO signal appears consistently as the second mode of variability, except in winter where it is the leading mode. The leading two modes of the full time series for both variance and mean height modes are consistent, in that both resemble SAM and ENSO for modes 1 and 2, respectively. However, the modes in summer are not clear-cut ENSO patterns, but strongly resemble the picture identified in the covariance analysis between the two fields for summer (see below for details). There are signs of physical signals being separated between modes, for example in autumn; the second and third modes appear to be two separated components of ENSO, which is likely due to their assumed degeneracy.</p>
+<p><span id="id1">[<a class="reference internal" href="../bibliography.html#id12">Goyal <em>et al.</em>, 2022</a>]</span> finds ZW3 explains a greater amount of variance in the meridional wind anomalies field, therefore there is a greater likelihood of non-degeneracy using this field in place of the geopotential height. The same paper uses a larger dataset – a historical simulation of the last 1200 years from the CESM2 model – which would again improve the chance of finding unique modes, which would also help investigate whether there are modes of variability that are stronger at different timescales, e.g., weekly or monthly.</p>
+<ul class="simple">
+<li><p>8% of variance in MCA explained by ZW3, in agreement with Goyal et al. 2021 <span id="id2">[<a class="reference internal" href="../bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span>??</p></li>
+</ul>
+</div>
+<div class="section" id="mca-with-daily-data">
+<h4>MCA with Daily Data<a class="headerlink" href="#mca-with-daily-data" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="zero-lag">
+<h5>Zero-Lag<a class="headerlink" href="#zero-lag" title="Permalink to this headline">¶</a></h5>
+<p>Of the two windows tested, 7- and 15-days, it was found that the 15-day window leading modes explained more variance – <em>why</em>? – and the patterns were more consistent – <em>again, why</em>? – in the full time series and across seasons. Only the leading five modes were inspected, despite more higher order modes being non-degenerate, however the amount of variance explained was less than 5% after these first five modes. Inspecting modes higher than the leading three is ill-advised as the higher modes tend to be either have no physical basis or a combination of variance from different mechanisms. This is what is seen here, with the higher order modes explaining very little variance and possessing unusual patterns that aren’t clearly associated with known phenomena or previous results, <em>(are there any previous results that support these findings?)</em>.</p>
+<p>SAM appears as the first mode of variability once again, across all seasons and in the full time series.</p>
+<p>The second mode is less consistent, but resembles an ENSO-like pattern across all figures. Key features such as the large band across the subtropical Pacific and oppositely signed-region over the Amundsen Sea are not consistently identified in the second mode, and have differing geometry and locations to the picture seen in composite and covariance figures. The typical ENSO pattern, assumed to be the same as that seen in figure (<em>get figure number</em>), is identified in higher order modes in a few datasets, e.g. the fourth mode in JJA and fourth mode in the full time series. It is likely that the typical features expected from an ENSO signal are distributed across several modes, given the close connection with SAM. However, the composite maps, discussed in detail below, suggest the manifestation of ENSO is season-dependent, and a typical ENSO pattern is only seen in spring. There are features in other seasonal composite figures that appear to correspond with features seen in higher order modes. <em>Correlate SOI with other modes.</em> To investigate what modes are linked with ENSO, correlations were calculated between the second principal component (PC2) and the SOI. Correlations are fairly low in all time series except for SON, when ENSO records its strongest events. PC2 in spring has a very similar pattern to the extreme events for the same season (see composite figure), which agrees with the higher correlations, but other seasons have quite different patterns, with features resembling some of the higher order MCA modes. There are different types of ENSO events that occur, so this may indicate that some event-types, e.g. central Pacific El Ninos, are more common in some seasosn more than others, <em>(however, ENSO events have typical timescales longer than a single season, so this may not make sense)</em>.</p>
+<p><strong>Correlate other PCs with SOI</strong></p>
+</div>
+<div class="section" id="lagged-data">
+<h5>Lagged Data<a class="headerlink" href="#lagged-data" title="Permalink to this headline">¶</a></h5>
+<p>A 5- and 10-day lag was added to the variance field to investigate whether short-timescale variance response to mean height field anomalies is simultaneous or delayed, in a similar fashion, though limited in scale, to the analysis performed by Lorenz and Hartmann 2001 <span id="id3">[<a class="reference internal" href="../bibliography.html#id27" title="David J. Lorenz and Dennis L. Hartmann. Eddy–Zonal Flow Feedback in the Southern Hemisphere. Journal of the Atmospheric Sciences, 58(21):3312–3327, November 2001. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/58/21/1520-0469_2001_058_3312_ezffit_2.0.co_2.xml (visited on 2022-05-18), doi:10.1175/1520-0469(2001)058&lt;3312:EZFFIT&gt;2.0.CO;2.">Lorenz and Hartmann, 2001</a>]</span>. It was found, in the analysis with the full time series, applying a lag generally decreases the explained variance in higher order modes, but increases the amount explained for the leading two modes. Another common feature, with few exceptions, is 10-day lag explaining more variance than 5-day lag for the leading two modes. As a rule, autumn explains lower variance than any other season by a couple of percentage points. Correlations between mean height and variance PCs are of roughly the same magnitude for leading two modes, but are lower for higher order modes, in opposition to the trend found in explained variance. <em>Why would this be?</em></p>
+<p>There is a similar pattern in seasonal data for the modes, though the difference in explained variance is likely insignificant. Generally, greater lag has lower correlations between the two PCs, though the 5-day lag doesn’t appear to be significantly different from the zero-lag for the leading PC. The second PC, which generally has higher correlations between variance and mean height PCs than the leading PC, has considerable differences between lagged analyses in all seasons except SON, which is consistently high.</p>
+<p><em>To establish which mode is most closely associated with ENSO, the time series of PCs 2-5 were correlated with the SOI.</em> Generally, correlations steadily decrease between PC2 and SOI with increased lag in all seasons except JJA, which is highly correlated with zero-lag, a magnitude of 0.41, but has minimal correlation with 5- and 10-day lagged analyses, ~0.05.</p>
+</div>
+<div class="section" id="presence-of-zw3-signal-in-leading-modes">
+<h5>Presence of ZW3 Signal in Leading Modes<a class="headerlink" href="#presence-of-zw3-signal-in-leading-modes" title="Permalink to this headline">¶</a></h5>
+<p>Aside from the leading modes, ZW3-like signals are common in the higher order modes from the monthly data MCA. However, no ZW3 pattern emerges in any of the leading five modes from MCA with daily data. There are higher order modes in the daily data analysis, not clearly associated with ENSO, with zonal wave signals; ZW4 and ZW5 signals appear, as well as Rossby wave trains in the subtropics. This could be an artifact of the rolling window averaging, or it could indicate something about the timescale on ZW3 operates. Again it should be noted monthly modes after the second mode are not unique according North et al. Rule of Thumb, however they do appear physically interpretable.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="june-14">
+<h2>2022 June 14<a class="headerlink" href="#june-14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hoskins-hodges-2005-hoskins-new-2005">
+<h3>Hoskins &amp; Hodges 2005 <span id="id4">[<a class="reference internal" href="../bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span><a class="headerlink" href="#hoskins-hodges-2005-hoskins-new-2005" title="Permalink to this headline">¶</a></h3>
+<p>Large SST gradients more prevalent in summer, why?</p>
+<p>Agrees with our analysis:</p>
+<ul class="simple">
+<li><p>“The summer storm track (DJF; Fig. 2a) is almost circular but has largest magnitudes in the central and eastern Indian Ocean and a break in the region of South America. In autumn (MAM; Fig. 2b) the maximum is in the same location, but the storm track is more broken east of New Zealand. For winter (JJA; Fig. 2c) the picture has changed considerably. The storm track that was present in summer now occupies only the Atlantic and Indian Oceans, after which it spirals in toward Antarctica.”</p></li>
+<li><p>“Circumpolar loop lost in the winter at 850hPa.”</p></li>
+<li><p>“The winter and summer storm tracks as shown by the variance in V850 are nearly collocated with the maximum SST gradients shown in Figs. 1c,d.”</p></li>
+<li><p>“the Southern Hemisphere winter storm track can appear weaker or stronger than that in the summer, depending on the diagnostic used. This closer similarity between the solsticial seasons is consistent with the small area of continental regions. The SST gradients (Figs. 1c,d) are very similar in the two seasons and are in fact slightly stronger in summer than winter between 35° and 55°S.”</p></li>
+<li><p>“In vorticity, and even more in <span class="math notranslate nohighlight">\(\theta_{PV=2}\)</span>, the maximum average intensities are associated with the subtropical track. However, the polar track dominates when using geopotential height, for example.”</p></li>
+<li><p>“Also, in agreement with others, and consistent with the thermal inertia of the largely ocean-covered surface, the Southern Hemisphere equinoctial season storm tracks tend to have similarity with those in the preceding seasons: autumn with summer, and spring with winter.”</p></li>
+</ul>
+<p>Other characteristics to check:</p>
+<ul class="simple">
+<li><p>“Winter spiral arms poleward from SA to South Indian Ocean, and from Australia to south of SA.”</p></li>
+<li><p>“Clearly separated jet stream in winter and spring in upper troposphere” - doesn’t appear the same in our results, not well-defined.</p></li>
+</ul>
+<p>Points of Interest:</p>
+<ul class="simple">
+<li><p>“raises again the notion that there may be a positive feedback between the storm track and the SST gradients: the storm track leads to surface winds that drive the currents that lead to SST gradients, and these may be favorable for the storm track. If this coupled perspective is valid, the basic driving of the asymmetric SH winter storm track structure in both the upper and lower troposphere is by the asymmetries in tropical convection.”</p></li>
+</ul>
+<p>Inatsu and Hoskins (2004), using controlled experiments with an atmospheric GCM confirmed that the zonal asymmetry of SST was crucial for the lowlevel winter storm-track structure.</p>
+</div>
+</div>
+<div class="section" id="june-15">
+<h2>2022 June 15<a class="headerlink" href="#june-15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fredricksen-fredricksen-1993-frederiksen-southern-1993">
+<h3>Fredricksen &amp; Fredricksen 1993 <span id="id5">[<a class="reference internal" href="../bibliography.html#id16" title="Jorgen S. Frederiksen and Carsten S. Frederiksen. Southern Hemisphere Storm Tracks, Blocking, and Low-Frequency Anomalies in a Primitive Equation Model. Journal of the Atmospheric Sciences, 50(18):3148–3163, September 1993. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/50/18/1520-0469_1993_050_3148_shstba_2_0_co_2.xml (visited on 2022-03-13), doi:10.1175/1520-0469(1993)050&lt;3148:SHSTBA&gt;2.0.CO;2.">Frederiksen and Frederiksen, 1993</a>]</span><a class="headerlink" href="#fredricksen-fredricksen-1993-frederiksen-southern-1993" title="Permalink to this headline">¶</a></h3>
+<p>Simulate “cyclogenesis modes” and conclude that the regions of maximum cyclogensis are located downstream of the regions of maximum baroclinicity – strongly suggesting baroclinicity manufactures synoptic-scale waves. They also find modes that exhibit similar structures to common atmospheric phenomena such as ZW3 and ENSO signals.</p>
+<p>Other Charateristics to check:</p>
+<ul class="simple">
+<li><p>Summer finds a prominent mode with a ZW3 signal, whereas the most prominent mode in winter is similar to a teleconnective pattern identified in Karoly 1989b.</p></li>
+</ul>
+<p>Points of Interest:</p>
+<ul class="simple">
+<li><p>Anomaly patterns are different in different ENSO events, discussed in Karoly 1989a. Could be due to various event types, EP and CP… might be useful for explaining the variation of MCA modes.</p></li>
+</ul>
+</div>
+<div class="section" id="berbery-vera-1996-berbery-characteristics-1996">
+<h3>Berbery &amp; Vera 1996 <span id="id6">[<a class="reference internal" href="../bibliography.html#id42" title="Ernesto H. Berbery and Carolina S. Vera. Characteristics of the Southern Hemisphere Winter Storm Track with Filtered and Unfiltered Data. Journal of the Atmospheric Sciences, 53(3):468–481, February 1996. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/53/3/1520-0469_1996_053_0468_cotshw_2_0_co_2.xml (visited on 2022-06-14), doi:10.1175/1520-0469(1996)053&lt;0468:COTSHW&gt;2.0.CO;2.">Berbery and Vera, 1996</a>]</span><a class="headerlink" href="#berbery-vera-1996-berbery-characteristics-1996" title="Permalink to this headline">¶</a></h3>
+<p>Synoptic-scale waves develop downstream of maximum baroclincity. Can be identified with filtered and unfiltered data. Present a wave-packet view of storms, and suggest that the wave-packet is most prominent in the subtropical jet where baroclinicity is weaker.</p>
+<p>“Trenberth describes fluxes caused by the storm track of properties such as heat, momentum, moisture.”</p>
+</div>
+<div class="section" id="karoly-1989-karoly-southern-1989">
+<h3>Karoly 1989 <span id="id7">[]</span><a class="headerlink" href="#karoly-1989-karoly-southern-1989" title="Permalink to this headline">¶</a></h3>
+<p>In agreement with our results:</p>
+<ul class="simple">
+<li><p>Geopotential height anomalies roughly circular around 60S, SAM-like signal, during summer, but much more wave train-like in winter, with a high over the Amundsen sea, and low equatorward and westward of that.</p></li>
+<li><p>Maxima greater in Indian ocean, lower in Atlantic, lowest in Pacific.</p></li>
+</ul>
+<p>Other characteristics to check:</p>
+<ul class="simple">
+<li><p>Winter ENSO events show a fair amount of variability, however, of the four El Nino events investigated, three of them display discernable ZW3 signals.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="july-16">
+<h2>2022 July 16<a class="headerlink" href="#july-16" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sensitivity-of-blocks-and-cyclones-in-era5-to-spatial-resolution-and-definition-rohrer-sensitivity-2020">
+<h3>Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition <span id="id8">[<a class="reference internal" href="../bibliography.html#id38" title="M. Rohrer, O. Martius, C. C. Raible, and S. Brönnimann. Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition. Geophysical Research Letters, 47(7):e2019GL085582, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GL085582. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/2019GL085582 (visited on 2022-06-13), doi:10.1029/2019GL085582.">Rohrer <em>et al.</em>, 2020</a>]</span><a class="headerlink" href="#sensitivity-of-blocks-and-cyclones-in-era5-to-spatial-resolution-and-definition-rohrer-sensitivity-2020" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="summary">
+<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h4>
+<p>ERA5 is state-of-the-art for investigating storm tracks. Using the full resolution is unnecessary as lower resolution performs equally well, therefore computation can be saved by using lower resolution since it is insensitive beyond a certain resolution. They find that the Eulerian method (the same as ours) is much less sensitive to changes in dataset and resolution than the Lagrangian method, where the tracking method introduces a greater amount of variation in storm behaviour and characteristcs.</p>
+<p>They conclude that ERA5 is similar to ERA-interim in quality of results. This means that previous results based on ERA-interim are able to validate our results. When comparing models, it is advised to use the same resolution.</p>
+</div>
+</div>
+<div class="section" id="an-evaluation-of-surface-climatology-in-state-of-the-art-reanalyses-over-the-antarctic-ice-sheet-gossart-evaluation-2019">
+<h3>An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet <span id="id9">[<a class="reference internal" href="../bibliography.html#id37" title="A. Gossart, S. Helsen, J. T. M. Lenaerts, S. Vanden Broucke, N. P. M. van Lipzig, and N. Souverijns. An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet. Journal of Climate, 32(20):6899–6915, October 2019. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/32/20/jcli-d-19-0030.1.xml (visited on 2022-06-13), doi:10.1175/JCLI-D-19-0030.1.">Gossart <em>et al.</em>, 2019</a>]</span><a class="headerlink" href="#an-evaluation-of-surface-climatology-in-state-of-the-art-reanalyses-over-the-antarctic-ice-sheet-gossart-evaluation-2019" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h4>Summary<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>Diagnoses biases in humidity, near-surface temperature, wind speed, and snow cover for four reanalyses products: ERA-5, ERA-interim, MERRA2, and NCEP CFSR. ERA-5 places too great an emphasis on the relative humidity seasonal cycle, with values too low for winter, <em>this could have repercussions for convection, hence atmospheric waves</em>. The conclusion drawn here is that the katabatic flow is too dry and sublimation from blowing snow is not parameterised. There are known biases for near-surface winds around Antarctica; ERA-5 underestimates winds along the coast and in the interior over the entire year, and overestimates winds over the Antarctic peninsula – this is likely transmitted vertically and present in Z500 field <span id="id11">[<a class="reference internal" href="../bibliography.html#id37" title="A. Gossart, S. Helsen, J. T. M. Lenaerts, S. Vanden Broucke, N. P. M. van Lipzig, and N. Souverijns. An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet. Journal of Climate, 32(20):6899–6915, October 2019. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/32/20/jcli-d-19-0030.1.xml (visited on 2022-06-13), doi:10.1175/JCLI-D-19-0030.1.">Gossart <em>et al.</em>, 2019</a>]</span>.</p>
+</div>
+</div>
+<div class="section" id="what-makes-era5-unique">
+<h3>What Makes ERA5 Unique?<a class="headerlink" href="#what-makes-era5-unique" title="Permalink to this headline">¶</a></h3>
+<p>Compared to previous generations, ERA-5 incorporates improvements in physics, data assimilation techniques and an updated numerical weather prediction model. It makes use of the Integrated Forecasting System (IFS) Cy41r2, a decades worth of improvement on the previous generation. Data acquisition comes from more sources, incorporates updated boundary conditions, such as radiative forcings from CMIP5, and more correction procedures are in place that make use of observational data. Improvements in representing key quantities in the troposhpere are considerable from the previous generation, ERA-interim. <span id="id12">[<a class="reference internal" href="../bibliography.html#id21" title="Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, András Horányi, Joaquín Muñoz-Sabater, Julien Nicolas, Carole Peubey, Raluca Radu, Dinand Schepers, Adrian Simmons, Cornel Soci, Saleh Abdalla, Xavier Abellan, Gianpaolo Balsamo, Peter Bechtold, Gionata Biavati, Jean Bidlot, Massimo Bonavita, Giovanna De Chiara, Per Dahlgren, Dick Dee, Michail Diamantakis, Rossana Dragani, Johannes Flemming, Richard Forbes, Manuel Fuentes, Alan Geer, Leo Haimberger, Sean Healy, Robin J. Hogan, Elías Hólm, Marta Janisková, Sarah Keeley, Patrick Laloyaux, Philippe Lopez, Cristina Lupu, Gabor Radnoti, Patricia de Rosnay, Iryna Rozum, Freja Vamborg, Sebastien Villaume, and Jean-Noël Thépaut. The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730):1999–2049, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/qj.3803. URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/qj.3803 (visited on 2022-03-20), doi:10.1002/qj.3803.">Hersbach <em>et al.</em>, 2020</a>]</span>  The greatest improvement in ERA-5 is the increased spatial, horizontal and vertical, and temporal resolution. However, Rohrer et al., 2020 find that Eulerian methods are insensitive to spatial resolution beyond a point <span id="id13">[<a class="reference internal" href="../bibliography.html#id38" title="M. Rohrer, O. Martius, C. C. Raible, and S. Brönnimann. Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition. Geophysical Research Letters, 47(7):e2019GL085582, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GL085582. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/2019GL085582 (visited on 2022-06-13), doi:10.1029/2019GL085582.">Rohrer <em>et al.</em>, 2020</a>]</span>.</p>
+</div>
+<div class="section" id="the-zonal-asymmetry-of-the-southern-hemisphere-winter-storm-track-inatsu-zonal-2004">
+<h3>The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track <span id="id14">[<a class="reference internal" href="../bibliography.html#id43" title="Masaru Inatsu and Brian J. Hoskins. The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track. Journal of Climate, 17(24):4882–4892, December 2004. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/17/24/jcli-3232.1.xml (visited on 2022-06-15), doi:10.1175/JCLI-3232.1.">Inatsu and Hoskins, 2004</a>]</span><a class="headerlink" href="#the-zonal-asymmetry-of-the-southern-hemisphere-winter-storm-track-inatsu-zonal-2004" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id15">
+<h3>Summary<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>The authors use a GCM to establish the relationship of aymmetrical SSTs and orography in the SH. They conclude that tropical SSTs generate stationary waves that strongly influence the strength of the upper-tropospheric storm track, and local SSTs strongly influence the lower tropospheric storm track, resulting in the observed asymmetries. Orographic features, i.e. the Andes and South African Plateau, influence the storm track through their contributions to downstream cyclogenesis, leading to maxima in corresponding ocean basins.</p>
+<p>SST gradients intensify passing storm systems, and have been linked to intensification of the jet stream through vertical motion driven by enhanced convection on the warm side, provided the anomalies are localised around the jet stream <span id="id16">[]</span> (<em>not 100% sure on this, need to double check</em>).</p>
+</div>
+<div class="section" id="opposite-phases-of-the-antarctic-oscillation-and-relationships-with-intraseasonal-to-interannual-activity-in-the-tropics-during-the-austral-summer-carvalho-opposite-2005">
+<h3>Opposite Phases of the Antarctic Oscillation and Relationships with Intraseasonal to Interannual Activity in the Tropics during the Austral Summer <span id="id17">[]</span><a class="headerlink" href="#opposite-phases-of-the-antarctic-oscillation-and-relationships-with-intraseasonal-to-interannual-activity-in-the-tropics-during-the-austral-summer-carvalho-opposite-2005" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h4>Summary<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p>Suggests that ENSO plays a role in modulating SAM phase, driving negative mode during El Nino, and positive mode during La Nina. /they also suggest that the predominant driver of SAM phase is anomalous convection patterns over the Pacific warm pool that drive Rossby wave trains poleward, similar to Goyal et al. 2021, which he suggests is also the driver of ZW3. Combine this with Campitelli et al. 2022, where the asymmetrical component of SAM is a ZW3-like pattern, that is completely explained by forcing from ENSO, this suggests that all three are intimately intertwined.</p>
+<p>In agreement with our results:</p>
+<ul class="simple">
+<li><p>Similar circular structure of wind anomalies around the pole during austral summer, with highs in Pacific, Indian and Atlantic oceans.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="trend-and-teleconnection-patterns-in-the-climatology-of-extratropical-cyclones-over-the-southern-hemisphere-reboita-trend-2015">
+<h3>Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere <span id="id19">[<a class="reference internal" href="../bibliography.html#id44" title="Michelle Simões Reboita, Rosmeri Porfírio da Rocha, Tércio Ambrizzi, and Carolina Daniel Gouveia. Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere. Climate Dynamics, 45(7):1929–1944, October 2015. URL: https://doi.org/10.1007/s00382-014-2447-3 (visited on 2022-06-15), doi:10.1007/s00382-014-2447-3.">Reboita <em>et al.</em>, 2015</a>]</span><a class="headerlink" href="#trend-and-teleconnection-patterns-in-the-climatology-of-extratropical-cyclones-over-the-southern-hemisphere-reboita-trend-2015" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h4>Summary<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p>Authors propose there is a positive trend in the frequency of high intensity and low intensity storms, and it is likely that a poleward shift of the baroclinic region (storm track) will occur with global warming.</p>
+<p>Results to compare:</p>
+<p>“EN years are associated with higher cyclones track density from central South Pacific Ocean to extreme south of South America and in southern-central South Atlantic Ocean. At the same time, lower cyclones track density occurs in the mid-latitudes of the Indian Ocean, except in its west sector. Opposite spatial pattern is obtained during LN years. The higher frequency of cyclones in lower latitudes during EN years when compared to LN can be associated to the strengthening and slight displacement towards the equator of the subtropical jet (Trenberth et al. 1998)”</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./era5_analysis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="week15.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 15</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../sample_code/corr_cov_maps.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Correlation &amp; Covariance Maps</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

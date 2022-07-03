@@ -31,7 +31,7 @@ ZW3 patterns have less certain forcing by ENSO, but indications of PPAs favoured
 
 ## 2022 May 25
 
-### Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach {cite}`campitelli_assessment_2021`
+### Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach {cite}`campitelli_assessment_2022`
 
 #### Summary
 
@@ -117,11 +117,19 @@ Even though this test assumes statistical independence, it is shown that the res
 
 ## 2022 May 26
 
-### Eddy–Zonal Flow Feedback in the Southern Hemisphere {cite}`lorenz_eddy_2001`
+### Eddy–Zonal Flow Feedback in the Southern Hemisphere {cite}`lorenz_eddyzonal_2001`
 
 #### Summary
 
-This paper seeks to establish the importance of eddies in influencing SAM variability. In particular, it seeks to establish whether there is a zonal-mean wind-eddy feedback. They do this by first calculating EOF1, the first mode of variability, of the zonal-mean zonal wind with height i.e. the longitudinal component of the wind averaged across all longitudes -- this means the spatial variability over longitude is lost, but vertical variations are retained. 
+This paper seeks to establish the importance of eddies in influencing north-south migration of the polar jet (SAM). In particular, it seeks to establish whether there is a zonal-mean wind-eddy feedback. They do this by first calculating EOF1, the first mode of variability, of the zonal-mean zonal wind with height i.e. the longitudinal component of the wind averaged across all longitudes -- this means the spatial variability over longitude is lost, but vertical variations are retained. 
+
+Initially, they do not isolate the variance due to baroclinic waves, i.e., high-frequency eddies of timescales less than 10 days, until they have established a positive correlation between the zonal index i.e., SAM index, and the eddy-forcing time series. They subsequently isolate the high-frequency forcing by running a filter on meridional and zonal velocity anomaly signals at timescales lower than 10 days, because they suggest that it could be argued that the positive correlations at longer timescales (6-13 days as indicared by the authors) could eb due to eddy internal variability, i.e., eddies with timescales on the order of 6-13 days. After running this filter, they find there is significant similarity in the power spectra of variability timescales of synoptic-forcing and zonal mean wind anomalies, in that synoptic-eddies (that have timescales of less than 10 days) vary on much longer timescales. Therefore, they suggest this indicates a positive feedback between baroclinic waves and zonal mean wind anomalies (anomalous due to their meridional location, shifted away from the 50S climatological mean). 
+
+Questions:
+- What kind of storms have an equatorward motion bias, and why does this occur?
+- Where is the instability that generates storms located? In the upper or lower troposphere?
+- What are the characteristics of individual storms?
+- Is there a variance maxima in Indian, Atlantic and Pacific because storms feed off the stronger SST gradient?
 
 #### Major Findings
 
@@ -160,4 +168,3 @@ The two are connected through the following equation:
 ```
 
 where $\tau$ parameterises the damping between $m$ and $z$, with a value of 8.9 days.
-
