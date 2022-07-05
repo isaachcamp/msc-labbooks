@@ -3,22 +3,23 @@
 ## Things to Do
 
 - Write paper.
-- Inspect correlation results between PC2 and SOI -- is the second mode due to variability in ENSO?
-    - I think it may be due to how ENSO presents in different seasons.
-- Add significant regions to covariance maps.
+    - Combine corr/cov and composite sections.
+    - Create publication-quality figures.
+        - Add significant regions to covariance maps.
+    - Mention units for covariance, what do they mean?
+        - Convert correlation values to covariance in paper.
+    - Write Conclusion and Abstract.
+    - Read Papers.
+        - Trenberth et al. 1998
+        - Carvalho et al. 2005
+        - Bretherton et al. 1992 - SVD analysis/MCA method
+    - Inspect correlation results between PC2 and SOI -- is the second mode due to variability in ENSO?
+        - I think it may be due to how ENSO presents in different seasons.
 - Write abstract for NZ Met Conference.
-- Read papers on ERA5 reanalyses.
-- Mention units for covariance, what do they mean?
-    - Convert correlation values to covariance in paper.
-- Read through week 10 notes and check out common features found in maps -- [week 10](era5_analysis/week10.md).
-    - Positive over negative? Positive over positive? Vice versa?
-    - Consistency between seasons of different phase bins?
-    - Spiral-like structure as seen in JJA 0 - 60 degrees?
 
 
 ## Questions to Answer
 
-- Is geostrophic balance the reason why there is momentum convergence in the storm tracks?
 - What is the Eliasson-Palm flux and what does it represent? Trenberth 1991 seems to use E-P flux as a proxy for representing eddy fluxes of several characteristics of storms.
 - The jet axis tends to be located above a narrow sloping zone of strong potential temperature gradients, called the _polar-frontal zone_, which separates the cold polar air from the warm tropical air. This is a result of the thermal wind balance. Why is this?
 

@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say? &#8212; Lab Notebooks</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/vic_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Lab Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing-page.html">
+   Lab Notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preliminary Research
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="preliminary_research/week1.html">
+   Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preliminary_research/week2.html">
+   Week 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preliminary_research/week3.html">
+   Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preliminary_research/week4.html">
+   Week 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="preliminary_research/week5.html">
+   Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Correlation/Covariance Analysis
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week6.html">
+   Week 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week7.html">
+   Week 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week8.html">
+   Week 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week9.html">
+   Week 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week10.html">
+   Week 10
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week11.html">
+   Week 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week12.html">
+   Week 12
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week13.html">
+   Week 13
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week14.html">
+   Week 14
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week15.html">
+   Week 15
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="era5_analysis/week16.html">
+   Week 16
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sample Code
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sample_code/corr_cov_maps.html">
+   Correlation &amp; Covariance Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sample_code/create_maps.html">
+   Create Maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sample_code/load_indices.html">
+   Load Indices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sample_code/sample_calculations.html">
+   Sample Calculations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Miscellaneous
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference-table.html">
+   References Table
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary of Terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="to-do-list.html">
+   To Do List
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paper1.html">
+   Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/thesis.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fthesis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstract">
+     Abstract
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methodology-and-data">
+   Methodology and Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-covariance-analysis">
+     Maximum Covariance Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-monthly-data">
+       MCA with Monthly Data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-daily-data">
+       MCA with Daily Data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#zero-lag">
+         Zero-Lag
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lagged-data">
+         Lagged Data
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#presence-of-zw3-signal-in-leading-modes">
+       Presence of ZW3 Signal in Leading Modes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correlation-covariance-maps">
+     Correlation &amp; Covariance Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#southern-annular-mode">
+       Southern Annular Mode
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#el-nino-southern-oscillation">
+       El Nino-Southern Oscillation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wave-3">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-maps">
+     Composite Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id49">
+       Southern Annular Mode
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id51">
+       El Nino-Southern Oscillation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id55">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#era5-data-summary">
+   ERA5 Data Summary
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#points-to-consider">
+   Points to consider
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abstract">
+     Abstract
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methodology-and-data">
+   Methodology and Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-covariance-analysis">
+     Maximum Covariance Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-monthly-data">
+       MCA with Monthly Data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mca-with-daily-data">
+       MCA with Daily Data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#zero-lag">
+         Zero-Lag
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#lagged-data">
+         Lagged Data
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#presence-of-zw3-signal-in-leading-modes">
+       Presence of ZW3 Signal in Leading Modes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correlation-covariance-maps">
+     Correlation &amp; Covariance Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#southern-annular-mode">
+       Southern Annular Mode
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#el-nino-southern-oscillation">
+       El Nino-Southern Oscillation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#zonal-wave-3">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#composite-maps">
+     Composite Maps
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id49">
+       Southern Annular Mode
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id51">
+       El Nino-Southern Oscillation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id55">
+       Zonal Wave 3
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#era5-data-summary">
+   ERA5 Data Summary
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#points-to-consider">
+   Points to consider
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="working-title-southern-hemisphere-storm-tracks-and-large-scale-variability-what-do-the-era5-reanalyses-say">
+<h1>Working Title - Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?<a class="headerlink" href="#working-title-southern-hemisphere-storm-tracks-and-large-scale-variability-what-do-the-era5-reanalyses-say" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The Southern Hemisphere (SH) storm track is a region of maximum storm activity that covers the Southern Ocean in a latitude band between 40° and 60°S. It is closely associated with extremes of wind speed, cloud formation and precipitation, and has a key role in the global circulation of momentum, energy, and moisture. The storm track is an emergent property of atmospheric circulation; differential heating of the Earth creates a meridional temperature gradient, and the deflection of resulting thermal winds by the Coriolis force drive the subpolar jet stream. Storm track strength and location is strongly linked to the jet stream, acting as the potential energy store that feeds storms. Instabilities inherent in the jet, which grow with steeper temperature gradients, propagate toward the surface, creating ideal conditions for cyclogenesis – storms form downstream of maximum baroclinic instabilities in the mean westerly flow <span id="id1">[<a class="reference internal" href="bibliography.html#id7" title="Kevin E. Trenberth. Storm Tracks in the Southern Hemisphere. Journal of the Atmospheric Sciences, 48(19):2159–2178, October 1991. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/48/19/1520-0469_1991_048_2159_stitsh_2_0_co_2.xml (visited on 2022-03-03), doi:10.1175/1520-0469(1991)048&lt;2159:STITSH&gt;2.0.CO;2.">Trenberth, 1991</a>]</span><span id="id2">[<a class="reference internal" href="bibliography.html#id43" title="Ernesto H. Berbery and Carolina S. Vera. Characteristics of the Southern Hemisphere Winter Storm Track with Filtered and Unfiltered Data. Journal of the Atmospheric Sciences, 53(3):468–481, February 1996. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/53/3/1520-0469_1996_053_0468_cotshw_2_0_co_2.xml (visited on 2022-06-14), doi:10.1175/1520-0469(1996)053&lt;0468:COTSHW&gt;2.0.CO;2.">Berbery and Vera, 1996</a>]</span>. The overall goal of the storm track is to reduce the meridional temperature gradient through its work in moving heat &amp; momentum poleward, but self-maintains through eddy-driven diabatic heating and convective processes reinforcing instabilities <span id="id3">[<a class="reference internal" href="bibliography.html#id48" title="Brian J. Hoskins and Paul J. Valdes. On the Existence of Storm-Tracks. Journal of the Atmospheric Sciences, 47(15):1854–1864, August 1990. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/47/15/1520-0469_1990_047_1854_oteost_2_0_co_2.xml (visited on 2022-06-17), doi:10.1175/1520-0469(1990)047&lt;1854:OTEOST&gt;2.0.CO;2.">Hoskins and Valdes, 1990</a>]</span>.</p>
+<p>Storm track behaviour is modulated by the seasonal cycle, Antarctic landmass distribution and sea ice extent – responsible for the three characteristic variance maxima in the ocean basins – and large-scale circulation patterns, particularly the Southern Annular Mode <span id="id4">[<a class="reference internal" href="bibliography.html#id27" title="David J. Lorenz and Dennis L. Hartmann. Eddy–Zonal Flow Feedback in the Southern Hemisphere. Journal of the Atmospheric Sciences, 58(21):3312–3327, November 2001. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/58/21/1520-0469_2001_058_3312_ezffit_2.0.co_2.xml (visited on 2022-05-18), doi:10.1175/1520-0469(2001)058&lt;3312:EZFFIT&gt;2.0.CO;2.">Lorenz and Hartmann, 2001</a>]</span><span id="id5">[<a class="reference internal" href="bibliography.html#id15" title="Timothy Paul Eichler and Jon Gottschalck. A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets. Advances in Meteorology, 2013:e891260, December 2013. Publisher: Hindawi. URL: https://www.hindawi.com/journals/amete/2013/891260/ (visited on 2022-03-13), doi:10.1155/2013/891260.">Eichler and Gottschalck, 2013</a>]</span><span id="id6">[<a class="reference internal" href="bibliography.html#id47" title="Leila M. V. Carvalho, Charles Jones, and Tércio Ambrizzi. Opposite Phases of the Antarctic Oscillation and Relationships with Intraseasonal to Interannual Activity in the Tropics during the Austral Summer. Journal of Climate, 18(5):702–718, 2005. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26253421 (visited on 2022-06-16).">Carvalho <em>et al.</em>, 2005</a>]</span>, El Nino-Southern Oscillation <span id="id7">[<a class="reference internal" href="bibliography.html#id18" title="Kevin E. Trenberth, Grant W. Branstator, David Karoly, Arun Kumar, Ngar-Cheung Lau, and Chester Ropelewski. Progress during TOGA in understanding and modeling global teleconnections associated with tropical sea surface temperatures. Journal of Geophysical Research: Oceans, 103(C7):14291–14324, 1998. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/97JC01444. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/97JC01444 (visited on 2022-03-14), doi:10.1029/97JC01444.">Trenberth <em>et al.</em>, 1998</a>]</span><span id="id8">[<a class="reference internal" href="bibliography.html#id44" title="Masaru Inatsu and Brian J. Hoskins. The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track. Journal of Climate, 17(24):4882–4892, December 2004. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/17/24/jcli-3232.1.xml (visited on 2022-06-15), doi:10.1175/JCLI-3232.1.">Inatsu and Hoskins, 2004</a>]</span><span id="id9">[<a class="reference internal" href="bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span>, and transient zonal wave activity <span id="id10">[<a class="reference internal" href="bibliography.html#id10" title="Damien Irving and Ian Simmonds. A Novel Approach to Diagnosing Southern Hemisphere Planetary Wave Activity and Its Influence on Regional Climate Variability. Journal of Climate, 28(23):9041–9057, December 2015. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/28/23/jcli-d-15-0287.1.xml (visited on 2022-03-03), doi:10.1175/JCLI-D-15-0287.1.">Irving and Simmonds, 2015</a>]</span><span id="id11">[<a class="reference internal" href="bibliography.html#id51" title="M. N. Raphael. The influence of atmospheric zonal wave three on Antarctic sea ice variability. Journal of Geophysical Research: Atmospheres, 2007. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2006JD007852. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/2006JD007852 (visited on 2022-07-03), doi:10.1029/2006JD007852.">Raphael, 2007</a>]</span>https://doi.org/10.1029/2006JD007852<span id="id12">[<a class="reference internal" href="bibliography.html#id12">Goyal <em>et al.</em>, 2022</a>]</span>, which have been shown to have significant impacts on how the storm track and individual storms manifest. It is important to understand how and why storm tracks vary with these external drivers as projections of storm track behaviour will be a key component in implementing effective policies on risk mitigation. The response of the SH storm track to the shifting climate remains unclear due to opposing influences <span id="id13">[<a class="reference internal" href="bibliography.html#id5" title="T. A. Shaw, M. Baldwin, E. A. Barnes, R. Caballero, C. I. Garfinkel, Y.-T. Hwang, C. Li, P. A. O'Gorman, G. Rivière, I. R. Simpson, and A. Voigt. Storm track processes and the opposing influences of climate change. Nature Geoscience, 9(9):656–664, September 2016. Number: 9 Publisher: Nature Publishing Group. URL: http://www.nature.com/articles/ngeo2783 (visited on 2022-03-03), doi:10.1038/ngeo2783.">Shaw <em>et al.</em>, 2016</a>]</span>, however, a basic analysis suggests rising global temperature will enhance the meridional temperature gradient in the Southern Hemisphere, leading to stronger storms. The uncertainty is exacerbated by the paucity of literature on the SH storm tracks, particularly on its relationship with ZW3. It is therefore valuable to document what the latest reanalyses say.</p>
+<p>Significant uncertainties around projected storm track behaviour are associated with SAM and ENSO in particular. SAM appears as a modal phenomenon with a positive and negative phase, which manifest as changes in average circulation over the Antarctic region and midlatitudes. These circulation anomalies affect storm track position, storm frequency and intensity – a stronger pressure gradient introduce greater instabilities in the polar jet and force storm track meridional migration. The relationship of baroclinic storms to the climatological westerly flow has been documented for the zonal mean circulation in Lorenz and Hartmann, 2001 <span id="id14">[<a class="reference internal" href="bibliography.html#id27" title="David J. Lorenz and Dennis L. Hartmann. Eddy–Zonal Flow Feedback in the Southern Hemisphere. Journal of the Atmospheric Sciences, 58(21):3312–3327, November 2001. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/58/21/1520-0469_2001_058_3312_ezffit_2.0.co_2.xml (visited on 2022-05-18), doi:10.1175/1520-0469(2001)058&lt;3312:EZFFIT&gt;2.0.CO;2.">Lorenz and Hartmann, 2001</a>]</span>. They identified an eddy-driven positive feedback mechanism that causes persistence of a given SAM mode. This is due in part to a net positive number of storms moving equatorward out of the mid-latitude jet region – a bias resulting from Earth’s spherical geometry – creating a poleward momentum transfer bias, since baroclinic waves transfer momentum opposite to their direction of travel. This drives a poleward propagation of the jet and reinforces baroclinic instabilities in the mean flow. The net equatorward movement of storms also accounts for the effect of the SAM on the subtropics. The recovery of the Antarctic ozone hole – the primary driver of the SAM positive trend <span id="id15">[<a class="reference internal" href="bibliography.html#id19" title="David W. J. Thompson, Susan Solomon, Paul J. Kushner, Matthew H. England, Kevin M. Grise, and David J. Karoly. Signatures of the Antarctic ozone hole in Southern Hemisphere surface climate change. Nature Geoscience, 4(11):741–749, November 2011. Number: 11 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/ngeo1296 (visited on 2022-03-14), doi:10.1038/ngeo1296.">Thompson <em>et al.</em>, 2011</a>]</span> – whose future is dependent on the concentration of atmospheric CFCs, introduces another uncertainty in projected storm track behaviour, whilst continuing greenhouse gas emissions are expected to push the positive trend <span id="id16">[<a class="reference internal" href="bibliography.html#id2" title="Ryan L. Fogt and Gareth J. Marshall. The Southern Annular Mode: Variability, trends, and climate impacts across the Southern Hemisphere. WIREs Climate Change, 11(4):e652, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/wcc.652. URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/wcc.652 (visited on 2022-02-24), doi:10.1002/wcc.652.">Fogt and Marshall, 2020</a>]</span>.</p>
+<p>ENSO is an interannual cycle that directly affects the shape and position of the storm track via its teleconnections. Inatsu &amp; Hoskins 2004 find tropical sea surface temperature anomalies (SSTAs) have a strong influence on the upper tropospheric jet, whilst mid-latitude SSTAs are a major driver in the formation and propagation of storms in the lower troposphere <span id="id17">[<a class="reference internal" href="bibliography.html#id44" title="Masaru Inatsu and Brian J. Hoskins. The Zonal Asymmetry of the Southern Hemisphere Winter Storm Track. Journal of Climate, 17(24):4882–4892, December 2004. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/17/24/jcli-3232.1.xml (visited on 2022-06-15), doi:10.1175/JCLI-3232.1.">Inatsu and Hoskins, 2004</a>]</span><span id="id18">[<a class="reference internal" href="bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span><span id="id19">[<a class="reference internal" href="bibliography.html#id46" title="David James Brayshaw, Brian Hoskins, and Michael Blackburn. The Basic Ingredients of the North Atlantic Storm Track. Part II: Sea Surface Temperatures. Journal of the Atmospheric Sciences, 68(8):1784–1805, August 2011. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/68/8/2011jas3674.1.xml (visited on 2022-06-15), doi:10.1175/2011JAS3674.1.">Brayshaw <em>et al.</em>, 2011</a>]</span>. SSTAs arising during warm El Nino events cause strong convection in the tropics, creating the necessary conditions for propagation of Rossby wave trains from the sub-tropics, notably over the western Pacific. These wave trains move poleward, and are the major source of observed teleconnection patterns such as the Pacific South American (PSA), a large-scale wave pattern particularly apparent during austral winter <span id="id20">[<a class="reference internal" href="bibliography.html#id42" title="David J. Karoly. Southern Hemisphere Circulation Features Associated with El Niño–Southern Oscillation Events. Journal of Climate, 2(11):1239–1252, 1989. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26196374 (visited on 2022-06-14).">Karoly, 1989</a>]</span><span id="id21">[<a class="reference internal" href="bibliography.html#id47" title="Leila M. V. Carvalho, Charles Jones, and Tércio Ambrizzi. Opposite Phases of the Antarctic Oscillation and Relationships with Intraseasonal to Interannual Activity in the Tropics during the Austral Summer. Journal of Climate, 18(5):702–718, 2005. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26253421 (visited on 2022-06-16).">Carvalho <em>et al.</em>, 2005</a>]</span>. The storm track in turn amplifies and even controls the propagation of wave trains, creating a positive feedback loop <span id="id22">[<a class="reference internal" href="bibliography.html#id18" title="Kevin E. Trenberth, Grant W. Branstator, David Karoly, Arun Kumar, Ngar-Cheung Lau, and Chester Ropelewski. Progress during TOGA in understanding and modeling global teleconnections associated with tropical sea surface temperatures. Journal of Geophysical Research: Oceans, 103(C7):14291–14324, 1998. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/97JC01444. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/97JC01444 (visited on 2022-03-14), doi:10.1029/97JC01444.">Trenberth <em>et al.</em>, 1998</a>]</span><span id="id23">[<a class="reference internal" href="bibliography.html#id45" title="Michelle Simões Reboita, Rosmeri Porfírio da Rocha, Tércio Ambrizzi, and Carolina Daniel Gouveia. Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere. Climate Dynamics, 45(7):1929–1944, October 2015. URL: https://doi.org/10.1007/s00382-014-2447-3 (visited on 2022-06-15), doi:10.1007/s00382-014-2447-3.">Reboita <em>et al.</em>, 2015</a>]</span>. The mechanism for this is described in greater detail in Karoly 1989 and Goyal et al. 2021.</p>
+<p>ZW3 is a quasi-stationary wave that plays a pivotal role in poleward heat and momentum transport, especially in winter, which has recently been linked to Rossby wave trains caused by tropical convection events <span id="id24">[<a class="reference internal" href="bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span>. Rossby wave trains are deflected equatorward by wave guides in the high latitudes and eventually decay in the tropics – which Goyal et al. (2021) suggest creates a ZW3-like signal on average, a wave with three highs and lows centred on 55°S. ZW3 centres of high and low pressure interact with storms and can exacerbate extreme weather events. Changes to SH circulation that generate tropical convection events such as ENSO are expected to affect ZW3, as well as warming SSTs, which will weaken teleconnections through increased tropospheric static stability, weakening vertical motions and convective circulation. As westerlies strengthen with warming temperatures, stationary wave theory suggests that the wavenumber – inversely proportional to zonal mean flow – generated by tropical convection events will decrease.</p>
+<p>The effects of low-frequency variability on the mean height field is well-documented <span id="id25">[<a class="reference internal" href="bibliography.html#id53" title="Michelle L. L’Heureux and David W. J. Thompson. Observed Relationships between the El Niño–Southern Oscillation and the Extratropical Zonal-Mean Circulation. Journal of Climate, 19(2):276–287, January 2006. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/19/2/jcli3617.1.xml (visited on 2022-07-03), doi:10.1175/JCLI3617.1.">L’Heureux and Thompson, 2006</a>]</span> https://doi.org/10.1175/JCLI3617.1 <span id="id26">[<a class="reference internal" href="bibliography.html#id18" title="Kevin E. Trenberth, Grant W. Branstator, David Karoly, Arun Kumar, Ngar-Cheung Lau, and Chester Ropelewski. Progress during TOGA in understanding and modeling global teleconnections associated with tropical sea surface temperatures. Journal of Geophysical Research: Oceans, 103(C7):14291–14324, 1998. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/97JC01444. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/97JC01444 (visited on 2022-03-14), doi:10.1029/97JC01444.">Trenberth <em>et al.</em>, 1998</a>]</span>; however, how those changes affect high-frequency variability has yet to be comprehensively explored. <em>Lorenz and Hartmann 2001 <span id="id27">[<a class="reference internal" href="bibliography.html#id27" title="David J. Lorenz and Dennis L. Hartmann. Eddy–Zonal Flow Feedback in the Southern Hemisphere. Journal of the Atmospheric Sciences, 58(21):3312–3327, November 2001. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/58/21/1520-0469_2001_058_3312_ezffit_2.0.co_2.xml (visited on 2022-05-18), doi:10.1175/1520-0469(2001)058&lt;3312:EZFFIT&gt;2.0.CO;2.">Lorenz and Hartmann, 2001</a>]</span> make a clear link between how baroclinic storms affect the mean westerly flow through the SAM. We hope here to extend their study, and make similar progress for ZW3 and ENSO</em> (<strong>Replace with a different statement of intent</strong>). This study will look to corroborate established relationships from previous reanalyses datasets <span id="id28">[<a class="reference internal" href="bibliography.html#id7" title="Kevin E. Trenberth. Storm Tracks in the Southern Hemisphere. Journal of the Atmospheric Sciences, 48(19):2159–2178, October 1991. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/48/19/1520-0469_1991_048_2159_stitsh_2_0_co_2.xml (visited on 2022-03-03), doi:10.1175/1520-0469(1991)048&lt;2159:STITSH&gt;2.0.CO;2.">Trenberth, 1991</a>]</span> <span id="id29">[<a class="reference internal" href="bibliography.html#id15" title="Timothy Paul Eichler and Jon Gottschalck. A Comparison of Southern Hemisphere Cyclone Track Climatology and Interannual Variability in Coarse-Gridded Reanalysis Datasets. Advances in Meteorology, 2013:e891260, December 2013. Publisher: Hindawi. URL: https://www.hindawi.com/journals/amete/2013/891260/ (visited on 2022-03-13), doi:10.1155/2013/891260.">Eichler and Gottschalck, 2013</a>]</span>  <span id="id30">[<a class="reference internal" href="bibliography.html#id8" title="Mark R. Sinclair. An Objective Cyclone Climatology for the Southern Hemisphere. Monthly Weather Review, 122(10):2239–2256, October 1994. Publisher: American Meteorological Society Section: Monthly Weather Review. URL: https://journals.ametsoc.org/view/journals/mwre/122/10/1520-0493_1994_122_2239_aoccft_2_0_co_2.xml (visited on 2022-03-03), doi:10.1175/1520-0493(1994)122&lt;2239:AOCCFT&gt;2.0.CO;2.">Sinclair, 1994</a>]</span>, and to glean new insights.</p>
+<p>We will document storm track characteristics with the latest ERA-5 reanalysis dataset, and identify teleconnections or interactions between the storm track, SAM, ENSO, and ZW3. We take an Eulerian approach, using the 500hPa geopotential height mean height field anomalies and high-frequency variance anomalies field, the latter field analogous to amount of storm activity; details of our methodology can be found in section 2. Section 3 looks at a Maximum Covariance Analysis (MCA) of the mean height field and high-frequency variance field, to establish whether large-scale circulation patterns emerge as leading variability modes. Section 4 inspects patterns of covariance generated from monthly time series of the two fields and standard indices of SAM, ENSO and ZW3. Finally, in support of this analysis, section 5 studies composites of the strongest events in each atmospheric phenomena (<em>these were not isolated to a single data point per extrema, therefore may have composited consecutive months for particularly strong and persistent events, this means that variability between events may have been obscured</em>).</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="methodology-and-data">
+<h1>Methodology and Data<a class="headerlink" href="#methodology-and-data" title="Permalink to this headline">¶</a></h1>
+<p>We use observational data acquired from the European Centre for Medium-Range Weather Forecasts’ (ECMWF) Reanalysis, 5th generation (ERA-5) <span id="id31">[<a class="reference internal" href="bibliography.html#id36" title="Hans Hersbach, Bill Bell, Paul Berrisford, Gionata Biavati, András Horányi, J Muñoz Sabater, Julien Nicolas, Carole Peubey, Raluca Radu, Iryna Rozum, Dinand Schepers, Adrian Simmons, Cornel Soci, Dick Dee, and Jean-Noël Thépaut. ERA5 hourly data on pressure levels from 1979 to present. 2018.">Hersbach <em>et al.</em>, 2018</a>]</span>, 1979-2021. There are two common approaches for investigating storm behaviour: Lagrangian; and Eulerian methods. Rohrer et al., 2020 find that Eulerian methods are insensitive to spatial resolution beyond a certain threshold <span id="id32">[<a class="reference internal" href="bibliography.html#id38" title="M. Rohrer, O. Martius, C. C. Raible, and S. Brönnimann. Sensitivity of Blocks and Cyclones in ERA5 to Spatial Resolution and Definition. Geophysical Research Letters, 47(7):e2019GL085582, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/2019GL085582. URL: https://onlinelibrary.wiley.com/doi/abs/10.1029/2019GL085582 (visited on 2022-06-13), doi:10.1029/2019GL085582.">Rohrer <em>et al.</em>, 2020</a>]</span>, whereas Lagrangian methods are more sensitive due to cyclolysis and secondary cyclogenesis processes, and can depend heavily on the tracking method adopted. We use an Eulerian method with 500hPa geopotential height field (Z500) data gridded at 1° latitude-longitude resolution, which adequately resolves synoptic-scale extratropical storms. Z500 is commonly referred to as “the level of minimum convergence”, and frequently used because of its assumed simpler physics and greater linearity. The seasonal cycle was removed from the data by subtracting the smoothed long-term daily mean at each grid point. Two derived fields were selected to investigate the effect of storm activity on the general circulation: mean height field anomalies characterise the general circulation pattern; and variance over a high-frequency timescale was calculated to identify the effect of passing storm centres. To isolate variance due to storm activity, a 2–8-day bandpass filter was applied to daily data as per Trenberth 1991 – the filter ‘turns-off’ all variance signals outside that frequency range. This frequency band is on the order of the lifetime of an individual storm, and retains maximal variance <span id="id33">[<a class="reference internal" href="bibliography.html#id7" title="Kevin E. Trenberth. Storm Tracks in the Southern Hemisphere. Journal of the Atmospheric Sciences, 48(19):2159–2178, October 1991. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/48/19/1520-0469_1991_048_2159_stitsh_2_0_co_2.xml (visited on 2022-03-03), doi:10.1175/1520-0469(1991)048&lt;2159:STITSH&gt;2.0.CO;2.">Trenberth, 1991</a>]</span>. To ease computational load, the monthly average of the filtered variance anomalies and mean height anomalies were predominantly considered.</p>
+<p>We examine the relationship between the two fields by using Maximum Covariance Analysis (MCA) to identify the prominent modes of variation. This was done for the full monthly time series as well as for data grouped according to season. North’s et al. Rule of Thumb <span id="id34">[<a class="reference internal" href="bibliography.html#id35" title="Gerald R. North, Thomas L. Bell, Robert F. Cahalan, and Fanthune J. Moeng. Sampling Errors in the Estimation of Empirical Orthogonal Functions. Monthly Weather Review, 110(7):699–706, July 1982. Publisher: American Meteorological Society Section: Monthly Weather Review. URL: https://journals.ametsoc.org/view/journals/mwre/110/7/1520-0493_1982_110_0699_seiteo_2_0_co_2.xml (visited on 2022-06-07), doi:10.1175/1520-0493(1982)110&lt;0699:SEITEO&gt;2.0.CO;2.">North <em>et al.</em>, 1982</a>]</span> was used to quantitatively identify non-degenerate MCA modes. For the monthly series, only the first two modes of the full time series were unique according to the North et al. criterion. Seasonally, only austral summer possessed any non-degenerate modes – again the first two. However, the proceeding modes were ostensibly ZW3 patterns of various phases so were considered briefly, but should be treated with caution. The same procedure was applied to daily data to capture finer temporal variability, and to identify more unique modes since the error in the covariance estimation is inversely proportional to the degrees of freedom, i.e., the sample size. To find values for variance over a daily timestep, a rolling window function was applied. Two windows were tested, 7- and 15-days, with the aim of selecting the smallest window length whilst minimising noise. It was found that the 15-day window leading modes explained more variance and the patterns were more consistent, therefore this window was considered. Only the leading five modes were inspected, despite more higher order modes being non-degenerate, however the amount of variance explained was less than 5% after these first five modes.</p>
+<p>Monthly time series for standard indices quantifying the aforementioned atmospheric phenomena were collected to investigate their relationship with storm activity. The Southern Oscillation Index (SOI) was used to quantify ENSO, with data collected from NOAA. An Empirical Orthogonal Function (EOF) analysis was conducted on the mean height field anomalies and the normalised first principal component was used to define SAM. Zonal Wave 3 is particularly mobile, meaning any index looking to capture it must consider the phase. For this reason, the index formulated in Goyal et al, 2022 <span id="id35">[<a class="reference internal" href="bibliography.html#id12">Goyal <em>et al.</em>, 2022</a>]</span> was chosen, with data retrieved from the author. This index defines a ZW3 magnitude and phase from the first and second principal components of 500hPa meridional wind field anomalies, the details of which can be found in the original paper. The ZW3-magnitude time series was split into phase bins. Initially, 30 degree intervals were used, however this severely limited the sample size, particularly for seasonally grouped data. Therefore, 60 degree bins were chosen instead, increasing the average sample size to 20 – any time series with less than 10 data were ignored. Correlation and covariance between time series for indices and mean height &amp; variance anomalies were calculated at each grid point to establish whether any relationship existed. For ZW3, these were calculated for each phase bin by taking data with corresponding time stamps between the field and ZW3-magnitude when in some phase.</p>
+<p>Correlations operate under the assumption of some linear relationship, so provides only a limited analysis – any non-linear relationship will be lost. The ZW3 index possesses a gamma distribution, such that before any linear statistics would require a sample distribution transformation into a standard Gaussian. However, the SOI also possesses a positive skew, with significant outliers that also limit the application of Gaussian statistics. For these reasons, the Spearman rank correlation method was used, since it is non-parametric, so makes no assumptions of a linear relationship nor about the distribution of a sample. It is also robust to outliers skewing the result. The significance of any relationship was determined using the method outlined in Wilks <span id="id36">[<a class="reference internal" href="bibliography.html#id28" title="D. S. Wilks. “The Stippling Shows Statistically Significant Grid Points”: How Research Results are Routinely Overstated and Overinterpreted, and What to Do about It. Bulletin of the American Meteorological Society, 97(12):2263–2273, December 2016. Publisher: American Meteorological Society Section: Bulletin of the American Meteorological Society. URL: https://journals.ametsoc.org/view/journals/bams/97/12/bams-d-15-00267.1.xml (visited on 2022-05-24), doi:10.1175/BAMS-D-15-00267.1.">Wilks, 2016</a>]</span>; controlling the False Discovery Rate. <span class="math notranslate nohighlight">\(\alpha_{FDR}\)</span> was chosen as <span class="math notranslate nohighlight">\(0.1\)</span>, as per Wilks’ recommendation. The same analysis was repeated on data grouped by season, in order to identify the existence of seasonal cycles. Analysis with the unprocessed time series is hereafter referred to as the full time series, and data grouped by season referred to as seasonal data.</p>
+<p>In support of this analysis, composites of the mean height &amp; short-scale variance fields during extreme events of each phenomena, i.e., when the index was most positive or negative, were created. The ninety-fifth- and fifth-percentiles for each index were composited, with a minimum of five data (some percentiles were different, given a sample size smaller than 100 – quantiles are indicated in each figure), hereafter referred to as upper and lower quantiles. For ENSO, positive index indicates a La Nina event (upper quantile), whilst a negative index indicates El Nino (lower quantile). For the SAM, a positive index indicates SAM in its positive mode, and vice versa. For ZW3 however, the index magnitude is always positive, hence lowest indices are when ZW3 is at its weakest. These composites were created anyway, as they help to identify what the effects of a strong ZW3 are.</p>
+<div class="section" id="maximum-covariance-analysis">
+<h2>Maximum Covariance Analysis<a class="headerlink" href="#maximum-covariance-analysis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Results &amp; Discussion</p></li>
+</ul>
+<p>Maximum Covariance Analysis (MCA) was performed on the high-frequency variance and mean height fields for both monthly and daily data, to identify the main modes of variability between the two fields. Daily variance was unavailable and as such was calculated using a rolling window on 12-hourly data.</p>
+<p>It was found that no one mode explains a particularly high percentage of variance, with a SAM-like pattern in the leading mode that explains 11.1% of variance. This suggests that many factors hold influence over the variance field, but the leading modes are highly suggestive of the large-scale circulation patterns currently being investigated.</p>
+<p><em>Why isn’t there be a lot of variance explained by the leading modes?</em>
+<em>If there are many non-linearities in response to varying conditions, might not the physical response associated with distinct phases of, for example, ENSO, have a diminished impact in overall variability? Hence, variance explained would be much reduced in MCA and may instead be part of degenerate/non-unique modes. As opposed to if there were a clear linear response to mode, e.g., between La Nina and El Nino.</em></p>
+<div class="section" id="mca-with-monthly-data">
+<h3>MCA with Monthly Data<a class="headerlink" href="#mca-with-monthly-data" title="Permalink to this headline">¶</a></h3>
+<p>Using North et al. Rule of Thumb, only the first two modes for the full time series and summer are unique. However, there are physical patterns such as ZW3 and ZW4 that appear in the higher order modes, and in other seasons, therefore these are cautiously considered.</p>
+<p>A textbook SAM pattern is the leading mode for the full time series and each season – except winter where the leading two modes explain the same variance to two significant figures – explaining between 7.8% of variance in MAM and 11.1% in DJF. SAM is well-known to be the leading mode of variability across the SH so is to be expected, and supports the notion of SAM as a controlling influence between mean height field and variance field.</p>
+<p>An ENSO signal appears consistently as the second mode of variability, except in winter where it is the leading mode. The leading two modes of the full time series for both variance and mean height modes are consistent, in that both resemble SAM and ENSO for modes 1 and 2, respectively. However, the modes in summer are not clear-cut ENSO patterns, but strongly resemble the picture identified in the covariance analysis between the two fields for summer (see below for details). There are signs of physical signals being separated between modes, for example in autumn; the second and third modes appear to be two separated components of ENSO, which is likely due to their degeneracy.</p>
+<p>There are ZW3 patterns in the higher order modes, however interpretation of these is ill-advised. <span id="id37">[<a class="reference internal" href="bibliography.html#id12">Goyal <em>et al.</em>, 2022</a>]</span> finds ZW3 explains a greater amount of variance in the meridional wind anomalies field, therefore there is a greater likelihood of non-degeneracy using this field in place of the geopotential height. The same paper uses a larger dataset – a historical simulation of the last 1200 years from the CESM2 model – which would again improve the chance of finding unique modes, which would also help investigate whether there are modes of variability that are stronger at different timescales, e.g., weekly, or monthly.</p>
+<ul class="simple">
+<li><p>8% of variance in MCA explained by ZW3, in agreement with Goyal et al. 2021 <span id="id38">[<a class="reference internal" href="bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span> who finds 8% of variacne explained by the leading EOF of Z500??</p></li>
+</ul>
+</div>
+<div class="section" id="mca-with-daily-data">
+<h3>MCA with Daily Data<a class="headerlink" href="#mca-with-daily-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="zero-lag">
+<h4>Zero-Lag<a class="headerlink" href="#zero-lag" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A lot of the higher order modes, EOF2 and onwards, align very well with the composite El Nino and La Nina events in the mean height field, but very poorly with the high-frequency variance field.</p>
+</div>
+<p>Of the two windows tested, 7- and 15-days, it was found that the 15-day window leading modes explained more variance and the patterns were more consistent – <em>why</em>? because more high-frequency noise was removed, thus less variance present – in the full time series and across seasons. Only the leading five modes were inspected, despite the uniqueness of higher order modes, however the amount of variance explained was less than 5% after these first five modes. Inspecting modes higher than the leading three is ill-advised as the higher modes tend to be either have no physical basis or a combination of variance from different mechanisms. This is what is seen here, with the higher order modes explaining very little variance and possessing unusual patterns that aren’t clearly associated with known phenomena or previous results, <em>(are there any previous results that support these findings?)</em>.</p>
+<p>A textbook SAM pattern is the leading mode for the full time series and each season, explaining between 6.8-9.8% of variance. This is well-known to be the leading mode of variability across the SH, and supports the idea of SAM as a controlling influence between mean height field and variance field.</p>
+<p>The second mode is less consistent, but resembles an ENSO-like pattern across all figures. Key features such as the large band across the subtropical Pacific and oppositely-signed region over the Amundsen Sea are not consistently identified in the second mode, and have differing geometry and locations to the picture seen in composite and covariance figures. The typical ENSO pattern, assumed to be the same as that seen in figure (<em>get figure number</em>), is identified in higher order modes in a few datasets, e.g., the fourth mode in JJA and fourth mode in the full time series. It is likely that the typical features expected from an ENSO signal are distributed across several modes, given the close connection with SAM. However, the composite maps, discussed in detail below, suggest the manifestation of ENSO is season-dependent, and a typical ENSO pattern is only seen in spring. There are features in other seasonal composite figures that appear to correspond with features seen in higher order modes. To investigate what modes are linked with ENSO, correlations were calculated between the second principal component (PC2) and the SOI. Correlations are fairly low in all time series except for SON, when ENSO records its strongest events. PC2 in spring has a very similar pattern to the extreme events for the same season (see composite figure), which agrees with the higher correlations, but other seasons have quite different patterns, with features resembling some of the higher order MCA modes. There are different types of ENSO events that occur, so this may indicate that some event-types, e.g., central Pacific El Ninos, are more common in some seasons more than others, <em>(however, ENSO events have typical timescales longer than a single season, so this may not make sense)</em>.</p>
+<p><strong>Correlate other PCs with SOI</strong></p>
+</div>
+<div class="section" id="lagged-data">
+<h4>Lagged Data<a class="headerlink" href="#lagged-data" title="Permalink to this headline">¶</a></h4>
+<p>A 5- and 10-day lag was added to the variance field to investigate whether short-timescale variance response to mean height field anomalies is simultaneous or delayed, in a similar fashion, though limited in scale due to its being applied to many single points, to the analysis performed by Lorenz and Hartmann 2001 <span id="id39">[<a class="reference internal" href="bibliography.html#id27" title="David J. Lorenz and Dennis L. Hartmann. Eddy–Zonal Flow Feedback in the Southern Hemisphere. Journal of the Atmospheric Sciences, 58(21):3312–3327, November 2001. Publisher: American Meteorological Society Section: Journal of the Atmospheric Sciences. URL: https://journals.ametsoc.org/view/journals/atsc/58/21/1520-0469_2001_058_3312_ezffit_2.0.co_2.xml (visited on 2022-05-18), doi:10.1175/1520-0469(2001)058&lt;3312:EZFFIT&gt;2.0.CO;2.">Lorenz and Hartmann, 2001</a>]</span>. It was found, in the analysis with the full time series, applying a lag generally decreases the explained variance in higher order modes, but increases the amount explained for the leading two modes. Another common feature, with few exceptions, is 10-day lag explaining more variance than 5-day lag for the leading two modes. As a general rule, autumn explains lower variance than any other season by a couple of percentage points. Correlations between mean height and variance PCs are of roughly the same magnitude for leading two modes, but are lower for higher order modes, in opposition to the trend found in explained variance. <em>Why would this be?</em></p>
+<p>There is a similar pattern in seasonal data for the modes, though the difference in explained variance is likely insignificant. Generally, greater lag has lower correlations between the two PCs, though the 5-day lag doesn’t appear to be significantly different from the zero-lag for the leading PC. The second PC, which generally has higher correlations between variance and mean height PCs than the leading PC, has considerable differences between lagged analyses in all seasons except SON, which is consistently high.</p>
+<p><em>To establish which mode is most closely associated with ENSO, the time series of PCs 2-5 were correlated with the SOI.</em> Generally, correlations steadily decrease between PC2 and SOI with increased lag in all seasons except JJA, which is highly correlated with zero-lag, a magnitude of 0.41, but has minimal correlation with 5- and 10-day lagged analyses, ~0.05.</p>
+</div>
+</div>
+<div class="section" id="presence-of-zw3-signal-in-leading-modes">
+<h3>Presence of ZW3 Signal in Leading Modes<a class="headerlink" href="#presence-of-zw3-signal-in-leading-modes" title="Permalink to this headline">¶</a></h3>
+<p>Aside from the leading modes, ZW3-like signals are very common in the higher order modes from the monthly data MCA. However, no ZW3 pattern emerges in any of the leading five modes from MCA with daily data. There are higher order modes in the daily data analysis, not directly associated with ENSO, with zonal wave signals; ZW4 and ZW5 signals appear, as well as atmospheric wave trains in the subtropics. This could be an artifact of the rolling window averaging, or it could indicate something about ZW3 timescales.</p>
+</div>
+</div>
+<div class="section" id="correlation-covariance-maps">
+<h2>Correlation &amp; Covariance Maps<a class="headerlink" href="#correlation-covariance-maps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Results &amp; Discussion</p></li>
+</ul>
+<div class="section" id="southern-annular-mode">
+<h3>Southern Annular Mode<a class="headerlink" href="#southern-annular-mode" title="Permalink to this headline">¶</a></h3>
+<p>Covariances between mean height anomalies and the SAM index show a textbook SAM pattern. The picture is highly symmetrical: a large central region of positive anomalies surrounded by an annulus centred at approximately 50S with three negative maxima, centred over the eastern Indian Ocean, the western Atlantic over South America, and western Pacific, southeast of New Zealand. There is also diminished covariance in the negative ring around the central Pacific, and another lesser region found south of Australia. This picture is largely in agreement with previous literature, <em>find citations</em>. Hoskins and Hodges 2005 describe how the ocean basin maxima are explained by the distribution of landmass and sea ice in the SH. Antarctica reaches lower latitudes in the Indian Ocean, and hthe surrounding sea ice modulates the temperature gradient, maintaining a lower temperature at lower latitudes, hence the gradient between the equator and Antarctica is greater, creating greater instabilities in the mean westerly flow. The opposite is true over the Pacific sector, where the Antarctic landmass does not extend far north. The presence of these maxima is a pattern repeated across seasonal data to varying degrees. There is a positive skew in the correlations, with maximum positive values reaching 8000 <em>(units?)</em>, whilst the negative extreme is -6000, another trend repeated across seasons, <em>why is there a positive skew, is this backed up by other literature?</em>. – <em>change these numbers to covariance values.</em> High correlations between the SAM index and mean height field are to be expected since the SAM index was defined as the leading PC of the mean height field.</p>
+<p>All seasons possess the annulus with three maxima, though some are more broken. Austral summer is the most symmetrical, <em>backed up by literature</em>, with a near perfect ring around 60S, well-defined meridionally. In austral winter, the positive ring is broken into the three prominent maxima, with a small deviation equatorward, which are broader than the tightly defined maxima in summer – likely due to splitting the jet stream subtropical and subpolar jets, which are poorly resolved in the Z500 field. Maximum covariance values are stronger than in summer, due to enhanced baroclinic instabilities stemming from the steeper meridional temperature gradient. The definition of the SAM index means the pressure field in winter is closely correlated with the first PC, hence the high covariance values. The transition seasons, spring and autumn, share a mix of the characteristics of summer and winter, as per Hoskins &amp; Hodges <span id="id40">[<a class="reference internal" href="bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span>.</p>
+<p>Visible in all seasons, there is a protruding region over the central Pacific in the mean height field, above the same location as the Amundsen sea low. which undergoes a seasonal cycle – it is most clear during winter, autumn and spring, where the ring is broken by this intruding region. Campitelli et al. 2022 <span id="id41">[<a class="reference internal" href="bibliography.html#id20" title="Elio Campitelli, Leandro B. Díaz, and Carolina Vera. Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach. Climate Dynamics, 58(1-2):161–178, January 2022. URL: https://link.springer.com/10.1007/s00382-021-05896-5 (visited on 2022-03-20), doi:10.1007/s00382-021-05896-5.">Campitelli <em>et al.</em>, 2022</a>]</span> suggest there are two components to SAM, symmetrical and asymmetrical (A-SAM), the latter manifesting as a ZW3 pattern which was found to explain all ENSO-driven variance in SAM. Goyal et al. 2021 <span id="id42">[<a class="reference internal" href="bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span> makes the case for ZW3 being driven by anomalous tropical convection caused by the western Pacific warm pool and ENSO events. Karoly 1989 <span id="id43">[<a class="reference internal" href="bibliography.html#id42" title="David J. Karoly. Southern Hemisphere Circulation Features Associated with El Niño–Southern Oscillation Events. Journal of Climate, 2(11):1239–1252, 1989. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26196374 (visited on 2022-06-14).">Karoly, 1989</a>]</span> shows winter ENSO events drive a Rossby-wave train, with a prominent low over the Amundsen Sea – a consistent feature in ENSO studies. This makes a clear case for the three phenomena being intimately connected, and is the likely cause of this region appearing in Z500-SAM covariance figures. A second consistent change occurs between seasons – the zonal shifting westwards of the three positive maxima as the seasons progress.</p>
+<p>Another textbook SAM pattern is seen in the short-timescale variance field, with alternating negative and positive annuli emanating from Antarctica. There are weak negative covariances centred over the pole, a ring of positive covariance around 60S – over mean height steep gradients – with three highs centred over the same longitudes, though displaced poleward, as the highs for mean height anomalies: in the Indian, Atlantic, and Pacific oceans. The positive covariance indicates the storm track is more active in these regions during a SAM positive mode, and less active in the negative regions, in good agreement with literature, <em>find citations</em>. A further band of negative covariance is located equatorward, though much more broken. Covariance values express the same positive skew as in the mean height.</p>
+<p>Seasonally, the positive covariance ring is consistent, centred over 60S, but becomes more broken during winter and particularly autumn. The weakened SAM signal across the lower latitudes in autumn and winter is an indicator of the splitting jet stream, giving storminess a more meridionally distributed appearance. Generally, region of lower storminess at lower latitudes is more diffuse than the inner ring of positive storminess throughout the seasons. In all seasons, there is weak covariance over the Pacific Ocean, collocated with the anomalous Amundsen Sea region observed in the mean height field, whereas there is consistent positive covariance over the Indian ocean, in accordance with previous findings.</p>
+<p><em>It’s interesting that summer has the clearest pattern of covariance, whereas winter, the period when the meridional temperature gradient is steepest and the polar jet is strongest, is much less distinctive. Lower correlation and broken rings. This is mirrored by findings of ENSO, also more SAM-like in summer and Rossby-wave train in winter.</em></p>
+<ul class="simple">
+<li><p><em>What does the literature say? Any discrepancies?</em></p></li>
+<li><p><em>What do these maps say about the relationship between mean height and variance fields?</em></p></li>
+</ul>
+</div>
+<div class="section" id="el-nino-southern-oscillation">
+<h3>El Nino-Southern Oscillation<a class="headerlink" href="#el-nino-southern-oscillation" title="Permalink to this headline">¶</a></h3>
+<p>Mean height anomalies show a strong band of positive covariance over the Pacific Ocean from north-east of New Zealand, around 30S, to southern South America, around 40S. This indicates average height of the 500hPa geopotential field is anomalously high during cold La Nina events, and lower than average during warm El Nino events. The strongest covariance occurs in the local western Pacific in contrast with SAM, where the effects of ENSO are felt most keenly. Aside from the band across the Pacific, there are a further two very weak local maxima around 40S, one centred over the mid-Atlantic, another over the mid-Indian ocean.
+The existence of these other alternating maxima and minima is suggestive of a ZW3 pattern, but are not deemed significant according to FDR. Another reason for these could be in a similar vein as SAM, with the Antarctic landmass influencing thermal gradients. There is also a strong minimum south of this narrow band above the Amundsen Sea low, a feature commonly associated with ENSO events, see Karoly 1989 <span id="id44">[<a class="reference internal" href="bibliography.html#id42" title="David J. Karoly. Southern Hemisphere Circulation Features Associated with El Niño–Southern Oscillation Events. Journal of Climate, 2(11):1239–1252, 1989. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26196374 (visited on 2022-06-14).">Karoly, 1989</a>]</span><span id="id45">[<a class="reference internal" href="bibliography.html#id49" title="John Turner, Tony Phillips, J. Scott Hosking, Gareth J. Marshall, and Andrew Orr. The Amundsen Sea low. International Journal of Climatology, 33(7):1818–1829, 2013. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/joc.3558. URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/joc.3558 (visited on 2022-06-21), doi:10.1002/joc.3558.">Turner <em>et al.</em>, 2013</a>]</span>.</p>
+<p>The strong positive covariance band across the Pacific is identified consistently across all seasons, but extends into a ring around the pole during austral spring and summer. In summer, there is the most SAM-like signal present: negative correlation over Antarctica, and almost a complete ring of positive covariance encircles the pole, as per Karoly 1989. However, this ring is equatorward and less symmetrical. The strongest maximum is over the western Pacific at 30S-40S unlike SAM, which is indicative of the height field’s localised response to ENSO. Only local maxima are significant, not the entire ring as is the case with SAM. The region of negative covariance located above the Amundsen Sea low is another consistent feature across the seasons. Winter and spring exhibit a particularly clear ZW3-like pattern, <em>why might this be?</em>. The strongest covariance between the SOI and mean height field occurs in springtime. This precedes the mature stage of ENSO events, usually occurring in austral summer, however, conditions are unsuitable for the poleward propagation of wave trains associated with ENSO are more suitable in the spring, <em>find citations</em>.</p>
+<p>In the short-timescale variance field, a band across the Pacific Ocean, similar to that observed in the mean height field anomalies, is seen although here it is further poleward, with one tail ending over the southern South American peninsula, the other tail stretches to around 60S, south of New Zealand. As with SAM, maximum covariance is lower in the variance field. A significant negative region is found directly north of the western end of the positive region, though it is much less extensive. <em>No region that is connected to the Amundsen Sea low… why not?</em></p>
+<p>There are fewer obvious trends between seasons compared to SAM, however the positive band across the Pacific is present in all seasons (although with varying longitudinal position and extent) and aligns well with the maximum gradient in the mean height field. This is indicative of the localised response to ENSO, and little more can be said of the teleconnections during any season other than summer. In the summer months, there is another SAM-like signal, though less distinct. Of note is the strong positive region in the Pacific, wrapping around and poleward from South America to south of New Zealand, and two positive maxima west of the Antarctic peninsula and off the coast of the Amery ice shelf, which together constitute an almost complete ring. Applying the FDR method suggests there are no significant regions, but this does agree with the accepted notion that the response to ENSO is at its most SAM-like during summer, <em>find citations</em> <span id="id46">[<a class="reference internal" href="bibliography.html#id42" title="David J. Karoly. Southern Hemisphere Circulation Features Associated with El Niño–Southern Oscillation Events. Journal of Climate, 2(11):1239–1252, 1989. Publisher: American Meteorological Society. URL: http://www.jstor.org/stable/26196374 (visited on 2022-06-14).">Karoly, 1989</a>]</span>. The only season that possesses significant regions in the variance field is spring, likely due to the strong covariances found during this month as a result of the poleward propagation of ENSO-associated atmospheric waves.</p>
+<ul class="simple">
+<li><p><em>What does the literature say? Any discrepancies?</em></p></li>
+<li><p><em>What do these maps say about the relationship between mean height and variance fields?</em></p></li>
+</ul>
+</div>
+<div class="section" id="zonal-wave-3">
+<h3>Zonal Wave 3<a class="headerlink" href="#zonal-wave-3" title="Permalink to this headline">¶</a></h3>
+<p>Covariance with mean height field anomalies across all phase bins possesses a ZW3-like signal, with the expected three highs (positive covariance) and lows (negative covariance); subsequent phase bins are zonally displaced in accordance with the shifting ZW3-phase. These highs and lows are consistently characterised as significant by the FDR method, however highs or lows in some phase bins are missing, either weakly covarying or missing entirely. This is likely because ZW3 is generated in the subtropics near anomalous tropical convection events, which create the ideal conditions for Rossby wave trains <span id="id47">[<a class="reference internal" href="bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span>, <em>there are lots of other papers that propose this mechanism, find a couple more citations</em>. As the Rossby wave trains propagate, energy and momentum dissipate, hence amplitude and impact on longitudes far from the place of origin is weakened.</p>
+<p>In the seasonal figures, the ZW3 signal is consistently observed across all phase bins and seasons. However, during summer there is a much less distinct pattern in each phase than can be seen in other seasons. One reason for this could be the weaker westerly flow in summer, which Rossby wave trains need for propagation. However, ZW3 is associated with anomalous convection events, particularly in the western Pacific warm pool and during El Nino events, the strength of which are heightened in summer, suggesting ZW3 should be stronger in summer. (<em>What is the effect of La Nina events on convection in the tropics? - could this contradict the above?</em>) Another reason for the lack of a ZW3 coherent pattern could be the small sample size, meaning outliers have a great impact that obscures the pattern. This could also be true of the other seasons, where the occasional phase bin also presents a less distinctive pattern.</p>
+<p>It must be noted that very few significant regions in the seasonal data exist in either field. However, the same ZW3 signal is observed for most phase bins in most seasons in the mean height field, hence the lack of significant results is likely due to the small sample size alone and can still be interpreted with caution. Goyal et al. 2022 <span id="id48">[<a class="reference internal" href="bibliography.html#id12">Goyal <em>et al.</em>, 2022</a>]</span> finds ZW3-like EOFs explain a greater amount of variance in the meridional wind anomalies field, therefore there is a higher likelihood of finding significant results using this field in place of the geopotential height. Statistical significance is more likely with a greater sample size; Goyal et al. also uses the past 1200 years from the CESM model in their analysis, improving the robustness of their results, however, it does increase reliance on model output. The current analysis works with limited data points, 60 degree bins as opposed to the 20 degree bins used in Goyal et al.. This was to provide enough data point for inferences to be safely made, however it is possible more localised effects of ZW3 are smeared out with large phase bins. Adopting the Goyal et al. approach  to the current analysis could improve likelihood of finding significant regions and result robustness.</p>
+<p>There are no obvious patterns or trends in the variance field covariance maps; many figures can be construed as noise, with no apparent coherent regions that align with features in the mean height field covariance maps. There are some phase bins figures, generated using the full time series, that have a vague ZW3 signal – negative covariance well-aligned with positive covariance in the mean height field – however they are few and no significance could be established. Similarly, no significant regions were found for seasonal data, which, given the difficulty in identifying any physically meaningful response that explains observed covariance patterns, could well be a realistic result, despite the relatively strong relationship found.</p>
+<p>One reason why there might be little coherent pattern is that the mobility of ZW3 means that the physical response is smeared over when undergoing the statistical analysis applied. Relatively transient signals will be lost due to the averaging over the monthly interval. There are regions of strong correlation, yet very small, which may be because they are consistently present in strong ZW3 events over the whole phase bin, whereas the surrounding regions inconsistent and are smeared over by statistical methods.</p>
+<ul class="simple">
+<li><p><em>What does the literature say? Any discrepancies?</em></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="composite-maps">
+<h2>Composite Maps<a class="headerlink" href="#composite-maps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Results &amp; Discussion</p></li>
+</ul>
+<div class="section" id="id49">
+<h3>Southern Annular Mode<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<p>Upper and lower quantiles (positive and negative SAM) of the full time series indicate the response of the mean height field to SAM modes is quite linear. The only apparent non-linearity is the sizeable maximum in western Atlantic, off the South American coast – more prominent in the upper quantile. This is reflected in the variance field upper composite, where there is significant storminess in the same region, whereas there is a much smaller variance anomaly in the lower composite, <em>why might this be? Any literature to corroborate this?</em>. Both mean height and variance fields have significant maxima in the Indian Ocean, in agreement with previous observations. Notably there is a skew in extreme variance values, the maximum over the Indian Ocean is the strongest anomaly, however it is much greater in the lower composite than the upper composite, an absolute difference of <span class="math notranslate nohighlight">\(5000m^2/s^2\)</span>.</p>
+<p>Non-linearities in the mean height field response to SAM become apparent in the seasonal data. Upper and lower quantile composites take on different characteristics, with unique signatures. In summer, positive SAM has a highly symmetrical pattern. However, negative SAM is relatively asymmetrical, with the Pacific quadrant missing the negative anomalous section of the ring, and the positive anomalies emanating from the pole do not reach as far north.</p>
+<p>The largest anomalies occur in winter, and present asymmetrical patterns in both positive and negative modes, as is typical of wintertime SAM, <em>see corr/cov maps and literature</em>. However, there is a unique feature in the autumn negative SAM; a highly positive anomalous region located over the Amundsen Sea – the strongest anomalies in any season – making it appear as though the polar anomalous region has been shifted toward the Pacific. It should be noted that the response of the mean height field is not isolated to responses to SAM, but the effects of other phenomena can leak into the picture. Given that the composites are an average picture of, in this case, the top 25 months, the effect should be minimal. However, Campitelli et al. 2022 <span id="id50">[<a class="reference internal" href="bibliography.html#id20" title="Elio Campitelli, Leandro B. Díaz, and Carolina Vera. Assessment of zonally symmetric and asymmetric components of the Southern Annular Mode using a novel approach. Climate Dynamics, 58(1-2):161–178, January 2022. URL: https://link.springer.com/10.1007/s00382-021-05896-5 (visited on 2022-03-20), doi:10.1007/s00382-021-05896-5.">Campitelli <em>et al.</em>, 2022</a>]</span> find that the asymmetrical component of SAM (A-SAM) can be isolated and is ZW3-like in nature. They also find the connection between SAM and ENSO is entirely explained by A-SAM. This is a persistent phenomenon that could intrude on the composites, hence the strong asymmetry in this composite could be a result of a persistent simultaneously strong ZW3, <em>(a bit wishy-washy, not sure on this)</em>. Spring presents another notable picture; the negative SAM is textbook, but a strongly negative region intrudes over the Pacific into much lower latitudes in the positive SAM composite. <em>What does any of this mean??</em></p>
+<p>The relationship between the mean height field and variance field is by no means clear either, with varied patterns of anomalies arising. Summer is a textbook SAM picture, and is linear in its response for positive and negative SAM. One noteworthy feature, however, is the extensive and deep region of negative variance anomalies in the Pacific quadrant, collocated with the unusually stable mean height field. This translates well, since a more stable mean height field in the Pacific would lead to fewer storms.</p>
+<p>Winter possesses strong variance anomalies, in line with the response of the mean height field, well-aligned with regions of steep height gradient. There are a couple of non-linearities here too: the zonal location of anomalies shifts from the western to eastern hemisphere between positive and negative modes; and positive SAM has few negative anomalies, whereas negative SAM has very strong positive anomalies at lower latitudes in the Atlantic and Indian oceans.</p>
+<p>Spring is highly irregular – in the positive mode, an extensive band over 60S stretches from the mid-Pacific to South Africa, before switching to a strong negative region that continues across the Indian Ocean. The negative SAM composite seemingly has no pattern at all, with localised regions of strong anomalies and little overall structure. Autumn has overtly strong localised anomalies that obscure some of the structure, but there remains a clear SAM signal for both positive and negative modes.</p>
+<p>The splitting of the jet stream is apparent in autumn and winter; increased storminess in the lower latitudes can be seen in negative SAM (lower composite) and the meridional distribution of variance is more extensive in positive SAM, i.e., there is increased storminess in observed in lower latitudes regardless of SAM state. However, there is not the expected effect in the Pacific, where the sub-tropical jet stream is most prominent.</p>
+</div>
+<div class="section" id="id51">
+<h3>El Nino-Southern Oscillation<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h3>
+<p>The full time series presents a picture for the mean height field similar to that seen in the correlation and covariance analysis, with a strong response over the Pacific, particularly in the subtropics and over the Amundsen Sea. During La Nina events, a deep positive band of anomalies stretches across the subtropical Pacific and a further two positive regions are present over the Atlantic and Indian oceans. The Amundsen Sea low is prominent, presenting a somewhat ZW3-like signal, lending itself to the hypothesis presented in Goyal at al. 2021 <span id="id52">[<a class="reference internal" href="bibliography.html#id11" title="Rishav Goyal, Martin Jucker, Alex Sen Gupta, Harry H. Hendon, and Matthew H. England. Zonal wave 3 pattern in the Southern Hemisphere generated by tropical convection. Nature Geoscience, 14(10):732–738, October 2021. Number: 10 Publisher: Nature Publishing Group. URL: https://www.nature.com/articles/s41561-021-00811-3 (visited on 2022-03-03), doi:10.1038/s41561-021-00811-3.">Goyal <em>et al.</em>, 2021</a>]</span> i.e., ENSO-associated convection events drive ZW3. The pattern is SAM-like, a feature that has been previously documented. A similar mirror image is found for El Nino events, though a couple of features indicate non-linearities. The deep band of anomalies across the Pacific and over the Amundsen Sea are present, but oppositely signed. There is also a poleward local negative minimum in the Pacific, adjacent to the Amundsen Sea. The two maxima over the Indian and Atlantic oceans are weaker, and another positive maximum is found off the south coast of Australia.</p>
+<p>Variance anomalies are well-aligned with the steepest gradient in the mean height field in both La Nina and El Nino events. There is a SAM-like signal, with a ring of positive storminess wrapped around the pole, centred over 50S. These are prominent over the Pacific – a stronger localised response – however, the effect does clearly extend across to the western hemisphere. This band could be a product of SAM, as the two phenomena are strongly interlinked. The generally weaker magnitude of mean height anomalies translates across to the variance field, with weaker anomalies in El Nino events. This seems unusual since SOI magnitude of El Nino events are stronger, and previous studies find El Nino causes a more active storm track between 40S and 60S, whereas La Nina events decrease storminess in the same region <span id="id53">[<a class="reference internal" href="bibliography.html#id30" title="Jeferson Prietsch Machado, Flávio Justino, and Caio Demétrio Souza. Influence of El Niño-Southern Oscillation on baroclinic instability and storm tracks in the Southern Hemisphere. International Journal of Climatology, 41(S1):E93–E109, 2021. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/joc.6651. URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/joc.6651 (visited on 2022-05-30), doi:10.1002/joc.6651.">Machado <em>et al.</em>, 2021</a>]</span><span id="id54">[<a class="reference internal" href="bibliography.html#id45" title="Michelle Simões Reboita, Rosmeri Porfírio da Rocha, Tércio Ambrizzi, and Carolina Daniel Gouveia. Trend and teleconnection patterns in the climatology of extratropical cyclones over the Southern Hemisphere. Climate Dynamics, 45(7):1929–1944, October 2015. URL: https://doi.org/10.1007/s00382-014-2447-3 (visited on 2022-06-15), doi:10.1007/s00382-014-2447-3.">Reboita <em>et al.</em>, 2015</a>]</span>. <em>Why is this? What do these results mean?</em></p>
+<p>The mean height field response to La Nina events is inconsistent across seasons, with the usually present band across the subtropical Pacific missing in some seasons, as well as the anomalous region over the Amundsen Sea. There are strong positive anomalies over the pole in spring, and strong negative regions over the pole in winter, however there is a lack of these anomalies in the full time series, which could be a result of averaging the seasonal cycle. Summer La Nina events see a diminished localised response in the Pacific ring, but stronger teleconnective maxima in the Indian and Atlantic oceans. There is the usual deep region over the Amundsen Sea however. Autumn La Ninas has a more ENSO-like pattern, but with a strong negative band poleward of the typical position, centred on 50S. There is also a series of lows and highs around 50S but with a frequency higher than a typical ZW3. Spring La Ninas have the expected subtropical positive band, but also has the aforementioned positive anomalies over the pole.</p>
+<p>The Amundsen Sea anomalous region is shifted westward in El Nino events, <em>which is a feature also found MCA on daily data…</em> The wintertime El Nino composite presents a more familiar ENSO response, superposed with a band of positive anomalies over the Indian Ocean and south of Australia. In autumn El Ninos, there is a deep negative region much further west of the Amundsen Sea, <em>which seems like it could be another feature of MCA on daily data…</em>  Springtime finds an El Nino picture almost identical to the full time series. Given that this is the time of year when El Nino is at its strongest <em>(not true, so why would this be?)</em>, this is likely because spring is overrepresented in the full time series composite.</p>
+<p>Variance anomalies generally align well with regions of steepest gradient in the mean height field. The variance field is most SAM-like during summer, with an almost whole ring of heightened storminess over 60S in La Nina events, and a negative semi-ring over 45S, both interrupted over the Pacific. El Nino events see a similar structure, except the negative band over 45S is over the Pacific and extends more meridionally. Winter has a less coherent structure; El Nino events have a band of negative anomalies aligned with the steep gradient in the mean height field – across the Pacific between the subtropics and Amundsen Sea. <em>(Would you always expect to see higher storminess in the regions with steepest gradient? If so, this doesn’t make much sense.)</em> There are a few other maxima that align with the mean height field, but don’t appear to connect with a grand structure.</p>
+<p>Autumn also has little structure, few clear teleconnections. The usual localised response is present in the Pacific, with negative and positive anomalies aligning with the mean height field in both El Nino and La Nina events. Both La Nina and El Nino seem to elicit the same response, albeit to varying degrees and in slightly different locations, but the general structure is the same – lower variance/storminess over 60S and greater storminess over 45S. Spring returns to a SAM signal, particularly in La Nina events. A heightened storminess is present over most of the Pacific, but there is a partial ring of lower storminess is between South America and Australia, via the South Africa. El Nino almost mirrors the La Nina composite, with a negative band across the Pacific and positive in the opposite hemisphere. There is also a region of much greater storminess between Tasmania and Antarctica, that aligns with the trough between the strong positive and negative regions in the mean height field mentioned above. <em>Why is there so much variation in ENSO’s response over the seasons? This might be something to link to Daily MCA, as many of the features seem to be present in MCA modes.</em></p>
+</div>
+<div class="section" id="id55">
+<h3>Zonal Wave 3<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
+<p>Composites of the mean height field for the full time series present very strong zonal wavenumber 3 patterns, with the patterns steadily circulating the pole in accordance with the phase shift. All composites have strong highs and weaker lows, with a single strong negative region. This negative region appears strongest when over the Pacific, though there are some phase bins with strong negative region over South America (phase bins 120E-60E and 120W-180W). There are regions of high variance consistent with regions of steep geopotential height gradient, though there does not appear to be any consistent structure.</p>
+<p>Strong ZW3 signals can be identified in all seasons and all phase bins in the mean height field. There are regions of strong variance anomalies, however, once more there is no consistent discernible structure in the high-frequency variance field. This could be because of the level of noise present with such a small sample size (each composite was constructed from only five months), however it may be ZW3 has minimal effect on storminess. It has been suggested that ZW3 has an effect on the direction of storms and position of the storm track, however this was not clear in these composites. Provided a systematic shift in behaviour of individual storms, it can be expected that this coherence would be present in the composites. This is an unusual result, since the composites were not taken from a dataset that suppressed signals from other sources, and ZW3 signals are prominent in all the mean height composites. It could be expected therefore that there would be some more obvious structure to the high-frequency variance field also. Following Goyal et al. 2022, using the meridional wind field anomalies may reveal more coherent structure as ZW3 clearly has a much stronger influence on this field.</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="era5-data-summary">
+<h1>ERA5 Data Summary<a class="headerlink" href="#era5-data-summary" title="Permalink to this headline">¶</a></h1>
+<p>The ERA-5 reanalysis uses historical observations combined with modelling and data assimilation techniques to provide global data. Building upon previous generations, ERA-5 makes use of the Integrated Forecasting System, Cy41r2: improvements in physics; data assimilation techniques; and an updated numerical weather prediction model. ERA-5 makes use of data acquisition from more sources, a greater number of correction procedures, and incorporates novel boundary conditions, such as radiative forcing from CMIP5. Improvements in representing key quantities in the troposphere are considerable from the previous generation, ERA-interim <span id="id56">[<a class="reference internal" href="bibliography.html#id21" title="Hans Hersbach, Bill Bell, Paul Berrisford, Shoji Hirahara, András Horányi, Joaquín Muñoz-Sabater, Julien Nicolas, Carole Peubey, Raluca Radu, Dinand Schepers, Adrian Simmons, Cornel Soci, Saleh Abdalla, Xavier Abellan, Gianpaolo Balsamo, Peter Bechtold, Gionata Biavati, Jean Bidlot, Massimo Bonavita, Giovanna De Chiara, Per Dahlgren, Dick Dee, Michail Diamantakis, Rossana Dragani, Johannes Flemming, Richard Forbes, Manuel Fuentes, Alan Geer, Leo Haimberger, Sean Healy, Robin J. Hogan, Elías Hólm, Marta Janisková, Sarah Keeley, Patrick Laloyaux, Philippe Lopez, Cristina Lupu, Gabor Radnoti, Patricia de Rosnay, Iryna Rozum, Freja Vamborg, Sebastien Villaume, and Jean-Noël Thépaut. The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730):1999–2049, 2020. _eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/qj.3803. URL: https://onlinelibrary.wiley.com/doi/abs/10.1002/qj.3803 (visited on 2022-03-20), doi:10.1002/qj.3803.">Hersbach <em>et al.</em>, 2020</a>]</span>.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="points-to-consider">
+<h1>Points to consider<a class="headerlink" href="#points-to-consider" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Goyal finds strong ZW3 seasonal cycle in phase and amplitude when using meridional winds with the seasonal cycle retained.</p>
+<ul>
+<li><p>20-40 degrees between winter and other seasons and magnitude shift of 0.6-0.8, peaking in winter.</p></li>
+</ul>
+</li>
+<li><p>What impact does the linkage between meridional heat transport and ZW3 have on storm tracks? ZW3 is is important for meridional heat transport as a large percentage of varaince in meridional wind anomalies is explained by ZW3.</p></li>
+<li><p>Goyal finds clear link between ZW3 phase and sea ice extent, which is also connected to the storm track, because a reduction in sea ice will reduce the meridional temperature gradient, reducing the speed of the polar jet and baroclinic instability, the potential energy store of storm tracks. This is a lagged relationship, as sea-ice extent does not respond immediately, meaning that some of the influence of ZW3 is missed in a simultaneous analysis.</p></li>
+<li><p>Gossart et al. 2019 diagnoses biases in humidity, near-surface temperature, wind speed, and snow cover for four reanalyses products: ERA-5, ERA-interim, MERRA2, and NCEP CFSR. ERA-5 places too great an emphasis on the relative humidity seasonal cycle, with values too low for winter, <em>this could have repercussions for convection, hence atmospheric waves</em>. The conclusion drawn here is that the katabatic flow is too dry and sublimation from blowing snow is not parameterised. There are known biases for near-surface winds around Antarctica; ERA-5 underestimates winds along the coast and in the interior over the entire year, and overestimates winds over the Antarctic peninsula – this is likely transmitted vertically and present in Z500 field <span id="id57">[<a class="reference internal" href="bibliography.html#id37" title="A. Gossart, S. Helsen, J. T. M. Lenaerts, S. Vanden Broucke, N. P. M. van Lipzig, and N. Souverijns. An Evaluation of Surface Climatology in State-of-the-Art Reanalyses over the Antarctic Ice Sheet. Journal of Climate, 32(20):6899–6915, October 2019. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/32/20/jcli-d-19-0030.1.xml (visited on 2022-06-13), doi:10.1175/JCLI-D-19-0030.1.">Gossart <em>et al.</em>, 2019</a>]</span>.</p></li>
+<li><p>Storm track strength and location is associated with the polar jet through the Coriolis force and thermal wind relation, which are in turn affected by sea ice extent. This momentum transfer plays an important role in reducing the temperature gradient between the equator and the poles, any change to which could see serious consequences. Reductions in sea ice will weaken the temperature gradient between the equator and the poles, leading to lower mean westerly flow velocities in accordance with the thermal wind relation. This will likely reduce the baroclinic instability from which storms form, potentially reducing storm incidence hence momentum transfer poleward – a potential negative feedback.</p></li>
+<li><p>It is suggested that the reason for the higher variance in the Indian ocean is due to the Antarctic landmass extending to much lower latitudes in this sector, and in turn the sea ice has a further extent, <span id="id58">[<a class="reference internal" href="bibliography.html#id4" title="B. J. Hoskins and K. I. Hodges. A New Perspective on Southern Hemisphere Storm Tracks. Journal of Climate, 18(20):4108–4129, October 2005. Publisher: American Meteorological Society Section: Journal of Climate. URL: https://journals.ametsoc.org/view/journals/clim/18/20/jcli3570.1.xml (visited on 2022-03-02), doi:10.1175/JCLI3570.1.">Hoskins and Hodges, 2005</a>]</span>. This modulates the temperature gradient, by maintaining a lower temperature at lower latitudes, hence the gradient between the equator and Antarctica is greater. The thermal wind relation indicates the jet stream over this sector is stronger, hence there are greater instabilities translating into more frequent storms. The opposite is true over the Pacific sector, where the Antarctic landmass does not extend far north, hence there is generally a lower incidence of storms. This is a climatological mean state, but which relates strongly to the Antarctic sea ice extent. A reduction in the sea ice could lead to a shallower temperature gradient, a weaker polar jet and fewer storms, which would seriously affect global circulation patterns.</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By isaachcamp<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
