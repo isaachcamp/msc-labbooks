@@ -3,18 +3,12 @@
 ## Things to Do
 
 - Write paper.
-    - Combine corr/cov and composite sections.
     - Create publication-quality figures.
         - Add significant regions to covariance maps.
-    - Mention units for covariance, what do they mean?
-        - Convert correlation values to covariance in paper.
-    - Write Conclusion and Abstract.
     - Read Papers.
         - Trenberth et al. 1998
         - Carvalho et al. 2005
         - Bretherton et al. 1992 - SVD analysis/MCA method
-    - Inspect correlation results between PC2 and SOI -- is the second mode due to variability in ENSO?
-        - I think it may be due to how ENSO presents in different seasons.
 - Write abstract for NZ Met Conference.
 
 
