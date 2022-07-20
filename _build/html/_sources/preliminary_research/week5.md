@@ -161,7 +161,7 @@ Character of atmospheric motions depends heavily on the horizontal scale, hence 
 ```
 
 
-#### Basic Conservatation Laws
+#### Basic Conservation Laws
 
 ##### Complete Equations of Motion
 

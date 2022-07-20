@@ -8,7 +8,6 @@
     - Read Papers.
         - Trenberth et al. 1998
         - Carvalho et al. 2005
-        - Bretherton et al. 1992 - SVD analysis/MCA method
 - Write abstract for NZ Met Conference.
 
 
