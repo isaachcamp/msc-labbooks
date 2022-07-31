@@ -112,7 +112,9 @@ Look at Wallace & Hobbs again to understand the physical basis for atmospheric d
 
 Strong convection events cause an increased Hadley overturning circulation, low-level convergence and upper-level divergence, which, coupled with the upper-level convergence at the descending branch of Hadley cell, produces the conditions for Rossby wave propagation. This paper once again reinforces the importance of Rossby wave trains in produing the teleconnection patterns observed such as the PSA. It reiterates that Rossby wave trains push the storm track equatorwards (_find citation_).
 
-It is suggested that the storm track plays a key role in amplifying the wave trains and even control the structure, partially explaining commonality of observed features, such as the lengthening of the jet stream, despite forcing from SST anomalies that geographically distributed. The amplification is due to transient transportation of flux that enhances jet streams.
+It is suggested that the storm track plays a key role in amplifying the wave trains and even control the structure, partially explaining commonality of observed features, such as the lengthening of the jet stream, despite forcing from SST anomalies that geographically distributed. The amplification is due to transient transportation of flux that enhances jet streams. 
+
+"The dominance of the extratropical natural variability over modest SST-related signal simplies that the extratropical atmosphere is only weakly constrained to select the SST-forced signal." They suggest there is a small contribution from the ENSO events to variance rather than the internal variability of the storm track, this would suggest correlation and covariance will be low.
 
 ```{note}
 Trenberth et al. use the streamfunction instead of geopotential height as they suggest the latter cna be influenced by strong winds in lower latitudes.
@@ -136,6 +138,9 @@ There are three classes of teleconnection patterns, as outlined in Schubert 1986
 - those with timescales between 10-30 days, in the SH these tend to be zonally orientated.
 - those with timescales less than 10 days, prominant over midlatitude oceans.
 
+Propagation to the mid-latitudes as a result of anomalous tropical convection:
+Upper-tropospheric divergence stemming from anomlous tropical convection does not directly contribute to the mid-latitude teleconnection through Rossby wave propagation, partly due to the easterly mean flow at these latitudes. However, Rasmusson and Mo (1993) find Rossby wave sources are most prominent poleward of 15° {cite}`rasmusson_linkages_1993`. They propose enhanced Hadley circulation as a result of the anomalous divergence in the tropics creates a upper-level convergence in the sub-tropics, which acts as the Rossby wave source, a mechanism which is supported by model studies {cite}`held_barotropic_1987`. 
+
 
 #### Variability and Effects of Storm Tracks
 
@@ -151,7 +156,7 @@ Convergence of vorticity that occurs in the storm track enhance the upper tropos
 - Horel & Wallace 1981 and Pan & Oort 1983, found that latent heat released from large convection events warmed the upper troposphere causing enhanced Hadley circulation & subtropical westerlies.
 - van Loon & Shea 1983 & 1985, Karoly 1989, found that the PSA is generally weaker and more variable than its NH hemisphere counterpart (PNA), exhibiting relatively weaker tropical forcing and zonal gradients.
 - Kok & Opsteegh 1985, demosntrated importance of flux transport by storm tracks in producing midlatitude anomalies, specifically for the 82-82 El Nino event.
-
+- They split the atmospheric circulation variance into external and internal forcing and argue that the signal-to-noise ratio is hgiest when time-averaged over 5 months, and for this reason it is better suited to identifying hte low-frequency atmospheric signal {cite}`trenberth_decadal_1994`. It's not clear how they do this, though answer may lie in one of the cited papers: "Thus the interannual variability of the atmospheremay be separatedinto internal and external components[Harzallahand $adourny,1995;Rowellet al., 1995;Kumar andHoerling,1995"
 
 #### Questions that follow
 
