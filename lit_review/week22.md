@@ -19,6 +19,8 @@ Many of the models did not possess the desired resolution to match the ERA5 data
 
 HadGEM3-GC31-MM operates on a 360-day calendar. At the moment the bandpass filter has been applied as usual, and the MCA on the results appears to give a fairly sensible picture. However, the CDO filter was aware of the differing timesteps and this may have caused some errors in the calculation. So far I haven't found an easy way to convert from the 360-day calendar to a noleap calendar.
 
+The data, once filtered, is averaged to monthly data, such that the number of data points is the same between models. When taking mean values, the CDO command "yearmonmean" weights each month by the number of days contained within that month, so that it becomes irrelevant. Use this command in combination with "timmean" to find the true mean of the time series. However, if CDO doesn't know that these are actually thirty day months, it will assume that it contains the usual number of days. Therefore, just use the "timmean" command for HadGEM3.
+
 MPI-ESM-1-2-HAM has missing data for all timesteps at 90S. The missing data has been filled by setting each longitude point at 90S equal to the zonal mean for a given timestep. Applying MCA presents sensible results, the expected picture for both mean and variance.
 
 
