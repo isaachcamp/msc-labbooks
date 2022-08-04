@@ -28,3 +28,12 @@ Descriptions found by searching for the model name and using the World Climate R
 | CanESM5 | historical | CMIP6 forcings, aerosol: interactive, atmos: CanAM5 (T63L49 native atmosphere, T63; 250km nominal resolution), atmosChem: specified oxidants for aerosols, land: CLASS3.6/CTEM1.2, landIce: specified ice sheets, ocean: NEMO3.4.1 (ORCA1 tripolar grid, 1° nominal resolution), ocnBgchem: (CMOC); NPZD ecosystem with OMIP prescribed carbonate chemistry, seaIce: LIM2. | CMIP6.CMIP.CCCma.CanESM5.historical.r1i1p1f1.AERday.zg500.gn | 
 | NorCPM1 | historical | CMIP6 forcings, aerosol: OsloAero4.1 , atmos: CAM-OSLO4.1 (250km nominal resolution), atmosChem: OsloChemSimp4.1, land: CLM4, ocean: MICOM1.1 (1° nominal resolution), ocnBgchem: HAMOCC5.1, seaIce: CICE4 | CMIP6.CMIP.NCC.NorCPM1.historical.r1i1p1f1.AERday.zg500.gn | 
 ```
+
+## Model Notes 
+
+Goyal et al. 2022 {cite}`goyal_new_2022` find two of the models that we have selected to be incompatible with the definition of the index, as either or both of the leading two EOFs are actually ZW4 or some other pattern not connected to ZW3. Those models are:
+
+- FGOALS-f3-L
+- GFDL-CM4
+
+These will be checked anyway, along with the other models to ensure that the EOFs are directly related to ZW3 before calculating the index.

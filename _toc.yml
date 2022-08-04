@@ -38,4 +38,4 @@ parts:
     - file: glossary.md
     - file: bibliography.md
     - file: to-do-list.md
-    - file: paper1.md
+    - file: paper1/paper1.md

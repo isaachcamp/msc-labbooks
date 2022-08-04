@@ -243,11 +243,6 @@ const thebe_selector_output = ".output, .cell_output"
    To Do List
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../paper1.html">
-   Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
-  </a>
- </li>
 </ul>
 
     </div>
@@ -330,6 +325,19 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-notes">
+   Model Notes
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -342,6 +350,19 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-notes">
+   Model Notes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -351,6 +372,15 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="cmip6-models">
 <h1>CMIP6 Models<a class="headerlink" href="#cmip6-models" title="Permalink to this headline">¶</a></h1>
 <p>Descriptions found by searching for the model name and using the World Climate Research Programme (WRCP) database (www.wdc-climate.de). Not all model elements are present, so may have to be found at a later date if important.</p>
+<div class="section" id="model-notes">
+<h2>Model Notes<a class="headerlink" href="#model-notes" title="Permalink to this headline">¶</a></h2>
+<p>Goyal et al. 2022 <span id="id1">[<a class="reference internal" href="../bibliography.html#id22">Goyal <em>et al.</em>, 2022</a>]</span> find two of the models that we have selected to be incompatible with the definition of the index, as either or both of the leading two EOFs are actually ZW4 or some other pattern not connected to ZW3. Those models are:</p>
+<ul class="simple">
+<li><p>FGOALS-f3-L</p></li>
+<li><p>GFDL-CM4</p></li>
+</ul>
+<p>These will be checked anyway, along with the other models to ensure that the EOFs are directly related to ZW3 before calculating the index.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
