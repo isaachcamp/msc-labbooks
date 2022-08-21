@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?" href="paper1/paper1.html" />
     <link rel="prev" title="Bibliography" href="bibliography.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -244,6 +245,11 @@ const thebe_selector_output = ".output, .cell_output"
    To Do List
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="paper1/paper1.html">
+   Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -427,23 +433,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>Write paper.</p>
 <ul>
-<li><p>Create publication-quality figures.</p></li>
+<li><p>Rewrite, Connect figures to text.</p></li>
+<li><p>Include Table with all SCF and PCs Correlation values.</p></li>
 </ul>
 </li>
 <li><p>Write abstract for NZ Met Conference – deadline: 22nd August. (https://www.hydrometsoc22.co.nz/presenter-guidelines)</p></li>
-<li><p>Cannot interpolate HadGEM3 calendar as expected. What effect will this have? It doesn’t appear to have any major effect on MCA results, however, there may be some small errors that could lead to unfair model performance analysis.</p></li>
-<li><p>Calculate ZW3 index for models.</p>
-<ul>
-<li><p>Calculate Magnitude and Phase time series.</p></li>
-</ul>
-</li>
 <li><p>Check spread of indices for models. Do they simulate frequency of extreme values?</p>
 <ul>
-<li><p>Violin/box plots for all models adjacent to ERA-5.</p></li>
 <li><p>Map for areas of high standard deviations/variances? – for all models and ERA-5.</p></li>
 </ul>
 </li>
-<li><p>Are there linear trends in some quantities? Perhaps location of maximum variance, or magnitude.</p></li>
 <li><p>Think about how to quantify the bias in annual cycle.</p>
 <ul>
 <li><p>James’ suggestion:</p>
@@ -457,15 +456,22 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li><p>Quantify the base state bias.</p>
 <ul>
-<li><p>Find the zonally-averaged mean height and plot vs. latitude.</p>
+<li><p>Show James and pick which field to use:</p>
 <ul>
-<li><p>Does the peak in mean height gradient occur at the same spot as ERA-5?</p></li>
+<li><p>Full mean height field.</p></li>
+<li><p>Mean height anomalies.</p></li>
+<li><p>Full variance field.</p></li>
+<li><p>Variance anomalies.</p></li>
+<li><p>Detrended versions of the above.</p></li>
+<li><p>Plot time series vs. detrended time series.</p></li>
 </ul>
 </li>
+<li><p>Find the zonally-averaged mean height and plot vs. latitude.</p></li>
 <li><p>Repeat the same analysis for the variance field – where is the meridional gradient peak?</p></li>
 </ul>
 </li>
-<li><p>Look into Taylor Diagrams</p></li>
+<li><p>Look into Taylor Diagrams.</p></li>
+<li><p>Check SOI is calculated correctly, and re-calculate if necessary. Run the analysis procedure over each model for SOI alone.</p></li>
 </ul>
 </div>
 <div class="section" id="questions-to-answer">
@@ -546,6 +552,13 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Bibliography</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="paper1/paper1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Southern Hemisphere storm tracks and large-scale variability: what do the ERA5 Reanalyses say?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

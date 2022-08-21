@@ -31,9 +31,16 @@ Descriptions found by searching for the model name and using the World Climate R
 
 ## Model Notes 
 
-Goyal et al. 2022 {cite}`goyal_new_2022` find two of the models that we have selected to be incompatible with the definition of the index, as either or both of the leading two EOFs are actually ZW4 or some other pattern not connected to ZW3. Those models are:
+Issues encountered:
 
-- FGOALS-f3-L
-- GFDL-CM4
+- Many of the models did not possess the desired resolution to match the ERA5 dataset. It was deemed acceptable to interpolate the data to a finer grid of 1 degree lat/lon resolution, as baroclinic storms have a typical scale of O(1000km), much greater than the nominal resolution for all the models selected. Also, Rohrer et al. (2020) {cite}`rohrer_sensitivity_2020` find that Eulerian methods are less sensitive to resolution beyond a threshold in their study on various reanalyses -- _check whether we are beyond this threshold or not_. It is understood that this interpolation does not increase the amount of information contained in these datasets, and interpretation will not go beyond what can fairly be inferred from the model's nominal resolution.
 
-These will be checked anyway, along with the other models to ensure that the EOFs are directly related to ZW3 before calculating the index.
+- HadGEM3-GC31-MM operates on a 360-day calendar. At the moment the bandpass filter has been applied as usual, and the MCA on the results appears to give a fairly sensible picture. However, the CDO filter was aware of the differing timesteps and this may have caused some errors in the calculation. So far I haven't found an easy way to convert from the 360-day calendar to a noleap calendar.
+    - The data, once filtered, is averaged to monthly data, such that the number of data points is the same between models. When taking mean values, the CDO command "yearmonmean" weights each month by the number of days contained within that month, so that it becomes irrelevant. Use this command in combination with "timmean" to find the true mean of the time series. However, if CDO doesn't know that these are actually thirty day months, it will assume that it contains the usual number of days. Therefore, just use the "timmean" command for HadGEM3.
+
+- MPI-ESM-1-2-HAM has missing data for all timesteps at 90S. The missing data has been filled by setting each longitude point at 90S equal to the zonal mean for a given timestep. Applying MCA presents sensible results, the expected picture for both mean and variance.
+
+- Goyal et al. 2022 {cite}`goyal_new_2022` find two of the models that we have selected to be incompatible with the definition of the index, as either or both of the leading two EOFs are actually ZW4 or some other pattern not connected to ZW3. Those models are:
+    - FGOALS-f3-L
+    - GFDL-CM4
+  These will be checked anyway, along with the other models to ensure that the EOFs are directly related to ZW3 before calculating the index.
