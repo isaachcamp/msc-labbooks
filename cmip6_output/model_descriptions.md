@@ -1,5 +1,7 @@
 # CMIP6 Models
 
+Published model descriptions are found in the AR6 Annex II: Models.
+
 Descriptions found by searching for the model name and using the World Climate Research Programme (WRCP) database (www.wdc-climate.de). Not all model elements are present, so may have to be found at a later date if important.
 
 ```{table} Model Descriptions

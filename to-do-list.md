@@ -3,26 +3,30 @@
 ## Things to Do
 
 - Write paper.
-- Check spread of indices for models. Do they simulate frequency of extreme values?
-    - Map for areas of high standard deviations/variances? -- for all models and ERA-5.
+    - Rerun sub-monthly with 15-day rolling means.
+    - Sensitivity test/Rule N test.
 - Bias in annual cycle.
     - Another method that retains some of the spatial structure?
-    - Apply RMSD script to all models.
-- Quantify the base state bias.
-    - Show James and pick which field to use:
-        - Full mean height field.
-        - Mean height anomalies.
-        - Full variance field.
-        - Variance anomalies.
-        - Detrended versions of the above.
-        - Plot time series vs. detrended time series.
-    - Find the zonally-averaged mean height and plot vs. latitude.
-    - Repeat the same analysis for the variance field -- where is the meridional gradient peak?
 - Look into Taylor Diagrams.
-- Check SOI is calculated correctly, and re-calculate if necessary. Run the analysis procedure over each model for SOI alone.
 - Check what the resolution required for Eulerian method in Rohrer et al. (2020) {cite}`rohrer_sensitivity_2020`.
 - Check singular vectors 1 & 2 of all model ZW3 indices.
     - Are there some that do not have ZW3 signals?
+- Base state analysis:
+    - Check out whether models are spectral something or other (perhaps it's called a Gibbs effect?)
+    - Check out what the second graph of diffs is actually calculating.
+- Collate a list of tools for model intercomparison: check Eyring et al., section 3.3 (2016) {cite}`eyring_overview_2016`.
+- Read up on model analysis:
+    - AR6 Chapter 1: Section 1.5.4
+    - AR5 Chapter 9
+    - AR3 Chapter 12
+    - Gettelman & Rood Chapters 9, 10 & 13
+- Lit Review SH ST:
+    - Read up on ST as normal modes: Fredricksen & Fredricksen.
+    - Read up on baroclinic wave packet theory.
+    - Find papers detailing interactions between ST and ZW3.
+    - Find a reference linking baroclinicity with strong temperature gradients.
+- Write up Methodology for CMIP6 chapter.
+    - Include diagrams of indices box plots, and discussion. 
 
 
 ## Questions to Answer
@@ -43,9 +47,10 @@
 
 ## Papers to Read
 
-- Fogt and Marshall, 2020
-- Fogt, Jones et al. 2012
-- Priestley et al. 2020
+- Storm Tracks:
+    - Kidson & Watterson 1999
+- Model Analysis:
+    - Priestley et al. 2020
 
 
 ## Books/Chapters to Read

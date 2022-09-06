@@ -47,6 +47,7 @@ We will document storm track characteristics with the latest ERA-5 reanalysis da
 - In a study on the Northern Hemisphere (NH) storm track, Nakamura (1992) {cite}`nakamura_midwinter_1992` finds a distinct minimum in storm track activity in the Pacific, contrary to increased baroclinicity inherent with winter temperature gradients, which according to a basic analysis, should generate higher storm activity. This anomalous region is not apparent in our analysis on the SH Pacific storm -- high-frequency variance was generally highest in winter composites, and positive covariance remained high over the storm track region. Chang (2001a), as a means of interpreting the observed NH Pacific anomaly, suggests upper-level baroclinicity does not always translate into increased cyclogenesis, but is governed by a number of factors including differences in diabatic heating, i.e., reduced tropical convection during winter months, and lower lifetimes for residual baroclinic wave packets {cite}`chang_gcm_2001`. The same factors may be important in the context of hemispheric differences, so too the distribution of landmass, to the suppression of high-frequency variance in the NH.
 
 - Descriptions of SAM, ENSO, ZW3.
+- Descriptions of Key characteristics of the above, such as seasonal cycle.
 - How does SAM, ENSO and ZW3 affect the storm track? Or individual storms?
 
 - What are General Circulation Models (GCMs)?
