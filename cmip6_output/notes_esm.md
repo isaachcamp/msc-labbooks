@@ -17,6 +17,33 @@ Models can be wrong, and the likelihood of them being wrong is quantified as unc
 - Initial Conditions Uncertainty
     - Errors stemming from the inability to be exact in the quantifying the initial conditions, which propagate into the future if the model is sensitive to initial conditions. This may not have strong effects on the long-term distribution, however, short-term forecasts can be severely affected.
 
+Models are approximations and often produce mischaracterisations of the global mean
+state. The likelihood of them being wrong is quantified as uncertainty. Uncertainty 
+in models can be categorised into three sources: model uncertainty; scenario 
+uncertainty; and initial conditions uncertainty{cite}`gettelman_demystifying_2016`. 
+Model uncertainty arises from structural errors in the way the model operates. 
+Knutti (2018) further splits model uncertainty into three sub-categories: model 
+structure;  grid resolution; and parameterisation{cite}`knutti_climate_2018`. The 
+latter two have been described above; an example of model structure uncertianty would 
+be the intentional neglect of explicit ice sheet description or ocean dynamics, or 
+errors in the equations representing physical mechanics; a prominent example being 
+representing cloud formation. These types of uncertainty tend to create systematic 
+errors warping the probability distribution of weather states in a consistent way, and 
+are the core representational uncertainties in modelling the climate, solely belonging 
+to model design. 
+
+Scenario uncertainty stems from errors in the assumptions of how parameters change or 
+evolve, such as the amount of anthropogenic CO2 emitted. This dominates the long-term 
+uncertainty and is important in how it affects the non-stationarity property of 
+climate. It is important for projections of future climate, but also how the model 
+evolves up to the present day; over the elapsed period from initialisation to present 
+day, CO2 forcing causes a shift in the mean climate state and affects other parameter 
+values. Initial conditions uncertainty arises from the inability to be exact in the 
+quantifying the initial conditions, errors which propagate into the future. Short-term 
+forecasts can be severely affected by this type of uncertainty, however, it generally 
+does not strongly effect the long-term distribution. Initial conditions and scenario 
+uncertainties are beyond the scope of this study and will be largely ignored.
+
 ### Components of the Climate System
 
 ESMs are usually composed of different building blocks, different systems that have specific boundaries where they can interact and specified mechanisms for those interactions. Typically these blocks are:
