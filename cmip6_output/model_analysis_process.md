@@ -22,10 +22,6 @@ Components are often shared between modelling centres, which has led different m
 
 It is often a good idea that extreme events simulations be assessed as well as time-mean averages. Knutti et al. 2010 -- possibly, but needs checking.
 
-This chapter regularly uses "correlation" as a measure of model performance for specific quantities. Does this mean correlating the mean value of spatial grid points? -- Ask James.
-
-
-
 ## Performance Metrics for Climate Models, Gleckler et al. 2008 {cite}`gleckler_performance_2008`
 
 This paper investigates climate models using proposed objective metrics that quantify model performance. One of note is the RMS difference, E, between a model output field, F, and a reference field, R. They do this by summing the weighted square of the differences over longitude, latitude and time and dividing by the sum of the weights -- _Need to incorporate this method into our methodology_.
