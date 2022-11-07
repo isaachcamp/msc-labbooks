@@ -16,15 +16,30 @@ Global average quantities fail to convey the synoptic extremes that have real im
 
 SSP1 
 
-Mitigation strategies 
-
+- Low population.
+- High urbanisation.
+- Fast technological advancement.
+- Assumes increased energy efficiency will lead to lower demand... not likely.
+- Largely renewable based energy resources, with fossil-fuels still contributing approximately 50%.
+- Mitigation strategies 
     - Early global collaboration at 2020.
     - Comprehensive mitigation strategies.
+    - Reforestation schemes.
+- Emissions 
+    - Carbon, methane and nitrogen oxide lowest of all scenarios.
+- Conversion to lower meat-rich diet & regular public transport use.
 
 
 SSP5 
 
-Mitigation strategies 
-
+- Low population.
+- High urbanisation.
+- Fast technological advancement.
+- Largely fossil-fuel energy resources, with some renewables.
+- Mitigation strategies 
     - Delayed global collaboration between 2020-2040.
     - Comprehensive mitigation strategies.
+- Emissions 
+    - Carbon significantly higher.
+    - Methane and nitrogen oxide fairly low, second lowest.
+

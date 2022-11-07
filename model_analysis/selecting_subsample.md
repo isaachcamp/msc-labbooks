@@ -26,3 +26,8 @@ Sub-Sample:
  - FGOALS-f3-L
  - SAM0-UNICON
  - NESM3
+
+
+Several issues arise with this selection process. Mostly, this has been a qualitative approach, and few metrics have been used to quantify model performance when it comes to covariance and MCA analyses, both annually and seasonally. It would be much preferred if a plot was created to summarise model performance across all aspects. In this regard, use of the portait diagram would have been good, which summarises the relative error (compared to the median error) for all metrics. It would therefore be preferable if I can develop metrics encompassing performance in covariance and composites to this end.
+
+Perhaps dropping 

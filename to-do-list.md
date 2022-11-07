@@ -9,32 +9,49 @@
         - Get intervals and masking limits for all ERA-5 figures.
     - Make corrections.
         - Redo composites with seasonal sample size of 10.
+    - Read up on MCA method again, make sure you understand the implications of it.
 
 - Chapter 2
-    - Check model dynamical cores.
-    - Collate a list of tools for model intercomparison: check Eyring et al., section 3.3 (2016) {cite}`eyring_overview_2016`.
-
+    - Back-up/Compare Results with References e.g. Zhang et al. 2022, Bracegirdle et al. 2020 and Lee et al. 2019
+    - Include extra components from discussion.
+    - MCA
+        - More emphasis on the connections between the two fields.
+    - Covariance Maps
+        - Include spatial correlations and RMSEs.
+        - Look into and mention seasonal differences, e.g. compare with Lee et al. 2019, is the post-dominant season still the weakest?
+        - Create portrait plot and refer to it.
+        - Ensure that the RMSEs for ZW3 are being calculated correctly -- are the small spatial correlation values due to the intentional change of sign? -- or is it because they are not directly related back to the observations, i.e., the extrema are not located in the same place?
+    - CBF analysis
+        - Download meridional wind anomalies, va.
+        - Calculate CBFs for each model from the following EOF analyses on ERA-5:
+            - SAM -- zg500 EOF1
+            - A-SAM -- zg500 zonal anomalies EOF1
+            - ENSO/PSA 1 & 2 -- zg500 EOF2 & 3
+            - ZW3 -- va EOF1 & 2
+        - Create portrait plot for these and for seasonality of mean fields and refer to it in text.
+     
 - Chapter 3
     - Introduction
-        - Research CMIP6 scenarios.
-        - Find papers looking into SH ST projections.
-            - Look into how Kidson investigates storm track migration.
-        - Write Intro.
+        - Include outline of methods in the summary part of the intro.
     - Methods
-        - Pick high and low emission scenarios.
-        - Find and download data.
+        - Identify statistically significant changes to the mean field.
+            - Apply either Tebaldi et al. 2011 or Knutti & Sedlacek 2013 method for robustness.
+        - Calculate change in meridional peak position.
+        - Covariance maps
+            - SAM annual & seasonal
+            - SOI annual & seasonal
+            - ZW3 annual only
+            - Take the difference between historical and scenario experiments.
+        - CBF analysis, as above.
     - Analysis
-        - Determine what analysis will be run.
-            - Taylor diagrams, meridional peaks and spatial biases.
-                - Significance test for each grid cell?
-            - Pearson covariance and correlations, seasonal and annual.
-            - Annual MCA.
-        - Run analysis.
+        - Mean field projections.
+            - Calculate statistical significance at each grid point using Welch's t-test and FDR method.
+            - Calculate MME mean.
+            - Identify model consensus/robustness of projections for MME mean plotting.
+        - Meridional peaks and spatial biases.
+        - Pearson covariance and correlations, seasonal and annual, and take the difference.
+            - Create summary plots and calculate MME mean annually & seasonally.
+        - CBF analysis.
     - Results 
         - Analyse results.
-
-## To Read
-
-- Gettelman & Rood Chapters 13
-- Bracegirdle et al. 2020
-- Lee et al. 2019
+        - Write-up.

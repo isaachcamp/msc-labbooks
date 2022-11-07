@@ -4,7 +4,9 @@
 
 Kidston & Gerber (2010) find biases in the SH jet stream mean state explain intermodel differences in the projected trend. Specifically, they suggest an equatorward bias in average jet stream position is associated with projections of enhanced persistance of the SAM and of exaggerated poleward migration. Knowledge of the magnitude of this poleward shift is important as the storm track has profound affects on mid-latitude regional precipitation and the hydrological cycle.
 
-They suggest the reason the models have an exaggerated poleward shift in storm track position is because atmospheric radiative forcing sets a limit to how far the jet stream can move into the high latitudes, _though I'm not sure what the radiative forcing has to do with this -- is it the notion that the extra momentum being shifted poleward must dissipate into through the atmosphere?_
+They suggest the reason the models have an exaggerated poleward shift in storm track position is because atmospheric radiative forcing sets a limit to how far the jet stream can move into the high latitudes, I assume this is because radiative forcing drives the meridional circulation via the meridional temperature gradient? 
+
+They also find a correlation between the persistence time of SAM (using the e-folding time as a metric) and the equatorward bias. They then suggest that this would suggest a link between annular mode persistence and enhanced poleward propagation under a warming climate, they subsequently find a statistically significant correlation, but which is weaker than the previous correlations at only 0.56 +/- 0.39. They suggest this correaltion could be due to a fluctuation-dissipation relationship.
 
 Useful Notes:
 
@@ -30,3 +32,10 @@ Priestley et al. (2020) finds considerable improvement in storm track average po
 ## An Overview of the Extratropical Storm Tracks in CMIP6 Historical Simulations, Priestley et al. (2020) {cite}`priestley_overview_2020`
 
 "In the SH winter season [June–August (JJA)] there is both a zonal and equatorward bias of the storm tracks (Kidston and Gerber 2010; Chang et al. 2012), with these errors possibly being linked to biases in cloud shortwave radiative processes (Ceppi et al. 2012), low-level orographic drag (Pithan et al. 2016), or the localized representation of blocking (Patterson et al. 2019)."
+
+
+## Evaluation of the seasonality and spatial aspects of the Southern Annular Mode in CMIP6 models {cite}`zhang_evaluation_2022`
+
+The authors find the MME mean could accurately recreate the spatial structure of the SAM (using Taylor diagram metrics, spatial correlation, standard deviation and RMSE), but find the AMIP experiments are more accurate than the historical experiment, which they suggest could be due to the realistic SST forcing applied (however, the reliability of such statements is weak, since they do not characterise statistical significance and the difference is fairly small). They also find that performance varies seasonally, and that they are generally poor at capturing A-SAM.
+
+They compare spatial correlation and standard deviations of the full pressure at sea level field and find the zonally symmetric SAM is generally well-captured by CMIP6 models. However, they isolate the asymmetrical component of the field by removing the zonal-mean and repeat the same procedure to find the correlations and standard deviations are significantly weaker for the MME mean, suggesting the asymmetrical component is poorly represented. Given the intimate connection between the SAM and the storm track, this likely has consequences for the zonal asymmetry of the storm track.
