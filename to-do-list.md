@@ -1,7 +1,15 @@
 # To Do List
 
+- Introductory Motivation section:
+    - James -- "An introductory/motivational chapter could be useful before you get into the guts of the work. Why do we care about storm tracks etc? Perhaps just an expanded version of your section 1.1."
+
+- Abstract
+    - Remove some of the detail.
+    - James -- "This is nice, but quite long. You could start with an opening sentence along the lines of "We have studied SH storms tracks and their interactions with the background circulation both in reanalyses and in CMIP6 models."
+
 - Chapter 1
     - Redo figures:
+        - Use shared cmap.
         - Mask low variance and remove colour scales.
         - Redo ZW3 annual composite without lower composites.
         - Add phase bins to ZW3 annual covariance and composite figure.
@@ -12,27 +20,21 @@
     - Read up on MCA method again, make sure you understand the implications of it.
 
 - Chapter 2
-    - Back-up/Compare Results with References e.g. Zhang et al. 2022, Bracegirdle et al. 2020 and Lee et al. 2019
-    - Include extra components from discussion.
-    - MCA
-        - More emphasis on the connections between the two fields.
-    - Covariance Maps
-        - Include spatial correlations and RMSEs.
-        - Look into and mention seasonal differences, e.g. compare with Lee et al. 2019, is the post-dominant season still the weakest?
-        - Create portrait plot and refer to it.
-        - Ensure that the RMSEs for ZW3 are being calculated correctly -- are the small spatial correlation values due to the intentional change of sign? -- or is it because they are not directly related back to the observations, i.e., the extrema are not located in the same place?
-    - CBF analysis
-        - Download meridional wind anomalies, va.
-        - Calculate CBFs for each model from the following EOF analyses on ERA-5:
-            - SAM -- zg500 EOF1
-            - A-SAM -- zg500 zonal anomalies EOF1
-            - ENSO/PSA 1 & 2 -- zg500 EOF2 & 3
-            - ZW3 -- va EOF1 & 2
-        - Create portrait plot for these and for seasonality of mean fields and refer to it in text.
+    - Back-up/Compare Results with References e.g. Bracegirdle et al. 2020.
+    - Base State
+        - Add figure with all meridional profiles.
+        - Add symbols to legend of Taylor diagram.
+        - Redo spatial biases figure with mask.
+    - Composites
+        - Redo figures with shared cmap.
+    - CBF analysis 
+        - Add in reference to seasonal performance.
+        - Effect of difference in methodology from Lee et al.?
      
 - Chapter 3
     - Introduction
-        - Include outline of methods in the summary part of the intro.
+        - Finish intro write-up.
+        - Include outline of methods in the summary part.
     - Methods
         - Identify statistically significant changes to the mean field.
             - Apply either Tebaldi et al. 2011 or Knutti & Sedlacek 2013 method for robustness.
@@ -55,3 +57,6 @@
     - Results 
         - Analyse results.
         - Write-up.
+
+- Bibliography
+    - Clean up references.
